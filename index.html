@@ -560,35 +560,53 @@
                             </div>
                         </section>
 
-                        {/* --- SECCION CONFIANZA --- */}
-                        <section className="py-20 px-6 bg-white">
+                        {/* --- SECCION CONFIANZA COMERCIAL --- */}
+                        <section className="py-24 px-6 bg-[#1A1A1A] text-white">
                             <div className="container mx-auto max-w-5xl">
-                                <FadeInSection className="text-center mb-12">
-                                    <h3 className="font-montserrat font-bold text-2xl md:text-3xl text-[#1A1A1A] mb-4">Tus datos están seguros</h3>
+                                <FadeInSection className="text-center mb-16">
+                                    <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-4">
+                                        Tu información no sale de aquí
+                                    </h2>
+                                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                                        Sabemos que abrir los números de tu negocio requiere confianza.<br />
+                                        Por eso trabajamos así:
+                                    </p>
                                 </FadeInSection>
 
-                                <FadeInSection className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-                                    <div className="text-center">
-                                        <div className="text-3xl mb-3">🔒</div>
-                                        <h4 className="font-montserrat font-bold text-lg text-[#1A1A1A] mb-2">Ley 1581</h4>
-                                        <p className="text-gray-500 text-sm">Cumplimos la ley de protección de datos</p>
-                                    </div>
-                                    <div className="text-center">
-                                        <div className="text-3xl mb-3">📝</div>
-                                        <h4 className="font-montserrat font-bold text-lg text-[#1A1A1A] mb-2">Confidencialidad</h4>
-                                        <p className="text-gray-500 text-sm">Firmamos compromiso antes de empezar</p>
-                                    </div>
-                                    <div className="text-center">
-                                        <div className="text-3xl mb-3">✅</div>
-                                        <h4 className="font-montserrat font-bold text-lg text-[#1A1A1A] mb-2">100% tuyo</h4>
-                                        <p className="text-gray-500 text-sm">El entregable es de tu propiedad</p>
-                                    </div>
-                                </FadeInSection>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                                    <FadeInSection className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300">
+                                        <div className="w-14 h-14 bg-[#10B981] rounded-xl flex items-center justify-center mx-auto mb-5">
+                                            <Icon name="file-signature" size={28} className="text-white" />
+                                        </div>
+                                        <h3 className="font-montserrat font-bold text-lg mb-3">Primero la firma, después los datos</h3>
+                                        <p className="text-gray-400 text-sm leading-relaxed">Firmamos compromiso de confidencialidad antes de que nos muestres un solo número.</p>
+                                    </FadeInSection>
 
-                                <FadeInSection className="text-center">
-                                    <a href="/confianza" className="inline-flex items-center gap-2 text-[#10B981] font-semibold hover:underline">
-                                        Conoce cómo trabajamos
-                                        <Icon name="arrow-right" size={18} />
+                                    <FadeInSection delay="100" className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300">
+                                        <div className="w-14 h-14 bg-[#10B981] rounded-xl flex items-center justify-center mx-auto mb-5">
+                                            <Icon name="lock" size={28} className="text-white" />
+                                        </div>
+                                        <h3 className="font-montserrat font-bold text-lg mb-3">Tu información es solo tuya</h3>
+                                        <p className="text-gray-400 text-sm leading-relaxed">No compartimos con terceros. Nunca. Ni con socios, ni con "partners estratégicos", ni con nadie.</p>
+                                    </FadeInSection>
+
+                                    <FadeInSection delay="200" className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300">
+                                        <div className="w-14 h-14 bg-[#10B981] rounded-xl flex items-center justify-center mx-auto mb-5">
+                                            <Icon name="trash-2" size={28} className="text-white" />
+                                        </div>
+                                        <h3 className="font-montserrat font-bold text-lg mb-3">Tú decides qué pasa al final</h3>
+                                        <p className="text-gray-400 text-sm leading-relaxed">Cuando terminamos, tú eliges: te entregamos todo o lo eliminamos. Sin letra pequeña.</p>
+                                    </FadeInSection>
+                                </div>
+
+                                <FadeInSection delay="300" className="text-center">
+                                    <p className="text-gray-300 text-base italic mb-6">
+                                        10 años manejando información sensible de operaciones con +300 empleados.<br />
+                                        Tu negocio está en buenas manos.
+                                    </p>
+                                    <a href="/confianza" className="inline-flex items-center gap-2 text-[#10B981] font-semibold hover:underline text-sm">
+                                        Ver nuestra política completa
+                                        <Icon name="arrow-right" size={16} />
                                     </a>
                                 </FadeInSection>
                             </div>

@@ -103,16 +103,24 @@
                 const domRef = useRef();
 
                 useEffect(() => {
-                    const observer = new IntersectionObserver(entries => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) setIsVisible(true);
-                        });
-                    });
                     const currentElement = domRef.current;
-                    if (currentElement) observer.observe(currentElement);
-                    return () => {
-                        if (currentElement) observer.unobserve(currentElement);
-                    };
+                    if (!currentElement) return;
+
+                    const observer = new IntersectionObserver(
+                        entries => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    setIsVisible(true);
+                                    // Desconectar después de ser visible (once: true)
+                                    observer.unobserve(currentElement);
+                                }
+                            });
+                        },
+                        { threshold: 0.1, rootMargin: '50px' }
+                    );
+
+                    observer.observe(currentElement);
+                    return () => observer.disconnect();
                 }, []);
 
                 return [isVisible, domRef];

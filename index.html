@@ -1,745 +1,751 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MéTRIK | Claridad para tu negocio</title>
-    <meta name="description" content="Las 5 preguntas financieras que definen si tu negocio está sano. Si no puedes responderlas HOY, empecemos por ahí.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MéTRIK — De caos a claridad</title>
+<meta name="description" content="Transformamos datos caóticos en dashboards funcionales. Claridad financiera para PYMEs colombianas en 10 días.">
+<meta property="og:title" content="MéTRIK — De caos a claridad">
+<meta property="og:description" content="Datos caóticos → Dashboards funcionales. 10 días.">
+<meta property="og:image" content="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Logo_Mk.png">
+<meta property="og:url" content="https://www.metrik.com.co">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
-    <link rel="apple-touch-icon" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
-    <link rel="shortcut icon" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
+<link rel="apple-touch-icon" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
+<link rel="shortcut icon" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<!-- META PIXEL — Descomentar y reemplazar YOUR_PIXEL_ID con el ID real -->
+<!-- <script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+/></noscript> -->
 
-    <!-- React -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- GOOGLE ANALYTICS — Descomentar y reemplazar G-XXXXXXXXXX con el Measurement ID real -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script> -->
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+<style>
+:root {
+  --negro-carbon: #1A1A1A;
+  --gris-acero: #6B7280;
+  --verde-metrica: #10B981;
+  --rojo-alerta: #EF4444;
+  --amarillo-warning: #F59E0B;
+  --blanco: #FFFFFF;
+  --gris-linea: #E5E7EB;
+  --gris-fondo: #F9FAFB;
+  --font: 'Montserrat', sans-serif;
+  --s-xs: 0.5rem;
+  --s-sm: 1rem;
+  --s-md: 1.5rem;
+  --s-lg: 2.5rem;
+  --s-xl: 4rem;
+  --s-2xl: 6rem;
+  --s-3xl: 8rem;
+  --s-4xl: 12rem;
+  --max-content: 1080px;
+  --max-narrow: 720px;
+  --max-text: 600px;
+}
 
-    <style>
-        .font-montserrat { font-family: 'Montserrat', sans-serif; }
-        .font-georgia { font-family: 'Georgia', serif; }
-        html { scroll-behavior: smooth; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: var(--font); font-weight: 400; font-size: 16px; line-height: 1.6; color: var(--gris-acero); background: var(--negro-carbon); overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
 
-        @keyframes blob {
-            0% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(30px, -50px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
-            100% { transform: translate(0px, 0px) scale(1); }
-        }
-        .animate-blob { animation: blob 7s infinite; }
-        .animation-delay-2000 { animation-delay: 2s; }
+.logo { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 0; }
+.logo-text { font-family: var(--font); font-weight: 700; letter-spacing: -0.02em; line-height: 1; color: var(--negro-carbon); }
+.logo--light .logo-text { color: var(--blanco); }
+.logo-line { width: 100%; height: 2.5px; background: var(--verde-metrica); margin-top: 8px; border-radius: 2px; }
 
-        @keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .animate-in { animation: fade-in 0.3s ease-out; }
+.lockup { display: inline-flex; flex-direction: column; align-items: flex-start; }
+.lockup-name { font-family: var(--font); line-height: 1; display: flex; align-items: baseline; gap: 0.15em; }
+.lockup-marca { font-weight: 700; color: var(--negro-carbon); }
+.lockup--light .lockup-marca { color: var(--blanco); }
+.lockup-producto { font-weight: 300; color: var(--negro-carbon); text-transform: lowercase; }
+.lockup--light .lockup-producto { color: var(--blanco); }
+.lockup-line { width: 100%; height: 2.5px; background: var(--verde-metrica); margin-top: 8px; border-radius: 2px; }
 
-        @keyframes pulse-slow {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        .animate-pulse-slow { animation: pulse-slow 2s ease-in-out infinite; }
-    </style>
+.section { padding: var(--s-3xl) var(--s-md); position: relative; }
+.section--dark { background: var(--negro-carbon); color: var(--blanco); }
+.section--light { background: var(--blanco); color: var(--negro-carbon); }
+.section--warm { background: var(--gris-fondo); color: var(--negro-carbon); }
+.container { max-width: var(--max-content); margin: 0 auto; }
+.container--narrow { max-width: var(--max-narrow); margin: 0 auto; }
+
+/* NAV */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: var(--s-md); display: flex; justify-content: space-between; align-items: center; transition: background 0.4s ease, backdrop-filter 0.4s ease; }
+.nav.scrolled { background: rgba(26,26,26,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+.nav-logo .logo-text { font-size: 1.25rem; color: var(--blanco); }
+.nav-logo .logo-line { height: 2px; margin-top: 5px; }
+.nav-cta { font-family: var(--font); font-weight: 600; font-size: 0.8125rem; color: var(--blanco); background: transparent; border: 1.5px solid rgba(255,255,255,0.25); padding: 0.5rem 1.25rem; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; letter-spacing: 0.01em; }
+.nav-cta:hover { border-color: var(--verde-metrica); color: var(--verde-metrica); }
+
+/* HERO */
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: var(--s-4xl) var(--s-md); background: var(--negro-carbon); position: relative; overflow: hidden; }
+.hero-logo .logo-text { font-size: clamp(3rem, 8vw, 5.5rem); color: var(--blanco); }
+.hero-logo .logo-line { margin-top: 12px; height: 3px; }
+.hero-tagline { font-weight: 300; font-size: clamp(1.125rem, 2.5vw, 1.5rem); color: rgba(255,255,255,0.55); margin-top: var(--s-lg); letter-spacing: 0.02em; }
+.hero-scroll { position: absolute; bottom: var(--s-lg); left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.7; transition: opacity 0.3s; }
+.hero-scroll:hover { opacity: 1; }
+.hero-scroll-text { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+.hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent); animation: scrollPulse 2s ease-in-out infinite; }
+@keyframes scrollPulse { 0%, 100% { opacity: 0.3; transform: scaleY(1); } 50% { opacity: 1; transform: scaleY(1.3); } }
+
+/* QUESTIONS */
+.questions { padding: var(--s-3xl) var(--s-md); background: var(--negro-carbon); }
+.questions-pain { text-align: center; margin-bottom: var(--s-lg); }
+.pain-hook { font-family: var(--font); font-weight: 800; font-size: clamp(2rem, 5vw, 3.25rem); color: var(--blanco); letter-spacing: -0.03em; line-height: 1.15; }
+.questions-transition { text-align: center; margin-bottom: var(--s-xl); }
+.transition-text { font-family: var(--font); font-weight: 300; font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.5); letter-spacing: 0.02em; }
+.transition-arrow { font-size: 1.25rem; color: var(--verde-metrica); margin-top: var(--s-sm); opacity: 0.6; animation: arrowPulse 2s ease-in-out infinite; }
+@keyframes arrowPulse { 0%, 100% { transform: translateY(0); opacity: 0.4; } 50% { transform: translateY(6px); opacity: 0.8; } }
+.questions-closure { text-align: center; margin-top: var(--s-xl); display: flex; flex-direction: column; align-items: center; gap: var(--s-md); }
+.closure-line { font-family: var(--font); font-weight: 600; font-size: clamp(1rem, 2.5vw, 1.375rem); color: var(--blanco); letter-spacing: -0.01em; }
+.closure-cta { display: inline-block; font-family: var(--font); font-weight: 600; font-size: 0.9375rem; color: var(--blanco); background: var(--verde-metrica); padding: 0.75rem 2rem; border-radius: 8px; transition: all 0.3s ease; }
+.closure-cta:hover { background: #0EA472; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(16,185,129,0.3); }
+
+/* MOCKUP */
+.mockup-wrapper { max-width: 420px; margin: 0 auto; position: relative; padding: 4px; }
+.mockup-glow { position: absolute; inset: -60px; background: radial-gradient(ellipse at center, rgba(16,185,129,0.08) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+.iphone-frame { position: relative; z-index: 1; background: #000; border-radius: 44px; padding: 12px; box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 24px 80px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.04); }
+.iphone-notch { width: 120px; height: 28px; background: #000; border-radius: 0 0 18px 18px; margin: 0 auto -14px; position: relative; z-index: 10; }
+.iphone-home { width: 120px; height: 4px; background: rgba(255,255,255,0.25); border-radius: 2px; margin: 8px auto 4px; }
+.mockup-app { position: relative; z-index: 1; background: var(--blanco); border-radius: 32px; overflow: hidden; padding: 0 0 1rem 0; }
+.mockup-topbar { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; border-bottom: 1px solid var(--gris-linea); }
+.mockup-topbar-left { display: flex; align-items: center; gap: 0.5rem; }
+.mockup-isotipo { display: inline-flex; flex-direction: column; align-items: flex-start; }
+.mockup-iso-chars { display: flex; align-items: baseline; line-height: 1; }
+.mockup-iso-m { font-family: var(--font); font-weight: 700; font-size: 1.125rem; color: var(--negro-carbon); line-height: 1; }
+.mockup-iso-sub { font-family: var(--font); font-weight: 400; font-size: 0.5rem; color: var(--negro-carbon); line-height: 1; }
+.mockup-brand-group { display: flex; flex-direction: column; align-items: flex-start; }
+.mockup-brand-top { display: flex; align-items: baseline; gap: 0.5rem; }
+.mockup-brand-line { width: 100%; height: 1.5px; background: var(--verde-metrica); margin-top: 3px; border-radius: 1px; }
+.mockup-lockup-mini { display: flex; flex-direction: column; }
+.mockup-lockup-name { display: flex; align-items: baseline; gap: 0.12em; }
+.mockup-lockup-marca { font-family: var(--font); font-weight: 700; font-size: 0.8125rem; color: var(--negro-carbon); letter-spacing: -0.01em; }
+.mockup-lockup-prod { font-family: var(--font); font-weight: 300; font-size: 0.8125rem; color: var(--negro-carbon); text-transform: lowercase; }
+.mockup-date { font-family: var(--font); font-weight: 400; font-size: 0.75rem; color: var(--gris-acero); }
+.mockup-alert { display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0.75rem; padding: 0.5rem 0.75rem; background: #FEF2F2; border-radius: 8px; border: 1px solid #FECACA; }
+.mockup-alert-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rojo-alerta); flex-shrink: 0; }
+.mockup-alert-text { font-family: var(--font); font-weight: 500; font-size: 0.6875rem; color: var(--rojo-alerta); line-height: 1.3; }
+.mockup-alert--positive { background: #F0FDF4; border-color: #BBF7D0; }
+.mockup-alert-dot--green { background: var(--verde-metrica); }
+.mockup-alert-text--green { color: #15803D; }
+.mockup-val--green { color: var(--verde-metrica); }
+.mockup-bar--yellow { background: var(--amarillo-warning); }
+.mockup-cards { display: flex; flex-direction: column; gap: 0.5rem; padding: 0 0.75rem; margin-top: 0.5rem; }
+.mockup-card { border: 1px solid var(--gris-linea); border-radius: 10px; padding: 0.75rem; }
+.mockup-card-q { font-family: var(--font); font-weight: 600; font-size: 0.6875rem; color: var(--negro-carbon); margin-bottom: 0.25rem; }
+.mockup-card-value { font-family: var(--font); font-weight: 700; font-size: 1.0625rem; color: var(--negro-carbon); line-height: 1.2; letter-spacing: -0.02em; }
+.mockup-val--red { color: var(--rojo-alerta); }
+.mockup-card-bar { margin-top: 0.5rem; }
+.mockup-bar-track { width: 100%; height: 4px; background: var(--gris-linea); border-radius: 2px; overflow: hidden; }
+.mockup-bar-fill { height: 100%; border-radius: 2px; }
+.mockup-bar--red { background: var(--rojo-alerta); }
+.mockup-bar--green { background: var(--verde-metrica); }
+.mockup-card-detail { font-family: var(--font); font-weight: 400; font-size: 0.625rem; color: var(--gris-acero); margin-top: 0.375rem; display: flex; justify-content: space-between; }
+.mockup-card-detail span { font-weight: 500; }
+.mockup-card-row { display: flex; justify-content: space-between; align-items: center; margin-top: 0.375rem; font-family: var(--font); font-size: 0.625rem; color: var(--gris-acero); }
+.mockup-card-num { font-weight: 600; color: var(--negro-carbon); }
+.mockup-runway { margin-top: 0.625rem; position: relative; }
+.mockup-runway-track { display: flex; height: 10px; border-radius: 5px; overflow: hidden; }
+.mockup-runway-seg { height: 100%; }
+.mockup-rw--red { background: var(--rojo-alerta); }
+.mockup-rw--orange { background: #F97316; }
+.mockup-rw--yellow { background: var(--amarillo-warning); }
+.mockup-rw--green { background: var(--verde-metrica); }
+.mockup-runway-marker { position: absolute; top: -2px; width: 2px; height: 14px; background: var(--negro-carbon); border-radius: 1px; }
+.mockup-runway-labels { display: flex; justify-content: space-between; margin-top: 0.25rem; font-family: var(--font); font-size: 0.5625rem; color: var(--gris-acero); }
+
+/* BRIDGE */
+.bridge { padding: var(--s-3xl) var(--s-md); background: var(--negro-carbon); text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
+.bridge-statement { font-weight: 700; font-size: clamp(1.5rem, 4vw, 2.5rem); color: var(--blanco); line-height: 1.25; max-width: var(--max-narrow); margin: 0 auto; letter-spacing: -0.02em; }
+.bridge-sub { font-weight: 400; font-size: 1rem; color: var(--gris-acero); margin-top: var(--s-md); max-width: var(--max-text); margin-left: auto; margin-right: auto; line-height: 1.7; }
+
+/* TRANSITION */
+.transition-divider { height: 120px; background: linear-gradient(to bottom, var(--negro-carbon), var(--blanco)); }
+
+/* PRODUCT */
+.product { padding: var(--s-3xl) var(--s-md); background: var(--blanco); }
+.product-header { text-align: center; margin-bottom: var(--s-2xl); }
+.product-lockup { display: flex; justify-content: center; margin-bottom: var(--s-md); }
+.product-lockup .lockup-name { font-size: clamp(1.75rem, 4vw, 2.25rem); }
+.product-lockup .lockup-line { margin-top: 10px; height: 3px; }
+.product-label { font-weight: 700; font-size: 0.6875rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gris-acero); margin-bottom: var(--s-sm); }
+.product-headline { font-weight: 700; font-size: clamp(1.25rem, 3vw, 1.75rem); color: var(--negro-carbon); margin-top: var(--s-sm); letter-spacing: -0.01em; }
+.product-desc { font-weight: 400; font-size: 1rem; color: var(--gris-acero); margin-top: var(--s-xs); max-width: var(--max-text); margin-left: auto; margin-right: auto; line-height: 1.7; }
+.modules { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--s-md); max-width: var(--max-content); margin: 0 auto; }
+.module-card { padding: var(--s-lg); border: 1px solid var(--gris-linea); border-radius: 12px; transition: all 0.3s ease; position: relative; }
+.module-card:hover { border-color: var(--verde-metrica); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(16,185,129,0.06); }
+.module-icon { margin-bottom: var(--s-sm); line-height: 1; }
+.module-name { font-weight: 700; font-size: 1.125rem; color: var(--negro-carbon); margin-bottom: 0.5rem; }
+.module-question { font-weight: 500; font-style: italic; font-size: 0.9375rem; color: var(--verde-metrica); margin-bottom: 0.75rem; line-height: 1.4; }
+.module-desc { font-weight: 400; font-size: 0.875rem; color: var(--gris-acero); line-height: 1.6; }
+
+/* WA HIGHLIGHT */
+.wa-highlight { max-width: var(--max-content); margin: var(--s-2xl) auto 0; display: flex; align-items: center; gap: var(--s-lg); padding: var(--s-lg); background: var(--gris-fondo); border-radius: 16px; border: 1px solid var(--gris-linea); }
+.wa-highlight-badge { flex-shrink: 0; width: 56px; height: 56px; background: #25D366; border-radius: 14px; display: flex; align-items: center; justify-content: center; }
+.wa-highlight-content { flex: 1; }
+.wa-highlight-title { font-weight: 700; font-size: 1.0625rem; color: var(--negro-carbon); margin-bottom: 0.25rem; }
+.wa-highlight-desc { font-weight: 400; font-size: 0.875rem; color: var(--gris-acero); line-height: 1.6; }
+.wa-highlight-tag { display: inline-block; font-weight: 700; font-size: 0.625rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--verde-metrica); background: rgba(16,185,129,0.08); padding: 0.25rem 0.625rem; border-radius: 4px; margin-top: 0.5rem; }
+
+/* PRICING */
+.pricing { padding: var(--s-3xl) var(--s-md); background: var(--gris-fondo); }
+.pricing-header { text-align: center; margin-bottom: var(--s-2xl); }
+.pricing-title { font-weight: 800; font-size: clamp(1.75rem, 4vw, 2.5rem); color: var(--negro-carbon); letter-spacing: -0.02em; }
+.pricing-sub { font-weight: 400; font-size: 1rem; color: var(--gris-acero); margin-top: var(--s-xs); }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--s-md); max-width: 960px; margin: 0 auto; align-items: start; }
+.price-card { background: var(--blanco); border: 1px solid var(--gris-linea); border-radius: 16px; padding: var(--s-lg); position: relative; transition: all 0.3s ease; }
+.price-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.06); transform: translateY(-2px); }
+.price-card--featured { border-color: var(--verde-metrica); box-shadow: 0 0 0 1px var(--verde-metrica); }
+.price-card--featured::before { content: 'POPULAR'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--verde-metrica); color: var(--blanco); font-weight: 700; font-size: 0.625rem; letter-spacing: 0.12em; padding: 0.3rem 1rem; border-radius: 20px; }
+.price-plan { font-weight: 700; font-size: 1.125rem; color: var(--negro-carbon); }
+.price-tagline { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); margin-top: 0.25rem; line-height: 1.5; }
+.price-amount { margin-top: var(--s-md); display: flex; align-items: baseline; gap: 0.25rem; }
+.price-currency { font-weight: 600; font-size: 1rem; color: var(--negro-carbon); }
+.price-value { font-weight: 700; font-size: 2.5rem; color: var(--negro-carbon); line-height: 1; letter-spacing: -0.03em; }
+.price-period { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); }
+.price-free-label { font-weight: 700; font-size: 2.5rem; color: var(--negro-carbon); line-height: 1; margin-top: var(--s-md); }
+.price-features { list-style: none; margin-top: var(--s-md); display: flex; flex-direction: column; gap: 0.625rem; }
+.price-features li { font-weight: 400; font-size: 0.875rem; color: var(--gris-acero); display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.5; }
+.price-features li::before { content: '\2713'; font-weight: 700; color: var(--verde-metrica); flex-shrink: 0; margin-top: 1px; }
+.price-features li.disabled { opacity: 0.4; }
+.price-features li.disabled::before { content: '\2014'; color: var(--gris-acero); }
+.price-btn { display: block; width: 100%; margin-top: var(--s-md); padding: 0.875rem; font-family: var(--font); font-weight: 600; font-size: 0.9375rem; border-radius: 8px; border: none; cursor: pointer; text-align: center; transition: all 0.3s ease; }
+.price-btn--primary { background: var(--verde-metrica); color: var(--blanco); }
+.price-btn--primary:hover { background: #0EA472; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(16,185,129,0.3); }
+.price-btn--secondary { background: transparent; color: var(--negro-carbon); border: 1.5px solid var(--gris-linea); }
+.price-btn--secondary:hover { border-color: var(--negro-carbon); }
+.pricing-note { text-align: center; margin-top: var(--s-lg); font-size: 0.8125rem; color: var(--gris-acero); }
+
+/* CLARITY */
+.clarity { padding: var(--s-3xl) var(--s-md); background: var(--blanco); }
+.clarity-inner { max-width: var(--max-narrow); margin: 0 auto; text-align: center; }
+.clarity-lockup { display: flex; justify-content: center; margin-bottom: var(--s-md); }
+.clarity-lockup .lockup-name { font-size: clamp(1.75rem, 4vw, 2.25rem); }
+.clarity-lockup .lockup-line { margin-top: 10px; height: 3px; }
+.clarity-label { font-weight: 700; font-size: 0.6875rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gris-acero); margin-bottom: var(--s-sm); }
+.clarity-headline { font-weight: 700; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--negro-carbon); margin-top: var(--s-xs); letter-spacing: -0.01em; }
+.clarity-desc { font-weight: 400; font-size: 1rem; color: var(--gris-acero); margin-top: var(--s-sm); line-height: 1.7; }
+.clarity-levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--s-sm); margin-top: var(--s-xl); text-align: left; }
+.clarity-level { padding: var(--s-md); border: 1px solid var(--gris-linea); border-radius: 12px; }
+.clarity-level-name { font-weight: 700; font-size: 1rem; color: var(--negro-carbon); }
+.clarity-level-time { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); margin-top: 0.25rem; }
+.clarity-level-price { font-weight: 700; font-size: 1.25rem; color: var(--negro-carbon); margin-top: 0.75rem; }
+.clarity-level-desc { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); margin-top: 0.5rem; line-height: 1.5; }
+.clarity-cta-wrapper { margin-top: var(--s-lg); }
+.clarity-cta { display: inline-block; font-family: var(--font); font-weight: 600; font-size: 0.9375rem; color: var(--negro-carbon); border: 1.5px solid var(--negro-carbon); padding: 0.875rem 2rem; border-radius: 8px; transition: all 0.3s ease; }
+.clarity-cta:hover { background: var(--negro-carbon); color: var(--blanco); }
+
+/* PROJECTS */
+.projects-section { padding: var(--s-2xl) var(--s-md) var(--s-3xl); background: var(--blanco); text-align: center; border-top: 1px solid rgba(0,0,0,0.05); }
+.projects-inner { max-width: var(--max-narrow); margin: 0 auto; }
+.projects-lockup { margin-bottom: var(--s-md); display: flex; justify-content: center; }
+.projects-lockup .lockup-name { font-size: clamp(1.75rem, 4vw, 2.25rem); }
+.projects-lockup .lockup-line { margin-top: 10px; height: 3px; }
+.projects-label { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.15em; color: var(--gris-acero); margin-bottom: var(--s-sm); }
+.projects-headline { font-weight: 700; font-size: clamp(1.375rem, 3vw, 1.75rem); color: var(--negro-carbon); letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+.projects-desc { font-weight: 400; font-size: 0.9375rem; color: var(--gris-acero); line-height: 1.7; margin-bottom: var(--s-lg); }
+.projects-capabilities { display: flex; justify-content: center; gap: var(--s-lg); flex-wrap: wrap; margin-bottom: var(--s-lg); }
+.projects-cap { display: flex; align-items: center; gap: 0.5rem; font-family: var(--font); font-weight: 500; font-size: 0.875rem; color: var(--negro-carbon); }
+.projects-footer { display: flex; flex-direction: column; align-items: center; gap: var(--s-sm); }
+.projects-price { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); }
+.projects-cta { display: inline-block; font-family: var(--font); font-weight: 600; font-size: 0.875rem; color: var(--negro-carbon); border: 1.5px solid var(--negro-carbon); padding: 0.625rem 1.75rem; border-radius: 8px; transition: all 0.3s ease; }
+.projects-cta:hover { background: var(--negro-carbon); color: var(--blanco); }
+
+/* CREDIBILITY */
+.credibility { padding: var(--s-3xl) var(--s-md); background: var(--negro-carbon); color: var(--blanco); }
+.founder { max-width: var(--max-narrow); margin: 0 auto var(--s-2xl); display: flex; align-items: center; gap: var(--s-lg); }
+.founder-img { width: 160px; height: 160px; border-radius: 16px; object-fit: cover; filter: grayscale(20%); flex-shrink: 0; }
+.founder-info { flex: 1; }
+.founder-quote { font-weight: 700; font-size: clamp(1.375rem, 3vw, 1.75rem); color: var(--blanco); line-height: 1.25; letter-spacing: -0.02em; margin-bottom: var(--s-sm); }
+.founder-story { font-weight: 400; font-size: 0.9375rem; color: var(--gris-acero); line-height: 1.7; margin-bottom: var(--s-sm); }
+.founder-meta { display: flex; flex-direction: column; gap: 0.125rem; }
+.founder-name { font-weight: 700; font-size: 0.875rem; color: var(--blanco); }
+.founder-role { font-weight: 400; font-size: 0.75rem; color: var(--gris-acero); }
+.trust-grid { max-width: var(--max-content); margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-md); }
+.trust-card { padding: var(--s-lg); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.trust-card--afi { border-color: rgba(16,185,129,0.2); background: rgba(16,185,129,0.03); }
+.trust-afi-seal { width: 72px; margin-bottom: var(--s-sm); opacity: 0.9; }
+.trust-icon { color: var(--blanco); margin-bottom: var(--s-sm); }
+.trust-title { font-weight: 700; font-size: 1rem; color: var(--blanco); margin-bottom: 0.5rem; }
+.trust-desc { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); line-height: 1.6; }
+
+/* METHODOLOGY */
+.methodology { padding: var(--s-2xl) var(--s-md); background: var(--negro-carbon); border-top: 1px solid rgba(255,255,255,0.06); }
+.methodology-inner { max-width: var(--max-narrow); margin: 0 auto; text-align: center; }
+.methodology-tag { font-weight: 500; font-style: italic; font-size: 1.0625rem; color: var(--verde-metrica); margin-bottom: var(--s-md); }
+.methodology-text { font-weight: 400; font-size: 1rem; color: var(--gris-acero); line-height: 1.7; }
+
+/* CTA FINAL */
+.cta-final { padding: var(--s-3xl) var(--s-md); background: var(--negro-carbon); text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
+.cta-final-headline { font-weight: 800; font-size: clamp(2rem, 5vw, 3rem); color: var(--blanco); letter-spacing: -0.03em; line-height: 1.15; max-width: var(--max-narrow); margin: 0 auto; }
+.cta-final-sub { font-weight: 400; font-size: 1rem; color: var(--gris-acero); margin-top: var(--s-sm); margin-bottom: var(--s-lg); }
+.cta-btn { display: inline-block; font-family: var(--font); font-weight: 600; font-size: 1.0625rem; color: var(--blanco); background: var(--verde-metrica); padding: 1rem 2.5rem; border-radius: 10px; border: none; cursor: pointer; transition: all 0.3s ease; letter-spacing: 0.01em; }
+.cta-btn:hover { background: #0EA472; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(16,185,129,0.3); }
+.cta-note { font-size: 0.75rem; color: var(--gris-acero); margin-top: var(--s-sm); opacity: 0.7; }
+
+/* FOOTER */
+.footer { padding: var(--s-lg) var(--s-md); background: var(--negro-carbon); border-top: 1px solid rgba(255,255,255,0.06); }
+.footer-inner { max-width: var(--max-content); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s-sm); }
+.footer-logo .logo-text { font-size: 1rem; color: var(--blanco); }
+.footer-logo .logo-line { height: 2px; margin-top: 4px; }
+.footer-links { display: flex; gap: var(--s-md); align-items: center; }
+.footer-link { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); transition: color 0.2s; }
+.footer-link:hover { color: var(--blanco); }
+.footer-social { display: flex; gap: var(--s-md); margin-top: var(--s-sm); }
+.footer-social-link { color: rgba(255,255,255,0.35); transition: color 0.3s ease; }
+.footer-social-link:hover { color: var(--blanco); }
+.footer-copy { width: 100%; text-align: center; font-weight: 400; font-size: 0.75rem; color: rgba(107,114,128,0.5); margin-top: var(--s-sm); padding-top: var(--s-sm); border-top: 1px solid rgba(255,255,255,0.04); }
+.footer-legal { width: 100%; text-align: center; margin-top: 0.5rem; }
+.footer-link--legal { font-size: 0.6875rem; opacity: 0.5; }
+.footer-link--legal:hover { opacity: 1; }
+
+/* ANIMATIONS */
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.hero-logo { opacity: 0; transform: scale(0.95); animation: heroEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; }
+.hero-tagline { opacity: 0; animation: heroFade 0.8s ease 0.8s forwards; }
+.hero-scroll { opacity: 0; animation: heroFade 0.8s ease 1.4s forwards; }
+@keyframes heroEntrance { to { opacity: 1; transform: scale(1); } }
+@keyframes heroFade { to { opacity: 1; } }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .section { padding: var(--s-2xl) var(--s-md); }
+  .hero { padding: var(--s-3xl) var(--s-md); }
+  .founder { flex-direction: column; text-align: center; }
+  .founder-img { width: 140px; height: 140px; }
+  .founder-meta { align-items: center; }
+  .trust-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .bridge-stats { gap: var(--s-lg); }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .clarity-levels { grid-template-columns: 1fr; }
+  .modules { grid-template-columns: 1fr; }
+  .wa-highlight { flex-direction: column; text-align: center; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .transition-divider { height: 80px; }
+}
+@media (max-width: 480px) {
+  .bridge-stats { flex-direction: column; gap: var(--s-md); }
+}
+</style>
 </head>
 <body>
-    <div id="root"></div>
 
-    <script type="text/babel">
-        const { useState, useEffect, useRef } = React;
-
-        const kebabToPascal = (str) => {
-            return str.split('-').map(part => {
-                if (!isNaN(part)) return part;
-                return part.charAt(0).toUpperCase() + part.slice(1);
-            }).join('');
-        };
-
-        const Icon = ({ name, size = 24, className = "", fill = "none" }) => {
-            const iconRef = useRef(null);
-
-            useEffect(() => {
-                if (iconRef.current && window.lucide) {
-                    iconRef.current.innerHTML = '';
-                    const pascalName = kebabToPascal(name);
-                    const iconData = window.lucide.icons[pascalName];
-                    if (iconData) {
-                        const iconElement = window.lucide.createElement(iconData);
-                        if (iconElement) {
-                            iconElement.setAttribute('width', size);
-                            iconElement.setAttribute('height', size);
-                            if (fill !== "none") {
-                                iconElement.setAttribute('fill', fill);
-                            }
-                            iconRef.current.appendChild(iconElement);
-                        }
-                    }
-                }
-            }, [name, size, fill]);
-
-            return <span ref={iconRef} className={`inline-flex items-center justify-center ${className}`}></span>;
-        };
-
-        const App = () => {
-            const [isMenuOpen, setIsMenuOpen] = useState(false);
-            const [isModalOpen, setIsModalOpen] = useState(false);
-            const [scrolled, setScrolled] = useState(false);
-
-            const useScrollVisibility = () => {
-                const [isVisible, setIsVisible] = useState(false);
-                const domRef = useRef();
-
-                useEffect(() => {
-                    const currentElement = domRef.current;
-                    if (!currentElement) return;
-
-                    const observer = new IntersectionObserver(
-                        entries => {
-                            entries.forEach(entry => {
-                                if (entry.isIntersecting) {
-                                    setIsVisible(true);
-                                    // Desconectar después de ser visible (once: true)
-                                    observer.unobserve(currentElement);
-                                }
-                            });
-                        },
-                        { threshold: 0.1, rootMargin: '50px' }
-                    );
-
-                    observer.observe(currentElement);
-                    return () => observer.disconnect();
-                }, []);
-
-                return [isVisible, domRef];
-            };
-
-            useEffect(() => {
-                const handleScroll = () => {
-                    setScrolled(window.scrollY > 20);
-                };
-                window.addEventListener('scroll', handleScroll);
-                return () => window.removeEventListener('scroll', handleScroll);
-            }, []);
-
-            const scrollToSection = (e, id) => {
-                e.preventDefault();
-                setIsMenuOpen(false);
-                const element = document.getElementById(id);
-                if (element) {
-                    const headerOffset = 100;
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
-                }
-            };
-
-            const FadeInSection = ({ children, className = "", delay = '0', noSlide = false }) => {
-                const [isVisible, domRef] = useScrollVisibility();
-                const slideClass = noSlide
-                    ? (isVisible ? 'opacity-100' : 'opacity-0')
-                    : (isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10');
-                return (
-                    <div
-                        ref={domRef}
-                        className={`transition-all duration-1000 ease-out transform ${slideClass} ${className}`}
-                        style={{ transitionDelay: `${delay}ms` }}
-                    >
-                        {children}
-                    </div>
-                );
-            };
-
-            const ContactForm = () => {
-                const [formStatus, setFormStatus] = useState('idle');
-
-                const handleSubmit = async (e) => {
-                    e.preventDefault();
-                    setFormStatus('sending');
-
-                    const formData = new FormData(e.target);
-                    const data = Object.fromEntries(formData.entries());
-
-                    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgvgjppn';
-
-                    try {
-                        if (FORMSPREE_ENDPOINT.includes('TU_ID_AQUI')) {
-                            const text = `Hola Mauricio, soy *${data.nombre}*.%0A%0AMi número es: ${data.telefono}%0AEmail: ${data.email || 'No especificado'}%0A%0AQuiero saber más sobre MéTRIK.`;
-                            const waUrl = `https://wa.me/573159509103?text=${text}`;
-                            await new Promise(resolve => setTimeout(resolve, 800));
-                            window.open(waUrl, '_blank');
-                            setFormStatus('success');
-                        } else {
-                            const response = await fetch(FORMSPREE_ENDPOINT, {
-                                method: 'POST',
-                                body: JSON.stringify(data),
-                                headers: { 'Accept': 'application/json' }
-                            });
-                            if (!response.ok) throw new Error("Error al enviar");
-                            setFormStatus('success');
-                        }
-                    } catch (error) {
-                        console.error("Error:", error);
-                        setFormStatus('error');
-                    }
-                };
-
-                if (formStatus === 'success') {
-                    return (
-                        <div className="bg-green-50 p-8 rounded-xl border border-green-100 text-center animate-in">
-                            <div className="w-16 h-16 bg-green-100 text-[#10B981] rounded-full flex items-center justify-center mx-auto mb-4">
-                                <Icon name="check" size={32} />
-                            </div>
-                            <h4 className="font-montserrat font-bold text-xl text-[#1A1A1A] mb-2">¡Recibido!</h4>
-                            <p className="text-gray-600">Hemos recibido tus datos correctamente. Mauricio los revisará y te contactará pronto.</p>
-                            <button onClick={() => setFormStatus('idle')} className="mt-4 text-sm text-[#10B981] font-semibold underline">Enviar otro</button>
-                        </div>
-                    );
-                }
-
-                if (formStatus === 'error') {
-                    return (
-                        <div className="bg-red-50 p-8 rounded-xl border border-red-100 text-center animate-in">
-                            <h4 className="font-montserrat font-bold text-xl text-red-600 mb-2">Ups, algo falló.</h4>
-                            <p className="text-gray-600 mb-4">Hubo un problema de conexión. Por favor escríbenos directamente al WhatsApp.</p>
-                            <button onClick={() => setFormStatus('idle')} className="bg-red-100 text-red-700 px-4 py-2 rounded-lg font-bold">Intentar de nuevo</button>
-                        </div>
-                    );
-                }
-
-                return (
-                    <form onSubmit={handleSubmit} className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100">
-                        <h4 className="font-montserrat font-bold text-xl text-[#1A1A1A] mb-1">¿Prefieres que te llamemos?</h4>
-                        <p className="text-sm text-gray-500 mb-6">Déjanos tus datos. Cero spam, promesa.</p>
-
-                        <div className="space-y-4">
-                            <div className="relative">
-                                <span className="absolute left-3 top-3.5 text-gray-400"><Icon name="user" size={18} /></span>
-                                <input required name="nombre" type="text" placeholder="Tu Nombre" className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#10B981] focus:border-transparent outline-none transition-all text-gray-900" />
-                            </div>
-
-                            <div className="relative">
-                                <span className="absolute left-3 top-3.5 text-gray-400"><Icon name="phone" size={18} /></span>
-                                <input required name="telefono" type="tel" placeholder="Número de Celular" className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#10B981] focus:border-transparent outline-none transition-all text-gray-900" />
-                            </div>
-
-                            <div className="relative">
-                                <span className="absolute left-3 top-3.5 text-gray-400"><Icon name="mail" size={18} /></span>
-                                <input name="email" type="email" placeholder="Correo (Opcional)" className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#10B981] focus:border-transparent outline-none transition-all text-gray-900" />
-                            </div>
-
-                            <label className="flex items-start gap-3 text-sm text-gray-400">
-                                <input type="checkbox" name="acepta_politica" required className="mt-1 accent-[#10B981] w-4 h-4 cursor-pointer" />
-                                <span>Acepto la <a href="/privacidad" target="_blank" className="text-[#10B981] underline hover:no-underline">Política de Tratamiento de Datos</a> y autorizo a MéTRIK a contactarme.</span>
-                            </label>
-
-                            <button type="submit" disabled={formStatus === 'sending'} className="w-full bg-[#1A1A1A] text-white font-bold py-3 rounded-lg hover:bg-[#10B981] transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
-                                {formStatus === 'sending' ? 'Enviando...' : (<>Solicitar Contacto <Icon name="send" size={18} /></>)}
-                            </button>
-                        </div>
-                    </form>
-                );
-            };
-
-            const CalendlyModal = () => {
-                if (!isModalOpen) return null;
-                return (
-                    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-in duration-300">
-                        <div className="bg-white rounded-xl w-full max-w-4xl h-[90vh] overflow-hidden relative shadow-2xl flex flex-col">
-                            <div className="p-4 border-b border-gray-100 flex justify-between items-center bg-gray-50 shrink-0">
-                                <h3 className="font-montserrat font-bold text-lg text-gray-800">Agenda tu diagnóstico gratis</h3>
-                                <button onClick={() => setIsModalOpen(false)} className="p-2 hover:bg-gray-200 rounded-full transition-colors">
-                                    <Icon name="x" size={24} className="text-gray-500" />
-                                </button>
-                            </div>
-                            <div className="flex-1 w-full h-full bg-white relative">
-                                <iframe src="https://calendly.com/mauricio-moreno-metrik/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=10b981" width="100%" height="100%" frameBorder="0" title="Calendly Scheduling" className="absolute inset-0 w-full h-full"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                );
-            };
-
-            const NavLink = ({ to, children, mobile }) => (
-                <a href={`#${to}`} onClick={(e) => scrollToSection(e, to)} className={`font-montserrat font-medium hover:text-[#10B981] transition-colors cursor-pointer ${mobile ? 'block text-xl py-4 border-b border-gray-100 text-center w-full text-gray-800' : 'text-sm text-gray-600'}`}>
-                    {children}
-                </a>
-            );
-
-            // Las 5 preguntas financieras
-            const fiveQuestions = [
-                { num: "1", question: "¿Cuánta plata tengo?", icon: "wallet", color: "bg-emerald-500" },
-                { num: "2", question: "¿Estoy ganando?", icon: "trending-up", color: "bg-blue-500" },
-                { num: "3", question: "¿Cuánto me queda de cada venta?", icon: "percent", color: "bg-purple-500" },
-                { num: "4", question: "¿Cuánto debo vender mínimo?", icon: "target", color: "bg-orange-500" },
-                { num: "5", question: "¿Cuánto aguanto sin vender?", icon: "clock", color: "bg-red-500" }
-            ];
-
-            return (
-                <div className="font-sans text-[#1A1A1A] antialiased overflow-x-hidden w-full selection:bg-[#10B981] selection:text-white">
-                    <CalendlyModal />
-
-                    {/* --- HEADER --- */}
-                    <header className={`fixed top-0 w-full z-50 bg-white py-3 ${scrolled ? 'shadow-md' : ''}`}>
-                        <div className="container mx-auto px-6 flex justify-between items-center relative">
-                            <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center gap-2 group z-50">
-                                <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Logo_Mk.png" alt="MéTRIK Logo" className="h-10 md:h-12 w-auto object-contain hover:scale-105 transition-transform" />
-                            </a>
-
-                            <nav className="hidden md:flex items-center gap-8">
-                                <NavLink to="problema">El Problema</NavLink>
-                                <NavLink to="entregable">La Solución</NavLink>
-                                <NavLink to="nosotros">Quién Soy</NavLink>
-                                <button onClick={() => setIsModalOpen(true)} className="bg-[#10B981] hover:bg-emerald-400 text-white px-5 py-2 rounded-lg font-montserrat font-semibold transition-all duration-300 shadow-lg hover:shadow-[#10B981]/30 transform hover:-translate-y-0.5 text-sm">
-                                    Agendar Diagnóstico
-                                </button>
-                            </nav>
-
-                            <button className="md:hidden z-50 p-2 focus:outline-none text-gray-800" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                                {isMenuOpen ? <Icon name="x" size={28} /> : <Icon name="menu" size={28} />}
-                            </button>
-                        </div>
-
-                        <div className={`fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-center items-center px-8 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                            <div className="w-full max-w-sm space-y-4 flex flex-col items-center">
-                                <NavLink to="problema" mobile>El Problema</NavLink>
-                                <NavLink to="entregable" mobile>La Solución</NavLink>
-                                <NavLink to="nosotros" mobile>Quién Soy</NavLink>
-                                <button onClick={() => { setIsModalOpen(true); setIsMenuOpen(false); }} className="bg-[#10B981] text-white w-full py-4 rounded-xl font-bold text-lg shadow-lg mt-6">
-                                    Agendar Diagnóstico
-                                </button>
-                            </div>
-                        </div>
-                    </header>
-
-                    <main>
-                        {/* --- HERO: LAS 5 PREGUNTAS --- */}
-                        <section className="min-h-screen flex items-center justify-center px-6 pt-24 pb-16 bg-gradient-to-b from-[#1A1A1A] to-[#2d2d2d] text-white relative overflow-hidden">
-                            {/* Background effects */}
-                            <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#10B981]/10 rounded-full filter blur-[120px]"></div>
-                            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-[#10B981]/5 rounded-full filter blur-[120px]"></div>
-
-                            <div className="max-w-5xl mx-auto text-center relative z-10">
-                                <FadeInSection noSlide>
-                                    <span className="inline-block py-1 px-4 rounded-full bg-white/10 text-[#10B981] font-semibold text-xs tracking-wider mb-8 border border-white/10">
-                                        PARA DUEÑOS DE PYMES EN COLOMBIA
-                                    </span>
-
-                                    <h1 className="font-montserrat font-bold text-3xl md:text-5xl lg:text-6xl leading-tight mb-6 tracking-tight">
-                                        Las <span className="text-[#10B981]">5 preguntas</span> que definen si tu negocio está sano
-                                    </h1>
-
-                                    <p className="font-montserrat text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-                                        Si no puedes responderlas <strong className="text-white">HOY</strong>, empecemos por ahí.
-                                    </p>
-                                </FadeInSection>
-
-                                {/* Las 5 preguntas */}
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
-                                    {fiveQuestions.map((item, index) => (
-                                        <FadeInSection key={index} delay={index * 100} noSlide className="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-all duration-300 group">
-                                            <div className={`w-10 h-10 ${item.color} rounded-lg flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition-transform`}>
-                                                <Icon name={item.icon} size={20} className="text-white" />
-                                            </div>
-                                            <p className="font-montserrat font-semibold text-sm text-white leading-snug">
-                                                {item.question}
-                                            </p>
-                                        </FadeInSection>
-                                    ))}
-                                </div>
-
-                                <FadeInSection delay="500" noSlide>
-                                    <button onClick={() => setIsModalOpen(true)} className="bg-[#10B981] text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-emerald-400 transition-all duration-300 shadow-[0_0_40px_rgba(16,185,129,0.3)] hover:shadow-[0_0_60px_rgba(16,185,129,0.4)] transform hover:-translate-y-1">
-                                        Diagnóstico Gratis - 30 minutos
-                                    </button>
-                                    <p className="text-gray-500 text-sm mt-4">Sin compromiso. Sin costo.</p>
-                                </FadeInSection>
-                            </div>
-                        </section>
-
-                        {/* --- SECCION PROBLEMA --- */}
-                        <section id="problema" className="py-24 px-6 bg-white">
-                            <div className="container mx-auto max-w-6xl">
-                                <FadeInSection className="text-center mb-16">
-                                    <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-[#1A1A1A] mb-4">
-                                        Tomas decisiones <span className="text-[#10B981]">sin ver</span> los números reales
-                                    </h2>
-                                </FadeInSection>
-
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                                    <FadeInSection className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
-                                        <div className="h-12 w-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
-                                            <Icon name="eye-off" size={24} className="text-red-500" />
-                                        </div>
-                                        <h4 className="font-montserrat font-bold text-xl mb-3">Vuelas a ciegas</h4>
-                                        <p className="text-gray-500 text-sm">No sabes si el mes fue bueno hasta que el contador te dice semanas después.</p>
-                                    </FadeInSection>
-
-                                    <FadeInSection delay="100" className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
-                                        <div className="h-12 w-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
-                                            <Icon name="file-spreadsheet" size={24} className="text-orange-500" />
-                                        </div>
-                                        <h4 className="font-montserrat font-bold text-xl mb-3">Excel infinito</h4>
-                                        <p className="text-gray-500 text-sm">Pasas horas armando reportes que nadie entiende.</p>
-                                    </FadeInSection>
-
-                                    <FadeInSection delay="200" className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
-                                        <div className="h-12 w-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
-                                            <Icon name="users" size={24} className="text-purple-500" />
-                                        </div>
-                                        <h4 className="font-montserrat font-bold text-xl mb-3">Cada quien tiene su versión</h4>
-                                        <p className="text-gray-500 text-sm">Ventas dice una cosa, operaciones otra, y tú no sabes cuál creer.</p>
-                                    </FadeInSection>
-                                </div>
-                            </div>
-                        </section>
-
-                        {/* --- SECCION TU SITUACION --- */}
-                        <section className="py-24 px-6 bg-[#F9FAFB]">
-                            <div className="container mx-auto max-w-6xl">
-                                <FadeInSection className="text-center mb-16">
-                                    <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-[#1A1A1A] mb-4">
-                                        ¿Dónde estás hoy?
-                                    </h2>
-                                </FadeInSection>
-
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                                    <FadeInSection className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-[#10B981]/30">
-                                        <div className="text-4xl mb-4">🧠</div>
-                                        <h4 className="font-montserrat font-bold text-xl mb-3 text-[#1A1A1A]">"Opero de memoria"</h4>
-                                        <p className="text-gray-500 text-sm mb-4">No tengo sistema. Las cosas funcionan porque yo estoy encima de todo.</p>
-                                        <div className="pt-4 border-t border-gray-100">
-                                            <p className="text-xs text-[#10B981] font-semibold uppercase tracking-wider mb-1">Lo que necesitas:</p>
-                                            <p className="text-sm text-gray-700 font-medium">Construir la estructura desde cero</p>
-                                        </div>
-                                    </FadeInSection>
-
-                                    <FadeInSection delay="100" className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-[#10B981]/30">
-                                        <div className="text-4xl mb-4">📊</div>
-                                        <h4 className="font-montserrat font-bold text-xl mb-3 text-[#1A1A1A]">"Tengo datos por todos lados"</h4>
-                                        <p className="text-gray-500 text-sm mb-4">Excel aquí, WhatsApp allá, cuadernos por otro lado. Consolidar todo toma días.</p>
-                                        <div className="pt-4 border-t border-gray-100">
-                                            <p className="text-xs text-[#10B981] font-semibold uppercase tracking-wider mb-1">Lo que necesitas:</p>
-                                            <p className="text-sm text-gray-700 font-medium">Organizar y conectar lo que ya tienes</p>
-                                        </div>
-                                    </FadeInSection>
-
-                                    <FadeInSection delay="200" className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-[#10B981]/30">
-                                        <div className="text-4xl mb-4">🖥️</div>
-                                        <h4 className="font-montserrat font-bold text-xl mb-3 text-[#1A1A1A]">"Tengo sistemas pero no veo nada"</h4>
-                                        <p className="text-gray-500 text-sm mb-4">ERP, software contable, CRM... pero cuando necesito un número, nadie sabe.</p>
-                                        <div className="pt-4 border-t border-gray-100">
-                                            <p className="text-xs text-[#10B981] font-semibold uppercase tracking-wider mb-1">Lo que necesitas:</p>
-                                            <p className="text-sm text-gray-700 font-medium">Convertir tus datos en respuestas claras</p>
-                                        </div>
-                                    </FadeInSection>
-                                </div>
-
-                                <FadeInSection delay="300" className="text-center">
-                                    <p className="text-gray-600 text-lg mb-6">En 30 minutos identificamos tu escenario y te proponemos el camino.</p>
-                                    <button onClick={() => setIsModalOpen(true)} className="bg-[#10B981] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-400 transition-all duration-300 shadow-lg hover:shadow-[#10B981]/30">
-                                        Agendar Diagnóstico Gratis
-                                    </button>
-                                </FadeInSection>
-                            </div>
-                        </section>
-
-                        {/* --- SECCION ENTREGABLE (QUE ES METRIK) --- */}
-                        <section id="entregable" className="py-24 px-6 bg-white">
-                            <div className="container mx-auto max-w-5xl">
-                                <FadeInSection className="text-center mb-16">
-                                    <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-[#1A1A1A] mb-6">
-                                        Qué te entregamos
-                                    </h2>
-                                    <p className="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
-                                        Tus números claros. En una pantalla. Actualizados.<br />
-                                        <strong className="text-[#1A1A1A]">Sin depender de nadie para entender cómo va tu negocio.</strong>
-                                    </p>
-                                </FadeInSection>
-
-                                {/* What it IS and ISN'T */}
-                                <FadeInSection className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                                    {/* What it IS */}
-                                    <div className="bg-[#10B981]/5 p-8 rounded-2xl border border-[#10B981]/20">
-                                        <h3 className="font-montserrat font-bold text-xl text-[#1A1A1A] mb-6 flex items-center gap-2">
-                                            <span className="text-[#10B981]">✓</span> Qué SÍ es MéTRIK
-                                        </h3>
-                                        <div className="space-y-4">
-                                            {[
-                                                "Tus 5 respuestas financieras en un solo lugar",
-                                                "Actualizado con tus datos reales",
-                                                "100% tuyo, sin pagos mensuales",
-                                                "Acceso desde cualquier dispositivo",
-                                                "Capacitación incluida"
-                                            ].map((item, index) => (
-                                                <div key={index} className="flex items-start gap-3">
-                                                    <span className="text-[#10B981] mt-0.5"><Icon name="check" size={18} /></span>
-                                                    <span className="text-gray-700">{item}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    {/* What it's NOT */}
-                                    <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
-                                        <h3 className="font-montserrat font-bold text-xl text-[#1A1A1A] mb-6 flex items-center gap-2">
-                                            <span className="text-red-400">✗</span> Qué NO es MéTRIK
-                                        </h3>
-                                        <div className="space-y-4">
-                                            {[
-                                                "No es un ERP",
-                                                "No es software genérico",
-                                                "No es consultoría de 6 meses",
-                                                "No son reportes PDF que nadie lee",
-                                                "No reemplaza a tu contador"
-                                            ].map((item, index) => (
-                                                <div key={index} className="flex items-start gap-3">
-                                                    <span className="text-red-400 mt-0.5"><Icon name="x" size={18} /></span>
-                                                    <span className="text-gray-500">{item}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </FadeInSection>
-
-                                {/* CTA */}
-                                <FadeInSection className="text-center">
-                                    <button onClick={() => setIsModalOpen(true)} className="bg-[#10B981] text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-emerald-400 transition-all duration-300 shadow-lg hover:shadow-[#10B981]/30">
-                                        Diagnóstico Gratis - 30 minutos
-                                    </button>
-                                </FadeInSection>
-                            </div>
-                        </section>
-
-                        {/* --- SECCION COMO FUNCIONA --- */}
-                        <section id="proceso" className="py-24 px-6 bg-[#F9FAFB]">
-                            <div className="container mx-auto max-w-5xl">
-                                <FadeInSection className="text-center mb-16">
-                                    <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-[#1A1A1A] mb-4">
-                                        Cómo Funciona
-                                    </h2>
-                                </FadeInSection>
-
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                                    <FadeInSection className="text-center">
-                                        <div className="w-16 h-16 bg-[#10B981] rounded-2xl flex items-center justify-center mx-auto mb-6">
-                                            <Icon name="message-circle" size={32} className="text-white" />
-                                        </div>
-                                        <h3 className="font-montserrat font-bold text-xl text-[#1A1A1A] mb-3">DIAGNÓSTICO</h3>
-                                        <p className="text-gray-600">30 minutos para entender dónde estás hoy. Sin compromiso.</p>
-                                    </FadeInSection>
-
-                                    <FadeInSection delay="100" className="text-center">
-                                        <div className="w-16 h-16 bg-[#10B981] rounded-2xl flex items-center justify-center mx-auto mb-6">
-                                            <Icon name="settings" size={32} className="text-white" />
-                                        </div>
-                                        <h3 className="font-montserrat font-bold text-xl text-[#1A1A1A] mb-3">CONSTRUCCIÓN</h3>
-                                        <p className="text-gray-600">Ordenamos tu información. Conectamos tus fuentes.</p>
-                                    </FadeInSection>
-
-                                    <FadeInSection delay="200" className="text-center">
-                                        <div className="w-16 h-16 bg-[#10B981] rounded-2xl flex items-center justify-center mx-auto mb-6">
-                                            <Icon name="package" size={32} className="text-white" />
-                                        </div>
-                                        <h3 className="font-montserrat font-bold text-xl text-[#1A1A1A] mb-3">ENTREGA</h3>
-                                        <p className="text-gray-600">Tu claridad funcionando. Capacitación incluida.</p>
-                                    </FadeInSection>
-                                </div>
-
-                                <FadeInSection delay="300" className="text-center">
-                                    <p className="text-gray-700 text-lg mb-6 font-medium">Empecemos por el diagnóstico</p>
-                                    <button onClick={() => setIsModalOpen(true)} className="bg-[#10B981] text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-emerald-400 transition-all duration-300 shadow-lg hover:shadow-[#10B981]/30">
-                                        Agendar Gratis - 30 min
-                                    </button>
-                                </FadeInSection>
-                            </div>
-                        </section>
-
-                        {/* --- SECCION CONFIANZA COMERCIAL --- */}
-                        <section className="py-24 px-6 bg-[#1A1A1A] text-white">
-                            <div className="container mx-auto max-w-5xl">
-                                <FadeInSection className="text-center mb-16">
-                                    <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-4">
-                                        Tu información no sale de aquí
-                                    </h2>
-                                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                                        Sabemos que abrir los números de tu negocio requiere confianza.<br />
-                                        Por eso trabajamos así:
-                                    </p>
-                                </FadeInSection>
-
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                                    <FadeInSection className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300">
-                                        <div className="w-14 h-14 bg-[#10B981] rounded-xl flex items-center justify-center mx-auto mb-5">
-                                            <Icon name="file-signature" size={28} className="text-white" />
-                                        </div>
-                                        <h3 className="font-montserrat font-bold text-lg mb-3">Primero la firma, después los datos</h3>
-                                        <p className="text-gray-400 text-sm leading-relaxed">Firmamos compromiso de confidencialidad antes de que nos muestres un solo número.</p>
-                                    </FadeInSection>
-
-                                    <FadeInSection delay="100" className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300">
-                                        <div className="w-14 h-14 bg-[#10B981] rounded-xl flex items-center justify-center mx-auto mb-5">
-                                            <Icon name="lock" size={28} className="text-white" />
-                                        </div>
-                                        <h3 className="font-montserrat font-bold text-lg mb-3">Tu información es solo tuya</h3>
-                                        <p className="text-gray-400 text-sm leading-relaxed">No compartimos con terceros. Nunca. Ni con socios, ni con "partners estratégicos", ni con nadie.</p>
-                                    </FadeInSection>
-
-                                    <FadeInSection delay="200" className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300">
-                                        <div className="w-14 h-14 bg-[#10B981] rounded-xl flex items-center justify-center mx-auto mb-5">
-                                            <Icon name="trash-2" size={28} className="text-white" />
-                                        </div>
-                                        <h3 className="font-montserrat font-bold text-lg mb-3">Tú decides qué pasa al final</h3>
-                                        <p className="text-gray-400 text-sm leading-relaxed">Cuando terminamos, tú eliges: te entregamos todo o lo eliminamos. Sin letra pequeña.</p>
-                                    </FadeInSection>
-                                </div>
-
-                                <FadeInSection delay="300" className="text-center">
-                                    <p className="text-gray-300 text-base italic mb-8">
-                                        10 años manejando información sensible de operaciones con +300 empleados.<br />
-                                        Tu negocio está en buenas manos.
-                                    </p>
-
-                                    <div className="flex flex-col items-center gap-3 mb-8">
-                                        <a href="https://www.afiinternationalgroup.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                                            <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Custodia_AFI.png" alt="Sello Custodia AFI International Group" className="h-20 w-auto" />
-                                        </a>
-                                        <p className="text-gray-400 text-xs">Respaldados por AFI International Group</p>
-                                    </div>
-
-                                    <a href="/confianza" className="inline-flex items-center gap-2 text-[#10B981] font-semibold hover:underline text-sm">
-                                        Ver nuestra política completa
-                                        <Icon name="arrow-right" size={16} />
-                                    </a>
-                                </FadeInSection>
-                            </div>
-                        </section>
-
-                        {/* --- SECCION BIO --- */}
-                        <section id="nosotros" className="py-24 px-6 bg-white">
-                            <div className="container mx-auto max-w-5xl flex flex-col md:flex-row items-center gap-16">
-                                <FadeInSection className="w-full md:w-1/2 relative">
-                                    <div className="absolute top-4 left-4 w-full h-full border-2 border-[#10B981] rounded-2xl transform translate-x-4 translate-y-4"></div>
-                                    <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Founder_Mk.png" alt="Mauricio Moreno" className="relative rounded-2xl shadow-2xl w-full h-[500px] object-cover filter grayscale hover:grayscale-0 transition-all duration-500" loading="lazy" />
-                                </FadeInSection>
-
-                                <FadeInSection className="w-full md:w-1/2 space-y-6">
-                                    <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-[#1A1A1A]">Quién está detrás</h2>
-
-                                    <div className="space-y-4 text-lg text-gray-600 font-montserrat leading-relaxed">
-                                        <p>Fui <strong className="text-gray-900">Gerente de Operaciones</strong>. Manejé más de 20 ubicaciones y equipos de 300 personas. Sé lo que es tener que reportar a junta directiva sin datos claros.</p>
-                                        <p>Hoy ayudo a dueños de negocio a tener la claridad que yo siempre quise.</p>
-                                    </div>
-
-                                    <div className="flex items-center gap-4 pt-4">
-                                        <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png" alt="MéTRIK" className="h-12 w-12 object-contain" />
-                                        <div>
-                                            <p className="font-bold text-[#1A1A1A] text-lg">Mauricio Moreno</p>
-                                            <p className="text-[#10B981] font-medium text-sm">Fundador, MéTRIK</p>
-                                        </div>
-                                    </div>
-                                </FadeInSection>
-                            </div>
-                        </section>
-
-                        {/* --- CTA FINAL --- */}
-                        <section className="py-24 px-6 bg-[#1A1A1A] text-white relative overflow-hidden">
-                            <div className="absolute inset-0 bg-[linear-gradient(rgba(16,185,129,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-
-                            <div className="container mx-auto max-w-6xl relative z-10">
-                                <div className="flex flex-col lg:flex-row gap-16 items-center">
-                                    <FadeInSection className="w-full lg:w-1/2 text-center lg:text-left">
-                                        <h2 className="font-montserrat font-bold text-4xl md:text-5xl mb-6 leading-tight">
-                                            ¿Listo para ver tus números?
-                                        </h2>
-                                        <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                                            30 minutos. Sin compromiso. Sin costo.
-                                        </p>
-
-                                        <button onClick={() => setIsModalOpen(true)} className="w-full sm:w-auto bg-[#10B981] text-white px-10 py-4 rounded-xl font-bold text-xl hover:bg-emerald-400 transition-all duration-300 shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)] transform hover:-translate-y-1 mb-6 lg:mb-0">
-                                            Agendar Diagnóstico Gratis
-                                        </button>
-
-                                        <p className="mt-6 text-sm text-gray-400">También puedes escribirnos: <a href="https://wa.me/573159509103" className="text-[#10B981] hover:underline">+57 315 950 9103</a></p>
-                                    </FadeInSection>
-
-                                    <FadeInSection className="w-full lg:w-1/2" delay="200">
-                                        <ContactForm />
-                                    </FadeInSection>
-                                </div>
-                            </div>
-                        </section>
-                    </main>
-
-                    {/* --- FOOTER --- */}
-                    <footer className="bg-white py-12 border-t border-gray-100">
-                        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-                            <div className="flex flex-col items-center md:items-start">
-                                <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Logo_Mk.png" alt="MéTRIK Logo" className="h-8 md:h-10 w-auto object-contain opacity-80 mb-2" />
-                            </div>
-
-                            <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-center">
-                                <a href="/confianza" className="text-gray-500 hover:text-[#10B981] transition-colors text-sm font-medium">
-                                    Cómo trabajamos
-                                </a>
-                                <a href="/confianza#datos" className="text-gray-500 hover:text-[#10B981] transition-colors text-sm font-medium">
-                                    Política de datos
-                                </a>
-                                <a href="https://wa.me/573159509103" className="text-gray-500 hover:text-[#10B981] transition-colors text-sm font-medium">
-                                    Contacto
-                                </a>
-                            </div>
-                        </div>
-
-                        {/* Redes Sociales */}
-                        <div className="flex justify-center gap-6 mt-8">
-                            <a href="https://www.linkedin.com/company/m%C3%A9trik/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#10B981] transition-colors" aria-label="LinkedIn">
-                                <Icon name="linkedin" size={22} />
-                            </a>
-                            <a href="https://www.instagram.com/metrik.negocios" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#10B981] transition-colors" aria-label="Instagram">
-                                <Icon name="instagram" size={22} />
-                            </a>
-                            <a href="https://www.tiktok.com/@metrik.negocios" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#10B981] transition-colors" aria-label="TikTok">
-                                <svg className="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                                </svg>
-                            </a>
-                        </div>
-
-                        <div className="text-center mt-8 text-xs text-gray-400 font-montserrat">
-                            © 2025 MéTRIK | Bogotá, Colombia
-                        </div>
-                    </footer>
-
-                    {/* --- FLOATING WHATSAPP --- */}
-                    <a href="https://wa.me/573159509103?text=Hola,%20vi%20tu%20página%20y%20me%20gustaría%20saber%20más%20sobre%20MéTRIK..." target="_blank" rel="noopener noreferrer" className="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#20bd5a] transition-all duration-300 z-40 hover:scale-110 flex items-center justify-center group" aria-label="Contactar por WhatsApp">
-                        <Icon name="message-circle" size={28} fill="white" className="group-hover:animate-bounce" />
-                        <span className="absolute right-full mr-4 bg-white text-gray-800 text-xs font-bold px-3 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">
-                            ¿Hablamos?
-                        </span>
-                    </a>
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">
+    <div class="logo logo--light">
+      <span class="logo-text">MéTRIK</span>
+      <div class="logo-line"></div>
+    </div>
+  </a>
+  <a href="#pricing" class="nav-cta">Probar gratis</a>
+</nav>
+
+<section class="hero" id="hero">
+  <div class="hero-logo">
+    <div class="logo logo--light">
+      <span class="logo-text">MéTRIK</span>
+      <div class="logo-line"></div>
+    </div>
+  </div>
+  <p class="hero-tagline">De caos a claridad.</p>
+  <div class="hero-scroll">
+    <span class="hero-scroll-text">Descubre</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<section class="questions" id="questions">
+  <div class="questions-pain fade-up">
+    <p class="pain-hook">¿Cuánto ganas de verdad?</p>
+  </div>
+  <div class="questions-transition fade-up">
+    <p class="transition-text">Así se ve cuando lo sabes.</p>
+    <div class="transition-arrow">&#8595;</div>
+  </div>
+  <div class="mockup-wrapper fade-up">
+    <div class="iphone-frame">
+      <div class="iphone-notch"></div>
+      <div class="mockup-app">
+        <div class="mockup-topbar">
+          <div class="mockup-topbar-left">
+            <div class="mockup-brand-group">
+              <div class="mockup-brand-top">
+                <div class="mockup-isotipo">
+                  <div class="mockup-iso-chars">
+                    <span class="mockup-iso-m">M</span><span class="mockup-iso-sub">1</span>
+                  </div>
                 </div>
-            );
-        };
+                <div class="mockup-lockup-mini">
+                  <div class="mockup-lockup-name">
+                    <span class="mockup-lockup-marca">MéTRIK</span>
+                    <span class="mockup-lockup-prod">one</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mockup-brand-line"></div>
+            </div>
+          </div>
+          <span class="mockup-date">Febrero 2026</span>
+        </div>
+        <div class="mockup-alert mockup-alert--positive">
+          <span class="mockup-alert-dot mockup-alert-dot--green"></span>
+          <span class="mockup-alert-text mockup-alert-text--green">Margen del 39% — revisa gastos de transporte</span>
+        </div>
+        <div class="mockup-cards">
+          <div class="mockup-card">
+            <div class="mockup-card-q">¿Cuánta plata tengo?</div>
+            <div class="mockup-card-value">$ 18.500.000</div>
+            <div class="mockup-card-bar"><div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar--green" style="width:66%"></div></div></div>
+            <div class="mockup-card-detail">Cobrado este mes <span>$ 9.200.000 de $ 14.000.000</span></div>
+          </div>
+          <div class="mockup-card">
+            <div class="mockup-card-q">¿Estoy ganando?</div>
+            <div class="mockup-card-value mockup-val--green">+$ 4.832.000</div>
+            <div class="mockup-card-row"><span>Ingresos</span><span class="mockup-card-num">$ 12.400.000</span></div>
+            <div class="mockup-card-bar"><div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar--green" style="width:88%"></div></div></div>
+            <div class="mockup-card-row"><span>Gastos</span><span class="mockup-card-num">$ 7.568.000</span></div>
+            <div class="mockup-card-bar"><div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar--yellow" style="width:54%"></div></div></div>
+          </div>
+          <div class="mockup-card">
+            <div class="mockup-card-q">¿Cuánto me deben?</div>
+            <div class="mockup-card-value">$ 4.800.000</div>
+            <div class="mockup-card-bar"><div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar--green" style="width:66%"></div></div></div>
+            <div class="mockup-card-detail">Cobrado <span>$ 9.200.000 de $ 14.000.000 (66%)</span></div>
+          </div>
+          <div class="mockup-card">
+            <div class="mockup-card-q">¿Cuánto necesito vender?</div>
+            <div class="mockup-card-value">$ 3.120.000</div>
+            <div class="mockup-card-bar"><div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar--green" style="width:78%"></div></div></div>
+            <div class="mockup-card-detail">$ 10.880.000 / $ 14.000.000 <span>Casi lo logras</span></div>
+          </div>
+          <div class="mockup-card">
+            <div class="mockup-card-q">¿Cuánto aguanto?</div>
+            <div class="mockup-card-value">4.2 meses</div>
+            <div class="mockup-runway">
+              <div class="mockup-runway-track">
+                <div class="mockup-runway-seg mockup-rw--red" style="width:15%"></div>
+                <div class="mockup-runway-seg mockup-rw--orange" style="width:20%"></div>
+                <div class="mockup-runway-seg mockup-rw--yellow" style="width:20%"></div>
+                <div class="mockup-runway-seg mockup-rw--green" style="width:45%"></div>
+              </div>
+              <div class="mockup-runway-marker" style="left:35%"></div>
+              <div class="mockup-runway-labels"><span>0</span><span>3</span><span>6</span><span>12+</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="iphone-home"></div>
+    </div>
+    <div class="mockup-glow"></div>
+  </div>
+  <div class="questions-closure fade-up">
+    <p class="closure-line">5 preguntas. 1 dashboard. Cero adivinanza.</p>
+    <a href="#pricing" class="closure-cta">Probar gratis</a>
+  </div>
+</section>
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
-    </script>
+<section class="bridge">
+  <p class="bridge-statement fade-up">No automatizamos caos.<br>Primero lo resolvemos.</p>
+  <p class="bridge-sub fade-up">Si no tienes proceso para generar datos, te ayudamos a crearlo. Si ya los tienes pero no ves nada claro, los convertimos en decisiones. Todo conecta con caja, margen y utilidad.</p>
+</section>
+
+<div class="transition-divider"></div>
+
+<section class="product" id="producto">
+  <div class="product-header">
+    <div class="product-label fade-up">S A A S &middot; I N D E P E N D I E N T E S &nbsp; Y &nbsp; P Y M E S</div>
+    <div class="product-lockup fade-up">
+      <div class="lockup">
+        <div class="lockup-name">
+          <span class="lockup-marca">MéTRIK</span>
+          <span class="lockup-producto">one</span>
+        </div>
+        <div class="lockup-line"></div>
+      </div>
+    </div>
+    <p class="product-headline fade-up">La claridad financiera que tu negocio necesita.<br>Desde tu celular.</p>
+    <p class="product-desc fade-up">Gestión operativa integral con capa fiscal colombiana y registro de campo por WhatsApp. No es contabilidad. No es ERP. Es ver tus números de verdad.</p>
+  </div>
+  <div class="modules fade-up">
+    <div class="module-card">
+      <div class="module-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="16" width="5" height="9" rx="1.5" fill="#6B7280"/><rect x="11" y="10" width="5" height="15" rx="1.5" fill="#6B7280"/><rect x="19" y="4" width="5" height="21" rx="1.5" fill="#1A1A1A"/></svg></div>
+      <div class="module-name">Números</div>
+      <div class="module-question">¿Cuánto gano de verdad?</div>
+      <div class="module-desc">Las 5 preguntas MéTRIK respondidas en un dashboard. Ingresos, gastos, utilidad, impuestos, punto de equilibrio.</div>
+    </div>
+    <div class="module-card">
+      <div class="module-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#6B7280" stroke-width="2" fill="none"/><path d="M14 8v6l4 4" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="module-name">Pipeline</div>
+      <div class="module-question">¿Cuántos negocios tengo abiertos?</div>
+      <div class="module-desc">Oportunidades 360° con cotización flash. Cálculo fiscal automático para que sepas cuánto te queda limpio antes de cotizar.</div>
+    </div>
+    <div class="module-card">
+      <div class="module-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 8a2 2 0 012-2h5l2 2h9a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V8z" stroke="#6B7280" stroke-width="2" fill="none"/><path d="M10 16l3 3 5-6" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="module-name">Proyectos</div>
+      <div class="module-question">¿Este proyecto me deja plata?</div>
+      <div class="module-desc">Ejecución 360: horas, gastos, facturas, cobros. Rentabilidad por proyecto en tiempo real.</div>
+    </div>
+    <div class="module-card">
+      <div class="module-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M15.5 4L8 16h6l-1.5 8L21 12h-6l1.5-8z" fill="#1A1A1A" stroke="#6B7280" stroke-width="1" stroke-linejoin="round"/></svg></div>
+      <div class="module-name">FAB</div>
+      <div class="module-question">¿Cómo registro sin perder tiempo?</div>
+      <div class="module-desc">Botón flotante en cualquier pantalla. Un tap: gasto, horas o cobro registrado. Sin formularios largos.</div>
+    </div>
+  </div>
+  <div class="wa-highlight fade-up">
+    <div class="wa-highlight-badge"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4C8.48 4 4 8.48 4 14c0 1.85.5 3.58 1.38 5.07L4 24l5.12-1.34A9.96 9.96 0 0014 24c5.52 0 10-4.48 10-10S19.52 4 14 4zm0 18c-1.7 0-3.28-.52-4.6-1.4l-.32-.2-3.36.88.9-3.28-.22-.34A7.96 7.96 0 016 14c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8zm4.38-5.97c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.18-.71-.64-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z" fill="white"/></svg></div>
+    <div class="wa-highlight-content">
+      <div class="wa-highlight-title">Tu equipo de campo registra desde WhatsApp</div>
+      <div class="wa-highlight-desc">Sin instalar apps. Sin capacitación. Técnicos, asistentes y colaboradores registran horas, gastos y notas con un mensaje de WhatsApp. Ilimitado.</div>
+      <div class="wa-highlight-tag">Único en Colombia</div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="pricing-header">
+    <h2 class="pricing-title fade-up">Precios claros desde el día 1</h2>
+    <p class="pricing-sub fade-up">Sin sorpresas. Sin letra chica. Empezá gratis.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="price-card fade-up">
+      <div class="price-plan">Free</div>
+      <div class="price-tagline">Organiza tus gastos</div>
+      <div class="price-free-label">$0</div>
+      <ul class="price-features">
+        <li>Dashboard Números básico</li>
+        <li>Registro de gastos vía FAB</li>
+        <li>1 proyecto activo</li>
+        <li>1 usuario</li>
+        <li>Para siempre</li>
+        <li class="disabled">Cálculo fiscal</li>
+        <li class="disabled">WhatsApp Bot</li>
+      </ul>
+      <button class="price-btn price-btn--secondary" onclick="window.open('https://metrikone.co','_blank')">Crear cuenta gratis</button>
+    </div>
+    <div class="price-card price-card--featured fade-up">
+      <div class="price-plan">Pro</div>
+      <div class="price-tagline">Sabe cuánto ganas de verdad</div>
+      <div class="price-amount"><span class="price-currency">$</span><span class="price-value">99K</span><span class="price-period">/mes</span></div>
+      <ul class="price-features">
+        <li>Todo en la app — sin límites</li>
+        <li>Pipeline ilimitado</li>
+        <li>Proyectos ilimitados</li>
+        <li>Cotización con cálculo fiscal</li>
+        <li>FAB completo</li>
+        <li>Alertas en app</li>
+        <li>Usuarios adicionales: +$50K c/u</li>
+        <li class="disabled">WhatsApp Bot</li>
+      </ul>
+      <button class="price-btn price-btn--primary" onclick="window.open('https://metrikone.co','_blank')">Empezar con Pro</button>
+    </div>
+    <div class="price-card fade-up">
+      <div class="price-plan">Pro+</div>
+      <div class="price-tagline">Tu equipo registra desde WhatsApp</div>
+      <div class="price-amount"><span class="price-currency">$</span><span class="price-value">149K</span><span class="price-period">/mes</span></div>
+      <ul class="price-features">
+        <li>Todo lo de Pro</li>
+        <li>WhatsApp Bot completo</li>
+        <li>Resumen semanal por WhatsApp</li>
+        <li>Alertas de cobro por WhatsApp</li>
+        <li>Colaboradores campo ilimitados</li>
+        <li>Usuarios adicionales: +$100K c/u</li>
+      </ul>
+      <button class="price-btn price-btn--secondary" onclick="window.open('https://metrikone.co','_blank')">Empezar con Pro+</button>
+    </div>
+  </div>
+  <p class="pricing-note fade-up">Plan anual: 2 meses gratis. 14 días de prueba en Pro. Cancela cuando quieras.</p>
+</section>
+
+<section class="clarity" id="clarity">
+  <div class="clarity-inner">
+    <div class="clarity-label fade-up">C O N S U L T I N G &middot; P Y M E S</div>
+    <div class="clarity-lockup fade-up">
+      <div class="lockup">
+        <div class="lockup-name"><span class="lockup-marca">MéTRIK</span><span class="lockup-producto">clarity</span></div>
+        <div class="lockup-line"></div>
+      </div>
+    </div>
+    <p class="clarity-headline fade-up">¿Necesitas más que software?</p>
+    <p class="clarity-desc fade-up">Clarity estructura tus procesos e implementa MéTRIK one en tu empresa. Diagnóstico, configuración, capacitación de equipo y soporte. Todo en 10 a 45 días.</p>
+    <div class="clarity-levels fade-up">
+      <div class="clarity-level">
+        <div class="clarity-level-name">Express</div>
+        <div class="clarity-level-time">5–10 días</div>
+        <div class="clarity-level-price">Desde $5M</div>
+        <div class="clarity-level-desc">Implementación ONE + capacitación + 30 días soporte</div>
+      </div>
+      <div class="clarity-level">
+        <div class="clarity-level-name">Standard</div>
+        <div class="clarity-level-time">15–25 días</div>
+        <div class="clarity-level-price">Desde $10M</div>
+        <div class="clarity-level-desc">Estructuración 1 área + implementación + capacitación</div>
+      </div>
+      <div class="clarity-level">
+        <div class="clarity-level-name">Full</div>
+        <div class="clarity-level-time">30–45 días</div>
+        <div class="clarity-level-price">Desde $20M</div>
+        <div class="clarity-level-desc">Estructuración completa + implementación + acompañamiento 60 días</div>
+      </div>
+    </div>
+    <div class="clarity-cta-wrapper fade-up">
+      <a href="https://calendly.com/metrik-co/clarity" target="_blank" class="clarity-cta">Agendar diagnóstico</a>
+    </div>
+  </div>
+</section>
+
+<section class="projects-section">
+  <div class="projects-inner">
+    <div class="projects-label fade-up">P E R S O N A L I Z A C I Ó N &middot; S O B R E &middot; O N E</div>
+    <div class="projects-lockup fade-up">
+      <div class="lockup">
+        <div class="lockup-name"><span class="lockup-marca">MéTRIK</span><span class="lockup-producto">projects</span></div>
+        <div class="lockup-line"></div>
+      </div>
+    </div>
+    <p class="projects-headline fade-up">¿ONE se te queda corto?</p>
+    <p class="projects-desc fade-up">Si tu operación necesita algo que el estándar no cubre, lo construimos sobre ONE. Módulos personalizados, integraciones con tus herramientas, dashboards a tu medida — todo conectado con la plataforma que ya conoces.</p>
+    <div class="projects-capabilities fade-up">
+      <div class="projects-cap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="14" width="4" height="7" rx="1" fill="#6B7280"/><rect x="10" y="9" width="4" height="12" rx="1" fill="#6B7280"/><rect x="17" y="4" width="4" height="17" rx="1" fill="#1A1A1A"/></svg><span>Dashboards custom</span></div>
+      <div class="projects-cap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 8h10M7 12h6" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/><path d="M17 12l3 3-3 3" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Integraciones a medida</span></div>
+      <div class="projects-cap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#6B7280" stroke-width="2" fill="none"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="#6B7280" stroke-width="2" fill="none"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="#6B7280" stroke-width="2" fill="none"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="#1A1A1A" stroke-width="2" fill="none"/><path d="M17.5 16v5M15 18.5h5" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/></svg><span>Módulos nuevos sobre ONE</span></div>
+      <div class="projects-cap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="3" stroke="#6B7280" stroke-width="2" fill="none"/><circle cx="12" cy="18" r="1" fill="#1A1A1A"/></svg><span>Apps y e-commerce</span></div>
+    </div>
+    <div class="projects-footer fade-up">
+      <span class="projects-price">Desde $2M &middot; Cotización por proyecto &middot; Integrado con ONE</span>
+      <a href="https://wa.me/573159509103?text=Hola%2C%20necesito%20personalizar%20MéTRIK%20ONE%20para%20mi%20operación" target="_blank" class="projects-cta">Cuéntanos tu reto</a>
+    </div>
+  </div>
+</section>
+
+<div style="height:120px;background:linear-gradient(to bottom, var(--blanco), var(--negro-carbon))"></div>
+
+<section class="credibility" id="nosotros">
+  <div class="founder fade-up">
+    <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Founder_Mk.png" alt="Mauricio Moreno — Fundador de MéTRIK" class="founder-img" loading="lazy">
+    <div class="founder-info">
+      <p class="founder-quote">Que ningún empresario vuele a ciegas.</p>
+      <p class="founder-story">10 años operando negocios reales. 43 ubicaciones. +400 personas bajo gestión. MéTRIK nace de vivir la frustración de no tener números claros — y construir la solución.</p>
+      <div class="founder-meta">
+        <span class="founder-name">Mauricio Moreno</span>
+        <span class="founder-role">Fundador &middot; MéTRIK</span>
+      </div>
+    </div>
+  </div>
+  <div class="trust-grid fade-up">
+    <div class="trust-card trust-card--afi">
+      <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Custodia_AFI.png" alt="AFI International Group" class="trust-afi-seal" loading="lazy">
+      <div class="trust-title">Custodia certificada</div>
+      <div class="trust-desc">Tus datos financieros están custodiados por AFI International Group, firma regulada de custodia de activos. Un tercero de confianza protege tu información.</div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 3L4 8v7c0 7.73 5.12 14.96 12 17 6.88-2.04 12-9.27 12-17V8L16 3z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M11 16l3.5 3.5L21 12" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="trust-title">Tus datos protegidos</div>
+      <div class="trust-desc">Infraestructura cifrada, servidores seguros, acceso controlado. Nadie más ve tus números — ni siquiera nosotros sin tu autorización.</div>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16 10v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="21" r="1.5" fill="currentColor"/></svg></div>
+      <div class="trust-title">Sin letra chica</div>
+      <div class="trust-desc">Precios publicados. Sin cargos ocultos. Cancela cuando quieras. Exporta tus datos en cualquier momento — siempre son tuyos.</div>
+    </div>
+  </div>
+</section>
+
+<section class="methodology">
+  <div class="methodology-inner fade-up">
+    <p class="methodology-tag">"Deja de adivinar y empieza a ver tus cifras."</p>
+    <p class="methodology-text">Datos caóticos → Dashboards funcionales. 10 días. 70% automatizado con IA. Sin dependencia, sin licencias, sin Excel infinito.</p>
+  </div>
+</section>
+
+<section class="cta-final">
+  <h2 class="cta-final-headline fade-up">Tus cifras claras.<br>Desde hoy.</h2>
+  <p class="cta-final-sub fade-up">Empieza gratis con MéTRIK one. 14 días de prueba Pro incluidos.</p>
+  <a href="https://metrikone.co" target="_blank" class="cta-btn fade-up">Probar MéTRIK one gratis</a>
+  <p class="cta-note fade-up">¿Prefieres hablar con nosotros? <a href="https://wa.me/573159509103" style="color:var(--verde-metrica);text-decoration:underline;">Escríbenos por WhatsApp</a></p>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="#" class="footer-logo">
+      <div class="logo logo--light">
+        <span class="logo-text">MéTRIK</span>
+        <div class="logo-line"></div>
+      </div>
+    </a>
+    <div class="footer-links">
+      <a href="mailto:mauricio.moreno@metrik.com.co" class="footer-link">mauricio.moreno@metrik.com.co</a>
+      <a href="https://wa.me/573159509103" class="footer-link">+57 315 950 9103</a>
+      <a href="https://www.metrik.com.co" class="footer-link">www.metrik.com.co</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/company/metrik-co" target="_blank" class="footer-social-link" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://www.instagram.com/metrik.co" target="_blank" class="footer-social-link" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      <a href="https://www.facebook.com/metrik.co" target="_blank" class="footer-social-link" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    </div>
+    <div class="footer-legal">
+      <a href="./privacidad.html" class="footer-link footer-link--legal">Política de tratamiento de datos</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 MéTRIK S.A.S. &middot; Bogotá, Colombia &middot; NIT pendiente</p>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+  lastScroll = window.scrollY;
+}, { passive: true });
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
 </body>
 </html>

@@ -189,7 +189,10 @@ a { text-decoration: none; color: inherit; }
 .bridge { padding: var(--s-3xl) var(--s-md); background: var(--negro-carbon); text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
 .bridge-statement { font-weight: 700; font-size: clamp(1.5rem, 4vw, 2.5rem); color: var(--blanco); line-height: 1.25; max-width: var(--max-narrow); margin: 0 auto; letter-spacing: -0.02em; }
 .bridge-accent { display: block; width: 40px; height: 2.5px; background: var(--verde-metrica); margin: 2rem auto 0; border-radius: 2px; }
-.bridge-sub { font-weight: 400; font-size: 1.125rem; color: rgba(255,255,255,0.65); margin-top: 2rem; max-width: var(--max-text); margin-left: auto; margin-right: auto; line-height: 1.7; }
+.bridge-lines { margin-top: 2rem; max-width: var(--max-narrow); margin-left: auto; margin-right: auto; display: flex; flex-direction: column; gap: 0.75rem; }
+.bridge-line { font-weight: 400; font-size: 1.125rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+.bridge-action { color: var(--blanco); font-weight: 600; }
+.bridge-anchor { font-weight: 600; font-size: 1.125rem; color: var(--verde-metrica); margin-top: 0.5rem; }
 
 /* TRANSITION */
 .transition-divider { height: 120px; background: linear-gradient(to bottom, var(--negro-carbon), var(--blanco)); }
@@ -480,7 +483,11 @@ a { text-decoration: none; color: inherit; }
 <section class="bridge">
   <p class="bridge-statement fade-up">No automatizamos caos.<br>Primero lo resolvemos.</p>
   <span class="bridge-accent fade-up"></span>
-  <p class="bridge-sub fade-up">Si no tienes proceso para generar datos, te ayudamos a crearlo. Si ya los tienes pero no ves nada claro, los convertimos en decisiones. Todo conecta con caja, margen y utilidad.</p>
+  <div class="bridge-lines fade-up">
+    <p class="bridge-line">No tienes proceso para generar datos — <span class="bridge-action">te ayudamos a crearlo.</span></p>
+    <p class="bridge-line">Ya los tienes pero no ves nada claro — <span class="bridge-action">los convertimos en decisiones.</span></p>
+    <p class="bridge-anchor">Todo conecta con caja, margen y utilidad.</p>
+  </div>
 </section>
 
 <div class="transition-divider"></div>

@@ -101,7 +101,7 @@ a { text-decoration: none; color: inherit; }
 .container--narrow { max-width: var(--max-narrow); margin: 0 auto; }
 
 /* NAV */
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: var(--s-md); display: flex; justify-content: space-between; align-items: center; transition: background 0.4s ease, backdrop-filter 0.4s ease; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: var(--s-md); display: flex; justify-content: space-between; align-items: center; transition: background 0.4s ease, backdrop-filter 0.4s ease, opacity 0.8s ease; }
 .nav.scrolled { background: rgba(26,26,26,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
 .nav-logo .logo-text { font-size: 1.25rem; color: var(--blanco); }
 .nav-logo .logo-line { height: 2px; margin-top: 5px; }
@@ -110,9 +110,8 @@ a { text-decoration: none; color: inherit; }
 
 /* HERO */
 .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: var(--s-4xl) var(--s-md); background: var(--negro-carbon); position: relative; overflow: hidden; }
-.hero-logo .logo-text { font-size: clamp(3rem, 8vw, 5.5rem); color: var(--blanco); }
 .hero-logo .logo-line { margin-top: 12px; height: 3px; }
-.hero-tagline { font-weight: 300; font-size: clamp(1.125rem, 2.5vw, 1.5rem); color: rgba(255,255,255,0.55); margin-top: var(--s-lg); letter-spacing: 0.02em; }
+.hero-tagline { font-weight: 300; font-size: clamp(1.125rem, 2.5vw, 1.5rem); color: rgba(255,255,255,0.55); margin-top: var(--s-lg); letter-spacing: 0.02em; transition: opacity 0.8s ease; }
 .hero-scroll { position: absolute; bottom: var(--s-lg); left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.7; transition: opacity 0.3s; }
 .hero-scroll:hover { opacity: 1; }
 .hero-scroll-text { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
@@ -372,51 +371,23 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 480px) {
   .bridge-stats { flex-direction: column; gap: var(--s-md); }
 }
-/* SPLASH */
-.splash{position:fixed;inset:0;z-index:99999;background:#0A0A0A;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity 0.8s cubic-bezier(0.4,0,0.2,1)}
-.splash-lk{position:relative;display:flex;flex-direction:column;align-items:flex-start}
-.splash-lk.breathe{animation:sp-br 2.2s ease-in-out infinite}
-@keyframes sp-br{0%,100%{transform:scale(1)}50%{transform:scale(1.01)}}
-.splash-row{display:flex;align-items:baseline;white-space:nowrap}
-.splash-ch{font-family:var(--font);font-weight:900;font-size:clamp(4.5rem,13vw,9.5rem);color:#FFF;line-height:1;letter-spacing:-0.02em;display:inline-block;will-change:opacity,text-shadow;transition:text-shadow 0.2s ease;opacity:0}
-.splash-ch.lit{text-shadow:0 4px 20px rgba(16,185,129,0.4),0 2px 40px rgba(16,185,129,0.15)}
-.splash-track{width:100%;height:4px;position:relative;margin-top:clamp(8px,1.2vw,14px);overflow:visible}
-.splash-trail{position:absolute;left:0;top:0;height:100%;background:#10B981;border-radius:2px;width:0}
-.splash-orb{position:absolute;top:50%;transform:translate(-50%,-50%);width:10px;height:10px;border-radius:50%;background:#FFF;box-shadow:0 0 6px 3px rgba(16,185,129,0.8),0 0 18px 8px rgba(16,185,129,0.45),0 0 50px 16px rgba(16,185,129,0.18),0 0 90px 30px rgba(16,185,129,0.06);z-index:10;pointer-events:none;opacity:0;transition:opacity 0.6s ease}
-.splash-tail{position:absolute;top:50%;transform:translateY(-50%);height:14px;background:linear-gradient(90deg,transparent 0%,rgba(16,185,129,0.06) 40%,rgba(16,185,129,0.25) 100%);border-radius:8px;pointer-events:none;z-index:9;opacity:0;transition:opacity 0.5s ease}
-.splash-cone{position:absolute;bottom:100%;transform:translateX(-50%);width:80px;height:60px;background:linear-gradient(0deg,rgba(16,185,129,0.15) 0%,rgba(16,185,129,0.03) 50%,transparent 100%);clip-path:polygon(35% 100%,65% 100%,85% 0%,15% 0%);pointer-events:none;z-index:8;opacity:0;transition:opacity 0.5s ease}
-.splash-glow{position:absolute;inset:-5px 0;background:#10B981;border-radius:6px;filter:blur(10px);opacity:0;pointer-events:none}
-.splash-glow.on{animation:sp-glow 1.2s cubic-bezier(0.16,1,0.3,1) forwards}
-@keyframes sp-glow{0%{opacity:0.3}30%{opacity:0.12}100%{opacity:0}}
-.splash-cn{position:absolute;width:14px;height:14px;opacity:0;transition:opacity 0.6s ease}
-.splash-cn::before,.splash-cn::after{content:'';position:absolute;background:#FFF}
-.splash-cn.tl::before{top:0;left:0;width:10px;height:1px}.splash-cn.tl::after{top:0;left:0;width:1px;height:10px}
-.splash-cn.tr::before{top:0;right:0;width:10px;height:1px}.splash-cn.tr::after{top:0;right:0;width:1px;height:10px}
-.splash-cn.bl::before{bottom:0;left:0;width:10px;height:1px}.splash-cn.bl::after{bottom:0;left:0;width:1px;height:10px}
-.splash-cn.br::before{bottom:0;right:0;width:10px;height:1px}.splash-cn.br::after{bottom:0;right:0;width:1px;height:10px}
+/* HERO BEAM ANIMATION */
+.hero-chars{display:flex;align-items:baseline;white-space:nowrap}
+.hero-ch{font-family:var(--font);font-weight:900;font-size:clamp(3rem,8vw,5.5rem);color:var(--blanco);line-height:1;letter-spacing:-0.02em;display:inline-block;will-change:opacity,text-shadow;transition:text-shadow 0.2s ease;opacity:0}
+.hero-ch.lit{text-shadow:0 4px 20px rgba(16,185,129,0.4),0 2px 40px rgba(16,185,129,0.15)}
+.hero-track{position:relative;overflow:visible;background:transparent}
+.hero-beam-trail{position:absolute;left:0;top:0;height:100%;background:var(--verde-metrica);border-radius:2px;width:0}
+.hero-beam-orb{position:absolute;top:50%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;background:#FFF;box-shadow:0 0 6px 3px rgba(16,185,129,0.8),0 0 18px 8px rgba(16,185,129,0.45),0 0 40px 14px rgba(16,185,129,0.18);z-index:10;pointer-events:none;opacity:0;transition:opacity 0.6s ease}
+.hero-beam-tail{position:absolute;top:50%;transform:translateY(-50%);height:12px;background:linear-gradient(90deg,transparent 0%,rgba(16,185,129,0.06) 40%,rgba(16,185,129,0.25) 100%);border-radius:8px;pointer-events:none;z-index:9;opacity:0;transition:opacity 0.5s ease}
+.hero-beam-cone{position:absolute;bottom:100%;transform:translateX(-50%);width:60px;height:50px;background:linear-gradient(0deg,rgba(16,185,129,0.15) 0%,rgba(16,185,129,0.03) 50%,transparent 100%);clip-path:polygon(35% 100%,65% 100%,85% 0%,15% 0%);pointer-events:none;z-index:8;opacity:0;transition:opacity 0.5s ease}
+.hero-beam-glow{position:absolute;inset:-5px 0;background:var(--verde-metrica);border-radius:6px;filter:blur(10px);opacity:0;pointer-events:none}
+.hero-beam-glow.on{animation:heroGlow 1.2s cubic-bezier(0.16,1,0.3,1) forwards}
+@keyframes heroGlow{0%{opacity:0.3}30%{opacity:0.12}100%{opacity:0}}
 </style>
 </head>
 <body>
 
-<!-- SPLASH SCREEN -->
-<div class="splash" id="splash">
-  <div class="splash-cn tl" style="top:15%;left:8%"></div>
-  <div class="splash-cn tr" style="top:15%;right:8%"></div>
-  <div class="splash-cn bl" style="bottom:15%;left:8%"></div>
-  <div class="splash-cn br" style="bottom:15%;right:8%"></div>
-  <div class="splash-lk" id="splash-lk">
-    <div class="splash-row" id="splash-row"></div>
-    <div class="splash-track">
-      <div class="splash-trail" id="splash-trail"></div>
-      <div class="splash-orb" id="splash-orb"></div>
-      <div class="splash-tail" id="splash-tail"></div>
-      <div class="splash-cone" id="splash-cone"></div>
-      <div class="splash-glow" id="splash-glow"></div>
-    </div>
-  </div>
-</div>
-
-<nav class="nav" id="nav">
+<nav class="nav" id="nav" style="opacity:0">
   <a href="#" class="nav-logo">
     <div class="logo logo--light">
       <span class="logo-text">MéTRIK</span>
@@ -429,12 +400,25 @@ a { text-decoration: none; color: inherit; }
 <section class="hero" id="hero">
   <div class="hero-logo">
     <div class="logo logo--light">
-      <span class="logo-text">MéTRIK</span>
-      <div class="logo-line"></div>
+      <div class="hero-chars" id="hero-chars">
+        <span class="hero-ch" data-at="0.00">M</span>
+        <span class="hero-ch" data-at="0.14">é</span>
+        <span class="hero-ch" data-at="0.28">T</span>
+        <span class="hero-ch" data-at="0.44">R</span>
+        <span class="hero-ch" data-at="0.58">I</span>
+        <span class="hero-ch" data-at="0.68">K</span>
+      </div>
+      <div class="logo-line hero-track" id="hero-track">
+        <div class="hero-beam-trail" id="hero-trail"></div>
+        <div class="hero-beam-orb" id="hero-orb"></div>
+        <div class="hero-beam-tail" id="hero-tail"></div>
+        <div class="hero-beam-cone" id="hero-cone"></div>
+        <div class="hero-beam-glow" id="hero-glow"></div>
+      </div>
     </div>
   </div>
-  <p class="hero-tagline">De caos a claridad.</p>
-  <div class="hero-scroll">
+  <p class="hero-tagline" id="hero-tagline" style="opacity:0">De caos a claridad.</p>
+  <div class="hero-scroll" id="hero-scroll" style="opacity:0">
     <span class="hero-scroll-text">Descubre</span>
     <div class="hero-scroll-line"></div>
   </div>
@@ -807,91 +791,63 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-/* ═══ SPLASH ANIMATION ═══ */
+/* ═══ HERO BEAM ANIMATION ═══ */
 (function(){
-  const splash = document.getElementById('splash');
-  const lk = document.getElementById('splash-lk');
-  const row = document.getElementById('splash-row');
-  const trail = document.getElementById('splash-trail');
-  const orb = document.getElementById('splash-orb');
-  const tail = document.getElementById('splash-tail');
-  const cone = document.getElementById('splash-cone');
-  const glow = document.getElementById('splash-glow');
-  const corners = splash.querySelectorAll('.splash-cn');
+  var chars = document.querySelectorAll('.hero-ch');
+  var trail = document.getElementById('hero-trail');
+  var orb = document.getElementById('hero-orb');
+  var tail = document.getElementById('hero-tail');
+  var cone = document.getElementById('hero-cone');
+  var glow = document.getElementById('hero-glow');
+  var tagline = document.getElementById('hero-tagline');
+  var heroScroll = document.getElementById('hero-scroll');
+  var nav = document.getElementById('nav');
 
-  const chars = [
-    {ch:'M',at:0.00},{ch:'é',at:0.14},{ch:'T',at:0.28},
-    {ch:'R',at:0.44},{ch:'I',at:0.58},{ch:'K',at:0.68}
-  ];
+  var beamStarted = false, beamFinished = false, beamProgress = 0;
+  var startTime = null;
 
-  chars.forEach(c => {
-    const span = document.createElement('span');
-    span.className = 'splash-ch';
-    span.textContent = c.ch;
-    span.dataset.at = c.at;
-    row.appendChild(span);
-  });
-
-  const spans = row.querySelectorAll('.splash-ch');
-  let beamStarted = false, beamFinished = false, beamProgress = 0;
-  let startTime = null, animId = null;
-
-  function updateChars(){
-    spans.forEach(s => {
-      const at = parseFloat(s.dataset.at);
-      const reveal = beamProgress - 0.02;
-      let op = 0;
+  function update(){
+    chars.forEach(function(s){
+      var at = parseFloat(s.dataset.at), reveal = beamProgress - 0.02, op = 0;
       if(reveal >= at + 0.10) op = 1;
-      else if(reveal >= at - 0.03) op = Math.max(0,(reveal-(at-0.03))/0.13);
+      else if(reveal >= at - 0.03) op = Math.max(0, (reveal - (at - 0.03)) / 0.13);
       s.style.opacity = op;
-      const lit = beamStarted && !beamFinished && Math.abs(beamProgress - at - 0.05) < 0.09;
-      s.classList.toggle('lit', lit);
+      s.classList.toggle('lit', beamStarted && !beamFinished && Math.abs(beamProgress - at - 0.05) < 0.09);
     });
-    const pct = beamProgress * 100;
-    trail.style.width = Math.min(pct,100) + '%';
+    var pct = beamProgress * 100;
+    trail.style.width = Math.min(pct, 100) + '%';
     orb.style.left = pct + '%';
-    tail.style.left = Math.max(0,pct-14) + '%';
-    tail.style.width = Math.min(pct,14) + '%';
+    tail.style.left = Math.max(0, pct - 14) + '%';
+    tail.style.width = Math.min(pct, 14) + '%';
     cone.style.left = pct + '%';
   }
 
   function tick(now){
     if(!startTime) startTime = now;
-    const elapsed = now - startTime;
-    const raw = Math.min(elapsed / 1800, 1);
+    var raw = Math.min((now - startTime) / 1800, 1);
     beamProgress = 1 - Math.pow(1 - raw, 2.6);
-    updateChars();
-    if(raw < 1) animId = requestAnimationFrame(tick);
-    else beamFinished = true;
-  }
-
-  function runBeam(){
-    beamStarted = true;
-    orb.style.opacity = 1;
-    tail.style.opacity = 1;
-    cone.style.opacity = 1;
-    animId = requestAnimationFrame(tick);
+    update();
+    if(raw < 1) requestAnimationFrame(tick);
+    else { beamFinished = true; update(); }
   }
 
   document.body.style.overflow = 'hidden';
 
-  setTimeout(runBeam, 500);
-  setTimeout(function(){ glow.classList.add('on'); }, 2400);
   setTimeout(function(){
-    corners.forEach(c => { c.style.opacity = 0.08; });
-  }, 2400);
+    beamStarted = true;
+    orb.style.opacity = 1; tail.style.opacity = 1; cone.style.opacity = 1;
+    requestAnimationFrame(tick);
+  }, 300);
+  setTimeout(function(){ glow.classList.add('on'); }, 2200);
+  setTimeout(function(){ orb.style.opacity = 0; tail.style.opacity = 0; cone.style.opacity = 0; }, 2300);
+  setTimeout(function(){ tagline.style.opacity = '1'; }, 2500);
+  setTimeout(function(){ nav.style.opacity = '1'; heroScroll.style.opacity = '1'; }, 2900);
   setTimeout(function(){
-    orb.style.opacity = 0; tail.style.opacity = 0; cone.style.opacity = 0;
-  }, 2500);
-  setTimeout(function(){ lk.classList.add('breathe'); }, 2900);
-  setTimeout(function(){
-    lk.classList.remove('breathe');
-    splash.style.opacity = 0;
-  }, 3900);
-  setTimeout(function(){
-    splash.remove();
     document.body.style.overflow = '';
-  }, 4700);
+    nav.style.removeProperty('opacity');
+    tagline.style.removeProperty('opacity');
+    heroScroll.style.removeProperty('opacity');
+  }, 3800);
 })();
 </script>
 </body>

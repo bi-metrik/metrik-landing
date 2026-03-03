@@ -200,8 +200,7 @@ a { text-decoration: none; color: inherit; }
 .product { padding: var(--s-3xl) var(--s-md); background: var(--blanco); }
 .product-header { text-align: center; margin-bottom: var(--s-2xl); }
 .product-lockup { display: flex; justify-content: center; margin-bottom: var(--s-md); }
-.product-lockup .lockup-name { font-size: clamp(1.75rem, 4vw, 2.25rem); }
-.product-lockup .lockup-line { margin-top: 10px; height: 3px; }
+.product-lockup .lockup { display: inline-flex; flex-direction: column; align-items: flex-start; }
 .product-label { font-weight: 700; font-size: 0.6875rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gris-acero); margin-bottom: var(--s-sm); }
 .product-headline { font-weight: 700; font-size: clamp(1.25rem, 3vw, 1.75rem); color: var(--negro-carbon); margin-top: var(--s-sm); letter-spacing: -0.01em; }
 .product-desc { font-weight: 400; font-size: 1rem; color: var(--gris-acero); margin-top: var(--s-xs); max-width: var(--max-text); margin-left: auto; margin-right: auto; line-height: 1.7; }
@@ -254,8 +253,7 @@ a { text-decoration: none; color: inherit; }
 .clarity { padding: var(--s-3xl) var(--s-md); background: var(--blanco); }
 .clarity-inner { max-width: var(--max-narrow); margin: 0 auto; text-align: center; }
 .clarity-lockup { display: flex; justify-content: center; margin-bottom: var(--s-md); }
-.clarity-lockup .lockup-name { font-size: clamp(1.75rem, 4vw, 2.25rem); }
-.clarity-lockup .lockup-line { margin-top: 10px; height: 3px; }
+.clarity-lockup .lockup { display: inline-flex; flex-direction: column; align-items: flex-start; }
 .clarity-label { font-weight: 700; font-size: 0.6875rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gris-acero); margin-bottom: var(--s-sm); }
 .clarity-headline { font-weight: 700; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--negro-carbon); margin-top: var(--s-xs); letter-spacing: -0.01em; }
 .clarity-desc { font-weight: 400; font-size: 1rem; color: var(--gris-acero); margin-top: var(--s-sm); line-height: 1.7; }
@@ -273,8 +271,7 @@ a { text-decoration: none; color: inherit; }
 .projects-section { padding: var(--s-2xl) var(--s-md) var(--s-3xl); background: var(--blanco); text-align: center; border-top: 1px solid rgba(0,0,0,0.05); }
 .projects-inner { max-width: var(--max-narrow); margin: 0 auto; }
 .projects-lockup { margin-bottom: var(--s-md); display: flex; justify-content: center; }
-.projects-lockup .lockup-name { font-size: clamp(1.75rem, 4vw, 2.25rem); }
-.projects-lockup .lockup-line { margin-top: 10px; height: 3px; }
+.projects-lockup .lockup { display: inline-flex; flex-direction: column; align-items: flex-start; }
 .projects-label { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.25em; color: var(--gris-acero); margin-bottom: var(--s-sm); }
 .projects-headline { font-weight: 700; font-size: clamp(1.375rem, 3vw, 1.75rem); color: var(--negro-carbon); letter-spacing: -0.02em; margin-bottom: 0.5rem; }
 .projects-desc { font-weight: 400; font-size: 0.9375rem; color: var(--gris-acero); line-height: 1.7; margin-bottom: var(--s-lg); }
@@ -338,11 +335,9 @@ a { text-decoration: none; color: inherit; }
 /* ANIMATIONS */
 .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
-.hero-logo { opacity: 0; transform: scale(0.95); animation: heroEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; }
-.hero-tagline { opacity: 0; animation: heroFade 0.8s ease 0.8s forwards; }
-.hero-scroll { opacity: 0; animation: heroFade 0.8s ease 1.4s forwards; }
-@keyframes heroEntrance { to { opacity: 1; transform: scale(1); } }
-@keyframes heroFade { to { opacity: 1; } }
+.hero-logo { opacity: 1; }
+.hero-tagline { opacity: 0; }
+.hero-scroll { opacity: 0; }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -383,6 +378,28 @@ a { text-decoration: none; color: inherit; }
 .hero-beam-glow{position:absolute;inset:-5px 0;background:var(--verde-metrica);border-radius:6px;filter:blur(10px);opacity:0;pointer-events:none}
 .hero-beam-glow.on{animation:heroGlow 1.2s cubic-bezier(0.16,1,0.3,1) forwards}
 @keyframes heroGlow{0%{opacity:0.3}30%{opacity:0.12}100%{opacity:0}}
+/* LOCKUP BEAM ANIMATION */
+.lockup-chars{display:flex;align-items:baseline;white-space:nowrap}
+.lockup-ch{font-family:var(--font);line-height:1;display:inline-block;will-change:opacity,text-shadow;letter-spacing:-0.02em;opacity:0.04}
+.lockup-ch-marca{font-weight:700;color:var(--negro-carbon);font-size:clamp(1.75rem,4vw,2.25rem)}
+.lockup-ch-marca.lit{text-shadow:0 3px 14px rgba(16,185,129,0.3),0 2px 28px rgba(16,185,129,0.1)}
+.lockup-prod-wrap{position:relative;display:inline-flex;align-items:baseline;margin-left:0.15em}
+.lockup-prod-text{font-family:var(--font);font-weight:300;font-size:clamp(1.75rem,4vw,2.25rem);color:var(--negro-carbon);line-height:1;letter-spacing:-0.01em;text-transform:lowercase;display:inline-block;will-change:opacity,color,text-shadow;position:relative;z-index:2;opacity:0.04}
+.lockup-destello-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:1;overflow:visible}
+.lockup-destello{width:0;height:0;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,1) 0%,rgba(16,185,129,0.3) 30%,rgba(16,185,129,0.08) 50%,transparent 70%);opacity:0}
+.lockup-destello.fire{animation:lockupDb 0.7s cubic-bezier(0.16,1,0.3,1) forwards}
+@keyframes lockupDb{0%{width:0;height:0;opacity:0}8%{width:40px;height:40px;opacity:1}22%{width:180px;height:180px;opacity:0.85}45%{width:220px;height:220px;opacity:0.35}100%{width:240px;height:240px;opacity:0}}
+.lockup-destello-ring{position:absolute;border-radius:50%;border:1.5px solid rgba(16,185,129,0.2);width:0;height:0;opacity:0}
+.lockup-destello-ring.fire{animation:lockupDr 0.85s cubic-bezier(0.16,1,0.3,1) 0.04s forwards}
+@keyframes lockupDr{0%{width:14px;height:14px;opacity:0.5}100%{width:160px;height:160px;opacity:0}}
+.lockup-beam-track{position:relative;overflow:visible;width:100%;height:3px;margin-top:10px}
+.lockup-beam-trail{position:absolute;left:0;top:0;height:100%;background:var(--verde-metrica);border-radius:2px;width:0}
+.lockup-beam-orb{position:absolute;top:50%;transform:translate(-50%,-50%);width:6px;height:6px;border-radius:50%;background:#FFF;box-shadow:0 0 5px 2px rgba(16,185,129,0.8),0 0 14px 6px rgba(16,185,129,0.45),0 0 35px 12px rgba(16,185,129,0.18);z-index:10;pointer-events:none;opacity:0;transition:opacity 0.6s ease}
+.lockup-beam-tail{position:absolute;top:50%;transform:translateY(-50%);height:10px;background:linear-gradient(90deg,transparent 0%,rgba(16,185,129,0.06) 40%,rgba(16,185,129,0.25) 100%);border-radius:8px;pointer-events:none;z-index:9;opacity:0;transition:opacity 0.5s ease}
+.lockup-beam-cone{position:absolute;bottom:100%;transform:translateX(-50%);width:50px;height:40px;background:linear-gradient(0deg,rgba(16,185,129,0.09) 0%,rgba(16,185,129,0.015) 50%,transparent 100%);clip-path:polygon(35% 100%,65% 100%,85% 0%,15% 0%);pointer-events:none;z-index:8;opacity:0;transition:opacity 0.5s ease}
+.lockup-beam-glow{position:absolute;inset:-4px 0;background:var(--verde-metrica);border-radius:6px;filter:blur(8px);opacity:0;pointer-events:none}
+.lockup-beam-glow.on{animation:lockupGlow 1.2s cubic-bezier(0.16,1,0.3,1) forwards}
+@keyframes lockupGlow{0%{opacity:0.25}30%{opacity:0.1}100%{opacity:0}}
 </style>
 </head>
 <body>
@@ -529,13 +546,30 @@ a { text-decoration: none; color: inherit; }
 <section class="product" id="producto">
   <div class="product-header">
     <div class="product-label fade-up">SAAS &middot; INDEPENDIENTES Y PYMES</div>
-    <div class="product-lockup fade-up">
+    <div class="product-lockup" data-lockup-beam="one">
       <div class="lockup">
-        <div class="lockup-name">
-          <span class="lockup-marca">MéTRIK</span>
-          <span class="lockup-producto">one</span>
+        <div class="lockup-chars">
+          <span class="lockup-ch lockup-ch-marca" data-at="0.00">M</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.11">é</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.20">T</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.29">R</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.37">I</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.43">K</span>
+          <div class="lockup-prod-wrap">
+            <div class="lockup-destello-wrap">
+              <div class="lockup-destello"></div>
+              <div class="lockup-destello-ring"></div>
+            </div>
+            <span class="lockup-prod-text">one</span>
+          </div>
         </div>
-        <div class="lockup-line"></div>
+        <div class="lockup-beam-track">
+          <div class="lockup-beam-trail"></div>
+          <div class="lockup-beam-orb"></div>
+          <div class="lockup-beam-tail"></div>
+          <div class="lockup-beam-cone"></div>
+          <div class="lockup-beam-glow"></div>
+        </div>
       </div>
     </div>
     <p class="product-headline fade-up">La claridad financiera que tu negocio necesita.<br>Desde tu celular.</p>
@@ -635,10 +669,30 @@ a { text-decoration: none; color: inherit; }
 <section class="clarity" id="clarity">
   <div class="clarity-inner">
     <div class="clarity-label fade-up">CONSULTING &middot; PYMES</div>
-    <div class="clarity-lockup fade-up">
+    <div class="clarity-lockup" data-lockup-beam="clarity">
       <div class="lockup">
-        <div class="lockup-name"><span class="lockup-marca">MéTRIK</span><span class="lockup-producto">clarity</span></div>
-        <div class="lockup-line"></div>
+        <div class="lockup-chars">
+          <span class="lockup-ch lockup-ch-marca" data-at="0.00">M</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.11">é</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.20">T</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.29">R</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.37">I</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.43">K</span>
+          <div class="lockup-prod-wrap">
+            <div class="lockup-destello-wrap">
+              <div class="lockup-destello"></div>
+              <div class="lockup-destello-ring"></div>
+            </div>
+            <span class="lockup-prod-text">clarity</span>
+          </div>
+        </div>
+        <div class="lockup-beam-track">
+          <div class="lockup-beam-trail"></div>
+          <div class="lockup-beam-orb"></div>
+          <div class="lockup-beam-tail"></div>
+          <div class="lockup-beam-cone"></div>
+          <div class="lockup-beam-glow"></div>
+        </div>
       </div>
     </div>
     <p class="clarity-headline fade-up">¿Necesitas más que software?</p>
@@ -672,10 +726,30 @@ a { text-decoration: none; color: inherit; }
 <section class="projects-section">
   <div class="projects-inner">
     <div class="projects-label fade-up">PERSONALIZACIÓN &middot; SOBRE &middot; ONE</div>
-    <div class="projects-lockup fade-up">
+    <div class="projects-lockup" data-lockup-beam="projects">
       <div class="lockup">
-        <div class="lockup-name"><span class="lockup-marca">MéTRIK</span><span class="lockup-producto">projects</span></div>
-        <div class="lockup-line"></div>
+        <div class="lockup-chars">
+          <span class="lockup-ch lockup-ch-marca" data-at="0.00">M</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.11">é</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.20">T</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.29">R</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.37">I</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.43">K</span>
+          <div class="lockup-prod-wrap">
+            <div class="lockup-destello-wrap">
+              <div class="lockup-destello"></div>
+              <div class="lockup-destello-ring"></div>
+            </div>
+            <span class="lockup-prod-text">projects</span>
+          </div>
+        </div>
+        <div class="lockup-beam-track">
+          <div class="lockup-beam-trail"></div>
+          <div class="lockup-beam-orb"></div>
+          <div class="lockup-beam-tail"></div>
+          <div class="lockup-beam-cone"></div>
+          <div class="lockup-beam-glow"></div>
+        </div>
       </div>
     </div>
     <p class="projects-headline fade-up">¿ONE se te queda corto?</p>
@@ -841,13 +915,99 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   setTimeout(function(){ glow.classList.add('on'); }, 2200);
   setTimeout(function(){ orb.style.opacity = 0; tail.style.opacity = 0; cone.style.opacity = 0; }, 2300);
   setTimeout(function(){ tagline.style.opacity = '1'; }, 2500);
-  setTimeout(function(){ nav.style.opacity = '1'; heroScroll.style.opacity = '1'; }, 2900);
+  setTimeout(function(){ nav.style.opacity = '1'; heroScroll.style.opacity = ''; }, 2900);
   setTimeout(function(){
     document.body.style.overflow = '';
     nav.style.removeProperty('opacity');
     tagline.style.removeProperty('opacity');
     heroScroll.style.removeProperty('opacity');
   }, 3800);
+})();
+
+/* ═══ LOCKUP BEAM ANIMATION (scroll-triggered) ═══ */
+(function(){
+  var K_REVEALED = 0.60;
+
+  function animateLockup(wrapper){
+    if(wrapper.dataset.lockupDone) return;
+    wrapper.dataset.lockupDone = '1';
+
+    var chars = wrapper.querySelectorAll('.lockup-ch');
+    var trail = wrapper.querySelector('.lockup-beam-trail');
+    var orb = wrapper.querySelector('.lockup-beam-orb');
+    var tail = wrapper.querySelector('.lockup-beam-tail');
+    var cone = wrapper.querySelector('.lockup-beam-cone');
+    var glow = wrapper.querySelector('.lockup-beam-glow');
+    var destello = wrapper.querySelector('.lockup-destello');
+    var ring = wrapper.querySelector('.lockup-destello-ring');
+    var prodText = wrapper.querySelector('.lockup-prod-text');
+
+    var beamStarted = false, beamFinished = false, beamProgress = 0;
+    var startTime = null, prodTriggered = false;
+
+    function update(){
+      chars.forEach(function(s){
+        var at = parseFloat(s.dataset.at), reveal = beamProgress - 0.02, op = 0.04;
+        if(reveal >= at + 0.07) op = 1;
+        else if(reveal >= at - 0.02) op = Math.max(0.04, (reveal - (at - 0.02)) / 0.09);
+        s.style.opacity = op;
+        s.classList.toggle('lit', beamStarted && !beamFinished && Math.abs(beamProgress - at - 0.04) < 0.07);
+      });
+      var pct = beamProgress * 100;
+      trail.style.width = Math.min(pct, 100) + '%';
+      orb.style.left = pct + '%';
+      tail.style.left = Math.max(0, pct - 14) + '%';
+      tail.style.width = Math.min(pct, 14) + '%';
+      cone.style.left = pct + '%';
+    }
+
+    function tick(now){
+      if(!startTime) startTime = now;
+      var raw = Math.min((now - startTime) / 2200, 1);
+      beamProgress = 1 - Math.pow(1 - raw, 2.6);
+
+      if(!prodTriggered && beamProgress >= K_REVEALED){
+        prodTriggered = true;
+        destello.classList.add('fire');
+        ring.classList.add('fire');
+        prodText.style.opacity = '1';
+        prodText.style.color = '#10B981';
+        prodText.style.textShadow = '0 0 25px rgba(16,185,129,0.5), 0 0 50px rgba(16,185,129,0.2)';
+        prodText.style.transition = 'opacity 0.1s ease, color 0.1s ease, text-shadow 0.3s ease';
+      }
+
+      update();
+      if(raw < 1) requestAnimationFrame(tick);
+      else { beamFinished = true; update(); }
+    }
+
+    setTimeout(function(){
+      beamStarted = true;
+      orb.style.opacity = 1; tail.style.opacity = 1; cone.style.opacity = 1;
+      requestAnimationFrame(tick);
+    }, 200);
+
+    setTimeout(function(){
+      prodText.style.transition = 'color 1s cubic-bezier(0.4,0,0.2,1), text-shadow 1s cubic-bezier(0.4,0,0.2,1)';
+      prodText.style.color = '#1A1A1A';
+      prodText.style.textShadow = '0 0 0 transparent';
+    }, 2000);
+
+    setTimeout(function(){ glow.classList.add('on'); }, 2400);
+    setTimeout(function(){ orb.style.opacity = 0; tail.style.opacity = 0; cone.style.opacity = 0; }, 2500);
+  }
+
+  var lockups = document.querySelectorAll('[data-lockup-beam]');
+  if('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting) { animateLockup(e.target); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 });
+    lockups.forEach(function(el){ obs.observe(el); });
+  } else {
+    lockups.forEach(function(el){ animateLockup(el); });
+  }
 })();
 </script>
 </body>

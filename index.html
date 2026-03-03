@@ -372,9 +372,49 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 480px) {
   .bridge-stats { flex-direction: column; gap: var(--s-md); }
 }
+/* SPLASH */
+.splash{position:fixed;inset:0;z-index:99999;background:#0A0A0A;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity 0.8s cubic-bezier(0.4,0,0.2,1)}
+.splash-lk{position:relative;display:flex;flex-direction:column;align-items:flex-start}
+.splash-lk.breathe{animation:sp-br 2.2s ease-in-out infinite}
+@keyframes sp-br{0%,100%{transform:scale(1)}50%{transform:scale(1.01)}}
+.splash-row{display:flex;align-items:baseline;white-space:nowrap}
+.splash-ch{font-family:var(--font);font-weight:900;font-size:clamp(4.5rem,13vw,9.5rem);color:#FFF;line-height:1;letter-spacing:-0.02em;display:inline-block;will-change:opacity,text-shadow;transition:text-shadow 0.2s ease;opacity:0}
+.splash-ch.lit{text-shadow:0 4px 20px rgba(16,185,129,0.4),0 2px 40px rgba(16,185,129,0.15)}
+.splash-track{width:100%;height:4px;position:relative;margin-top:clamp(8px,1.2vw,14px);overflow:visible}
+.splash-trail{position:absolute;left:0;top:0;height:100%;background:#10B981;border-radius:2px;width:0}
+.splash-orb{position:absolute;top:50%;transform:translate(-50%,-50%);width:10px;height:10px;border-radius:50%;background:#FFF;box-shadow:0 0 6px 3px rgba(16,185,129,0.8),0 0 18px 8px rgba(16,185,129,0.45),0 0 50px 16px rgba(16,185,129,0.18),0 0 90px 30px rgba(16,185,129,0.06);z-index:10;pointer-events:none;opacity:0;transition:opacity 0.6s ease}
+.splash-tail{position:absolute;top:50%;transform:translateY(-50%);height:14px;background:linear-gradient(90deg,transparent 0%,rgba(16,185,129,0.06) 40%,rgba(16,185,129,0.25) 100%);border-radius:8px;pointer-events:none;z-index:9;opacity:0;transition:opacity 0.5s ease}
+.splash-cone{position:absolute;bottom:100%;transform:translateX(-50%);width:80px;height:60px;background:linear-gradient(0deg,rgba(16,185,129,0.15) 0%,rgba(16,185,129,0.03) 50%,transparent 100%);clip-path:polygon(35% 100%,65% 100%,85% 0%,15% 0%);pointer-events:none;z-index:8;opacity:0;transition:opacity 0.5s ease}
+.splash-glow{position:absolute;inset:-5px 0;background:#10B981;border-radius:6px;filter:blur(10px);opacity:0;pointer-events:none}
+.splash-glow.on{animation:sp-glow 1.2s cubic-bezier(0.16,1,0.3,1) forwards}
+@keyframes sp-glow{0%{opacity:0.3}30%{opacity:0.12}100%{opacity:0}}
+.splash-cn{position:absolute;width:14px;height:14px;opacity:0;transition:opacity 0.6s ease}
+.splash-cn::before,.splash-cn::after{content:'';position:absolute;background:#FFF}
+.splash-cn.tl::before{top:0;left:0;width:10px;height:1px}.splash-cn.tl::after{top:0;left:0;width:1px;height:10px}
+.splash-cn.tr::before{top:0;right:0;width:10px;height:1px}.splash-cn.tr::after{top:0;right:0;width:1px;height:10px}
+.splash-cn.bl::before{bottom:0;left:0;width:10px;height:1px}.splash-cn.bl::after{bottom:0;left:0;width:1px;height:10px}
+.splash-cn.br::before{bottom:0;right:0;width:10px;height:1px}.splash-cn.br::after{bottom:0;right:0;width:1px;height:10px}
 </style>
 </head>
 <body>
+
+<!-- SPLASH SCREEN -->
+<div class="splash" id="splash">
+  <div class="splash-cn tl" style="top:15%;left:8%"></div>
+  <div class="splash-cn tr" style="top:15%;right:8%"></div>
+  <div class="splash-cn bl" style="bottom:15%;left:8%"></div>
+  <div class="splash-cn br" style="bottom:15%;right:8%"></div>
+  <div class="splash-lk" id="splash-lk">
+    <div class="splash-row" id="splash-row"></div>
+    <div class="splash-track">
+      <div class="splash-trail" id="splash-trail"></div>
+      <div class="splash-orb" id="splash-orb"></div>
+      <div class="splash-tail" id="splash-tail"></div>
+      <div class="splash-cone" id="splash-cone"></div>
+      <div class="splash-glow" id="splash-glow"></div>
+    </div>
+  </div>
+</div>
 
 <nav class="nav" id="nav">
   <a href="#" class="nav-logo">
@@ -766,6 +806,93 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
 });
+
+/* ═══ SPLASH ANIMATION ═══ */
+(function(){
+  const splash = document.getElementById('splash');
+  const lk = document.getElementById('splash-lk');
+  const row = document.getElementById('splash-row');
+  const trail = document.getElementById('splash-trail');
+  const orb = document.getElementById('splash-orb');
+  const tail = document.getElementById('splash-tail');
+  const cone = document.getElementById('splash-cone');
+  const glow = document.getElementById('splash-glow');
+  const corners = splash.querySelectorAll('.splash-cn');
+
+  const chars = [
+    {ch:'M',at:0.00},{ch:'é',at:0.14},{ch:'T',at:0.28},
+    {ch:'R',at:0.44},{ch:'I',at:0.58},{ch:'K',at:0.68}
+  ];
+
+  chars.forEach(c => {
+    const span = document.createElement('span');
+    span.className = 'splash-ch';
+    span.textContent = c.ch;
+    span.dataset.at = c.at;
+    row.appendChild(span);
+  });
+
+  const spans = row.querySelectorAll('.splash-ch');
+  let beamStarted = false, beamFinished = false, beamProgress = 0;
+  let startTime = null, animId = null;
+
+  function updateChars(){
+    spans.forEach(s => {
+      const at = parseFloat(s.dataset.at);
+      const reveal = beamProgress - 0.02;
+      let op = 0;
+      if(reveal >= at + 0.10) op = 1;
+      else if(reveal >= at - 0.03) op = Math.max(0,(reveal-(at-0.03))/0.13);
+      s.style.opacity = op;
+      const lit = beamStarted && !beamFinished && Math.abs(beamProgress - at - 0.05) < 0.09;
+      s.classList.toggle('lit', lit);
+    });
+    const pct = beamProgress * 100;
+    trail.style.width = Math.min(pct,100) + '%';
+    orb.style.left = pct + '%';
+    tail.style.left = Math.max(0,pct-14) + '%';
+    tail.style.width = Math.min(pct,14) + '%';
+    cone.style.left = pct + '%';
+  }
+
+  function tick(now){
+    if(!startTime) startTime = now;
+    const elapsed = now - startTime;
+    const raw = Math.min(elapsed / 1800, 1);
+    beamProgress = 1 - Math.pow(1 - raw, 2.6);
+    updateChars();
+    if(raw < 1) animId = requestAnimationFrame(tick);
+    else beamFinished = true;
+  }
+
+  function runBeam(){
+    beamStarted = true;
+    orb.style.opacity = 1;
+    tail.style.opacity = 1;
+    cone.style.opacity = 1;
+    animId = requestAnimationFrame(tick);
+  }
+
+  document.body.style.overflow = 'hidden';
+
+  setTimeout(runBeam, 500);
+  setTimeout(function(){ glow.classList.add('on'); }, 2400);
+  setTimeout(function(){
+    corners.forEach(c => { c.style.opacity = 0.08; });
+  }, 2400);
+  setTimeout(function(){
+    orb.style.opacity = 0; tail.style.opacity = 0; cone.style.opacity = 0;
+  }, 2500);
+  setTimeout(function(){ lk.classList.add('breathe'); }, 2900);
+  setTimeout(function(){
+    lk.classList.remove('breathe');
+    splash.style.opacity = 0;
+  }, 3900);
+  setTimeout(function(){
+    splash.remove();
+    document.body.style.overflow = '';
+  }, 4700);
+})();
 </script>
 </body>
 </html>

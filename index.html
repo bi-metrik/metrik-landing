@@ -105,13 +105,19 @@ a { text-decoration: none; color: inherit; }
 .nav.scrolled { background: rgba(26,26,26,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
 .nav-logo .logo-text { font-size: 1.25rem; color: var(--blanco); }
 .nav-logo .logo-line { height: 2px; margin-top: 5px; }
+.nav-links { display: flex; gap: 1.5rem; align-items: center; }
+.nav-link { font-family: var(--font); font-weight: 500; font-size: 0.8125rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; letter-spacing: 0.01em; }
+.nav-link:hover { color: var(--blanco); }
 .nav-cta { font-family: var(--font); font-weight: 600; font-size: 0.8125rem; color: var(--blanco); background: transparent; border: 1.5px solid rgba(255,255,255,0.25); padding: 0.5rem 1.25rem; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; letter-spacing: 0.01em; }
 .nav-cta:hover { border-color: var(--verde-metrica); color: var(--verde-metrica); }
+@media (max-width: 600px) { .nav-links { display: none; } }
 
 /* HERO */
 .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: var(--s-4xl) var(--s-md); background: var(--negro-carbon); position: relative; overflow: hidden; }
 .hero-logo .logo-line { margin-top: 12px; height: 3px; }
 .hero-tagline { font-weight: 300; font-size: clamp(1.125rem, 2.5vw, 1.5rem); color: rgba(255,255,255,0.55); margin-top: var(--s-lg); letter-spacing: 0.02em; transition: opacity 0.8s ease; }
+.hero-cta { display: inline-block; margin-top: var(--s-xl); font-family: var(--font); font-weight: 600; font-size: 1rem; color: var(--negro-carbon); background: var(--verde-metrica); padding: 0.875rem 2.25rem; border-radius: 8px; transition: all 0.3s ease, opacity 0.8s ease; }
+.hero-cta:hover { background: #0EA472; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(16,185,129,0.35); }
 .hero-scroll { position: absolute; bottom: var(--s-lg); left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.7; transition: opacity 0.3s; }
 .hero-scroll:hover { opacity: 1; }
 .hero-scroll-text { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
@@ -427,6 +433,11 @@ a { text-decoration: none; color: inherit; }
       <div class="logo-line"></div>
     </div>
   </a>
+  <nav class="nav-links">
+    <a href="#producto" class="nav-link">ONE</a>
+    <a href="#clarity" class="nav-link">Clarity</a>
+    <a href="#pricing" class="nav-link">Precios</a>
+  </nav>
   <a href="#pricing" class="nav-cta">Probar gratis</a>
 </nav>
 
@@ -451,6 +462,7 @@ a { text-decoration: none; color: inherit; }
     </div>
   </div>
   <p class="hero-tagline" id="hero-tagline" style="opacity:0">De caos a claridad.</p>
+  <a href="#pricing" class="hero-cta" id="hero-cta" style="opacity:0">Empieza gratis</a>
   <div class="hero-scroll" id="hero-scroll" style="opacity:0">
     <span class="hero-scroll-text">Descubre</span>
     <div class="hero-scroll-line"></div>
@@ -630,7 +642,7 @@ a { text-decoration: none; color: inherit; }
 <section class="pricing" id="pricing">
   <div class="pricing-header">
     <h2 class="pricing-title fade-up">Precios claros desde el día 1</h2>
-    <p class="pricing-sub fade-up">Sin sorpresas. Sin letra chica. Empezá gratis.</p>
+    <p class="pricing-sub fade-up">Sin sorpresas. Sin letra chica. Empieza gratis.</p>
     <div class="pricing-toggle-wrap fade-up">
       <span class="pricing-toggle-label active" id="toggle-label-mensual">Mensual</span>
       <label class="pricing-toggle">
@@ -699,7 +711,7 @@ a { text-decoration: none; color: inherit; }
       <button class="price-btn price-btn--secondary" onclick="window.open('https://metrikone.co','_blank')">Empezar con Empresa + WA</button>
     </div>
   </div>
-  <p class="pricing-note fade-up" id="pricing-footer-note">Plan anual: 2 meses gratis. 14 días de prueba. Cancela cuando quieras.</p>
+  <p class="pricing-note fade-up" id="pricing-footer-note">Plan anual: 2 meses gratis. 10 días de prueba. Cancela cuando quieras.</p>
 </section>
 
 <section class="clarity" id="clarity">
@@ -731,7 +743,7 @@ a { text-decoration: none; color: inherit; }
         </div>
       </div>
     </div>
-    <p class="clarity-headline fade-up">¿Necesitas más que software?</p>
+    <p class="clarity-headline fade-up">¿Tu empresa necesita acompañamiento?</p>
     <p class="clarity-desc fade-up">Clarity estructura tus procesos e implementa MéTRIK one en tu empresa. Diagnóstico, configuración, capacitación de equipo y soporte. Todo en 10 a 45 días.</p>
     <div class="clarity-levels fade-up">
       <div class="clarity-level">
@@ -788,7 +800,7 @@ a { text-decoration: none; color: inherit; }
         </div>
       </div>
     </div>
-    <p class="projects-headline fade-up">¿ONE se te queda corto?</p>
+    <p class="projects-headline fade-up">¿Tu operación necesita algo a la medida?</p>
     <p class="projects-desc fade-up">Si tu operación necesita algo que el estándar no cubre, lo construimos sobre ONE. Módulos personalizados, integraciones con tus herramientas, dashboards a tu medida — todo conectado con la plataforma que ya conoces.</p>
     <div class="projects-capabilities fade-up">
       <div class="projects-cap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="14" width="4" height="7" rx="1" fill="#6B7280"/><rect x="10" y="9" width="4" height="12" rx="1" fill="#6B7280"/><rect x="17" y="4" width="4" height="17" rx="1" fill="#1A1A1A"/></svg><span>Dashboards custom</span></div>
@@ -821,7 +833,7 @@ a { text-decoration: none; color: inherit; }
     <div class="trust-card trust-card--afi">
       <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Custodia_AFI.png" alt="AFI International Group" class="trust-afi-seal" loading="lazy">
       <div class="trust-title">Custodia certificada</div>
-      <div class="trust-desc">Tus datos financieros están custodiados por AFI International Group, firma regulada de custodia de activos. Un tercero de confianza protege tu información.</div>
+      <div class="trust-desc">Tus datos financieros están custodiados por AFI International Group, firma regulada de custodia de activos digitales. Un tercero independiente garantiza la integridad y confidencialidad de tu información.</div>
     </div>
     <div class="trust-card">
       <div class="trust-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 3L4 8v7c0 7.73 5.12 14.96 12 17 6.88-2.04 12-9.27 12-17V8L16 3z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M11 16l3.5 3.5L21 12" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -845,7 +857,7 @@ a { text-decoration: none; color: inherit; }
 
 <section class="cta-final">
   <h2 class="cta-final-headline fade-up">Tus cifras claras.<br>Desde hoy.</h2>
-  <p class="cta-final-sub fade-up">Empieza gratis con MéTRIK one. 14 días de prueba Pro incluidos.</p>
+  <p class="cta-final-sub fade-up">Empieza gratis con MéTRIK one. 10 días de prueba Empresa incluidos.</p>
   <a href="https://metrikone.co" target="_blank" class="cta-btn fade-up">Probar MéTRIK one gratis</a>
   <p class="cta-note fade-up">¿Prefieres hablar con nosotros? <a href="https://wa.me/573159509103" style="color:var(--verde-metrica);text-decoration:underline;">Escríbenos por WhatsApp</a></p>
 </section>
@@ -872,7 +884,7 @@ a { text-decoration: none; color: inherit; }
     <div class="footer-legal">
       <a href="./privacidad.html" class="footer-link footer-link--legal">Política de tratamiento de datos</a>
     </div>
-    <p class="footer-copy">&copy; 2026 MéTRIK S.A.S. &middot; Bogotá, Colombia &middot; NIT pendiente</p>
+    <p class="footer-copy">&copy; 2026 MéTRIK S.A.S. &middot; Bogotá, Colombia</p>
   </div>
 </footer>
 
@@ -935,8 +947,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     labelAnual.classList.toggle('active', anual);
     saveBadge.style.display = anual ? '' : 'none';
     footerNote.textContent = anual
-      ? '2 meses gratis en plan anual. 14 días de prueba. Cancela cuando quieras.'
-      : 'Plan anual: 2 meses gratis. 14 días de prueba. Cancela cuando quieras.';
+      ? '2 meses gratis en plan anual. 10 días de prueba. Cancela cuando quieras.'
+      : 'Plan anual: 2 meses gratis. 10 días de prueba. Cancela cuando quieras.';
   }
 
   toggle.addEventListener('change', function(){ applyPricing(this.checked); });
@@ -952,6 +964,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   var cone = document.getElementById('hero-cone');
   var glow = document.getElementById('hero-glow');
   var tagline = document.getElementById('hero-tagline');
+  var heroCta = document.getElementById('hero-cta');
   var heroScroll = document.getElementById('hero-scroll');
   var nav = document.getElementById('nav');
 
@@ -993,11 +1006,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   setTimeout(function(){ glow.classList.add('on'); }, 2200);
   setTimeout(function(){ orb.style.opacity = 0; tail.style.opacity = 0; cone.style.opacity = 0; }, 2300);
   setTimeout(function(){ tagline.style.opacity = '1'; }, 2500);
+  setTimeout(function(){ heroCta.style.opacity = '1'; }, 2750);
   setTimeout(function(){ nav.style.opacity = '1'; heroScroll.style.opacity = ''; }, 2900);
   setTimeout(function(){
     document.body.style.overflow = '';
     nav.style.removeProperty('opacity');
     tagline.style.removeProperty('opacity');
+    heroCta.style.removeProperty('opacity');
     heroScroll.style.removeProperty('opacity');
   }, 3800);
 })();

@@ -260,6 +260,12 @@ a { text-decoration: none; color: inherit; }
 .price-btn--secondary { background: transparent; color: var(--negro-carbon); border: 1.5px solid var(--gris-linea); }
 .price-btn--secondary:hover { border-color: var(--negro-carbon); }
 .pricing-note { text-align: center; margin-top: var(--s-lg); font-size: 1rem; font-weight: 500; color: var(--negro-carbon); letter-spacing: 0.01em; }
+.price-users-line { font-size: 0.75rem; color: var(--gris-acero); margin-top: 0.5rem; line-height: 1.4; }
+.price-features-separator { list-style: none; display: flex; align-items: center; gap: 0.5rem; margin-top: 0.375rem; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gris-acero); opacity: 0.6; }
+.price-features-separator::before { content: none !important; }
+.price-features-separator::after { content: ''; flex: 1; height: 1px; background: var(--gris-linea); }
+.price-feature-extra { color: var(--negro-carbon) !important; font-weight: 500 !important; }
+.price-feature-extra::before { content: '+' !important; color: var(--negro-carbon) !important; font-weight: 700 !important; }
 
 /* CLARITY */
 .clarity { padding: var(--s-3xl) var(--s-md); background: var(--blanco); }
@@ -659,6 +665,7 @@ a { text-decoration: none; color: inherit; }
         <span class="price-currency">$</span><span class="price-value" id="precio-empresa">100K</span><span class="price-period">/mes</span>
       </div>
       <p class="price-billing-note" id="billing-note-empresa" style="font-size:0.75rem;color:var(--gris-acero);margin-top:0.25rem;min-height:1.1em;"></p>
+      <p class="price-users-line">1 usuario de gestión · 3 read-only · 3 contador</p>
       <ul class="price-features">
         <li>Todo en la app — sin límites</li>
         <li>Pipeline ilimitado</li>
@@ -666,8 +673,9 @@ a { text-decoration: none; color: inherit; }
         <li>Cotización con cálculo fiscal</li>
         <li>FAB completo</li>
         <li>Alertas en app</li>
-        <li>Usuarios adicionales: +$50K c/u</li>
         <li class="disabled">WhatsApp Bot</li>
+        <li class="price-features-separator">Extras</li>
+        <li class="price-feature-extra">Usuario de gestión adicional: $50K/mes</li>
       </ul>
       <button class="price-btn price-btn--primary" onclick="window.open('https://metrikone.co','_blank')">Empezar con Empresa</button>
     </div>
@@ -678,13 +686,15 @@ a { text-decoration: none; color: inherit; }
         <span class="price-currency">$</span><span class="price-value" id="precio-empresa-wa">150K</span><span class="price-period">/mes</span>
       </div>
       <p class="price-billing-note" id="billing-note-empresa-wa" style="font-size:0.75rem;color:var(--gris-acero);margin-top:0.25rem;min-height:1.1em;"></p>
+      <p class="price-users-line">1 usuario de gestión · 3 read-only · 3 contador · campo ilimitado</p>
       <ul class="price-features">
         <li>Todo lo de Empresa</li>
         <li>WhatsApp Bot completo</li>
+        <li>Colaboradores de campo ilimitados</li>
         <li>Resumen semanal por WhatsApp</li>
         <li>Alertas de cobro por WhatsApp</li>
-        <li>Colaboradores campo ilimitados</li>
-        <li>Add-on usuario adicional: +$50K c/u</li>
+        <li class="price-features-separator">Extras</li>
+        <li class="price-feature-extra">Usuario de gestión adicional: $50K/mes</li>
       </ul>
       <button class="price-btn price-btn--secondary" onclick="window.open('https://metrikone.co','_blank')">Empezar con Empresa + WA</button>
     </div>

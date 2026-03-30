@@ -9,26 +9,30 @@
 
 ## Sprint actual
 - **Fase:** Deploy
-- **Objetivo:** Ajustes de contenido, redes sociales y pricing
+- **Objetivo:** Mejoras de UX y consistencia post-auditoría Noor
 - **Progreso:** Completado — en producción en metrik.com.co
 
 ## Ultimo avance
-**Sesion:** 2026-03-25
+**Sesion:** 2026-03-30
 **Branch:** main
 
 Que se hizo:
-- Redes sociales unificadas en 3 páginas (index.html, confianza.html, privacidad.html): LinkedIn `/company/m%C3%A9trik/`, Instagram `metrik.negocios`, TikTok `@metrik.negocios`, Facebook `metrik.co`
-- DNS migrado a Vercel (metrik-one team) — nameservers + registro A — metrik.com.co live con SSL
-- Copy actualizado en index.html: title/meta tags + methodology section → nuevo eje "El sistema que toda empresa necesita"
-- Hero tagline "De caos a claridad" se mantiene (decisión Mauricio)
-- Toggle mensual/anual implementado por Max: Empresa $100K/mes | Empresa+WA $150K/mes (anual: $83K | $125K)
-- Vercel project re-linked a metrik-one (el team ID anterior estaba obsoleto)
-- Cambios sin commitear — pendiente git commit
+- Commit de todos los cambios pendientes de la sesión anterior (redes, copy, pricing ONE v3.0)
+- Pricing: línea de usuarios incluidos debajo del precio en cajones Empresa y Empresa+WA
+- Pricing: separador "Extras" (en español) para diferenciar lo incluido de lo adicional
+- Auditoría UX completa con Noor — 9 hallazgos priorizados
+- Nav: anclas ONE / Clarity / Precios (ocultas en mobile)
+- Hero: CTA "Empieza gratis" visible above the fold con animación
+- Trial unificado a 10 días en todo el documento (era 14 en algunos lugares)
+- "Pro" → "Empresa" en CTA final (plan ya no se llama Pro)
+- "Empezá" → "Empieza" (tuteo colombiano consistente)
+- Framing Clarity/Projects corregido — sin implicar que ONE falla
+- Contexto adicional en trust card AFI
+- "NIT pendiente" eliminado del footer
 
 ## Pendientes
-- [ ] **URGENTE:** Commit de todos los cambios (index.html, confianza.html, privacidad.html)
+- [ ] Testimonios / casos reales de clientes — requiere contenido de Mauricio
 - [ ] Verificar billing real Meta desde business.facebook.com → WhatsApp Manager → Billing
-- [ ] Auditar sección Clarity de la landing — copy no revisado en esta sesión
 - [ ] Al hacer nuevo deploy: reasignar alias `metrik.com.co` con `vercel alias set [url] metrik.com.co --scope metrik-one`
 
 ## Decisiones clave
@@ -39,13 +43,17 @@ Que se hizo:
 | 2026-03-25 | Toggle mensual/anual: Free / Empresa $100K / Empresa+WA $150K | Pricing ONE v3.0 aprobado — sin WA chico |
 | 2026-03-25 | WA add-on bajó de $80K a $50K | User-initiated = gratis según Meta API. Margen >97% |
 | 2026-03-25 | Vercel re-linked a metrik-one team | Team ID bi-metrik estaba obsoleto — proyecto vive en metrik-one |
+| 2026-03-30 | "Extras" como equivalente español de "Add-ons" | Más claro para el ICP colombiano |
+| 2026-03-30 | Trial unificado a 10 días | Consistente con ficha ONE [21] — 14 días generaba postergación |
+| 2026-03-30 | Nav con 3 anclas sin hamburguesa | Oculto en mobile (<600px) — prioridad mobile-first |
+| 2026-03-30 | NIT eliminado del footer hasta tener dato confirmado | "NIT pendiente" generaba desconfianza en B2B |
 
 ## Contexto critico
-- Todos los cambios de esta sesión están **sin commitear** — hacer git commit antes del próximo trabajo
 - Vercel scope es `metrik-one`, no `bi-metrik`. Usar `vercel --prod --yes` desde el directorio del proyecto
 - Cada deploy genera una URL nueva — siempre reasignar alias con `vercel alias set [nueva-url] metrik.com.co --scope metrik-one`
-- [21] Ficha ONE actualizada a v3.0 en metrik-docs con nuevo modelo de pricing
+- [21] Ficha ONE actualizada a v3.0 en metrik-docs con modelo de pricing actual
 - Docs [25][26][27][28][70][71] siguen CONGELADOS hasta resultados del A/B test de LinkedIn (diseñado por Mateo)
+- Testimonios es el único pendiente de UX que requiere contenido real — no se puede implementar sin casos de clientes
 
 ## Notas para continuidad
 Al retomar este proyecto, revisar:

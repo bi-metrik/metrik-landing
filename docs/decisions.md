@@ -10,3 +10,8 @@
 | 2026-03-25 | WA chico eliminado del modelo | Simplificación aprobada por Hana, Vera, Santiago. Modelo más limpio sin tier intermedio |
 | 2026-03-25 | Vercel project re-linked a metrik-one team | Team ID bi-metrik estaba obsoleto. Scope correcto: metrik-one |
 | 2026-03-25 | DNS migrado a Vercel | Nameservers cambiados a ns1/ns2.vercel-dns.com. Registro A 76.76.21.21 agregado via Vercel DNS |
+| 2026-03-30 | "Extras" como equivalente español de "Add-ons" | Más claro para el ICP colombiano — propuesta de Noor |
+| 2026-03-30 | Trial unificado a 10 días en toda la landing | Era 14 días en algunos lugares — inconsistente con ficha ONE [21] |
+| 2026-03-30 | Nav con anclas ONE / Clarity / Precios | Sin hamburguesa, oculto en mobile — auditoría Noor |
+| 2026-03-30 | NIT eliminado del footer hasta tener dato confirmado | "NIT pendiente" visible generaba desconfianza en B2B |
+| 2026-03-30 | CTA "Empieza gratis" agregado above the fold en hero | Auditoría Noor — sin CTA visible generaba fricción |

@@ -22,5 +22,5 @@ Landing page corporativa de MéTRIK. Contexto del proyecto en `../CONTEXT.md`.
 
 ## Convenciones
 - Tuteo colombiano ("Empieza", no "Empezá")
-- Precios y trial: fuente de verdad es `metrik-docs/docs/20_lineas/` ficha [21] ONE
+- Precios y trial: fuente de verdad es `metrik-docs/cerebro/reglas/pricing-one.md` + `conceptos/one-como-producto.md`
 - Copy de posicionamiento alineado con eje "sistema antes de crecer"

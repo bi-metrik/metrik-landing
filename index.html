@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MéTRIK — El sistema que toda empresa necesita</title>
-<meta name="description" content="Estructuramos el sistema operativo de tu empresa. Datos reales, decisiones claras, sin dependencia.">
+<title>MéTRIK — Claridad para decidir</title>
+<meta name="description" content="Estructuramos tu operación sobre una plataforma única. Ves cuánto te queda de cada venta y la utilidad real de tu negocio, en tiempo real, desde tu celular.">
 <link rel="canonical" href="https://metrik.com.co/">
-<meta property="og:title" content="MéTRIK — El sistema que toda empresa necesita">
-<meta property="og:description" content="Estructuramos el sistema operativo de tu empresa. Datos reales, decisiones claras, sin dependencia.">
+<meta property="og:title" content="MéTRIK — Claridad para decidir">
+<meta property="og:description" content="Estructuramos tu operación sobre una plataforma única. Ves cuánto te queda de cada venta y la utilidad real de tu negocio, en tiempo real, desde tu celular.">
 <meta property="og:image" content="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Logo_Mk.png">
 <meta property="og:url" content="https://metrik.com.co/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_CO">
 <meta property="og:site_name" content="MéTRIK">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="MéTRIK — El sistema que toda empresa necesita">
-<meta name="twitter:description" content="Estructuramos el sistema operativo de tu empresa. Datos reales, decisiones claras, sin dependencia.">
+<meta name="twitter:title" content="MéTRIK — Claridad para decidir">
+<meta name="twitter:description" content="Estructuramos tu operación sobre una plataforma única. Ves cuánto te queda de cada venta y la utilidad real de tu negocio, en tiempo real, desde tu celular.">
 <meta name="twitter:image" content="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Logo_Mk.png">
 
 <script type="application/ld+json">
@@ -28,7 +28,7 @@
       "name": "MéTRIK",
       "url": "https://metrik.com.co/",
       "logo": "https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Logo_Mk.png",
-      "description": "Consultora AI-first que estructura el sistema operativo de empresas PYME con datos y procesos claros.",
+      "description": "Consultora colombiana que opera con IA desde el origen. Estructura la operación de PYMEs sobre una plataforma única (MéTRIK ONE) y muestra margen y utilidad real en tiempo real, con IA gobernada dentro de los flujos.",
       "email": "mauricio.moreno@metrik.com.co",
       "telephone": "+57-315-950-9103",
       "areaServed": "CO",
@@ -162,8 +162,11 @@ a { text-decoration: none; color: inherit; }
 .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: var(--s-4xl) var(--s-md); background: var(--negro-carbon); position: relative; overflow: hidden; }
 .hero-logo .logo-line { margin-top: 12px; height: 3px; }
 .hero-tagline { font-weight: 300; font-size: clamp(1.125rem, 2.5vw, 1.5rem); color: rgba(255,255,255,0.55); margin-top: var(--s-lg); letter-spacing: 0.02em; transition: opacity 0.8s ease; }
-.hero-cta { display: inline-block; margin-top: var(--s-xl); font-family: var(--font); font-weight: 600; font-size: 1rem; color: var(--negro-carbon); background: var(--verde-metrica); padding: 0.875rem 2.25rem; border-radius: 8px; transition: all 0.3s ease, opacity 0.8s ease; }
+.hero-ctas { display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-top: var(--s-xl); transition: opacity 0.8s ease; }
+.hero-cta { display: inline-block; font-family: var(--font); font-weight: 600; font-size: 1rem; color: var(--negro-carbon); background: var(--verde-metrica); padding: 0.875rem 2.25rem; border-radius: 8px; transition: all 0.3s ease; }
 .hero-cta:hover { background: #0EA472; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(16,185,129,0.35); }
+.hero-cta-secondary { font-family: var(--font); font-weight: 500; font-size: 0.9375rem; color: rgba(255,255,255,0.65); transition: color 0.2s; letter-spacing: 0.01em; }
+.hero-cta-secondary:hover { color: var(--verde-metrica); }
 .hero-scroll { position: absolute; bottom: var(--s-lg); left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.7; transition: opacity 0.3s; }
 .hero-scroll:hover { opacity: 1; }
 .hero-scroll-text { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
@@ -184,38 +187,50 @@ a { text-decoration: none; color: inherit; }
 .closure-cta:hover { background: #0EA472; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(16,185,129,0.3); }
 
 /* MOCKUP */
-.mockup-wrapper { max-width: 420px; margin: 0 auto; position: relative; padding: 4px; }
+.mockup-wrapper { max-width: 360px; margin: 0 auto; position: relative; padding: 4px; }
 .mockup-glow { position: absolute; inset: -60px; background: radial-gradient(ellipse at center, rgba(16,185,129,0.08) 0%, transparent 70%); pointer-events: none; z-index: 0; }
 .iphone-frame { position: relative; z-index: 1; background: #000; border-radius: 44px; padding: 12px; box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 24px 80px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.04); }
 .iphone-notch { width: 120px; height: 28px; background: #000; border-radius: 0 0 18px 18px; margin: 0 auto -14px; position: relative; z-index: 10; }
 .iphone-home { width: 120px; height: 4px; background: rgba(255,255,255,0.25); border-radius: 2px; margin: 8px auto 4px; }
-.mockup-app { position: relative; z-index: 1; background: var(--blanco); border-radius: 32px; overflow: hidden; padding: 0 0 1rem 0; }
-.mockup-topbar { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; border-bottom: 1px solid var(--gris-linea); }
-.mockup-topbar-left { display: flex; align-items: center; gap: 0.5rem; }
-.mockup-isotipo { display: inline-flex; flex-direction: column; align-items: flex-start; }
-.mockup-iso-chars { display: flex; align-items: baseline; line-height: 1; }
-.mockup-iso-m { font-family: var(--font); font-weight: 700; font-size: 1.125rem; color: var(--negro-carbon); line-height: 1; }
-.mockup-iso-sub { font-family: var(--font); font-weight: 400; font-size: 0.5rem; color: var(--negro-carbon); line-height: 1; }
-.mockup-brand-group { display: flex; flex-direction: column; align-items: flex-start; }
-.mockup-brand-top { display: flex; align-items: baseline; gap: 0.5rem; }
-.mockup-brand-line { width: 100%; height: 1.5px; background: var(--verde-metrica); margin-top: 3px; border-radius: 1px; }
+.mockup-app { position: relative; z-index: 1; background: var(--blanco); border-radius: 32px; overflow: hidden; padding: 0 0 0.625rem 0; }
+.mockup-header { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0.75rem 0.4375rem; border-bottom: 1px solid var(--gris-linea); }
+.mockup-header-left { display: flex; align-items: center; gap: 0.375rem; flex-wrap: wrap; }
+.mockup-greeting { font-family: var(--font); font-weight: 700; font-size: 0.6875rem; color: var(--negro-carbon); }
+.mockup-greeting-sep { color: var(--gris-acero); font-size: 0.625rem; }
+.mockup-greeting-date { font-family: var(--font); font-weight: 400; font-size: 0.625rem; color: var(--gris-acero); }
+.mockup-header-right { display: flex; align-items: center; gap: 0.5rem; }
+.mockup-bell { color: var(--gris-acero); }
 .mockup-lockup-mini { display: flex; flex-direction: column; }
 .mockup-lockup-name { display: flex; align-items: baseline; gap: 0.12em; }
-.mockup-lockup-marca { font-family: var(--font); font-weight: 700; font-size: 0.8125rem; color: var(--negro-carbon); letter-spacing: -0.01em; }
-.mockup-lockup-prod { font-family: var(--font); font-weight: 300; font-size: 0.8125rem; color: var(--negro-carbon); text-transform: lowercase; }
-.mockup-date { font-family: var(--font); font-weight: 400; font-size: 0.75rem; color: var(--gris-acero); }
-.mockup-alert { display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0.75rem; padding: 0.5rem 0.75rem; background: #FEF2F2; border-radius: 8px; border: 1px solid #FECACA; }
-.mockup-alert-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rojo-alerta); flex-shrink: 0; }
-.mockup-alert-text { font-family: var(--font); font-weight: 500; font-size: 0.6875rem; color: var(--rojo-alerta); line-height: 1.3; }
-.mockup-alert--positive { background: #F0FDF4; border-color: #BBF7D0; }
-.mockup-alert-dot--green { background: var(--verde-metrica); }
-.mockup-alert-text--green { color: #15803D; }
+.mockup-lockup-marca { font-family: var(--font); font-weight: 700; font-size: 0.6875rem; color: var(--negro-carbon); letter-spacing: -0.01em; }
+.mockup-lockup-prod { font-family: var(--font); font-weight: 300; font-size: 0.6875rem; color: var(--negro-carbon); text-transform: lowercase; }
+.mockup-brand-line { width: 100%; height: 1.5px; background: var(--verde-metrica); margin-top: 2px; border-radius: 1px; }
+
+.mockup-title-row { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0.75rem 0.375rem; }
+.mockup-title { font-family: var(--font); font-weight: 700; font-size: 0.8125rem; color: var(--negro-carbon); letter-spacing: -0.01em; }
+.mockup-month { display: flex; align-items: center; gap: 0.5rem; }
+.mockup-month-text { font-family: var(--font); font-weight: 600; font-size: 0.6875rem; color: var(--negro-carbon); }
+.mockup-month-arrow { font-size: 0.75rem; color: var(--gris-acero); cursor: default; }
+
+.mockup-tile-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4375rem; padding: 0 0.625rem; margin-bottom: 0.4375rem; }
+.mockup-tile { padding: 0.5rem; border: 1px solid var(--gris-linea); border-radius: 8px; }
+.mockup-tile-label { font-family: var(--font); font-weight: 700; font-size: 0.4375rem; color: var(--gris-acero); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.1875rem; }
+.mockup-tile-value { font-family: var(--font); font-weight: 700; font-size: 0.8125rem; color: var(--negro-carbon); letter-spacing: -0.02em; line-height: 1.2; }
+.mockup-tile-sub { font-family: var(--font); font-weight: 400; font-size: 0.5rem; color: var(--gris-acero); margin-top: 0.1875rem; line-height: 1.3; }
+
+.mockup-combo { display: flex; padding: 0.5rem 0.625rem; margin: 0 0.625rem 0.4375rem; border: 1px solid var(--gris-linea); border-radius: 8px; gap: 0.4375rem; }
+.mockup-combo-half { flex: 1; min-width: 0; }
+.mockup-combo-divider { width: 1px; background: var(--gris-linea); align-self: stretch; }
+.mockup-combo-label { font-family: var(--font); font-weight: 700; font-size: 0.4375rem; color: var(--gris-acero); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.1875rem; line-height: 1.3; }
+.mockup-combo-value { font-family: var(--font); font-weight: 700; font-size: 0.875rem; color: var(--negro-carbon); letter-spacing: -0.02em; line-height: 1.2; }
+.mockup-combo-sub { font-family: var(--font); font-weight: 400; font-size: 0.5rem; color: var(--gris-acero); margin-top: 0.1875rem; line-height: 1.3; }
+
 .mockup-val--green { color: var(--verde-metrica); }
 .mockup-bar--yellow { background: var(--amarillo-warning); }
-.mockup-cards { display: flex; flex-direction: column; gap: 0.5rem; padding: 0 0.75rem; margin-top: 0.5rem; }
-.mockup-card { border: 1px solid var(--gris-linea); border-radius: 10px; padding: 0.75rem; }
-.mockup-card-q { font-family: var(--font); font-weight: 600; font-size: 0.6875rem; color: var(--negro-carbon); margin-bottom: 0.25rem; }
-.mockup-card-value { font-family: var(--font); font-weight: 700; font-size: 1.0625rem; color: var(--negro-carbon); line-height: 1.2; letter-spacing: -0.02em; }
+.mockup-cards { display: flex; flex-direction: column; gap: 0.4375rem; padding: 0 0.625rem; margin-top: 0.1875rem; }
+.mockup-card { border: 1px solid var(--gris-linea); border-radius: 8px; padding: 0.5rem 0.625rem; }
+.mockup-card-q { font-family: var(--font); font-weight: 600; font-size: 0.625rem; color: var(--negro-carbon); margin-bottom: 0.1875rem; }
+.mockup-card-value { font-family: var(--font); font-weight: 700; font-size: 0.9375rem; color: var(--negro-carbon); line-height: 1.2; letter-spacing: -0.02em; }
 .mockup-val--red { color: var(--rojo-alerta); }
 .mockup-card-bar { margin-top: 0.5rem; }
 .mockup-bar-track { width: 100%; height: 4px; background: var(--gris-linea); border-radius: 2px; overflow: hidden; }
@@ -244,9 +259,19 @@ a { text-decoration: none; color: inherit; }
 .bridge-line { font-weight: 400; font-size: 1.125rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
 .bridge-action { color: var(--blanco); font-weight: 600; }
 .bridge-anchor { font-weight: 600; font-size: 1.125rem; color: var(--verde-metrica); margin-top: 0.5rem; }
+.bridge-cta-wrap { margin-top: var(--s-lg); text-align: center; }
+.bridge-cta { display: inline-block; font-family: var(--font); font-weight: 600; font-size: 0.9375rem; color: var(--blanco); border: 1.5px solid rgba(255,255,255,0.4); padding: 0.75rem 2rem; border-radius: 8px; transition: all 0.3s ease; }
+.bridge-cta:hover { border-color: var(--verde-metrica); color: var(--verde-metrica); transform: translateY(-1px); }
 
 /* TRANSITION */
 .transition-divider { height: 120px; background: linear-gradient(to bottom, var(--negro-carbon), var(--blanco)); }
+
+/* AI GOVERNANCE */
+.ai-governance { padding: var(--s-2xl) var(--s-md); background: var(--blanco); border-bottom: 1px solid var(--gris-linea); }
+.ai-governance-inner { max-width: var(--max-narrow); margin: 0 auto; text-align: center; }
+.ai-governance-eyebrow { font-weight: 700; font-size: 0.6875rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--verde-metrica); margin-bottom: var(--s-sm); }
+.ai-governance-headline { font-weight: 700; font-size: clamp(1.5rem, 3.5vw, 2.25rem); color: var(--negro-carbon); letter-spacing: -0.02em; line-height: 1.25; }
+.ai-governance-text { font-weight: 400; font-size: 1.0625rem; color: var(--gris-acero); margin-top: var(--s-md); line-height: 1.7; }
 
 /* PRODUCT */
 .product { padding: var(--s-3xl) var(--s-md); background: var(--blanco); }
@@ -275,8 +300,9 @@ a { text-decoration: none; color: inherit; }
 /* PRICING */
 .pricing { padding: var(--s-3xl) var(--s-md); background: var(--gris-fondo); }
 .pricing-header { text-align: center; margin-bottom: var(--s-2xl); }
-.pricing-title { font-weight: 800; font-size: clamp(1.75rem, 4vw, 2.5rem); color: var(--negro-carbon); letter-spacing: -0.02em; }
-.pricing-sub { font-weight: 400; font-size: 1rem; color: var(--gris-acero); margin-top: var(--s-xs); }
+.pricing-eyebrow { font-weight: 600; font-size: 0.6875rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gris-acero); margin-bottom: var(--s-sm); }
+.pricing-title { font-weight: 800; font-size: clamp(1.5rem, 3.5vw, 2rem); color: var(--negro-carbon); letter-spacing: -0.02em; }
+.pricing-sub { font-weight: 400; font-size: 0.9375rem; color: var(--gris-acero); margin-top: var(--s-xs); }
 .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--s-md); max-width: 960px; margin: 0 auto; align-items: start; }
 
 /* PRICING TOGGLE */
@@ -293,7 +319,7 @@ a { text-decoration: none; color: inherit; }
 .price-card { background: var(--blanco); border: 1px solid var(--gris-linea); border-radius: 16px; padding: var(--s-lg); position: relative; transition: all 0.3s ease; }
 .price-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.06); transform: translateY(-2px); }
 .price-card--featured { border-color: var(--verde-metrica); box-shadow: 0 0 0 1px var(--verde-metrica); }
-.price-card--featured::before { content: 'POPULAR'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--verde-metrica); color: var(--blanco); font-weight: 700; font-size: 0.625rem; letter-spacing: 0.12em; padding: 0.3rem 1rem; border-radius: 20px; }
+.price-card--featured::before { content: 'EL ELEGIDO'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--verde-metrica); color: var(--blanco); font-weight: 700; font-size: 0.625rem; letter-spacing: 0.12em; padding: 0.3rem 1rem; border-radius: 20px; }
 .price-plan { font-weight: 700; font-size: 1.125rem; color: var(--negro-carbon); }
 .price-tagline { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); margin-top: 0.25rem; line-height: 1.5; }
 .price-amount { margin-top: var(--s-md); display: flex; align-items: baseline; gap: 0.25rem; }
@@ -326,31 +352,52 @@ a { text-decoration: none; color: inherit; }
 .clarity-lockup .lockup { display: inline-flex; flex-direction: column; align-items: flex-start; }
 .clarity-label { font-weight: 700; font-size: 0.6875rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gris-acero); margin-bottom: var(--s-sm); }
 .clarity-headline { font-weight: 700; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--negro-carbon); margin-top: var(--s-xs); letter-spacing: -0.01em; }
-.clarity-desc { font-weight: 400; font-size: 1rem; color: var(--gris-acero); margin-top: var(--s-sm); line-height: 1.7; }
-.clarity-levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--s-sm); margin-top: var(--s-xl); text-align: left; }
-.clarity-level { padding: var(--s-md); border: 1px solid var(--gris-linea); border-radius: 12px; }
+.clarity-intro { font-weight: 500; font-size: 1.0625rem; color: var(--negro-carbon); margin-top: var(--s-md); line-height: 1.6; }
+
+.clarity-promesas { list-style: none; margin: var(--s-lg) auto 0; padding: 0; max-width: var(--max-narrow); display: flex; flex-direction: column; gap: var(--s-md); text-align: left; }
+.clarity-promesa { display: flex; gap: var(--s-md); align-items: flex-start; padding: var(--s-md); border: 1px solid var(--gris-linea); border-radius: 12px; transition: border-color 0.3s, transform 0.3s; }
+.clarity-promesa:hover { border-color: var(--verde-metrica); transform: translateX(2px); }
+.clarity-promesa-num { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: var(--verde-metrica); color: var(--blanco); font-weight: 800; font-size: 0.9375rem; display: flex; align-items: center; justify-content: center; line-height: 1; }
+.clarity-promesa-content { flex: 1; }
+.clarity-promesa-title { font-weight: 700; font-size: 1rem; color: var(--negro-carbon); letter-spacing: -0.01em; margin: 0.125rem 0 0.375rem; line-height: 1.3; }
+.clarity-promesa-text { font-weight: 400; font-size: 0.9375rem; color: var(--gris-acero); line-height: 1.6; margin: 0; }
+.clarity-promesa-text strong { color: var(--negro-carbon); font-weight: 600; }
+
+.clarity-cierre { font-weight: 500; font-size: 1.0625rem; color: var(--negro-carbon); margin-top: var(--s-lg); line-height: 1.6; max-width: var(--max-narrow); margin-left: auto; margin-right: auto; padding: var(--s-md); background: rgba(16,185,129,0.06); border-radius: 10px; border-left: 3px solid var(--verde-metrica); }
+.clarity-cierre strong { color: var(--verde-metrica); font-weight: 700; }
+.clarity-levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-md); margin-top: var(--s-xl); text-align: left; }
+@media (max-width: 768px) { .clarity-levels { grid-template-columns: 1fr; } }
+.clarity-level { padding: var(--s-md); border: 1px solid var(--gris-linea); border-radius: 12px; transition: border-color 0.3s; }
+.clarity-level:hover { border-color: var(--verde-metrica); }
 .clarity-level-name { font-weight: 700; font-size: 1rem; color: var(--negro-carbon); }
-.clarity-level-time { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); margin-top: 0.25rem; }
+.clarity-level-tag { font-weight: 600; font-size: 0.6875rem; color: var(--verde-metrica); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.25rem; }
 .clarity-level-price { font-weight: 700; font-size: 1.25rem; color: var(--negro-carbon); margin-top: 0.75rem; }
 .clarity-level-desc { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); margin-top: 0.5rem; line-height: 1.5; }
+.clarity-filter { font-weight: 500; font-size: 0.875rem; color: var(--negro-carbon); text-align: center; margin-top: var(--s-md); padding: 0.75rem var(--s-md); background: rgba(16,185,129,0.06); border-radius: 8px; border: 1px solid rgba(16,185,129,0.15); }
+.clarity-notes { margin-top: var(--s-lg); display: flex; flex-direction: column; gap: 0.625rem; max-width: var(--max-narrow); margin-left: auto; margin-right: auto; }
+.clarity-note { display: flex; align-items: flex-start; gap: 0.625rem; font-weight: 400; font-size: 0.875rem; color: var(--gris-acero); line-height: 1.6; text-align: left; }
+.clarity-note-dot { display: inline-block; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--verde-metrica); margin-top: 0.5rem; }
+.clarity-note-link { color: var(--verde-metrica); font-weight: 600; text-decoration: underline; }
+.clarity-note-link:hover { color: #0EA472; }
 .clarity-cta-wrapper { margin-top: var(--s-lg); }
 .clarity-cta { display: inline-block; font-family: var(--font); font-weight: 600; font-size: 0.9375rem; color: var(--negro-carbon); border: 1.5px solid var(--negro-carbon); padding: 0.875rem 2rem; border-radius: 8px; transition: all 0.3s ease; }
 .clarity-cta:hover { background: var(--negro-carbon); color: var(--blanco); }
 
 /* PROJECTS */
-.projects-section { padding: var(--s-2xl) var(--s-md) var(--s-3xl); background: var(--blanco); text-align: center; border-top: 1px solid rgba(0,0,0,0.05); }
-.projects-inner { max-width: var(--max-narrow); margin: 0 auto; }
-.projects-lockup { margin-bottom: var(--s-md); display: flex; justify-content: center; }
-.projects-lockup .lockup { display: inline-flex; flex-direction: column; align-items: flex-start; }
-.projects-label { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.25em; color: var(--gris-acero); margin-bottom: var(--s-sm); }
-.projects-headline { font-weight: 700; font-size: clamp(1.375rem, 3vw, 1.75rem); color: var(--negro-carbon); letter-spacing: -0.02em; margin-bottom: 0.5rem; }
-.projects-desc { font-weight: 400; font-size: 0.9375rem; color: var(--gris-acero); line-height: 1.7; margin-bottom: var(--s-lg); }
-.projects-capabilities { display: flex; justify-content: center; gap: var(--s-lg); flex-wrap: wrap; margin-bottom: var(--s-lg); }
-.projects-cap { display: flex; align-items: center; gap: 0.5rem; font-family: var(--font); font-weight: 500; font-size: 0.875rem; color: var(--negro-carbon); }
-.projects-footer { display: flex; flex-direction: column; align-items: center; gap: var(--s-sm); }
-.projects-price { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); }
-.projects-cta { display: inline-block; font-family: var(--font); font-weight: 600; font-size: 0.875rem; color: var(--negro-carbon); border: 1.5px solid var(--negro-carbon); padding: 0.625rem 1.75rem; border-radius: 8px; transition: all 0.3s ease; }
-.projects-cta:hover { background: var(--negro-carbon); color: var(--blanco); }
+.projects-section { padding: var(--s-xl) var(--s-md); background: var(--blanco); text-align: center; border-top: 1px solid rgba(0,0,0,0.05); }
+.projects-inner { max-width: 560px; margin: 0 auto; }
+.projects-lockup { margin-bottom: var(--s-sm); display: flex; justify-content: center; }
+.projects-lockup .lockup { display: inline-flex; flex-direction: column; align-items: flex-start; transform: scale(0.7); transform-origin: center; }
+.projects-label { font-size: 0.625rem; font-weight: 600; letter-spacing: 0.25em; color: var(--gris-acero); margin-bottom: 0.5rem; opacity: 0.7; }
+.projects-headline { font-weight: 600; font-size: 1.0625rem; color: var(--negro-carbon); letter-spacing: -0.01em; margin-bottom: 0.5rem; }
+.projects-desc { font-weight: 400; font-size: 0.875rem; color: var(--gris-acero); line-height: 1.6; margin-bottom: var(--s-md); }
+.projects-capabilities { display: flex; justify-content: center; gap: var(--s-md); flex-wrap: wrap; margin-bottom: var(--s-md); }
+.projects-cap { display: flex; align-items: center; gap: 0.375rem; font-family: var(--font); font-weight: 500; font-size: 0.75rem; color: var(--gris-acero); }
+.projects-cap svg { width: 16px; height: 16px; }
+.projects-footer { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.projects-price { font-weight: 400; font-size: 0.75rem; color: var(--gris-acero); }
+.projects-cta { display: inline-block; font-family: var(--font); font-weight: 500; font-size: 0.8125rem; color: var(--gris-acero); border: 1px solid var(--gris-linea); padding: 0.5rem 1.25rem; border-radius: 6px; transition: all 0.3s ease; }
+.projects-cta:hover { border-color: var(--negro-carbon); color: var(--negro-carbon); }
 
 /* CREDIBILITY */
 .credibility { padding: var(--s-3xl) var(--s-md); background: var(--negro-carbon); color: var(--blanco); }
@@ -374,9 +421,14 @@ a { text-decoration: none; color: inherit; }
 
 /* METHODOLOGY */
 .methodology { padding: var(--s-2xl) var(--s-md); background: var(--negro-carbon); border-top: 1px solid rgba(255,255,255,0.06); }
-.methodology-inner { max-width: var(--max-narrow); margin: 0 auto; text-align: center; }
-.methodology-tag { font-weight: 500; font-style: italic; font-size: 1.0625rem; color: var(--verde-metrica); margin-bottom: var(--s-md); }
-.methodology-text { font-weight: 400; font-size: 1rem; color: var(--gris-acero); line-height: 1.7; }
+.methodology-inner { max-width: var(--max-content); margin: 0 auto; text-align: center; }
+.methodology-tag { font-weight: 700; font-size: 0.6875rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--verde-metrica); margin-bottom: var(--s-lg); }
+.methodology-rev { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-md); margin-top: var(--s-md); }
+.rev-step { padding: var(--s-md); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; text-align: left; background: rgba(255,255,255,0.02); }
+.rev-step-num { font-weight: 800; font-size: 2.5rem; color: var(--verde-metrica); line-height: 1; letter-spacing: -0.04em; margin-bottom: 0.5rem; }
+.rev-step-name { font-weight: 700; font-size: 1.125rem; color: var(--blanco); margin-bottom: 0.5rem; }
+.rev-step-desc { font-weight: 400; font-size: 0.875rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+@media (max-width: 768px) { .methodology-rev { grid-template-columns: 1fr; } }
 
 /* CTA FINAL */
 .cta-final { padding: var(--s-3xl) var(--s-md); background: var(--negro-carbon); text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
@@ -397,6 +449,7 @@ a { text-decoration: none; color: inherit; }
 .footer-social { display: flex; gap: var(--s-md); margin-top: var(--s-sm); }
 .footer-social-link { color: rgba(255,255,255,0.35); transition: color 0.3s ease; }
 .footer-social-link:hover { color: var(--blanco); }
+.footer-tagline { width: 100%; text-align: center; font-weight: 500; font-size: 0.875rem; color: var(--verde-metrica); margin-top: var(--s-sm); letter-spacing: 0.01em; }
 .footer-copy { width: 100%; text-align: center; font-weight: 400; font-size: 0.75rem; color: rgba(107,114,128,0.5); margin-top: var(--s-sm); padding-top: var(--s-sm); border-top: 1px solid rgba(255,255,255,0.04); }
 .footer-legal { width: 100%; text-align: center; margin-top: 0.5rem; }
 .footer-link--legal { font-size: 0.6875rem; opacity: 0.5; }
@@ -480,11 +533,11 @@ a { text-decoration: none; color: inherit; }
     </div>
   </a>
   <nav class="nav-links">
-    <a href="#producto" class="nav-link">ONE</a>
     <a href="#clarity" class="nav-link">Clarity</a>
+    <a href="#producto" class="nav-link">ONE</a>
     <a href="#pricing" class="nav-link">Precios</a>
   </nav>
-  <a href="#pricing" class="nav-cta">Probar gratis</a>
+  <a href="https://calendly.com/metrik-co/clarity" target="_blank" class="nav-cta">Agendar radiografía</a>
 </nav>
 
 <section class="hero" id="hero">
@@ -507,8 +560,11 @@ a { text-decoration: none; color: inherit; }
       </div>
     </div>
   </div>
-  <p class="hero-tagline" id="hero-tagline" style="opacity:0">De caos a claridad.</p>
-  <a href="#pricing" class="hero-cta" id="hero-cta" style="opacity:0">Empieza gratis</a>
+  <p class="hero-tagline" id="hero-tagline" style="opacity:0">Claridad para decidir.</p>
+  <div class="hero-ctas" id="hero-ctas" style="opacity:0">
+    <a href="https://calendly.com/metrik-co/clarity" target="_blank" class="hero-cta">Agendar radiografía</a>
+    <a href="https://wa.me/573159509103?text=Hola%2C%20quiero%20agendar%20una%20radiograf%C3%ADa%20con%20MéTRIK" target="_blank" class="hero-cta-secondary">o por WhatsApp →</a>
+  </div>
   <div class="hero-scroll" id="hero-scroll" style="opacity:0">
     <span class="hero-scroll-text">Descubre</span>
     <div class="hero-scroll-line"></div>
@@ -517,7 +573,7 @@ a { text-decoration: none; color: inherit; }
 
 <section class="questions" id="questions">
   <div class="questions-pain fade-up">
-    <p class="pain-hook">¿Cuánto ganas de verdad?</p>
+    <p class="pain-hook">¿Cuánto te queda de cada venta?</p>
   </div>
   <div class="questions-transition fade-up">
     <p class="transition-text">Así se ve cuando lo sabes.</p>
@@ -527,57 +583,69 @@ a { text-decoration: none; color: inherit; }
     <div class="iphone-frame">
       <div class="iphone-notch"></div>
       <div class="mockup-app">
-        <div class="mockup-topbar">
-          <div class="mockup-topbar-left">
-            <div class="mockup-brand-group">
-              <div class="mockup-brand-top">
-                <div class="mockup-isotipo">
-                  <div class="mockup-iso-chars">
-                    <span class="mockup-iso-m">M</span><span class="mockup-iso-sub">1</span>
-                  </div>
-                </div>
-                <div class="mockup-lockup-mini">
-                  <div class="mockup-lockup-name">
-                    <span class="mockup-lockup-marca">MéTRIK</span>
-                    <span class="mockup-lockup-prod">one</span>
-                  </div>
-                </div>
+        <div class="mockup-header">
+          <div class="mockup-header-left">
+            <span class="mockup-greeting">Hola Mauricio</span>
+            <span class="mockup-greeting-sep">·</span>
+            <span class="mockup-greeting-date">Lun 4 may</span>
+          </div>
+          <div class="mockup-header-right">
+            <svg class="mockup-bell" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <div class="mockup-lockup-mini">
+              <div class="mockup-lockup-name">
+                <span class="mockup-lockup-marca">MéTRIK</span>
               </div>
               <div class="mockup-brand-line"></div>
             </div>
           </div>
-          <span class="mockup-date">Febrero 2026</span>
         </div>
-        <div class="mockup-alert mockup-alert--positive">
-          <span class="mockup-alert-dot mockup-alert-dot--green"></span>
-          <span class="mockup-alert-text mockup-alert-text--green">Margen del 39% — revisa gastos de transporte</span>
+        <div class="mockup-title-row">
+          <span class="mockup-title">Mis Números</span>
+          <div class="mockup-month">
+            <span class="mockup-month-arrow">‹</span>
+            <span class="mockup-month-text">Mayo 2026</span>
+            <span class="mockup-month-arrow">›</span>
+          </div>
+        </div>
+        <div class="mockup-tile-row">
+          <div class="mockup-tile">
+            <div class="mockup-tile-label">EN VENTA</div>
+            <div class="mockup-tile-value">$ 12.800.000</div>
+            <div class="mockup-tile-sub">Negocios en venta</div>
+          </div>
+          <div class="mockup-tile">
+            <div class="mockup-tile-label">CONTRATADO</div>
+            <div class="mockup-tile-value">$ 28.500.000</div>
+            <div class="mockup-tile-sub">Proyectos activos</div>
+          </div>
+        </div>
+        <div class="mockup-combo">
+          <div class="mockup-combo-half">
+            <div class="mockup-combo-label">MARGEN DE CONTRIBUCIÓN</div>
+            <div class="mockup-combo-value">42%</div>
+            <div class="mockup-combo-sub">$ 13.608.000</div>
+          </div>
+          <div class="mockup-combo-divider"></div>
+          <div class="mockup-combo-half">
+            <div class="mockup-combo-label">EBITDA</div>
+            <div class="mockup-combo-value mockup-val--green">+$ 4.832.000</div>
+            <div class="mockup-combo-sub">Utilidad operativa</div>
+          </div>
         </div>
         <div class="mockup-cards">
           <div class="mockup-card">
-            <div class="mockup-card-q">¿Cuánta plata tengo?</div>
+            <div class="mockup-card-q">¿Cuánto efectivo tengo?</div>
             <div class="mockup-card-value">$ 18.500.000</div>
-            <div class="mockup-card-bar"><div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar--green" style="width:66%"></div></div></div>
-            <div class="mockup-card-detail">Cobrado este mes <span>$ 9.200.000 de $ 14.000.000</span></div>
+            <div class="mockup-card-bar"><div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar--green" style="width:45%"></div></div></div>
+            <div class="mockup-card-detail">Cobrado este mes <span>$ 14.500.000 de $ 32.000.000</span></div>
           </div>
           <div class="mockup-card">
             <div class="mockup-card-q">¿Estoy ganando?</div>
             <div class="mockup-card-value mockup-val--green">+$ 4.832.000</div>
-            <div class="mockup-card-row"><span>Ingresos</span><span class="mockup-card-num">$ 12.400.000</span></div>
+            <div class="mockup-card-row"><span>Ingresos</span><span class="mockup-card-num">$ 32.400.000</span></div>
             <div class="mockup-card-bar"><div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar--green" style="width:88%"></div></div></div>
-            <div class="mockup-card-row"><span>Gastos</span><span class="mockup-card-num">$ 7.568.000</span></div>
-            <div class="mockup-card-bar"><div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar--yellow" style="width:54%"></div></div></div>
-          </div>
-          <div class="mockup-card">
-            <div class="mockup-card-q">¿Cuánto me deben?</div>
-            <div class="mockup-card-value">$ 4.800.000</div>
-            <div class="mockup-card-bar"><div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar--green" style="width:66%"></div></div></div>
-            <div class="mockup-card-detail">Cobrado <span>$ 9.200.000 de $ 14.000.000 (66%)</span></div>
-          </div>
-          <div class="mockup-card">
-            <div class="mockup-card-q">¿Cuánto necesito vender?</div>
-            <div class="mockup-card-value">$ 3.120.000</div>
-            <div class="mockup-card-bar"><div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar--green" style="width:78%"></div></div></div>
-            <div class="mockup-card-detail">$ 10.880.000 / $ 14.000.000 <span>Casi lo logras</span></div>
+            <div class="mockup-card-row"><span>Gastos operativos</span><span class="mockup-card-num">$ 27.568.000</span></div>
+            <div class="mockup-card-bar"><div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar--yellow" style="width:74%"></div></div></div>
           </div>
           <div class="mockup-card">
             <div class="mockup-card-q">¿Cuánto aguanto?</div>
@@ -600,8 +668,8 @@ a { text-decoration: none; color: inherit; }
     <div class="mockup-glow"></div>
   </div>
   <div class="questions-closure fade-up">
-    <p class="closure-line">5 preguntas. 1 dashboard. Cero adivinanza.</p>
-    <a href="#pricing" class="closure-cta">Probar gratis</a>
+    <p class="closure-line">Las preguntas que importan. Un tablero. Cero adivinanza.</p>
+    <a href="https://calendly.com/metrik-co/clarity" target="_blank" class="closure-cta">Agendar radiografía</a>
   </div>
 </section>
 
@@ -611,158 +679,18 @@ a { text-decoration: none; color: inherit; }
   <div class="bridge-lines fade-up">
     <p class="bridge-line">No tienes proceso para generar datos — <span class="bridge-action">te ayudamos a crearlo.</span></p>
     <p class="bridge-line">Ya los tienes pero no ves nada claro — <span class="bridge-action">los convertimos en decisiones.</span></p>
-    <p class="bridge-anchor">Todo conecta con caja, margen y utilidad.</p>
+    <p class="bridge-anchor">Y la IA, integrada con gobernanza dentro de tus flujos.</p>
+  </div>
+  <div class="bridge-cta-wrap fade-up">
+    <a href="#clarity" class="bridge-cta">Conocer Clarity →</a>
   </div>
 </section>
 
 <div class="transition-divider"></div>
 
-<section class="product" id="producto">
-  <div class="product-header">
-    <div class="product-label fade-up">SAAS &middot; INDEPENDIENTES Y PYMES</div>
-    <div class="product-lockup" data-lockup-beam="one">
-      <div class="lockup">
-        <div class="lockup-chars">
-          <span class="lockup-ch lockup-ch-marca" data-at="0.00">M</span>
-          <span class="lockup-ch lockup-ch-marca" data-at="0.11">é</span>
-          <span class="lockup-ch lockup-ch-marca" data-at="0.20">T</span>
-          <span class="lockup-ch lockup-ch-marca" data-at="0.29">R</span>
-          <span class="lockup-ch lockup-ch-marca" data-at="0.37">I</span>
-          <span class="lockup-ch lockup-ch-marca" data-at="0.43">K</span>
-          <div class="lockup-prod-wrap">
-            <div class="lockup-destello-wrap">
-              <div class="lockup-destello"></div>
-              <div class="lockup-destello-ring"></div>
-            </div>
-            <span class="lockup-prod-text">one</span>
-          </div>
-        </div>
-        <div class="lockup-beam-track">
-          <div class="lockup-beam-trail"></div>
-          <div class="lockup-beam-orb"></div>
-          <div class="lockup-beam-tail"></div>
-          <div class="lockup-beam-cone"></div>
-          <div class="lockup-beam-glow"></div>
-        </div>
-      </div>
-    </div>
-    <p class="product-headline fade-up">La claridad financiera que tu negocio necesita.<br>Desde tu celular.</p>
-    <p class="product-desc fade-up">Gestión operativa integral con capa fiscal colombiana y registro de campo por WhatsApp. No es contabilidad. No es ERP. Es ver tus números de verdad.</p>
-  </div>
-  <div class="modules fade-up">
-    <div class="module-card">
-      <div class="module-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="16" width="5" height="9" rx="1.5" fill="#6B7280"/><rect x="11" y="10" width="5" height="15" rx="1.5" fill="#6B7280"/><rect x="19" y="4" width="5" height="21" rx="1.5" fill="#1A1A1A"/></svg></div>
-      <div class="module-name">Números</div>
-      <div class="module-question">¿Cuánto gano de verdad?</div>
-      <div class="module-desc">Las 5 preguntas MéTRIK respondidas en un dashboard. Ingresos, gastos, utilidad, impuestos, punto de equilibrio.</div>
-    </div>
-    <div class="module-card">
-      <div class="module-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#6B7280" stroke-width="2" fill="none"/><path d="M14 8v6l4 4" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="module-name">Oportunidades</div>
-      <div class="module-question">¿Cuántos negocios tengo abiertos?</div>
-      <div class="module-desc">Oportunidades 360° con cotización rápida. Cálculo fiscal automático para que sepas cuánto te queda limpio antes de cotizar.</div>
-    </div>
-    <div class="module-card">
-      <div class="module-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 8a2 2 0 012-2h5l2 2h9a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V8z" stroke="#6B7280" stroke-width="2" fill="none"/><path d="M10 16l3 3 5-6" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="module-name">Proyectos</div>
-      <div class="module-question">¿Este proyecto me deja plata?</div>
-      <div class="module-desc">Ejecución 360: horas, gastos, facturas, cobros. Rentabilidad por proyecto en tiempo real.</div>
-    </div>
-    <div class="module-card">
-      <div class="module-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M15.5 4L8 16h6l-1.5 8L21 12h-6l1.5-8z" fill="#1A1A1A" stroke="#6B7280" stroke-width="1" stroke-linejoin="round"/></svg></div>
-      <div class="module-name">FAB</div>
-      <div class="module-question">¿Cómo registro sin perder tiempo?</div>
-      <div class="module-desc">Botón flotante en cualquier pantalla. Un tap: gasto, horas o cobro registrado. Sin formularios largos.</div>
-    </div>
-  </div>
-  <div class="wa-highlight fade-up">
-    <div class="wa-highlight-badge"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4C8.48 4 4 8.48 4 14c0 1.85.5 3.58 1.38 5.07L4 24l5.12-1.34A9.96 9.96 0 0014 24c5.52 0 10-4.48 10-10S19.52 4 14 4zm0 18c-1.7 0-3.28-.52-4.6-1.4l-.32-.2-3.36.88.9-3.28-.22-.34A7.96 7.96 0 016 14c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8zm4.38-5.97c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.18-.71-.64-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z" fill="white"/></svg></div>
-    <div class="wa-highlight-content">
-      <div class="wa-highlight-title">Tu equipo de campo registra desde WhatsApp</div>
-      <div class="wa-highlight-desc">Sin instalar apps. Sin capacitación. Técnicos, asistentes y colaboradores registran horas, gastos y notas con un mensaje de WhatsApp. Ilimitado.</div>
-      <div class="wa-highlight-tag">Único en Colombia</div>
-    </div>
-  </div>
-</section>
-
-<section class="pricing" id="pricing">
-  <div class="pricing-header">
-    <h2 class="pricing-title fade-up">Precios claros desde el día 1</h2>
-    <p class="pricing-sub fade-up">Sin sorpresas. Sin letra chica. Empieza gratis.</p>
-    <div class="pricing-toggle-wrap fade-up">
-      <span class="pricing-toggle-label active" id="toggle-label-mensual">Mensual</span>
-      <label class="pricing-toggle">
-        <input type="checkbox" id="pricing-billing-toggle">
-        <span class="pricing-toggle-track"></span>
-        <span class="pricing-toggle-thumb"></span>
-      </label>
-      <span class="pricing-toggle-label" id="toggle-label-anual">Anual</span>
-      <span class="pricing-toggle-badge" id="toggle-save-badge" style="display:none;">Ahorra 2 meses</span>
-    </div>
-  </div>
-  <div class="pricing-grid">
-    <div class="price-card fade-up">
-      <div class="price-plan">Free</div>
-      <div class="price-tagline">Organiza tus gastos</div>
-      <div class="price-free-label">$0</div>
-      <ul class="price-features">
-        <li>Dashboard Números básico</li>
-        <li>Registro de gastos vía FAB</li>
-        <li>1 proyecto activo</li>
-        <li>1 usuario</li>
-        <li>Para siempre</li>
-        <li class="disabled">Cálculo fiscal</li>
-        <li class="disabled">WhatsApp Bot</li>
-      </ul>
-      <button class="price-btn price-btn--secondary" onclick="window.open('https://metrikone.co','_blank')">Crear cuenta gratis</button>
-    </div>
-    <div class="price-card price-card--featured fade-up">
-      <div class="price-plan">Empresa</div>
-      <div class="price-tagline">Sabe cuánto ganas de verdad</div>
-      <div class="price-amount">
-        <span class="price-currency">$</span><span class="price-value" id="precio-empresa">100K</span><span class="price-period">/mes</span>
-      </div>
-      <p class="price-billing-note" id="billing-note-empresa" style="font-size:0.75rem;color:var(--gris-acero);margin-top:0.25rem;min-height:1.1em;"></p>
-      <p class="price-users-line">1 usuario de gestión · 3 read-only · 3 contador</p>
-      <ul class="price-features">
-        <li>Todo en la app — sin límites</li>
-        <li>Pipeline ilimitado</li>
-        <li>Proyectos ilimitados</li>
-        <li>Cotización con cálculo fiscal</li>
-        <li>FAB completo</li>
-        <li>Alertas en app</li>
-        <li class="disabled">WhatsApp Bot</li>
-        <li class="price-features-separator">Extras</li>
-        <li class="price-feature-extra">Usuario de gestión adicional: $50K/mes</li>
-      </ul>
-      <button class="price-btn price-btn--primary" onclick="window.open('https://metrikone.co','_blank')">Empezar con Empresa</button>
-    </div>
-    <div class="price-card fade-up">
-      <div class="price-plan">Empresa + WA</div>
-      <div class="price-tagline">Tu equipo registra desde WhatsApp</div>
-      <div class="price-amount">
-        <span class="price-currency">$</span><span class="price-value" id="precio-empresa-wa">150K</span><span class="price-period">/mes</span>
-      </div>
-      <p class="price-billing-note" id="billing-note-empresa-wa" style="font-size:0.75rem;color:var(--gris-acero);margin-top:0.25rem;min-height:1.1em;"></p>
-      <p class="price-users-line">1 usuario de gestión · 3 read-only · 3 contador · campo ilimitado</p>
-      <ul class="price-features">
-        <li>Todo lo de Empresa</li>
-        <li>WhatsApp Bot completo</li>
-        <li>Colaboradores de campo ilimitados</li>
-        <li>Resumen semanal por WhatsApp</li>
-        <li>Alertas de cobro por WhatsApp</li>
-        <li class="price-features-separator">Extras</li>
-        <li class="price-feature-extra">Usuario de gestión adicional: $50K/mes</li>
-      </ul>
-      <button class="price-btn price-btn--secondary" onclick="window.open('https://metrikone.co','_blank')">Empezar con Empresa + WA</button>
-    </div>
-  </div>
-  <p class="pricing-note fade-up" id="pricing-footer-note">Plan anual: 2 meses gratis. 10 días de prueba. Cancela cuando quieras.</p>
-</section>
-
 <section class="clarity" id="clarity">
   <div class="clarity-inner">
-    <div class="clarity-label fade-up">CONSULTING &middot; PYMES</div>
+    <div class="clarity-label fade-up">CONSULTORÍA &middot; PYME COLOMBIANA</div>
     <div class="clarity-lockup" data-lockup-beam="clarity">
       <div class="lockup">
         <div class="lockup-chars">
@@ -789,32 +717,213 @@ a { text-decoration: none; color: inherit; }
         </div>
       </div>
     </div>
-    <p class="clarity-headline fade-up">¿Tu empresa necesita acompañamiento?</p>
-    <p class="clarity-desc fade-up">Clarity estructura tus procesos e implementa MéTRIK one en tu empresa. Diagnóstico, configuración, capacitación de equipo y soporte. Todo en 10 a 45 días.</p>
+    <p class="clarity-headline fade-up">Te dejamos viendo lo que tu operación produce.<br>Hoy. No en 45 días.</p>
+    <p class="clarity-intro fade-up">Ayudamos al empresario a dejar de operar a ciegas. Esto es lo que entregamos:</p>
+    <ul class="clarity-promesas fade-up">
+      <li class="clarity-promesa">
+        <div class="clarity-promesa-num">1</div>
+        <div class="clarity-promesa-content">
+          <h3 class="clarity-promesa-title">Una sola plataforma</h3>
+          <p class="clarity-promesa-text">Estructuramos tu operación sobre <strong>MéTRIK ONE®</strong> — gestión operativa hasta utilidad real.</p>
+        </div>
+      </li>
+      <li class="clarity-promesa">
+        <div class="clarity-promesa-num">2</div>
+        <div class="clarity-promesa-content">
+          <h3 class="clarity-promesa-title">Tus números reales, en tiempo real</h3>
+          <p class="clarity-promesa-text">Ves <strong>cuánto te queda de cada venta</strong> (margen de contribución) y <strong>la utilidad operativa de tu negocio</strong> (EBITDA). Hoy, no en semanas.</p>
+        </div>
+      </li>
+      <li class="clarity-promesa">
+        <div class="clarity-promesa-num">3</div>
+        <div class="clarity-promesa-content">
+          <h3 class="clarity-promesa-title">Sin fricción para tu equipo</h3>
+          <p class="clarity-promesa-text">Registro de campo por <strong>WhatsApp en lenguaje natural</strong>. Sin instalar aplicaciones, sin capacitación.</p>
+        </div>
+      </li>
+      <li class="clarity-promesa">
+        <div class="clarity-promesa-num">4</div>
+        <div class="clarity-promesa-content">
+          <h3 class="clarity-promesa-title">IA con gobernanza</h3>
+          <p class="clarity-promesa-text">No la dejamos como herramientas sueltas en manos de tu equipo. La <strong>integramos estratégicamente, con gobernanza, dentro de los flujos de trabajo</strong>.</p>
+        </div>
+      </li>
+    </ul>
+    <p class="clarity-cierre fade-up">Lo que contabilidad entrega en semanas, te lo mostramos hoy. <strong>Esto es claridad para decidir.</strong></p>
     <div class="clarity-levels fade-up">
       <div class="clarity-level">
         <div class="clarity-level-name">Express</div>
-        <div class="clarity-level-time">5–10 días</div>
-        <div class="clarity-level-price">Desde $5M</div>
-        <div class="clarity-level-desc">Implementación ONE + capacitación + 30 días soporte</div>
+        <div class="clarity-level-tag">3 meses de plataforma incluidos</div>
+        <div class="clarity-level-price">$5M – $7M</div>
+        <div class="clarity-level-desc">Implementación + capacitación + soporte. Para empresas con procesos razonables.</div>
       </div>
       <div class="clarity-level">
         <div class="clarity-level-name">Standard</div>
-        <div class="clarity-level-time">15–25 días</div>
-        <div class="clarity-level-price">Desde $10M</div>
-        <div class="clarity-level-desc">Estructuración 1 área + implementación + capacitación</div>
+        <div class="clarity-level-tag">6 meses de plataforma incluidos</div>
+        <div class="clarity-level-price">$12M – $18M</div>
+        <div class="clarity-level-desc">Estructuración de 1 a 2 áreas desordenadas + implementación + capacitación.</div>
       </div>
       <div class="clarity-level">
         <div class="clarity-level-name">Full</div>
-        <div class="clarity-level-time">30–45 días</div>
-        <div class="clarity-level-price">Desde $20M</div>
-        <div class="clarity-level-desc">Estructuración completa + implementación + acompañamiento 60 días</div>
+        <div class="clarity-level-tag">12 meses de plataforma incluidos</div>
+        <div class="clarity-level-price">$25M – $35M</div>
+        <div class="clarity-level-desc">Transformación operativa completa + implementación + acompañamiento extendido.</div>
       </div>
     </div>
+    <div class="clarity-notes fade-up">
+      <p class="clarity-note"><span class="clarity-note-dot"></span>Todos los planes incluyen diagnóstico inicial.</p>
+      <p class="clarity-note"><span class="clarity-note-dot"></span>Trabajamos sobre MéTRIK ONE por defecto. Si prefieres tu propio stack, también lo evaluamos contigo.</p>
+      <p class="clarity-note"><span class="clarity-note-dot"></span>¿Solo quieres cotizar el diagnóstico? <a href="https://wa.me/573159509103?text=Hola%2C%20quiero%20cotizar%20solo%20el%20diagn%C3%B3stico%20MeTRIK" target="_blank" class="clarity-note-link">Escríbenos por WhatsApp →</a></p>
+      <p class="clarity-note"><span class="clarity-note-dot"></span>Filtro honesto: si tu inversión no se recupera en 18 meses, te lo decimos antes de cotizar.</p>
+    </div>
     <div class="clarity-cta-wrapper fade-up">
-      <a href="https://calendly.com/metrik-co/clarity" target="_blank" class="clarity-cta">Agendar diagnóstico</a>
+      <a href="https://calendly.com/metrik-co/clarity" target="_blank" class="clarity-cta">Agendar radiografía</a>
     </div>
   </div>
+</section>
+
+<section class="product" id="producto">
+  <div class="product-header">
+    <div class="product-label fade-up">PLATAFORMA &middot; PYME COLOMBIANA</div>
+    <div class="product-lockup" data-lockup-beam="one">
+      <div class="lockup">
+        <div class="lockup-chars">
+          <span class="lockup-ch lockup-ch-marca" data-at="0.00">M</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.11">é</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.20">T</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.29">R</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.37">I</span>
+          <span class="lockup-ch lockup-ch-marca" data-at="0.43">K</span>
+          <div class="lockup-prod-wrap">
+            <div class="lockup-destello-wrap">
+              <div class="lockup-destello"></div>
+              <div class="lockup-destello-ring"></div>
+            </div>
+            <span class="lockup-prod-text">one</span>
+          </div>
+        </div>
+        <div class="lockup-beam-track">
+          <div class="lockup-beam-trail"></div>
+          <div class="lockup-beam-orb"></div>
+          <div class="lockup-beam-tail"></div>
+          <div class="lockup-beam-cone"></div>
+          <div class="lockup-beam-glow"></div>
+        </div>
+      </div>
+    </div>
+    <p class="product-headline fade-up">Tus negocios, sus etapas y todo lo que pasa en cada una.<br>Desde tu celular.</p>
+    <p class="product-desc fade-up">Plataforma de gestión operativa hasta utilidad real. Tus negocios viven en ONE — recorren las etapas que tu operación necesita, con los bloques que tu equipo completa para avanzar. No es contabilidad — lo contable se queda con tu contador. No es ERP. Es ver lo que tu operación produce, hoy.</p>
+  </div>
+  <div class="modules fade-up">
+    <div class="module-card">
+      <div class="module-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="6" cy="14" r="3" fill="#1A1A1A"/><circle cx="14" cy="14" r="3" fill="#6B7280"/><circle cx="22" cy="14" r="3" fill="#6B7280"/><path d="M9 14h2M17 14h2" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="module-name">Negocios</div>
+      <div class="module-question">¿Dónde está cada negocio?</div>
+      <div class="module-desc">Cada negocio recorre las etapas que tu operación necesita — venta, contrato, ejecución, cobro. Tú las configuras, no nosotros.</div>
+    </div>
+    <div class="module-card">
+      <div class="module-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="10" height="10" rx="1.5" fill="#1A1A1A"/><rect x="15" y="3" width="10" height="10" rx="1.5" stroke="#6B7280" stroke-width="2" fill="none"/><rect x="3" y="15" width="10" height="10" rx="1.5" stroke="#6B7280" stroke-width="2" fill="none"/><rect x="15" y="15" width="10" height="10" rx="1.5" fill="#6B7280"/></svg></div>
+      <div class="module-name">Bloques en cada etapa</div>
+      <div class="module-question">¿Qué falta para avanzar?</div>
+      <div class="module-desc">Datos, documentos, cotizaciones, cobros, checklists, aprobaciones, cronogramas. Tu equipo completa lo que pediste en cada etapa — y avanza solo cuando todo está listo.</div>
+    </div>
+    <div class="module-card">
+      <div class="module-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="16" width="5" height="9" rx="1.5" fill="#6B7280"/><rect x="11" y="10" width="5" height="15" rx="1.5" fill="#6B7280"/><rect x="19" y="4" width="5" height="21" rx="1.5" fill="#1A1A1A"/></svg></div>
+      <div class="module-name">Mis Números</div>
+      <div class="module-question">¿Cuánto gano de verdad?</div>
+      <div class="module-desc">Margen de contribución, utilidad operativa, efectivo y punto de equilibrio en tiempo real. Alimentados por los negocios que cierras y los gastos que registras.</div>
+    </div>
+    <div class="module-card">
+      <div class="module-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M15.5 4L8 16h6l-1.5 8L21 12h-6l1.5-8z" fill="#1A1A1A" stroke="#6B7280" stroke-width="1" stroke-linejoin="round"/></svg></div>
+      <div class="module-name">Registro rápido</div>
+      <div class="module-question">¿Cómo registra mi equipo sin perder tiempo?</div>
+      <div class="module-desc">Botón flotante en cualquier pantalla y registro por WhatsApp en lenguaje natural. Un mensaje, un toque — gasto, horas o cobro registrado.</div>
+    </div>
+  </div>
+  <div class="wa-highlight fade-up">
+    <div class="wa-highlight-badge"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4C8.48 4 4 8.48 4 14c0 1.85.5 3.58 1.38 5.07L4 24l5.12-1.34A9.96 9.96 0 0014 24c5.52 0 10-4.48 10-10S19.52 4 14 4zm0 18c-1.7 0-3.28-.52-4.6-1.4l-.32-.2-3.36.88.9-3.28-.22-.34A7.96 7.96 0 016 14c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8zm4.38-5.97c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.18-.71-.64-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z" fill="white"/></svg></div>
+    <div class="wa-highlight-content">
+      <div class="wa-highlight-title">Tu equipo de campo registra desde WhatsApp</div>
+      <div class="wa-highlight-desc">Sin instalar aplicaciones. Sin capacitación. Técnicos, asistentes y colaboradores registran horas, gastos y notas con un mensaje de WhatsApp. Ilimitado.</div>
+      <div class="wa-highlight-tag">Único en Colombia</div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="pricing-header">
+    <p class="pricing-eyebrow fade-up">¿Ya sabes que quieres ONE?</p>
+    <h2 class="pricing-title fade-up">Licencia ONE — precios claros</h2>
+    <p class="pricing-sub fade-up">ONE solo, sin Clarity. Sin sorpresas, sin letra chica. Para quien ya tiene procesos en orden.</p>
+    <div class="pricing-toggle-wrap fade-up">
+      <span class="pricing-toggle-label active" id="toggle-label-mensual">Mensual</span>
+      <label class="pricing-toggle">
+        <input type="checkbox" id="pricing-billing-toggle">
+        <span class="pricing-toggle-track"></span>
+        <span class="pricing-toggle-thumb"></span>
+      </label>
+      <span class="pricing-toggle-label" id="toggle-label-anual">Anual</span>
+      <span class="pricing-toggle-badge" id="toggle-save-badge" style="display:none;">Ahorra 2 meses</span>
+    </div>
+  </div>
+  <div class="pricing-grid">
+    <div class="price-card fade-up">
+      <div class="price-plan">Gratis</div>
+      <div class="price-tagline">Organiza tus gastos</div>
+      <div class="price-free-label">$0</div>
+      <ul class="price-features">
+        <li>Tablero Mis Números básico</li>
+        <li>Registro de gastos con un toque</li>
+        <li>1 negocio activo</li>
+        <li>1 usuario</li>
+        <li>Para siempre</li>
+        <li class="disabled">Etapas y bloques configurables</li>
+        <li class="disabled">Asistente de WhatsApp</li>
+      </ul>
+      <button class="price-btn price-btn--secondary" onclick="window.open('https://metrikone.co','_blank')">Crear cuenta gratis</button>
+    </div>
+    <div class="price-card price-card--featured fade-up">
+      <div class="price-plan">Empresa</div>
+      <div class="price-tagline">Sabe cuánto ganas de verdad</div>
+      <div class="price-amount">
+        <span class="price-currency">$</span><span class="price-value" id="precio-empresa">100K</span><span class="price-period">/mes</span>
+      </div>
+      <p class="price-billing-note" id="billing-note-empresa" style="font-size:0.75rem;color:var(--gris-acero);margin-top:0.25rem;min-height:1.1em;"></p>
+      <p class="price-users-line">1 usuario de gestión · 3 solo lectura · 3 contador</p>
+      <ul class="price-features">
+        <li>Negocios ilimitados con etapas configurables</li>
+        <li>Bloques en cada etapa: datos, documentos, cotizaciones, cobros, aprobaciones, cronogramas</li>
+        <li>Cotización con margen y utilidad por negocio</li>
+        <li>Mis Números completo (MC, EBITDA, caja, punto de equilibrio)</li>
+        <li>Registro rápido con un toque</li>
+        <li>Alertas dentro de la aplicación</li>
+        <li class="disabled">Asistente de WhatsApp</li>
+        <li class="price-features-separator">Extras</li>
+        <li class="price-feature-extra">Usuario de gestión adicional: $50K/mes</li>
+      </ul>
+      <button class="price-btn price-btn--primary" onclick="window.open('https://metrikone.co','_blank')">Empezar con Empresa</button>
+    </div>
+    <div class="price-card fade-up">
+      <div class="price-plan">Empresa + WhatsApp</div>
+      <div class="price-tagline">Tu equipo registra desde el celular</div>
+      <div class="price-amount">
+        <span class="price-currency">$</span><span class="price-value" id="precio-empresa-wa">150K</span><span class="price-period">/mes</span>
+      </div>
+      <p class="price-billing-note" id="billing-note-empresa-wa" style="font-size:0.75rem;color:var(--gris-acero);margin-top:0.25rem;min-height:1.1em;"></p>
+      <p class="price-users-line">1 usuario de gestión · 3 solo lectura · 3 contador · campo ilimitado</p>
+      <ul class="price-features">
+        <li>Todo lo de Empresa</li>
+        <li>Asistente de WhatsApp completo</li>
+        <li>Colaboradores de campo ilimitados</li>
+        <li>Resumen semanal por WhatsApp</li>
+        <li>Alertas de cobro por WhatsApp</li>
+        <li class="price-features-separator">Extras</li>
+        <li class="price-feature-extra">Usuario de gestión adicional: $50K/mes</li>
+      </ul>
+      <button class="price-btn price-btn--secondary" onclick="window.open('https://metrikone.co','_blank')">Empezar con Empresa + WhatsApp</button>
+    </div>
+  </div>
+  <p class="pricing-note fade-up" id="pricing-footer-note">Plan anual: 2 meses gratis. 10 días de prueba. Cancela cuando quieras.</p>
 </section>
 
 <section class="projects-section">
@@ -847,9 +956,9 @@ a { text-decoration: none; color: inherit; }
       </div>
     </div>
     <p class="projects-headline fade-up">¿Tu operación necesita algo a la medida?</p>
-    <p class="projects-desc fade-up">Si tu operación necesita algo que el estándar no cubre, lo construimos sobre ONE. Módulos personalizados, integraciones con tus herramientas, dashboards a tu medida — todo conectado con la plataforma que ya conoces.</p>
+    <p class="projects-desc fade-up">Si tu operación necesita algo que el estándar no cubre, lo construimos sobre ONE. Módulos personalizados, integraciones con tus herramientas, tableros a la medida — todo conectado con la plataforma que ya conoces.</p>
     <div class="projects-capabilities fade-up">
-      <div class="projects-cap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="14" width="4" height="7" rx="1" fill="#6B7280"/><rect x="10" y="9" width="4" height="12" rx="1" fill="#6B7280"/><rect x="17" y="4" width="4" height="17" rx="1" fill="#1A1A1A"/></svg><span>Dashboards custom</span></div>
+      <div class="projects-cap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="14" width="4" height="7" rx="1" fill="#6B7280"/><rect x="10" y="9" width="4" height="12" rx="1" fill="#6B7280"/><rect x="17" y="4" width="4" height="17" rx="1" fill="#1A1A1A"/></svg><span>Tableros a la medida</span></div>
       <div class="projects-cap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 8h10M7 12h6" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/><path d="M17 12l3 3-3 3" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Integraciones a medida</span></div>
       <div class="projects-cap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#6B7280" stroke-width="2" fill="none"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="#6B7280" stroke-width="2" fill="none"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="#6B7280" stroke-width="2" fill="none"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="#1A1A1A" stroke-width="2" fill="none"/><path d="M17.5 16v5M15 18.5h5" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round"/></svg><span>Módulos nuevos sobre ONE</span></div>
       <div class="projects-cap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="3" stroke="#6B7280" stroke-width="2" fill="none"/><circle cx="12" cy="18" r="1" fill="#1A1A1A"/></svg><span>Apps y e-commerce</span></div>
@@ -867,8 +976,8 @@ a { text-decoration: none; color: inherit; }
   <div class="founder fade-up">
     <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Founder_Mk.png" alt="Mauricio Moreno — Fundador de MéTRIK" class="founder-img" loading="lazy">
     <div class="founder-info">
-      <p class="founder-quote">Que ningún empresario vuele a ciegas.</p>
-      <p class="founder-story">10 años operando negocios reales. 43 ubicaciones. +400 personas bajo gestión. MéTRIK nace de vivir la frustración de no tener números claros — y construir la solución.</p>
+      <p class="founder-quote">Claridad para decidir. Eso entregamos.</p>
+      <p class="founder-story">Estructuramos tu operación, automatizamos tus flujos con IA gobernada y te damos un cerebro operativo en tu celular: cuánto te queda de cada venta, cuál es tu utilidad real, dónde está la fuga. Tú decides. Nosotros te damos los números.</p>
       <div class="founder-meta">
         <span class="founder-name">Mauricio Moreno</span>
         <span class="founder-role">Fundador &middot; MéTRIK</span>
@@ -896,16 +1005,32 @@ a { text-decoration: none; color: inherit; }
 
 <section class="methodology">
   <div class="methodology-inner fade-up">
-    <p class="methodology-tag">"Deja de adivinar y empieza a ver tus cifras."</p>
-    <p class="methodology-text">El sistema que toda empresa necesita antes de crecer. No es consultoría. No es software. Es el orden que permite que tu empresa funcione sin que todo dependa de ti.</p>
+    <p class="methodology-tag">El método REV</p>
+    <div class="methodology-rev">
+      <div class="rev-step">
+        <div class="rev-step-num">R</div>
+        <div class="rev-step-name">Reconocer</div>
+        <div class="rev-step-desc">Mapeo AS-IS, dolor real, datos disponibles.</div>
+      </div>
+      <div class="rev-step">
+        <div class="rev-step-num">E</div>
+        <div class="rev-step-name">Estructurar</div>
+        <div class="rev-step-desc">Procesos rediseñados para que la data salga limpia por diseño.</div>
+      </div>
+      <div class="rev-step">
+        <div class="rev-step-num">V</div>
+        <div class="rev-step-name">Visibilizar</div>
+        <div class="rev-step-desc">Configuración ONE, tableros y capacitación. Tu equipo decide con datos.</div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="cta-final">
-  <h2 class="cta-final-headline fade-up">Tus cifras claras.<br>Desde hoy.</h2>
-  <p class="cta-final-sub fade-up">Empieza gratis con MéTRIK one. 10 días de prueba Empresa incluidos.</p>
-  <a href="https://metrikone.co" target="_blank" class="cta-btn fade-up">Probar MéTRIK one gratis</a>
-  <p class="cta-note fade-up">¿Prefieres hablar con nosotros? <a href="https://wa.me/573159509103" style="color:var(--verde-metrica);text-decoration:underline;">Escríbenos por WhatsApp</a></p>
+  <h2 class="cta-final-headline fade-up">Claridad para decidir.<br>Desde hoy.</h2>
+  <p class="cta-final-sub fade-up">Agenda una radiografía con retorno proyectado. Sin compromiso, sin letra chica.</p>
+  <a href="https://calendly.com/metrik-co/clarity" target="_blank" class="cta-btn fade-up">Agendar radiografía</a>
+  <p class="cta-note fade-up">¿Prefieres WhatsApp? <a href="https://wa.me/573159509103?text=Hola%2C%20quiero%20agendar%20una%20radiograf%C3%ADa%20con%20MéTRIK" style="color:var(--verde-metrica);text-decoration:underline;">Escríbenos →</a> · ¿Solo quieres probar ONE? <a href="https://metrikone.co" target="_blank" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Crear cuenta gratis</a></p>
 </section>
 
 <footer class="footer">
@@ -930,7 +1055,8 @@ a { text-decoration: none; color: inherit; }
     <div class="footer-legal">
       <a href="./privacidad.html" class="footer-link footer-link--legal">Política de tratamiento de datos</a>
     </div>
-    <p class="footer-copy">&copy; 2026 MéTRIK S.A.S. &middot; Bogotá, Colombia</p>
+    <p class="footer-tagline">Claridad para decidir.</p>
+    <p class="footer-copy">&copy; 2026 MéTRIK &middot; Bogotá, Colombia</p>
   </div>
 </footer>
 
@@ -1010,7 +1136,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   var cone = document.getElementById('hero-cone');
   var glow = document.getElementById('hero-glow');
   var tagline = document.getElementById('hero-tagline');
-  var heroCta = document.getElementById('hero-cta');
+  var heroCta = document.getElementById('hero-ctas');
   var heroScroll = document.getElementById('hero-scroll');
   var nav = document.getElementById('nav');
 

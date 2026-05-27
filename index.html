@@ -307,6 +307,11 @@ a { text-decoration: none; color: inherit; }
 .bridge-cta { display: inline-block; font-family: var(--font); font-weight: 600; font-size: 0.9375rem; color: var(--blanco); border: 1.5px solid rgba(255,255,255,0.4); padding: 0.75rem 2rem; border-radius: 8px; transition: all 0.3s ease; }
 .bridge-cta:hover { border-color: var(--verde-metrica); color: var(--verde-metrica); transform: translateY(-1px); }
 
+/* BRIDGE → CLARITY handoff */
+.bridge-handoff { margin-top: var(--s-xl); display: flex; flex-direction: column; align-items: center; gap: var(--s-sm); }
+.bridge-handoff-text { font-family: var(--font); font-weight: 400; font-style: italic; font-size: clamp(0.9375rem, 1.6vw, 1.0625rem); color: var(--gris-acero); letter-spacing: -0.005em; }
+.bridge-handoff-arrow { display: flex; justify-content: center; opacity: 0.85; }
+
 /* TRANSITION */
 .transition-divider { height: 120px; background: linear-gradient(to bottom, var(--negro-carbon), var(--blanco)); }
 
@@ -343,6 +348,11 @@ a { text-decoration: none; color: inherit; }
 .product-disclaimer-note { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); margin-top: 0.625rem; }
 .product-headline { font-weight: 700; font-size: clamp(1.25rem, 3vw, 1.75rem); color: var(--negro-carbon); margin-top: var(--s-sm); letter-spacing: -0.01em; }
 .product-desc { font-weight: 400; font-size: 1rem; color: var(--gris-acero); margin-top: var(--s-xs); max-width: var(--max-text); margin-left: auto; margin-right: auto; line-height: 1.7; }
+.product-demo-cta { display: inline-flex; align-items: center; gap: 0.625rem; margin-top: var(--s-lg); padding: 0.75rem 1.5rem; font-family: var(--font); font-weight: 700; font-size: 0.9375rem; color: var(--blanco); background: var(--verde-metrica); border-radius: 8px; text-decoration: none; transition: all 0.3s ease; letter-spacing: 0.01em; }
+.product-demo-cta:hover { background: #0EA472; transform: translateY(-1px); box-shadow: 0 8px 28px rgba(16,185,129,0.35); }
+.product-demo-cta-icon { display: inline-flex; align-items: center; color: var(--blanco); }
+.product-demo-cta-sub { font-weight: 500; font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.75; padding-left: 0.625rem; border-left: 1px solid rgba(255,255,255,0.3); margin-left: 0.125rem; }
+@media (max-width: 600px) { .product-demo-cta { padding: 0.625rem 1.125rem; font-size: 0.8125rem; gap: 0.5rem; } .product-demo-cta-sub { display: none; } }
 .modules { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-md); max-width: var(--max-content); margin: 0 auto; }
 .module-card { padding: var(--s-lg); border: 1px solid var(--gris-linea); border-radius: 12px; transition: all 0.3s ease; position: relative; }
 .module-card:hover { border-color: var(--verde-metrica); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(16,185,129,0.06); }
@@ -1053,6 +1063,15 @@ a { text-decoration: none; color: inherit; }
     <p class="bridge-line">No tienes flujos de trabajo para generar datos — <span class="bridge-action">te ayudamos a diseñarlos.</span></p>
     <p class="bridge-line">Ya los tienes pero no ves nada claro — <span class="bridge-action">los convertimos en decisiones.</span></p>
   </div>
+  <div class="bridge-handoff fade-up">
+    <p class="bridge-handoff-text">Ese trabajo tiene nombre.</p>
+    <div class="bridge-handoff-arrow" aria-hidden="true">
+      <svg width="14" height="38" viewBox="0 0 14 38" fill="none">
+        <path d="M7 0 L7 30" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M2 25 L7 32 L12 25" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+  </div>
 </section>
 
 <section class="clarity" id="clarity">
@@ -1197,6 +1216,18 @@ a { text-decoration: none; color: inherit; }
     </div>
     <p class="product-headline fade-up">Donde tus flujos viven y se vuelven números.</p>
     <p class="product-desc fade-up">Tus negocios recorren las etapas que tu operación necesita. En cada etapa, los bloques que tu equipo completa para avanzar. Todo conectado a margen, utilidad y caja — en tiempo real, en tu celular.</p>
+    <a class="product-demo-cta fade-up" href="/operamos-one" target="_blank" rel="noopener" aria-label="Ver demo interactivo de MéTRIK ONE — 2 minutos">
+      <span class="product-demo-cta-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+          <polygon points="10 7 10 13 15 10" fill="currentColor" stroke="none"/>
+        </svg>
+      </span>
+      <span>Ver MéTRIK ONE en acción</span>
+      <span class="product-demo-cta-sub">demo · 2 min</span>
+    </a>
   </div>
   <div class="modules fade-up">
     <div class="module-card">
@@ -1356,15 +1387,15 @@ a { text-decoration: none; color: inherit; }
     <p class="founder-tagline-ai">AI-FIRST COMPANY · INDUSTRIA 5.0 · BOGOTÁ, COLOMBIA</p>
   </div>
   <div class="trust-grid fade-up">
-    <div class="trust-card trust-card--afi">
-      <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Custodia_AFI.png" alt="AFI International Group" class="trust-afi-seal" loading="lazy">
-      <div class="trust-title">Custodia certificada</div>
-      <div class="trust-desc">Tus datos custodiados por <strong>AFI International Group</strong>, firma regulada e independiente.</div>
-    </div>
     <div class="trust-card">
       <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M16 3L4 8v7c0 7.73 5.12 14.96 12 17 6.88-2.04 12-9.27 12-17V8L16 3z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M11 16l3.5 3.5L21 12" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       <div class="trust-title">Datos protegidos</div>
       <div class="trust-desc">Infraestructura cifrada. Acceso controlado. <strong>Solo tú ves tus números.</strong></div>
+    </div>
+    <div class="trust-card trust-card--afi">
+      <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Custodia_AFI.png" alt="AFI International Group" class="trust-afi-seal" loading="lazy">
+      <div class="trust-title">Custodia certificada</div>
+      <div class="trust-desc">Tus datos custodiados por <strong>AFI International Group</strong>, firma regulada e independiente.</div>
     </div>
     <div class="trust-card">
       <div class="trust-icon"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16 10v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="21" r="1.5" fill="currentColor"/></svg></div>

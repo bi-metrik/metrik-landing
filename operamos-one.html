@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MéTRIK — Conoce cómo opera Estudio Creativo Lúmina en MéTRIK ONE</title>
+<meta name="description" content="Workspace real de un cliente demo de MéTRIK ONE. Navega libre o sigue el tour guiado.">
+<link rel="canonical" href="https://metrik.com.co/operamos-one.html">
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
+<link rel="apple-touch-icon" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- driver.js v1 — mismo motor que tour Valida en ONE -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.css">
+<script src="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.js.iife.js"></script>
+
+<style>
+:root {
+  /* Tokens MeTRIK canonicos (cerebro/conceptos/identidad-visual-metrik.md) */
+  --negro-carbon: #1A1A1A;
+  --gris-acero: #6B7280;
+  --verde-metrica: #10B981;
+  --verde-dark: #059669;
+  --rojo-alerta: #EF4444;
+  --amarillo-warning: #F59E0B;
+  --blanco: #FFFFFF;
+  --gris-linea: #E5E7EB;
+  --fondo-crema: #F5F4F2;
+  --font: 'Montserrat', sans-serif;
+  --font-serif: 'DM Serif Display', serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font); font-size: 14px; line-height: 1.5; color: var(--negro-carbon); background: var(--fondo-crema); overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* NAV LANDING (heredado)                                            */
+/* ═══════════════════════════════════════════════════════════════ */
+.landing-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; background: rgba(26,26,26,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+.ln-logo { display: inline-flex; flex-direction: column; }
+.ln-logo-text { font-family: var(--font); font-weight: 700; letter-spacing: -0.02em; line-height: 1; color: var(--blanco); font-size: 1.25rem; }
+.ln-logo-line { width: 100%; height: 2px; background: var(--verde-metrica); margin-top: 5px; border-radius: 2px; }
+.ln-back { font-family: var(--font); font-weight: 500; font-size: 0.8125rem; color: rgba(255,255,255,0.6); margin-right: auto; margin-left: 1.5rem; transition: color 0.2s; }
+.ln-back:hover { color: var(--blanco); }
+.ln-cta { font-family: var(--font); font-weight: 600; font-size: 0.8125rem; color: var(--blanco); background: transparent; border: 1.5px solid rgba(255,255,255,0.25); padding: 0.5rem 1.25rem; border-radius: 6px; transition: all 0.3s ease; }
+.ln-cta:hover { border-color: var(--verde-metrica); color: var(--verde-metrica); }
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* HERO COMPACTO                                                     */
+/* ═══════════════════════════════════════════════════════════════ */
+.oo-hero { background: var(--negro-carbon); color: var(--blanco); padding: 7rem 1.5rem 3rem; text-align: center; }
+.oo-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; color: var(--verde-metrica); text-transform: uppercase; margin-bottom: 1.25rem; }
+.oo-eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--verde-metrica); border-radius: 50%; animation: pulse-dot 2s ease-in-out infinite; }
+@keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
+.oo-title { font-weight: 800; font-size: clamp(1.75rem, 4vw, 2.75rem); line-height: 1.15; letter-spacing: -0.02em; max-width: 800px; margin: 0 auto; }
+.oo-title-accent { color: var(--verde-metrica); }
+.oo-sub { font-weight: 400; font-size: clamp(0.9375rem, 1.6vw, 1.0625rem); color: rgba(255,255,255,0.7); margin: 1rem auto 0; max-width: 600px; line-height: 1.6; }
+.oo-cta-row { display: inline-flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; justify-content: center; }
+.oo-cta-primary { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font); font-weight: 600; font-size: 0.9375rem; color: var(--negro-carbon); background: var(--verde-metrica); border: none; padding: 0.75rem 1.5rem; border-radius: 8px; transition: all 0.3s ease; }
+.oo-cta-primary:hover { background: var(--verde-dark); color: var(--blanco); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(16,185,129,0.3); }
+.oo-cta-secondary { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font); font-weight: 500; font-size: 0.875rem; color: rgba(255,255,255,0.7); padding: 0.75rem 0; transition: color 0.2s; }
+.oo-cta-secondary:hover { color: var(--blanco); }
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* WORKSPACE SHELL — replica UI de MéTRIK ONE                       */
+/* ═══════════════════════════════════════════════════════════════ */
+.ws-frame { max-width: 1280px; margin: -1.5rem auto 0; padding: 0 1.5rem 4rem; }
+.ws-app { background: var(--blanco); border-radius: 12px; box-shadow: 0 24px 60px rgba(0,0,0,0.12), 0 4px 12px rgba(0,0,0,0.05); overflow: hidden; }
+
+/* Sidebar + main layout */
+.ws-shell { display: grid; grid-template-columns: 220px 1fr; min-height: 640px; }
+@media (max-width: 900px) { .ws-shell { grid-template-columns: 1fr; } .ws-sidebar { padding: 0.875rem 0; flex-direction: row; overflow-x: auto; align-items: center; border-right: none; border-bottom: 1px solid var(--gris-linea); } .ws-brand { border-bottom: none; border-right: 1px solid var(--gris-linea); padding: 0 1rem 0 1.25rem; flex-shrink: 0; } .ws-brand-sub { display: none; } .ws-nav { flex-direction: row; padding: 0 0.5rem; gap: 0; flex: 0 0 auto; } .ws-nav-section { display: none; } .ws-nav-item { padding: 0.5rem 0.875rem; border-left: none; border-bottom: 2px solid transparent; white-space: nowrap; } .ws-nav-item.active { border-left: none; border-bottom-color: var(--verde-dark); background: var(--verde-metrica); color: var(--blanco); } .ws-user { display: none; } }
+
+.ws-sidebar { background: var(--fondo-crema); color: var(--negro-carbon); padding: 1.25rem 0; display: flex; flex-direction: column; border-right: 1px solid var(--gris-linea); }
+.ws-brand { padding: 0 1.25rem 1.25rem; border-bottom: 1px solid var(--gris-linea); }
+.ws-brand-lockup { display: inline-flex; align-items: baseline; gap: 0.18em; }
+.ws-brand-marca { font-weight: 700; font-size: 0.9375rem; letter-spacing: -0.01em; color: var(--negro-carbon); line-height: 1; }
+.ws-brand-prod { font-weight: 300; font-size: 0.9375rem; color: var(--negro-carbon); text-transform: lowercase; line-height: 1; opacity: 0.7; }
+.ws-brand-prod-sub { font-size: 0.5rem; font-weight: 700; vertical-align: super; color: var(--verde-metrica); margin-left: 1px; }
+.ws-brand-line { width: 36px; height: 2.5px; background: var(--verde-metrica); margin-top: 5px; border-radius: 2px; }
+.ws-brand-sub { font-weight: 500; font-size: 0.625rem; color: var(--gris-acero); margin-top: 8px; letter-spacing: 0.06em; text-transform: uppercase; }
+.ws-nav { display: flex; flex-direction: column; padding: 0.75rem 0; flex: 1; }
+.ws-nav-section { padding: 0.75rem 1.25rem 0.375rem; font-size: 0.5625rem; font-weight: 700; letter-spacing: 0.12em; color: var(--gris-acero); text-transform: uppercase; }
+.ws-nav-item { display: flex; align-items: center; gap: 0.625rem; padding: 0.5rem 1.25rem; font-size: 0.8125rem; font-weight: 500; color: var(--negro-carbon); transition: all 0.2s; border-left: 2px solid transparent; }
+.ws-nav-item:hover { background: rgba(16,185,129,0.06); }
+.ws-nav-item.active { color: var(--blanco); background: var(--verde-metrica); border-left-color: var(--verde-dark); }
+.ws-nav-item--inactive { cursor: default; opacity: 0.45; }
+.ws-nav-item--inactive:hover { background: transparent; }
+.ws-nav-item svg { width: 16px; height: 16px; flex-shrink: 0; }
+.ws-user { padding: 1rem 1.25rem; border-top: 1px solid var(--gris-linea); display: flex; align-items: center; gap: 0.625rem; }
+.ws-user-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--negro-carbon); color: var(--blanco); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.75rem; flex-shrink: 0; }
+.ws-user-info { min-width: 0; }
+.ws-user-name { font-weight: 600; font-size: 0.75rem; color: var(--negro-carbon); }
+.ws-user-role { font-size: 0.625rem; color: var(--gris-acero); margin-top: 1px; }
+
+/* Main content */
+.ws-main { background: var(--fondo-crema); padding: 1.5rem 2rem; overflow: hidden; }
+.ws-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.75rem; }
+.ws-page-title { font-weight: 700; font-size: 1.375rem; color: var(--negro-carbon); letter-spacing: -0.01em; }
+.ws-page-meta { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); margin-top: 2px; }
+.ws-actions { display: inline-flex; gap: 0.5rem; }
+.ws-btn { font-family: var(--font); font-weight: 600; font-size: 0.8125rem; padding: 0.5rem 0.875rem; border-radius: 6px; border: 1px solid var(--gris-linea); background: var(--blanco); color: var(--negro-carbon); transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.375rem; }
+.ws-btn:hover { border-color: var(--negro-carbon); }
+.ws-btn--primary { background: var(--verde-metrica); color: var(--blanco); border-color: var(--verde-metrica); }
+.ws-btn--primary:hover { background: var(--verde-dark); border-color: var(--verde-dark); }
+
+/* Month nav */
+.ws-month { display: inline-flex; align-items: center; gap: 0.75rem; background: var(--blanco); border: 1px solid var(--gris-linea); border-radius: 8px; padding: 0.375rem 0.75rem; }
+.ws-month-btn { background: transparent; border: none; color: var(--gris-acero); padding: 2px 6px; border-radius: 4px; }
+.ws-month-btn:hover { background: var(--fondo-crema); color: var(--negro-carbon); }
+.ws-month-label { font-weight: 600; font-size: 0.8125rem; color: var(--negro-carbon); text-transform: capitalize; min-width: 110px; text-align: center; }
+
+/* KPI strip (combo MC + EBITDA + Caja + Por cobrar) */
+.ws-kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 1.5rem; }
+@media (max-width: 768px) { .ws-kpis { grid-template-columns: repeat(2, 1fr); } }
+.ws-kpi { background: var(--blanco); border: 1px solid var(--gris-linea); border-radius: 10px; padding: 0.875rem 1rem; }
+.ws-kpi-label { font-weight: 600; font-size: 0.5625rem; letter-spacing: 0.12em; color: var(--gris-acero); text-transform: uppercase; }
+.ws-kpi-value { font-weight: 800; font-size: 1.5rem; color: var(--negro-carbon); letter-spacing: -0.02em; line-height: 1.1; margin-top: 0.375rem; }
+.ws-kpi-value--green { color: var(--verde-metrica); }
+.ws-kpi-value--red { color: var(--rojo-alerta); }
+.ws-kpi-sub { font-weight: 400; font-size: 0.6875rem; color: var(--gris-acero); margin-top: 0.25rem; }
+
+/* Question cards (5 preguntas canonicas — replica UI ONE numeros-v2) */
+.ws-questions { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.75rem; }
+.ws-qc { background: var(--blanco); border: 1px solid var(--gris-linea); border-radius: 10px; padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem; transition: border-color 0.2s; min-height: 168px; }
+.ws-qc:hover { border-color: var(--gris-acero); }
+.ws-qc-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.ws-qc-num { width: 22px; height: 22px; border-radius: 50%; background: var(--fondo-crema); color: var(--gris-acero); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-style: italic; font-size: 0.75rem; flex-shrink: 0; }
+.ws-qc-q { font-weight: 600; font-size: 0.75rem; color: var(--negro-carbon); }
+.ws-qc-value { font-weight: 800; font-size: 1.375rem; color: var(--negro-carbon); letter-spacing: -0.02em; line-height: 1.1; }
+.ws-qc-value--green { color: var(--verde-metrica); }
+.ws-qc-bar { width: 100%; height: 4px; background: var(--gris-linea); border-radius: 2px; overflow: hidden; }
+.ws-qc-bar-fill { height: 100%; border-radius: 2px; transition: width 0.4s ease; }
+.ws-qc-bar-fill--green { background: var(--verde-metrica); }
+.ws-qc-bar-fill--yellow { background: var(--amarillo-warning); }
+.ws-qc-bar-fill--red { background: var(--rojo-alerta); }
+.ws-qc-sub { font-size: 0.6875rem; color: var(--gris-acero); display: flex; justify-content: space-between; gap: 0.5rem; }
+.ws-qc-sub strong { font-weight: 600; color: var(--negro-carbon); }
+
+/* Negocios list */
+.ws-stage-tabs { display: inline-flex; gap: 0.375rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.ws-stage-tab { display: inline-flex; align-items: center; font-weight: 600; font-size: 0.75rem; padding: 0.4375rem 0.875rem; border-radius: 100px; border: 1px solid var(--gris-linea); background: var(--blanco); color: var(--gris-acero); cursor: default; transition: all 0.2s; }
+.ws-stage-tab.active { background: var(--negro-carbon); color: var(--blanco); border-color: var(--negro-carbon); }
+.ws-stage-tab-count { font-size: 0.625rem; opacity: 0.7; margin-left: 4px; }
+
+.ws-negocios { display: flex; flex-direction: column; gap: 0.625rem; }
+.ws-nc { background: var(--blanco); border: 1px solid var(--gris-linea); border-radius: 10px; padding: 1rem 1.25rem; display: grid; grid-template-columns: auto 1fr auto auto; gap: 1rem; align-items: center; transition: border-color 0.2s, transform 0.2s; cursor: pointer; text-decoration: none; color: inherit; }
+.ws-nc:hover { border-color: var(--gris-acero); transform: translateY(-1px); }
+.ws-nc:focus-visible { outline: 2px solid var(--verde-metrica); outline-offset: 2px; }
+.ws-nc-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--fondo-crema); display: flex; align-items: center; justify-content: center; color: var(--gris-acero); }
+.ws-nc-icon svg { width: 18px; height: 18px; }
+.ws-nc-body { min-width: 0; }
+.ws-nc-name { font-weight: 700; font-size: 0.9375rem; color: var(--negro-carbon); letter-spacing: -0.01em; line-height: 1.25; }
+.ws-nc-meta { font-weight: 400; font-size: 0.75rem; color: var(--gris-acero); margin-top: 3px; }
+.ws-nc-meta strong { color: var(--negro-carbon); font-weight: 600; }
+.ws-nc-stage { font-weight: 600; font-size: 0.625rem; letter-spacing: 0.08em; padding: 0.25rem 0.625rem; border-radius: 100px; text-transform: uppercase; }
+.ws-nc-stage--venta { background: rgba(16,185,129,0.1); color: var(--verde-dark); }
+.ws-nc-stage--ejecucion { background: #FFF7ED; color: #C2410C; }
+.ws-nc-stage--cobro { background: #EFF6FF; color: #2563EB; }
+.ws-nc-value { font-weight: 700; font-size: 1rem; color: var(--negro-carbon); letter-spacing: -0.01em; text-align: right; }
+@media (max-width: 600px) {
+  .ws-nc { grid-template-columns: auto 1fr; gap: 0.75rem; }
+  .ws-nc-stage, .ws-nc-value { grid-column: 2; justify-self: start; }
+}
+
+/* Cotización */
+.ws-quote { background: var(--blanco); border: 1px solid var(--gris-linea); border-radius: 10px; padding: 1.5rem; }
+.ws-quote-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem; }
+@media (max-width: 700px) { .ws-quote-grid { grid-template-columns: 1fr; } }
+.ws-quote-tile { padding: 1rem 1.125rem; border: 1px solid var(--gris-linea); border-radius: 8px; }
+.ws-quote-tile--main { background: var(--negro-carbon); color: var(--blanco); border-color: var(--negro-carbon); }
+.ws-quote-label { font-weight: 700; font-size: 0.5625rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris-acero); }
+.ws-quote-tile--main .ws-quote-label { color: rgba(255,255,255,0.55); }
+.ws-quote-value-big { font-weight: 800; font-size: 1.875rem; letter-spacing: -0.02em; line-height: 1; margin-top: 0.5rem; }
+.ws-quote-value { font-weight: 700; font-size: 1.25rem; color: var(--negro-carbon); letter-spacing: -0.02em; margin-top: 0.5rem; }
+.ws-quote-value--green { color: var(--verde-metrica); }
+.ws-quote-margin { background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.2); border-radius: 8px; padding: 1rem; text-align: center; }
+.ws-quote-margin-label { font-weight: 700; font-size: 0.625rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--verde-dark); }
+.ws-quote-margin-value { font-weight: 800; font-size: 2rem; color: var(--verde-metrica); letter-spacing: -0.02em; line-height: 1; margin-top: 0.375rem; }
+.ws-quote-margin-sub { font-size: 0.75rem; color: var(--gris-acero); margin-top: 0.5rem; }
+
+.ws-line-items { margin-top: 1.5rem; border-top: 1px solid var(--gris-linea); padding-top: 1rem; }
+.ws-line-items-title { font-weight: 700; font-size: 0.625rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris-acero); margin-bottom: 0.75rem; }
+.ws-line-item { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; padding: 0.75rem 0; border-bottom: 1px solid var(--fondo-crema); align-items: flex-start; }
+.ws-line-item:last-child { border-bottom: none; }
+.ws-line-item-info { min-width: 0; }
+.ws-line-item-name { font-weight: 500; font-size: 0.875rem; color: var(--negro-carbon); line-height: 1.35; }
+.ws-line-item-detail { font-size: 0.75rem; color: var(--gris-acero); margin-top: 3px; line-height: 1.4; }
+.ws-line-item-value { font-weight: 600; font-size: 0.9375rem; color: var(--negro-carbon); white-space: nowrap; }
+.ws-line-item--total { border-top: 2px solid var(--negro-carbon); padding-top: 1rem; margin-top: 0.5rem; border-bottom: none; }
+.ws-line-item--total .ws-line-item-name { font-weight: 700; font-size: 1rem; }
+.ws-line-item--total .ws-line-item-value { font-weight: 800; font-size: 1.125rem; letter-spacing: -0.01em; }
+
+/* Section label + runway block (4 preguntas + complemento) */
+.ws-section-label { font-weight: 700; font-size: 0.625rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris-acero); margin-bottom: 0.75rem; }
+.ws-runway-block { margin-top: 1rem; background: var(--blanco); border: 1px solid var(--gris-linea); border-radius: 10px; padding: 1rem 1.25rem; display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: center; }
+@media (max-width: 700px) { .ws-runway-block { grid-template-columns: 1fr; gap: 0.75rem; } }
+.ws-runway-header { min-width: 180px; }
+.ws-runway-eyebrow { display: block; font-weight: 700; font-size: 0.5625rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris-acero); margin-bottom: 4px; }
+.ws-runway-q { display: block; font-weight: 600; font-size: 0.9375rem; color: var(--negro-carbon); letter-spacing: -0.01em; }
+.ws-runway-body { min-width: 0; }
+.ws-runway-value { font-weight: 800; font-size: 1.5rem; color: var(--negro-carbon); letter-spacing: -0.02em; line-height: 1.1; }
+.ws-runway-meta { font-size: 0.75rem; color: var(--gris-acero); margin-top: 4px; }
+.ws-runway-meta strong { color: var(--verde-dark); font-weight: 700; }
+.ws-runway-track { display: flex; height: 8px; border-radius: 4px; overflow: hidden; background: var(--gris-linea); margin-top: 0.75rem; }
+.ws-runway-seg { height: 100%; }
+.ws-runway-seg--red { background: var(--rojo-alerta); }
+.ws-runway-seg--orange { background: #F97316; }
+.ws-runway-seg--yellow { background: var(--amarillo-warning); }
+.ws-runway-seg--green { background: var(--verde-metrica); }
+.ws-runway-labels { display: flex; justify-content: space-between; margin-top: 6px; font-size: 0.625rem; color: var(--gris-acero); font-weight: 500; }
+
+/* WhatsApp natural */
+.ws-wa { background: var(--blanco); border: 1px solid var(--gris-linea); border-radius: 10px; overflow: hidden; max-width: 580px; margin: 0 auto; }
+.ws-wa-head { background: #075E54; color: #fff; padding: 0.875rem 1rem; display: flex; align-items: center; gap: 0.75rem; }
+.ws-wa-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--verde-metrica); color: var(--negro-carbon); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8125rem; flex-shrink: 0; }
+.ws-wa-name { font-weight: 600; font-size: 0.875rem; }
+.ws-wa-sub { font-size: 0.6875rem; opacity: 0.7; margin-top: 2px; }
+.ws-wa-body { background: #ECE5DD; padding: 1.25rem 1rem; display: flex; flex-direction: column; gap: 0.5rem; min-height: 280px; }
+.ws-wa-msg { max-width: 80%; padding: 0.5rem 0.75rem; border-radius: 8px; font-size: 0.8125rem; line-height: 1.45; box-shadow: 0 1px 0.5px rgba(0,0,0,0.13); }
+.ws-wa-msg--user { align-self: flex-end; background: #DCF8C6; border-bottom-right-radius: 2px; }
+.ws-wa-msg--bot { align-self: flex-start; background: #fff; border-bottom-left-radius: 2px; }
+.ws-wa-msg-time { display: block; font-size: 0.625rem; color: var(--gris-acero); margin-top: 4px; text-align: right; }
+.ws-wa-meta { display: inline-block; font-size: 0.625rem; color: var(--gris-acero); margin-top: 4px; padding: 2px 6px; background: rgba(16,185,129,0.08); border-radius: 4px; }
+
+/* Tab switcher (vistas del workspace) */
+.ws-view-switcher { display: none; }
+.ws-view-tab { font-family: var(--font); font-weight: 600; font-size: 0.8125rem; color: var(--gris-acero); background: transparent; border: none; padding: 0.875rem 0; border-bottom: 2px solid transparent; transition: all 0.2s; white-space: nowrap; }
+.ws-view-tab:hover { color: var(--negro-carbon); }
+.ws-view-tab.active { color: var(--negro-carbon); border-bottom-color: var(--verde-metrica); }
+.ws-view-content { padding: 1.5rem 2rem; }
+@media (max-width: 768px) { .ws-view-switcher, .ws-view-content { padding-left: 1rem; padding-right: 1rem; } }
+.ws-view { display: none; }
+.ws-view.active { display: block; }
+
+/* SCREENSHOT viewer (camino C — vistas reales como <img>) */
+.ws-view--screenshot { padding: 0; background: var(--fondo-crema); }
+.ws-shot { display: flex; justify-content: center; padding: 1.25rem; transition: padding 0.3s ease; }
+.ws-shot-img { width: 100%; max-width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: opacity 0.25s ease, max-width 0.3s ease; }
+.ws-shot-img.is-loading { opacity: 0.4; }
+/* Mobile screenshot: chassis estilo iPhone (centrado + maxwidth 360 + borde simulado) */
+.ws-shot.is-mobile { padding: 2rem 1rem; background: linear-gradient(180deg, var(--fondo-crema) 0%, var(--gris-fondo) 100%); }
+.ws-shot.is-mobile .ws-shot-img { max-width: 360px; border-radius: 28px; box-shadow: 0 12px 40px rgba(0,0,0,0.15), 0 0 0 8px var(--negro-carbon), 0 0 0 9px rgba(0,0,0,0.2); }
+@media (max-width: 768px) { .ws-shot { padding: 0.5rem; } .ws-shot.is-mobile { padding: 1rem 0.5rem; } .ws-shot.is-mobile .ws-shot-img { max-width: 280px; } }
+
+/* Platform toggle (Desktop / Mobile screenshot switcher) */
+.ws-platform-toggle { display: none; background: var(--blanco); border-bottom: 1px solid var(--gris-linea); padding: 0.625rem 2rem; gap: 0.375rem; }
+.ws-view--screenshot ~ .ws-platform-toggle, .ws-view-content:has(.ws-view--screenshot) .ws-platform-toggle { display: flex; }
+/* Force show always (simpler than :has fallback) */
+.ws-platform-toggle.show { display: flex; }
+.ws-pt-btn { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.04em; color: var(--gris-acero); background: transparent; border: 1px solid var(--gris-linea); padding: 0.375rem 0.75rem; border-radius: 100px; cursor: pointer; transition: all 0.2s ease; }
+.ws-pt-btn:hover { color: var(--negro-carbon); border-color: var(--gris-acero); }
+.ws-pt-btn.active { background: var(--negro-carbon); color: var(--blanco); border-color: var(--negro-carbon); }
+.ws-pt-btn svg { flex-shrink: 0; }
+@media (max-width: 768px) { .ws-platform-toggle { padding: 0.5rem 1rem; } }
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* SECCION INDUSTRIAS + CIERRE                                       */
+/* ═══════════════════════════════════════════════════════════════ */
+.oo-industries { background: var(--blanco); padding: 4rem 1.5rem; text-align: center; border-top: 1px solid var(--gris-linea); }
+.oo-industries-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; color: var(--verde-metrica); text-transform: uppercase; margin-bottom: 1rem; }
+.oo-industries-title { font-family: var(--font-serif); font-weight: 400; font-size: clamp(1.5rem, 3vw, 2.25rem); color: var(--negro-carbon); margin-bottom: 0.75rem; letter-spacing: -0.01em; line-height: 1.2; }
+.oo-industries-sub { font-weight: 400; font-size: 1rem; color: var(--gris-acero); max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.6; }
+.oo-industries-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; max-width: 800px; margin: 0 auto; }
+.oo-industry-badge { font-weight: 600; font-size: 0.875rem; padding: 0.625rem 1.25rem; background: var(--fondo-crema); border: 1px solid var(--gris-linea); border-radius: 100px; color: var(--negro-carbon); transition: all 0.2s; }
+.oo-industry-badge:hover { border-color: var(--verde-metrica); color: var(--verde-dark); transform: translateY(-1px); }
+
+.oo-close { background: var(--fondo-crema); padding: 4rem 1.5rem; text-align: center; }
+.oo-close-text { font-family: var(--font-serif); font-style: italic; font-size: clamp(1.25rem, 2.6vw, 1.625rem); color: var(--negro-carbon); margin-bottom: 1rem; line-height: 1.3; }
+.oo-close-link { display: inline-block; font-family: var(--font); font-weight: 600; font-size: 1rem; color: var(--verde-metrica); border-bottom: 1.5px solid var(--verde-metrica); padding-bottom: 4px; transition: opacity 0.3s ease; }
+.oo-close-link:hover { opacity: 0.7; }
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* FOOTER                                                            */
+/* ═══════════════════════════════════════════════════════════════ */
+.oo-footer { padding: 2rem 1.5rem; background: var(--negro-carbon); border-top: 1px solid rgba(255,255,255,0.06); }
+.oo-footer-inner { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.oo-footer-logo .ln-logo-text { font-size: 1rem; }
+.oo-footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.oo-footer-link { font-weight: 400; font-size: 0.8125rem; color: var(--gris-acero); transition: color 0.2s; }
+.oo-footer-link:hover { color: var(--blanco); }
+.oo-footer-tagline { width: 100%; text-align: center; font-weight: 500; font-size: 0.875rem; color: var(--verde-metrica); margin-top: 0.5rem; }
+.oo-footer-copy { width: 100%; text-align: center; font-weight: 400; font-size: 0.75rem; color: rgba(107,114,128,0.5); margin-top: 0.5rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.04); }
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* WHATSAPP FAB                                                      */
+/* ═══════════════════════════════════════════════════════════════ */
+.wa-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 90; width: 52px; height: 52px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(37,211,102,0.35), 0 2px 8px rgba(0,0,0,0.15); transition: transform 0.3s ease; }
+.wa-fab:hover { transform: translateY(-2px) scale(1.04); }
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* DRIVER.JS — estilo MeTRIK (replica tutorial.css de ONE)           */
+/* ═══════════════════════════════════════════════════════════════ */
+.metrik-driver .driver-popover { background: var(--blanco); border-radius: 12px; box-shadow: 0 24px 60px rgba(0,0,0,0.2), 0 4px 12px rgba(0,0,0,0.1); border: 1px solid var(--gris-linea); padding: 1.25rem; max-width: 380px; font-family: var(--font); }
+.metrik-driver .driver-popover-title { font-family: var(--font); font-weight: 700; font-size: 1rem; color: var(--negro-carbon); letter-spacing: -0.01em; line-height: 1.3; margin-bottom: 0.5rem; }
+.metrik-driver .driver-popover-description { font-family: var(--font); font-weight: 400; font-size: 0.875rem; color: var(--gris-acero); line-height: 1.55; }
+.metrik-driver .driver-popover-footer { margin-top: 1rem; display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; }
+.metrik-driver .driver-popover-progress-text { font-family: var(--font); font-weight: 600; font-size: 0.6875rem; color: var(--gris-acero); letter-spacing: 0.08em; text-transform: uppercase; }
+.metrik-driver .driver-popover-navigation-btns { display: inline-flex; gap: 0.5rem; }
+.metrik-driver .driver-popover-prev-btn,
+.metrik-driver .driver-popover-next-btn,
+.metrik-driver .driver-popover-close-btn { font-family: var(--font); font-weight: 600; font-size: 0.8125rem; padding: 0.5rem 1rem; border-radius: 6px; border: 1.5px solid var(--gris-linea); background: var(--blanco); color: var(--negro-carbon); cursor: pointer; transition: all 0.2s; }
+.metrik-driver .driver-popover-prev-btn:hover,
+.metrik-driver .driver-popover-next-btn:hover { border-color: var(--negro-carbon); }
+.metrik-driver .driver-popover-next-btn { background: var(--verde-metrica); color: var(--negro-carbon); border-color: var(--verde-metrica); }
+.metrik-driver .driver-popover-next-btn:hover { background: var(--verde-dark); color: var(--blanco); border-color: var(--verde-dark); }
+.metrik-driver .driver-popover-close-btn { position: absolute; top: 8px; right: 8px; padding: 4px 8px; font-size: 1rem; border: none; color: var(--gris-acero); background: transparent; }
+.metrik-driver .driver-popover-close-btn:hover { color: var(--negro-carbon); background: var(--fondo-crema); }
+.metrik-driver .driver-popover-arrow { border-color: var(--blanco); }
+.metrik-driver .driver-overlay { background: rgba(26,26,26,0.55); }
+.metrik-driver .driver-active-element { box-shadow: 0 0 0 4px rgba(16,185,129,0.3), 0 0 0 8px rgba(16,185,129,0.12); border-radius: 8px; }
+</style>
+</head>
+<body>
+
+<nav class="landing-nav">
+  <a href="/index.html" class="ln-logo">
+    <span class="ln-logo-text">MéTRIK</span>
+    <div class="ln-logo-line"></div>
+  </a>
+  <a href="/index.html" class="ln-back">← Volver al inicio</a>
+  <a href="https://calendly.com/mauricio-moreno-metrik/30min" target="_blank" class="ln-cta">Agendar diagnóstico</a>
+</nav>
+
+<section class="oo-hero">
+  <p class="oo-eyebrow">DEMO INTERACTIVO</p>
+  <h1 class="oo-title">Así opera un estudio creativo <span class="oo-title-accent">sobre MéTRIK ONE</span>.</h1>
+  <p class="oo-sub">Estudio Creativo Lúmina — workspace demo con datos representativos. Capturas reales del producto, no mockups. Navega libre o sigue el tour guiado.</p>
+  <div class="oo-cta-row">
+    <button class="oo-cta-primary" id="oo-start-tour">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></svg>
+      Iniciar tour guiado
+    </button>
+    <a href="#ws" class="oo-cta-secondary">o navega libre ↓</a>
+  </div>
+</section>
+
+<section class="ws-frame" id="ws">
+  <div class="ws-app">
+    <div class="ws-shell">
+      <!-- SIDEBAR (replica nav de ONE) -->
+      <aside class="ws-sidebar" data-tour="sidebar">
+        <div class="ws-brand">
+          <div class="ws-brand-lockup">
+            <span class="ws-brand-marca">MéTRIK</span>
+            <span class="ws-brand-prod">one<span class="ws-brand-prod-sub">1</span></span>
+          </div>
+          <div class="ws-brand-line"></div>
+          <div class="ws-brand-sub">Estudio Creativo Lúmina</div>
+        </div>
+        <div class="ws-nav">
+          <div class="ws-nav-section">Operación</div>
+          <a class="ws-nav-item active" data-view="numeros" href="#numeros">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 6-6"/></svg>
+            Números
+          </a>
+          <a class="ws-nav-item" data-view="negocios" href="#negocios">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Negocios
+          </a>
+          <a class="ws-nav-item" data-view="equipo" href="#equipo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Equipo
+          </a>
+          <div class="ws-nav-section">Caja</div>
+          <a class="ws-nav-item" data-view="movimientos" href="#movimientos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+            Movimientos
+          </a>
+          <div class="ws-nav-section">Compartidos</div>
+          <span class="ws-nav-item ws-nav-item--inactive">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+            Directorio
+          </span>
+          <span class="ws-nav-item ws-nav-item--inactive">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Mi Negocio
+          </span>
+          <span class="ws-nav-item ws-nav-item--inactive">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+            Tableros
+          </span>
+          <div class="ws-nav-section">Workflows</div>
+          <a class="ws-nav-item" data-view="flujo" href="#flujo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="3" width="6" height="6" rx="1"/><rect x="3" y="15" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/><line x1="9" y1="6" x2="15" y2="6"/><line x1="9" y1="18" x2="15" y2="18"/><line x1="6" y1="9" x2="6" y2="15"/><line x1="18" y1="9" x2="18" y2="15"/></svg>
+            Workflows
+          </a>
+        </div>
+        <div class="ws-user" data-tour="user">
+          <div class="ws-user-avatar">C</div>
+          <div class="ws-user-info">
+            <div class="ws-user-name">Camila Vega</div>
+            <div class="ws-user-role">Directora Creativa</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="ws-main" style="padding:0">
+        <div class="ws-view-switcher" data-tour="switcher">
+          <button class="ws-view-tab active" data-view-tab="numeros">Mis Números</button>
+          <button class="ws-view-tab" data-view-tab="negocios">Negocios</button>
+          <button class="ws-view-tab" data-view-tab="detalle">Detalle</button>
+          <button class="ws-view-tab" data-view-tab="flujo">Flujo</button>
+          <button class="ws-view-tab" data-view-tab="equipo">Equipo</button>
+          <button class="ws-view-tab" data-view-tab="movimientos">Movimientos</button>
+        </div>
+        <div class="ws-platform-toggle">
+          <button class="ws-pt-btn active" data-platform="desktop">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Desktop
+          </button>
+          <button class="ws-pt-btn" data-platform="mobile">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            Mobile
+          </button>
+        </div>
+
+        <!-- VIEW: Mis Números (screenshot real SOENA) -->
+        <div class="ws-view-content ws-view ws-view--screenshot active" data-view-content="numeros">
+          <div class="ws-shot" data-tour="numeros-shot">
+            <img class="ws-shot-img" data-desktop="assets/screenshots/01-numeros.png" data-mobile="assets/screenshots/mobile/01-numeros.png" src="assets/screenshots/01-numeros.png" alt="Vista Mis Números — MéTRIK ONE" loading="lazy">
+          </div>
+        </div>
+
+        <!-- VIEW: Negocios (screenshot real) -->
+        <div class="ws-view-content ws-view ws-view--screenshot" data-view-content="negocios">
+          <div class="ws-shot" data-tour="negocios-shot">
+            <img class="ws-shot-img" data-desktop="assets/screenshots/02-negocios.png" data-mobile="assets/screenshots/mobile/02-negocios.png" src="assets/screenshots/02-negocios.png" alt="Vista Negocios — MéTRIK ONE" loading="lazy">
+          </div>
+        </div>
+
+        <!-- VIEW: Detalle de negocio (screenshot real con bloques + actividad) -->
+        <div class="ws-view-content ws-view ws-view--screenshot" data-view-content="detalle">
+          <div class="ws-shot" data-tour="detalle-shot">
+            <img class="ws-shot-img" data-desktop="assets/screenshots/07-negocio-detalle.png" data-mobile="assets/screenshots/mobile/07-negocio-detalle.png" src="assets/screenshots/07-negocio-detalle.png" alt="Detalle de un negocio — bloques + actividad" loading="lazy">
+          </div>
+        </div>
+
+        <!-- VIEW: Equipo (screenshot real) -->
+        <div class="ws-view-content ws-view ws-view--screenshot" data-view-content="equipo">
+          <div class="ws-shot" data-tour="equipo-shot">
+            <img class="ws-shot-img" data-desktop="assets/screenshots/03-equipo.png" data-mobile="assets/screenshots/mobile/03-equipo.png" src="assets/screenshots/03-equipo.png" alt="Vista Equipo — staff y tarifas" loading="lazy">
+          </div>
+        </div>
+
+        <!-- VIEW: Flujo / Workflow (screenshot real) -->
+        <div class="ws-view-content ws-view ws-view--screenshot" data-view-content="flujo">
+          <div class="ws-shot" data-tour="flujo-shot">
+            <img class="ws-shot-img" data-desktop="assets/screenshots/06-workflow.png" data-mobile="assets/screenshots/mobile/06-workflow.png" src="assets/screenshots/06-workflow.png" alt="Vista Flujo — workflow del proceso con etapas y bloques" loading="lazy">
+          </div>
+        </div>
+
+        <!-- VIEW: Movimientos (screenshot real) -->
+        <div class="ws-view-content ws-view ws-view--screenshot" data-view-content="movimientos">
+          <div class="ws-shot" data-tour="movimientos-shot">
+            <img class="ws-shot-img" data-desktop="assets/screenshots/04-movimientos.png" data-mobile="assets/screenshots/mobile/04-movimientos.png" src="assets/screenshots/04-movimientos.png" alt="Vista Movimientos — gastos, cobros, horas" loading="lazy">
+          </div>
+        </div>
+
+        <!-- VIEW: Negocios HTML (legacy, oculto — reemplazado por screenshot arriba) -->
+        <div class="ws-view-content ws-view" data-view-content="negocios-legacy" style="display:none">
+          <div class="ws-topbar">
+            <div>
+              <div class="ws-page-title">Negocios</div>
+              <div class="ws-page-meta">6 activos · $84.0M en pipeline</div>
+            </div>
+            <div class="ws-actions">
+              <button class="ws-btn">Filtrar</button>
+              <button class="ws-btn ws-btn--primary">+ Nuevo negocio</button>
+            </div>
+          </div>
+
+          <div class="ws-stage-tabs">
+            <span class="ws-stage-tab active">Todos<span class="ws-stage-tab-count">6</span></span>
+            <span class="ws-stage-tab">Venta<span class="ws-stage-tab-count">2</span></span>
+            <span class="ws-stage-tab">Ejecución<span class="ws-stage-tab-count">3</span></span>
+            <span class="ws-stage-tab">Cobro<span class="ws-stage-tab-count">1</span></span>
+          </div>
+
+          <div class="ws-negocios" data-tour="negocios-list">
+            <div class="ws-nc" data-tour="negocio-card" role="button" tabindex="0">
+              <div class="ws-nc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="6" cy="6" r="2"/></svg>
+              </div>
+              <div class="ws-nc-body">
+                <div class="ws-nc-name">Branding Fintech Nube</div>
+                <div class="ws-nc-meta">Cliente: <strong>Nube SAS</strong> · Líder: Camila V. · Inicio mar 2026</div>
+              </div>
+              <span class="ws-nc-stage ws-nc-stage--ejecucion">Ejecución</span>
+              <div class="ws-nc-value">$18.0M</div>
+            </div>
+            <div class="ws-nc" role="button" tabindex="0">
+              <div class="ws-nc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+              </div>
+              <div class="ws-nc-body">
+                <div class="ws-nc-name">Rediseño web Cosmética Aurora</div>
+                <div class="ws-nc-meta">Cliente: <strong>Aurora Skincare</strong> · Líder: Andrés R. · Inicio feb 2026</div>
+              </div>
+              <span class="ws-nc-stage ws-nc-stage--cobro">Cobro</span>
+              <div class="ws-nc-value">$12.0M</div>
+            </div>
+            <div class="ws-nc" role="button" tabindex="0">
+              <div class="ws-nc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              </div>
+              <div class="ws-nc-body">
+                <div class="ws-nc-name">Video promocional Educatec</div>
+                <div class="ws-nc-meta">Cliente: <strong>Educatec EdTech</strong> · Líder: Pablo N. · Inicio abr 2026</div>
+              </div>
+              <span class="ws-nc-stage ws-nc-stage--ejecucion">Ejecución</span>
+              <div class="ws-nc-value">$9.0M</div>
+            </div>
+            <div class="ws-nc" role="button" tabindex="0">
+              <div class="ws-nc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/><polygon points="12 2 2 7 12 12 22 7 12 2"/></svg>
+              </div>
+              <div class="ws-nc-body">
+                <div class="ws-nc-name">Packaging Línea Premium Café del Sur</div>
+                <div class="ws-nc-meta">Cliente: <strong>Café del Sur</strong> · Líder: Andrés R. · Inicio mar 2026</div>
+              </div>
+              <span class="ws-nc-stage ws-nc-stage--ejecucion">Ejecución</span>
+              <div class="ws-nc-value">$15.0M</div>
+            </div>
+            <div class="ws-nc" role="button" tabindex="0">
+              <div class="ws-nc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="ws-nc-body">
+                <div class="ws-nc-name">Identidad Campaña Verano Hotel Coral</div>
+                <div class="ws-nc-meta">Cliente: <strong>Hotel Coral</strong> · Líder: Lucía M. · Cotizado may 2026</div>
+              </div>
+              <span class="ws-nc-stage ws-nc-stage--venta">Venta</span>
+              <div class="ws-nc-value">$8.0M</div>
+            </div>
+            <div class="ws-nc" role="button" tabindex="0">
+              <div class="ws-nc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M6 4v4"/></svg>
+              </div>
+              <div class="ws-nc-body">
+                <div class="ws-nc-name">Sitio e-commerce Tienda Boreal</div>
+                <div class="ws-nc-meta">Cliente: <strong>Boreal Outdoor</strong> · Líder: Andrés R. · Discovery abr 2026</div>
+              </div>
+              <span class="ws-nc-stage ws-nc-stage--venta">Venta</span>
+              <div class="ws-nc-value">$22.0M</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIEW: Cotización (legacy HTML, oculto — el detalle ahora usa screenshot) -->
+        <div class="ws-view-content ws-view" data-view-content="cotizacion-legacy" style="display:none">
+          <div class="ws-topbar">
+            <div>
+              <div class="ws-page-title">Cotización · Sitio e-commerce Tienda Boreal</div>
+              <div class="ws-page-meta">Borrador · pendiente enviar al cliente</div>
+            </div>
+            <div class="ws-actions">
+              <button class="ws-btn">Vista PDF</button>
+              <button class="ws-btn ws-btn--primary">Enviar al cliente</button>
+            </div>
+          </div>
+
+          <div class="ws-quote" data-tour="quote">
+            <div class="ws-quote-grid">
+              <div class="ws-quote-tile ws-quote-tile--main">
+                <div class="ws-quote-label">Precio al cliente</div>
+                <div class="ws-quote-value-big">$22.000.000</div>
+              </div>
+              <div class="ws-quote-tile">
+                <div class="ws-quote-label">Costo directo</div>
+                <div class="ws-quote-value">$8.580.000</div>
+              </div>
+              <div class="ws-quote-tile">
+                <div class="ws-quote-label">Utilidad bruta</div>
+                <div class="ws-quote-value ws-quote-value--green">$13.420.000</div>
+              </div>
+            </div>
+
+            <div class="ws-quote-margin" data-tour="quote-margin">
+              <div class="ws-quote-margin-label">Margen proyectado</div>
+              <div class="ws-quote-margin-value">61%</div>
+              <div class="ws-quote-margin-sub">Por encima del objetivo de Lúmina (55%). Aprobado para enviar.</div>
+            </div>
+
+            <div class="ws-line-items">
+              <div class="ws-line-items-title">Desglose de la propuesta</div>
+              <div class="ws-line-item">
+                <div class="ws-line-item-info">
+                  <div class="ws-line-item-name">Discovery + arquitectura de información</div>
+                  <div class="ws-line-item-detail">2 sesiones de descubrimiento + sitemap + flow</div>
+                </div>
+                <div class="ws-line-item-value">$3.500.000</div>
+              </div>
+              <div class="ws-line-item">
+                <div class="ws-line-item-info">
+                  <div class="ws-line-item-name">Diseño UX/UI · 12 pantallas</div>
+                  <div class="ws-line-item-detail">Wireframes + visual design + prototipo interactivo</div>
+                </div>
+                <div class="ws-line-item-value">$7.500.000</div>
+              </div>
+              <div class="ws-line-item">
+                <div class="ws-line-item-info">
+                  <div class="ws-line-item-name">Desarrollo frontend + integración Shopify</div>
+                  <div class="ws-line-item-detail">Theme custom, conexión pasarela, QA cross-browser</div>
+                </div>
+                <div class="ws-line-item-value">$7.000.000</div>
+              </div>
+              <div class="ws-line-item">
+                <div class="ws-line-item-info">
+                  <div class="ws-line-item-name">Gestión de proyecto + entrega</div>
+                  <div class="ws-line-item-detail">Coordinación, revisiones, capacitación + soporte 30 días</div>
+                </div>
+                <div class="ws-line-item-value">$3.800.000</div>
+              </div>
+              <div class="ws-line-item">
+                <div class="ws-line-item-info">
+                  <div class="ws-line-item-name">Imprevistos reservados</div>
+                  <div class="ws-line-item-detail">Cobertura para alcance fuera de spec inicial</div>
+                </div>
+                <div class="ws-line-item-value">$200.000</div>
+              </div>
+              <div class="ws-line-item ws-line-item--total">
+                <div class="ws-line-item-info">
+                  <div class="ws-line-item-name">Total propuesta</div>
+                </div>
+                <div class="ws-line-item-value">$22.000.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIEW: WhatsApp -->
+        <div class="ws-view-content ws-view" data-view-content="whatsapp-legacy" style="display:none">
+          <div class="ws-topbar">
+            <div>
+              <div class="ws-page-title">Registro por WhatsApp</div>
+              <div class="ws-page-meta">El equipo registra desde el celular, en lenguaje natural · sin app</div>
+            </div>
+          </div>
+
+          <div class="ws-wa" data-tour="wa">
+            <div class="ws-wa-head">
+              <div class="ws-wa-avatar">M</div>
+              <div>
+                <div class="ws-wa-name">MéTRIK</div>
+                <div class="ws-wa-sub">en línea</div>
+              </div>
+            </div>
+            <div class="ws-wa-body">
+              <div class="ws-wa-msg ws-wa-msg--user">
+                Hola, gasté 320mil en la sesión de fotos para Café del Sur
+                <span class="ws-wa-msg-time">10:24</span>
+              </div>
+              <div class="ws-wa-msg ws-wa-msg--bot">
+                Listo, Camila. Registré <strong>$320.000 COP</strong> de producción al negocio <strong>"Packaging Línea Premium Café del Sur"</strong>. Lo verás reflejado en Mis Números.
+                <span class="ws-wa-meta">Negocio confirmado · Categoría: producción</span>
+                <span class="ws-wa-msg-time">10:24</span>
+              </div>
+              <div class="ws-wa-msg ws-wa-msg--user">
+                Andrés trabajó 6 horas hoy en branding Fintech Nube
+                <span class="ws-wa-msg-time">14:12</span>
+              </div>
+              <div class="ws-wa-msg ws-wa-msg--bot">
+                Anoté <strong>6 horas</strong> de <strong>Andrés Rojas</strong> al negocio <strong>"Branding Fintech Nube"</strong>. Quedan 14 horas del estimado.
+                <span class="ws-wa-msg-time">14:12</span>
+              </div>
+              <div class="ws-wa-msg ws-wa-msg--user">
+                Aurora Skincare ya pagó la última factura, 4.5 millones
+                <span class="ws-wa-msg-time">16:48</span>
+              </div>
+              <div class="ws-wa-msg ws-wa-msg--bot">
+                Registré cobro de <strong>$4.500.000 COP</strong> al negocio <strong>"Rediseño web Cosmética Aurora"</strong>. Negocio pasa a estado <strong>Cerrado · Exitoso</strong>. ¿Quieres enviar agradecimiento al cliente?
+                <span class="ws-wa-msg-time">16:48</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+
+<section class="oo-industries">
+  <p class="oo-industries-eyebrow">VERSATILIDAD POR DISEÑO</p>
+  <h2 class="oo-industries-title">Cada workspace se adapta al lenguaje<br>operativo de tu sector.</h2>
+  <p class="oo-industries-sub">Lo que ves arriba es un estudio creativo. Mismo motor, distinto vocabulario. Industrias en las que ya trabajamos:</p>
+  <div class="oo-industries-row">
+    <span class="oo-industry-badge">Salud</span>
+    <span class="oo-industry-badge">Turismo</span>
+    <span class="oo-industry-badge">Manufactura</span>
+    <span class="oo-industry-badge">Consultoría</span>
+    <span class="oo-industry-badge">Compliance</span>
+  </div>
+</section>
+
+<section class="oo-close">
+  <p class="oo-close-text">¿Quieres ver el tuyo con tus datos?</p>
+  <a href="https://calendly.com/mauricio-moreno-metrik/30min" target="_blank" class="oo-close-link">Agendar Radiografía →</a>
+</section>
+
+<a href="https://wa.me/573159509103?text=Hola%2C%20vi%20el%20demo%20de%20M%C3%A9TRIK%20ONE" target="_blank" class="wa-fab" aria-label="Escríbenos por WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M14 4C8.48 4 4 8.48 4 14c0 1.85.5 3.58 1.38 5.07L4 24l5.12-1.34A9.96 9.96 0 0014 24c5.52 0 10-4.48 10-10S19.52 4 14 4zm0 18c-1.7 0-3.28-.52-4.6-1.4l-.32-.2-3.36.88.9-3.28-.22-.34A7.96 7.96 0 016 14c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8zm4.38-5.97c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.18-.71-.64-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.1.16 1.52.1.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z" fill="white"/></svg>
+</a>
+
+<footer class="oo-footer">
+  <div class="oo-footer-inner">
+    <a href="/index.html" class="oo-footer-logo ln-logo">
+      <span class="ln-logo-text">MéTRIK</span>
+      <div class="ln-logo-line"></div>
+    </a>
+    <div class="oo-footer-links">
+      <a href="mailto:mauricio.moreno@metrik.com.co" class="oo-footer-link">mauricio.moreno@metrik.com.co</a>
+      <a href="https://wa.me/573159509103" class="oo-footer-link">+57 315 950 9103</a>
+      <a href="/index.html" class="oo-footer-link">Volver al inicio</a>
+    </div>
+    <p class="oo-footer-tagline">Claridad para decidir.</p>
+    <p class="oo-footer-copy">&copy; 2026 MéTRIK &middot; Bogotá, Colombia</p>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════ */
+/* STATE: tab actual + platform (desktop|mobile)                     */
+/* ═══════════════════════════════════════════════════════════════ */
+const STATE = { tab: 'numeros', platform: 'desktop' };
+const SIDEBAR_NAV_MAP = { numeros: 'numeros', negocios: 'negocios', detalle: 'negocios', equipo: 'equipo', movimientos: 'movimientos', flujo: 'flujo' };
+
+function setView(viewKey) {
+  if (!viewKey) return;
+  STATE.tab = viewKey;
+  document.querySelectorAll('.ws-view').forEach(v => v.classList.toggle('active', v.dataset.viewContent === viewKey));
+  document.querySelectorAll('.ws-view-tab').forEach(t => t.classList.toggle('active', t.dataset.viewTab === viewKey));
+  // Sidebar highlight follows tab (detalle highlights "negocios" sidebar)
+  const sidebarKey = SIDEBAR_NAV_MAP[viewKey] ?? viewKey;
+  document.querySelectorAll('.ws-nav-item[data-view]').forEach(n => n.classList.toggle('active', n.dataset.view === sidebarKey));
+  // Platform toggle visible only on screenshot views (todas las del nuevo set)
+  const isScreenshotView = ['numeros','negocios','detalle','equipo','movimientos','flujo'].includes(viewKey);
+  document.querySelector('.ws-platform-toggle')?.classList.toggle('show', isScreenshotView);
+}
+
+function setPlatform(p) {
+  STATE.platform = p;
+  document.querySelectorAll('.ws-pt-btn').forEach(b => b.classList.toggle('active', b.dataset.platform === p));
+  document.querySelectorAll('.ws-shot').forEach(s => s.classList.toggle('is-mobile', p === 'mobile'));
+  document.querySelectorAll('.ws-shot-img').forEach(img => {
+    const newSrc = p === 'mobile' ? img.dataset.mobile : img.dataset.desktop;
+    if (newSrc && img.src !== newSrc) {
+      img.classList.add('is-loading');
+      img.onload = () => img.classList.remove('is-loading');
+      img.src = newSrc;
+    }
+  });
+}
+
+document.querySelectorAll('.ws-view-tab').forEach(t => t.addEventListener('click', () => setView(t.dataset.viewTab)));
+document.querySelectorAll('.ws-nav-item[data-view]').forEach(n => n.addEventListener('click', e => { e.preventDefault(); setView(n.dataset.view); }));
+document.querySelectorAll('.ws-pt-btn').forEach(b => b.addEventListener('click', () => setPlatform(b.dataset.platform)));
+// Init platform toggle visibility based on initial tab
+setView('numeros');
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* TOUR — driver.js v1 (mismo motor que tour Valida en ONE)          */
+/* ═══════════════════════════════════════════════════════════════ */
+const TOUR_STEPS = [
+  {
+    element: null,
+    popover: {
+      title: 'Estás viendo MéTRIK ONE real',
+      description: 'Estudio Creativo Lúmina — un workspace demo con datos representativos. Lo que ves son capturas reales del producto: sus negocios, su equipo, su flujo. Te muestro lo esencial en pocos pasos.',
+    },
+  },
+  {
+    element: '[data-tour="sidebar"]',
+    popover: {
+      title: 'Tu workspace, un solo lugar',
+      description: 'Cada empresa tiene su workspace. A la izquierda los módulos esenciales agrupados por área: Operación, Caja, Workflows.',
+      side: 'right',
+    },
+    onHighlightStarted: () => setView('numeros'),
+  },
+  {
+    element: '[data-tour="numeros-shot"]',
+    popover: {
+      title: 'Mis Números — en tiempo real',
+      description: 'Margen, EBITDA, caja, cuánto te deben, cuánto necesitas vender. Sin esperar al cierre contable. Lo que pasó hoy se ve hoy.',
+      side: 'top',
+    },
+    onHighlightStarted: () => setView('numeros'),
+  },
+  {
+    element: '[data-tour="negocios-shot"]',
+    popover: {
+      title: 'Pipeline de negocios',
+      description: 'Cada proyecto con cliente, líder, etapa actual y valor. Los stages Venta · Ejecución · Cobro filtran sin perder el contexto.',
+      side: 'top',
+    },
+    onHighlightStarted: () => setView('negocios'),
+  },
+  {
+    element: '[data-tour="detalle-shot"]',
+    popover: {
+      title: 'Adentro de un negocio',
+      description: 'Bloques con IDs cortos (DC9, CB5, PE1) que el equipo completa por etapa. Gates obligatorios. Historial de etapas anteriores. Timeline de actividad con comentarios.',
+      side: 'top',
+    },
+    onHighlightStarted: () => setView('detalle'),
+  },
+  {
+    element: '[data-tour="equipo-shot"]',
+    popover: {
+      title: 'Equipo con tarifas y carga',
+      description: 'Cada persona con su rol, tarifa y vínculo. Las horas registradas alimentan automáticamente el costo de cada negocio.',
+      side: 'top',
+    },
+    onHighlightStarted: () => setView('equipo'),
+  },
+  {
+    element: '[data-tour="movimientos-shot"]',
+    popover: {
+      title: 'Movimientos — caja al día',
+      description: 'Cobros, gastos, horas. Filtros por categoría, clasificación variable/fijo, marcado para revisión del contador. Sin esperar al cierre.',
+      side: 'top',
+    },
+    onHighlightStarted: () => setView('movimientos'),
+  },
+  {
+    element: null,
+    popover: {
+      title: '¿Quieres ver el tuyo con tus datos?',
+      description: 'Lo que viste es un workspace real operando. El tuyo se diseña en una Radiografía gratuita — sin compromiso. Si la cuenta no da, te lo decimos antes de cotizarte.',
+    },
+  },
+];
+
+const driverObj = window.driver.js.driver({
+  showProgress: true,
+  popoverClass: 'metrik-driver',
+  progressText: '{{current}} de {{total}}',
+  nextBtnText: 'Siguiente →',
+  prevBtnText: '← Atrás',
+  doneBtnText: 'Cerrar tour',
+  steps: TOUR_STEPS,
+  onCloseClick: () => driverObj.destroy(),
+});
+
+document.getElementById('oo-start-tour').addEventListener('click', () => {
+  setView('numeros');
+  document.getElementById('ws').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  setTimeout(() => driverObj.drive(), 700);
+});
+
+/* Auto-arranque suave: si el usuario llega con #tour en el URL, arranca el tour */
+if (window.location.hash === '#tour') {
+  setTimeout(() => { setView('numeros'); driverObj.drive(); }, 600);
+}
+</script>
+
+</body>
+</html>

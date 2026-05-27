@@ -209,6 +209,32 @@ a { text-decoration: none; color: inherit; }
 .mockup-glow { position: absolute; inset: -60px; background: radial-gradient(ellipse at center, rgba(16,185,129,0.08) 0%, transparent 70%); pointer-events: none; z-index: 0; }
 .iphone-frame { position: relative; z-index: 1; background: #000; border-radius: 44px; padding: 12px; box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 24px 80px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.04); aspect-ratio: 1170 / 2281; display: flex; flex-direction: column; }
 .mockup-app-img { flex: 1; width: 100%; height: 100%; object-fit: cover; object-position: top center; border-radius: 32px; background: #F5F4F2; display: block; }
+
+/* iphone-frame clickeable → demo */
+.iphone-frame--link { text-decoration: none; cursor: pointer; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease; }
+.iphone-frame--link:hover { transform: translateY(-6px) scale(1.015); box-shadow: 0 0 0 1px rgba(16,185,129,0.4), 0 32px 96px rgba(0,0,0,0.55), 0 16px 64px rgba(16,185,129,0.18), inset 0 0 0 1px rgba(255,255,255,0.04); }
+.iphone-frame--link:hover .iphone-frame-cta { opacity: 1; transform: translate(-50%, 0); }
+.iphone-frame--link:focus-visible { outline: 2px solid var(--verde-metrica); outline-offset: 8px; border-radius: 44px; }
+.iphone-frame-cta {
+  position: absolute; bottom: -42px; left: 50%; transform: translate(-50%, -8px);
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font); font-weight: 700; font-size: 0.75rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--blanco); background: var(--verde-metrica);
+  padding: 0.5rem 0.875rem; border-radius: 100px;
+  box-shadow: 0 6px 24px rgba(16,185,129,0.35);
+  opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap; pointer-events: none;
+}
+.iphone-frame-cta svg { display: inline-block; }
+@media (max-width: 600px) {
+  /* Mobile: el CTA siempre visible (no hay hover) */
+  .iphone-frame-cta { opacity: 1; transform: translate(-50%, 0); bottom: -36px; font-size: 0.6875rem; }
+  .iphone-frame--link:hover { transform: none; box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 24px 80px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.04); }
+}
+@media (hover: none) {
+  .iphone-frame-cta { opacity: 1; transform: translate(-50%, 0); }
+}
 .iphone-notch { width: 120px; height: 28px; background: #000; border-radius: 0 0 18px 18px; margin: 0 auto 6px; position: relative; z-index: 10; flex-shrink: 0; }
 .iphone-home { width: 120px; height: 4px; background: rgba(255,255,255,0.25); border-radius: 2px; margin: 8px auto 4px; flex-shrink: 0; }
 .mockup-app { position: relative; z-index: 1; background: var(--blanco); border-radius: 32px; overflow: hidden; padding: 0 0 0.625rem 0; flex: 1; display: flex; flex-direction: column; }
@@ -991,16 +1017,25 @@ a { text-decoration: none; color: inherit; }
     <div class="transition-arrow">&#8595;</div>
   </div>
   <div class="mockup-wrapper fade-up">
-    <div class="iphone-frame">
+    <a class="iphone-frame iphone-frame--link"
+       href="/operamos-one"
+       target="_blank"
+       rel="noopener"
+       aria-label="Ver demo interactivo de MéTRIK ONE">
       <div class="iphone-notch"></div>
       <img class="mockup-app-img"
            src="assets/screenshots/mobile/01-numeros.png"
            alt="MéTRIK ONE — Mis Números desde el celular del fundador"
            loading="lazy"
            width="1170" height="2281">
-
       <div class="iphone-home"></div>
-    </div>
+      <span class="iphone-frame-cta" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="6 4 20 12 6 20" fill="currentColor"/>
+        </svg>
+        Toca para ver el demo
+      </span>
+    </a>
     <div class="mockup-glow"></div>
   </div>
   <div class="questions-closure fade-up">

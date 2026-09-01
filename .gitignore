@@ -4,3 +4,6 @@ node_modules/
 .next/
 .env
 *.log
+
+# Worktrees de agentes
+.claude/

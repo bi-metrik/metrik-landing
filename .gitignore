@@ -7,3 +7,4 @@ node_modules/
 
 # Worktrees de agentes
 .claude/
+.env*

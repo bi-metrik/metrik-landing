@@ -23,14 +23,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4NG1H3TJMQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4NG1H3TJMQ');
-</script>
+<!-- Medicion con consentimiento previo: GA4 no carga hasta que la persona acepta.
+     Ver la seccion 5.4 de /privacidad y assets/consentimiento.js -->
+<script src="/assets/consentimiento.js" defer></script>
 
 <style>
 :root {
@@ -275,9 +270,9 @@ a { text-decoration: none; color: inherit; }
 
     var fit = fitICP(empleados.value, facturacion.value);
 
-    // GA4 event
-    if (typeof gtag === 'function'){
-      gtag('event', 'radiografia_submit', {
+    // GA4 event. Solo se registra si la persona acepto la medicion; si no, se descarta.
+    if (window.metrikMedicion){
+      window.metrikMedicion.evento('radiografia_submit', {
         empleados: empleados.value,
         facturacion: facturacion.value,
         sector: sector,

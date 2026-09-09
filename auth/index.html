@@ -1,148 +1,202 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MÉTRIK - Acceso a Dashboards</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            background: linear-gradient(135deg, #1A1A1A 0%, #2d3436 100%);
-            min-height: 100vh;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>MéTRIK · Acceso a tableros</title>
+<link rel="icon" type="image/png" href="/assets/marca/metrik-isotipo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Martian+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --carbon: #191713;
+  --gris: #6E6A62;
+  --pino: #0E5C43;
+  --pino-300: #6FB89D;
+  --pino-300-rgb: 111, 184, 157;
+  --oxido: #B3382C;
+  --blanco: #FFFFFF;
+  --gris-linea: #E3E0D9;
+  --papel: #F3F1EC;
+  --font: 'Schibsted Grotesk', sans-serif;
+  --s-xs: 0.5rem;
+  --s-sm: 1rem;
+  --s-md: 1.5rem;
+  --s-lg: 2.5rem;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font);
+  background: var(--carbon);
+  color: var(--gris);
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: var(--s-md);
+  -webkit-font-smoothing: antialiased;
+}
+.shell { width: 100%; max-width: 420px; }
+
+/* Encabezado: sobre carbon el verde sube a Pino 300 */
+.head { text-align: center; margin-bottom: var(--s-lg); }
+.head img { height: 34px; width: auto; }
+.head p {
+  margin-top: var(--s-sm);
+  font-size: 0.6875rem; font-weight: 700;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--pino-300);
+}
+
+.card {
+  background: var(--papel);
+  border-radius: 4px;
+  padding: var(--s-lg) var(--s-md);
+  border-top: 3px solid var(--pino);
+}
+.card h1 {
+  font-size: 1.375rem; font-weight: 700; letter-spacing: -0.02em;
+  color: var(--carbon); margin-bottom: var(--s-xs);
+}
+.card-sub { font-size: 0.875rem; color: var(--gris); margin-bottom: var(--s-lg); }
+
+.campo { margin-bottom: var(--s-md); }
+.campo label {
+  display: block; margin-bottom: var(--s-xs);
+  font-size: 0.6875rem; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--carbon);
+}
+.campo select, .campo input[type="password"] {
+  width: 100%; padding: 0.75rem var(--s-sm);
+  font-family: var(--font); font-size: 0.9375rem; color: var(--carbon);
+  background: var(--blanco);
+  border: 1px solid var(--gris-linea); border-radius: 3px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.campo select:focus, .campo input[type="password"]:focus {
+  outline: none; border-color: var(--pino);
+  box-shadow: 0 0 0 3px rgba(var(--pino-300-rgb), 0.35);
+}
+.campo input::placeholder { color: #6E6A62; }
+
+.recordar { display: flex; align-items: center; gap: var(--s-xs); margin-bottom: var(--s-lg); }
+.recordar input { width: 15px; height: 15px; accent-color: var(--pino); }
+.recordar label { font-size: 0.8125rem; color: var(--gris); }
+
+button {
+  width: 100%; padding: 0.875rem var(--s-sm);
+  font-family: var(--font); font-size: 0.9375rem; font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--blanco); background: var(--pino);
+  border: none; border-radius: 3px; cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover { background: #0A4634; }
+
+.aviso {
+  margin-top: var(--s-md); padding: 0.75rem var(--s-sm);
+  font-size: 0.8125rem; border-radius: 3px;
+}
+.aviso--error {
+  color: var(--oxido); background: rgba(179, 56, 44, 0.08);
+  border: 1px solid rgba(179, 56, 44, 0.25);
+}
+.aviso--nota {
+  color: var(--gris); background: rgba(110, 106, 98, 0.07);
+  border: 1px solid var(--gris-linea);
+}
+[hidden] { display: none !important; }
+
+.pie {
+  margin-top: var(--s-md); text-align: center;
+  font-size: 0.75rem; color: #A19C92;   /* sobre carbon el gris sube: #6E6A62 no se lee */
+}
+</style>
 </head>
 <body>
-    <div class="min-h-screen flex items-center justify-center p-4">
-        <div class="w-full max-w-md">
-            <!-- Logo -->
-            <div class="text-center mb-8">
-                <img src="/assets/marca/metrik-wordmark-negativo.svg" alt="Logo MéTRIK" class="h-16 w-auto mx-auto mb-4">
-                <h1 class="text-3xl font-bold text-white">MÉTRIK</h1>
-                <p class="text-gray-400 text-sm mt-2">Acceso a Dashboards Operacionales</p>
-            </div>
 
-            <!-- Auth Card -->
-            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-                <div class="bg-gradient-to-r from-[#108981] to-[#0D7069] p-6">
-                    <h2 class="text-xl font-bold text-white">Ingresa a tu Dashboard</h2>
-                </div>
+<div class="shell">
+  <div class="head">
+    <img src="/assets/marca/metrik-wordmark-negativo.svg" alt="MéTRIK">
+    <p>Tableros operacionales</p>
+  </div>
 
-                <div class="p-8">
-                    <form id="authForm" onsubmit="handleAuth(event)">
-                        <!-- Cliente Select -->
-                        <div class="mb-6">
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">
-                                <i class="fas fa-building mr-2"></i>Cliente
-                            </label>
-                            <select id="clientSelect" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#108981] transition-colors" required>
-                                <option value="">Selecciona tu cliente</option>
-                                <option value="creadores">Creadores de Prosperidad</option>
-                                <option value="cliente2">Cliente 2 (próximamente)</option>
-                                <option value="cliente3">Cliente 3 (próximamente)</option>
-                            </select>
-                        </div>
+  <div class="card">
+    <h1>Ingresa a tu tablero</h1>
+    <p class="card-sub">Selecciona tu empresa y escribe la clave que te compartimos.</p>
 
-                        <!-- Password -->
-                        <div class="mb-6">
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">
-                                <i class="fas fa-lock mr-2"></i>Contraseña
-                            </label>
-                            <input type="password" id="passwordInput" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#108981] transition-colors" placeholder="Ingresa tu contraseña" required>
-                        </div>
+    <form id="authForm">
+      <div class="campo">
+        <label for="clientSelect">Empresa</label>
+        <select id="clientSelect" required>
+          <option value="">Selecciona tu empresa</option>
+          <option value="creadores">Creadores de Prosperidad</option>
+        </select>
+      </div>
 
-                        <!-- Remember Me -->
-                        <div class="mb-6 flex items-center">
-                            <input type="checkbox" id="rememberMe" class="w-4 h-4 text-[#108981] rounded">
-                            <label for="rememberMe" class="ml-2 text-sm text-gray-600">Recuérdame en este dispositivo</label>
-                        </div>
+      <div class="campo">
+        <label for="passwordInput">Clave</label>
+        <input type="password" id="passwordInput" placeholder="Escribe tu clave" required>
+      </div>
 
-                        <!-- Submit Button -->
-                        <button type="submit" class="w-full bg-gradient-to-r from-[#108981] to-[#0D7069] hover:shadow-lg text-white font-bold py-3 rounded-lg transition-all transform hover:-translate-y-1">
-                            <i class="fas fa-sign-in-alt mr-2"></i>Acceder al Dashboard
-                        </button>
-                    </form>
+      <div class="recordar">
+        <input type="checkbox" id="rememberMe">
+        <label for="rememberMe">Recuérdame en este dispositivo</label>
+      </div>
 
-                    <!-- Error Message -->
-                    <div id="errorMsg" class="mt-4 p-3 bg-red-50 border border-red-200 text-red-700 rounded-lg hidden">
-                        <i class="fas fa-exclamation-circle mr-2"></i>
-                        <span id="errorText"></span>
-                    </div>
+      <button type="submit">Entrar al tablero</button>
+    </form>
 
-                    <!-- Info -->
-                    <div class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-700">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        Si no tienes acceso, contacta a tu cuenta de MÉTRIK.
-                    </div>
-                </div>
-            </div>
+    <div id="errorMsg" class="aviso aviso--error" hidden><span id="errorText"></span></div>
 
-            <!-- Footer -->
-            <div class="text-center mt-6 text-gray-400 text-sm">
-                <p>&copy; 2026 MéTRIK - Dashboards Operacionales</p>
-            </div>
-        </div>
+    <div class="aviso aviso--nota">
+      Si no tienes acceso, escríbele a tu contacto en MéTRIK.
     </div>
+  </div>
 
-    <script>
-        // Configuración de clientes y contraseñas
-        const CLIENTS = {
-            'creadores': {
-                name: 'Creadores de Prosperidad',
-                password: 'CreadoresOps2025!',
-                url: 'https://metrik360.github.io/creadores-de-prosperidad-dashboard/'
-            },
-            'cliente2': {
-                name: 'Cliente 2',
-                password: 'Cliente2Pass123!',
-                url: 'https://metrik360.github.io/cliente2-dashboard/'
-            },
-            'cliente3': {
-                name: 'Cliente 3',
-                password: 'Cliente3Pass123!',
-                url: 'https://metrik360.github.io/cliente3-dashboard/'
-            }
-        };
+  <p class="pie">&copy; 2026 MéTRIK · Tableros operacionales</p>
+</div>
 
-        function handleAuth(event) {
-            event.preventDefault();
+<script>
+const CLIENTS = {
+  'creadores': {
+    name: 'Creadores de Prosperidad',
+    password: 'CreadoresOps2025!',
+    url: 'https://metrik360.github.io/creadores-de-prosperidad-dashboard/'
+  }
+};
 
-            const clientKey = document.getElementById('clientSelect').value;
-            const password = document.getElementById('passwordInput').value;
-            const rememberMe = document.getElementById('rememberMe').checked;
-            const errorMsg = document.getElementById('errorMsg');
-            const errorText = document.getElementById('errorText');
+document.getElementById('authForm').addEventListener('submit', (event) => {
+  event.preventDefault();
 
-            if (!CLIENTS[clientKey]) {
-                errorText.textContent = 'Cliente no válido';
-                errorMsg.classList.remove('hidden');
-                return;
-            }
+  const clientKey = document.getElementById('clientSelect').value;
+  const password = document.getElementById('passwordInput').value;
+  const errorMsg = document.getElementById('errorMsg');
+  const errorText = document.getElementById('errorText');
+  const cliente = CLIENTS[clientKey];
 
-            if (CLIENTS[clientKey].password !== password) {
-                errorText.textContent = 'Contraseña incorrecta';
-                errorMsg.classList.remove('hidden');
-                return;
-            }
+  if (!cliente || cliente.password !== password) {
+    errorText.textContent = 'Empresa o clave incorrecta.';
+    errorMsg.hidden = false;
+    return;
+  }
 
-            errorMsg.classList.add('hidden');
+  errorMsg.hidden = true;
 
-            if (rememberMe) {
-                localStorage.setItem('metrik_client', clientKey);
-            }
+  if (document.getElementById('rememberMe').checked) {
+    localStorage.setItem('metrik_client', clientKey);
+  }
 
-            setTimeout(() => {
-                window.location.href = CLIENTS[clientKey].url;
-            }, 500);
-        }
+  window.location.href = cliente.url;
+});
 
-        window.addEventListener('load', () => {
-            const savedClient = localStorage.getItem('metrik_client');
-            if (savedClient && CLIENTS[savedClient]) {
-                document.getElementById('clientSelect').value = savedClient;
-            }
-        });
-    </script>
+window.addEventListener('load', () => {
+  const savedClient = localStorage.getItem('metrik_client');
+  if (savedClient && CLIENTS[savedClient]) {
+    document.getElementById('clientSelect').value = savedClient;
+  }
+});
+</script>
+
 </body>
 </html>

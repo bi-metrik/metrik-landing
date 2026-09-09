@@ -138,7 +138,7 @@
 /* Contexto oscuro: sobre carbon el verde de marca sube a Pino 300 — el Pino base no contrasta.
    Todo var(--pino) que herede de aqui cambia solo, sin duplicar una sola regla de color. */
 .nav, .hero, .questions, .credibility, .methodology, .cta-final, .footer,
-.trust-strip, .product-disclaimer, .section--dark {
+.product-disclaimer, .section--dark {
   --pino: var(--pino-300);
   --pino-rgb: var(--pino-300-rgb);
   --gris: #A19C92;              /* el gris de texto tambien sube: #6E6A62 sobre carbon no se lee */
@@ -725,58 +725,6 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ═══════════════════════════════════════════════════
-   TRUST STRIP — respaldo arriba del fold
-   ═══════════════════════════════════════════════════ */
-.trust-strip {
-  padding: var(--s-xl) var(--s-md) var(--s-lg);
-  background: var(--carbon);
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
-.trust-strip-inner { max-width: var(--max-narrow); margin: 0 auto; text-align: center; }
-.trust-strip-eyebrow {
-  font-weight: 700; font-size: 0.6875rem; letter-spacing: 0.25em;
-  text-transform: uppercase; color: var(--pino);
-  margin-bottom: var(--s-md);
-}
-.trust-strip-seals {
-  display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: var(--s-lg); align-items: center; justify-items: center;
-  max-width: 520px; margin: 0 auto;
-}
-.trust-strip-seal {
-  max-height: 56px; width: auto; opacity: 0.7;
-  filter: brightness(0) invert(1); transition: opacity 0.3s;
-}
-.trust-strip-seal:hover { opacity: 1; }
-.trust-strip-seal--text {
-  display: flex; flex-direction: column; align-items: center; gap: 2px;
-  color: rgba(255,255,255,0.7); transition: color 0.3s;
-  text-align: center; padding: 0.5rem;
-}
-.trust-strip-seal--text:hover { color: var(--blanco); }
-.trust-strip-seal-eyebrow {
-  font-weight: 700; font-size: 0.5625rem; letter-spacing: 0.22em;
-  text-transform: uppercase; color: var(--pino);
-  margin-bottom: 2px;
-}
-.trust-strip-seal-name {
-  font-weight: 700; font-size: 0.875rem;
-  color: var(--blanco); letter-spacing: -0.01em;
-}
-.trust-strip-seal-sub {
-  font-weight: 400; font-size: 0.6875rem;
-  color: rgba(255,255,255,0.5); margin-top: 2px;
-}
-.trust-strip-foot {
-  font-weight: 400; font-size: 0.75rem;
-  color: rgba(255,255,255,0.4); margin-top: var(--s-md);
-  letter-spacing: 0.02em;
-}
-@media (max-width: 600px) {
-  .trust-strip-seals { grid-template-columns: 1fr; gap: var(--s-md); }
-}
-
-/* ═══════════════════════════════════════════════════
    CLARITY PATHS — Express + Full (reemplaza grilla)
    ═══════════════════════════════════════════════════ */
 .clarity-entry-header {
@@ -998,21 +946,6 @@ a { text-decoration: none; color: inherit; }
   <div class="hero-scroll" id="hero-scroll" style="opacity:0">
     <span class="hero-scroll-text">Descubre</span>
     <div class="hero-scroll-line"></div>
-  </div>
-</section>
-
-<section class="trust-strip">
-  <div class="trust-strip-inner">
-    <p class="trust-strip-eyebrow">RESPALDADO POR</p>
-    <div class="trust-strip-seals">
-      <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Custodia_AFI.png" alt="AFI International Group — custodia certificada" class="trust-strip-seal" loading="lazy">
-      <div class="trust-strip-seal trust-strip-seal--text">
-        <span class="trust-strip-seal-eyebrow">PROGRAMA</span>
-        <span class="trust-strip-seal-name">Futuras Startups</span>
-        <span class="trust-strip-seal-sub">Cámara de Comercio de Bogotá</span>
-      </div>
-    </div>
-    <p class="trust-strip-foot">Custodia certificada · Programa de innovación · Aliados estratégicos</p>
   </div>
 </section>
 

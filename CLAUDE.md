@@ -4,7 +4,8 @@ Landing page corporativa de MéTRIK. Contexto del proyecto en `../CONTEXT.md`.
 
 ## Stack
 - HTML + CSS + JS vanilla
-- Assets en `assets/`, paginas auxiliares en root (`confianza.html`, `auth/`, `Tratamiento de datos/`)
+- Assets en `assets/`, paginas auxiliares en root (`confianza.html`, `Tratamiento de datos/`)
+- `auth/` retirada 2026-09-09, `/auth` redirige a `/`. No reintroducirla (ver `decisions.md`)
 
 ## Repo
 - Remote: `https://github.com/bi-metrik/metrik-landing` (public)

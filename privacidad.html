@@ -8,19 +8,19 @@
     <link rel="canonical" href="https://metrik.com.co/privacidad.html">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
-    <link rel="apple-touch-icon" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
-    <link rel="shortcut icon" href="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Isotipo_Mk.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/marca/metrik-isotipo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/marca/metrik-isotipo.png">
+    <link rel="apple-touch-icon" href="/assets/marca/metrik-isotipo.png">
+    <link rel="shortcut icon" href="/assets/marca/metrik-isotipo.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Martian+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
     <style>
         /* Reset base (equivalente al preflight que aplicaba Tailwind en esta pagina) */
-        *, *::before, *::after { box-sizing: border-box; border: 0 solid #E5E7EB; }
+        *, *::before, *::after { box-sizing: border-box; border: 0 solid #E3E0D9; }
         html { line-height: 1.5; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
         body { margin: 0; line-height: inherit; }
         h1, h2, h3, p, ul, ol { margin: 0; }
@@ -35,11 +35,11 @@
         /* Base de pagina */
         .page {
             font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            color: #1A1A1A;
+            color: #191713;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-sans { font-family: 'Schibsted Grotesk', sans-serif; }
 
         /* Contenedores */
         .container { width: 100%; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
@@ -57,7 +57,7 @@
 
         /* Iconos */
         .icon { display: inline-flex; align-items: center; justify-content: center; }
-        .icon--green { color: #10B981; }
+        .icon--green { color: #0E5C43; }
         .icon--li { margin-top: 0.25rem; flex-shrink: 0; }
 
         /* Header */
@@ -67,44 +67,44 @@
         .site-header__logo { display: flex; align-items: center; gap: 0.5rem; }
         .site-header__logo img { height: 2.5rem; width: auto; object-fit: contain; }
         @media (min-width: 768px) { .site-header__logo img { height: 3rem; } }
-        .back-link { display: flex; align-items: center; gap: 0.5rem; color: #4B5563; font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 0.875rem; line-height: 1.25rem; transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
-        .back-link:hover { color: #10B981; }
+        .back-link { display: flex; align-items: center; gap: 0.5rem; color: #55514A; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 500; font-size: 0.875rem; line-height: 1.25rem; transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
+        .back-link:hover { color: #0E5C43; }
 
         /* Documento */
         .doc-main { padding-top: 6rem; padding-bottom: 4rem; }
         .doc-hero { text-align: center; margin-bottom: 4rem; }
-        .doc-hero__badge { display: inline-flex; align-items: center; justify-content: center; width: 4rem; height: 4rem; background: rgba(16, 185, 129, 0.1); border-radius: 9999px; margin-bottom: 1.5rem; }
-        .doc-hero__title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.875rem; line-height: 2.25rem; color: #1A1A1A; margin-bottom: 1rem; }
+        .doc-hero__badge { display: inline-flex; align-items: center; justify-content: center; width: 4rem; height: 4rem; background: rgba(var(--pino-rgb), 0.1); border-radius: 9999px; margin-bottom: 1.5rem; }
+        .doc-hero__title { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 1.875rem; line-height: 2.25rem; color: #191713; margin-bottom: 1rem; }
         @media (min-width: 768px) { .doc-hero__title { font-size: 2.25rem; line-height: 2.5rem; } }
-        .doc-hero__meta { color: #4B5563; font-family: 'Montserrat', sans-serif; }
+        .doc-hero__meta { color: #55514A; font-family: 'Schibsted Grotesk', sans-serif; }
         .doc-card { background: #FFFFFF; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); padding: 2rem; }
         @media (min-width: 768px) { .doc-card { padding: 3rem; } }
 
         .doc-section { margin-bottom: 3rem; }
-        .doc-section__title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 2rem; color: #1A1A1A; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #10B981; }
-        .doc-h3 { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.125rem; line-height: 1.75rem; color: #1A1A1A; margin-bottom: 0.75rem; }
+        .doc-section__title { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 2rem; color: #191713; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #0E5C43; }
+        .doc-h3 { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 600; font-size: 1.125rem; line-height: 1.75rem; color: #191713; margin-bottom: 0.75rem; }
         .doc-h3--spaced { margin-top: 1.5rem; }
-        .doc-p { color: #374151; }
-        .doc-defs { color: #374151; }
+        .doc-p { color: #3A3630; }
+        .doc-defs { color: #3A3630; }
         .doc-defs > * + * { margin-top: 1rem; }
-        .strong-dark { color: #1A1A1A; }
+        .strong-dark { color: #191713; }
 
         /* Listas */
-        .doc-list { color: #374151; }
+        .doc-list { color: #3A3630; }
         .doc-list > * + * { margin-top: 0.5rem; }
         .doc-list--icon > li { display: flex; align-items: flex-start; gap: 0.5rem; }
         .doc-list--num { list-style-type: decimal; list-style-position: inside; }
         .doc-list--disc { list-style-type: disc; list-style-position: inside; }
         .doc-list--sm { font-size: 0.875rem; line-height: 1.25rem; }
-        .marker { color: #10B981; font-weight: 700; }
+        .marker { color: #0E5C43; font-weight: 700; }
 
         /* Tablas */
         .doc-table-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
         .doc-table { width: 100%; border-collapse: collapse; background: #FFFFFF; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
-        .doc-table thead tr { background: #1A1A1A; color: #FFFFFF; }
-        .doc-table th { padding: 0.75rem 1rem; text-align: left; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.875rem; line-height: 1.25rem; }
-        .doc-table td { padding: 0.75rem 1rem; font-size: 0.875rem; line-height: 1.25rem; color: #374151; border-bottom: 1px solid #F3F4F6; }
-        .doc-table tbody tr:nth-child(odd) { background: #F9FAFB; }
+        .doc-table thead tr { background: #191713; color: #FFFFFF; }
+        .doc-table th { padding: 0.75rem 1rem; text-align: left; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 600; font-size: 0.875rem; line-height: 1.25rem; }
+        .doc-table td { padding: 0.75rem 1rem; font-size: 0.875rem; line-height: 1.25rem; color: #3A3630; border-bottom: 1px solid #EBE8E1; }
+        .doc-table tbody tr:nth-child(odd) { background: #F3F1EC; }
         .doc-table tbody tr:nth-child(even) { background: #FFFFFF; }
 
         /* Grillas */
@@ -116,52 +116,52 @@
         }
 
         /* Tarjetas de derechos */
-        .right-card { background: #F9FAFB; padding: 1rem; border-radius: 0.5rem; border: 1px solid #F3F4F6; }
+        .right-card { background: #F3F1EC; padding: 1rem; border-radius: 0.5rem; border: 1px solid #EBE8E1; }
         .right-card__head { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
-        .right-card__num { width: 1.5rem; height: 1.5rem; background: #10B981; color: #FFFFFF; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; line-height: 1rem; font-weight: 700; }
-        .right-card__title { font-family: 'Montserrat', sans-serif; font-weight: 600; color: #1A1A1A; }
-        .right-card__desc { font-size: 0.875rem; line-height: 1.25rem; color: #4B5563; }
+        .right-card__num { width: 1.5rem; height: 1.5rem; background: #0E5C43; color: #FFFFFF; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; line-height: 1rem; font-weight: 700; }
+        .right-card__title { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 600; color: #191713; }
+        .right-card__desc { font-size: 0.875rem; line-height: 1.25rem; color: #55514A; }
 
         /* Caja de contacto */
-        .contact-box { background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .contact-box { background: rgba(var(--pino-rgb), 0.05); border: 1px solid rgba(var(--pino-rgb), 0.2); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1.5rem; }
         .contact-box__list { display: flex; flex-direction: column; gap: 0.75rem; }
-        .contact-link { display: flex; align-items: center; gap: 0.75rem; color: #374151; transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
-        .contact-link:hover { color: #10B981; }
-        .contact-box__note { font-size: 0.875rem; line-height: 1.25rem; color: #6B7280; margin-top: 1rem; }
+        .contact-link { display: flex; align-items: center; gap: 0.75rem; color: #3A3630; transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
+        .contact-link:hover { color: #0E5C43; }
+        .contact-box__note { font-size: 0.875rem; line-height: 1.25rem; color: #6E6A62; margin-top: 1rem; }
 
         /* Paneles de seguridad */
-        .panel { background: #F9FAFB; padding: 1.5rem; border-radius: 0.5rem; }
-        .panel__title { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.125rem; line-height: 1.75rem; color: #1A1A1A; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .panel { background: #F3F1EC; padding: 1.5rem; border-radius: 0.5rem; }
+        .panel__title { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 600; font-size: 1.125rem; line-height: 1.75rem; color: #191713; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
 
         /* Caja oscura de cierre */
-        .dark-box { background: #1A1A1A; color: #FFFFFF; padding: 1.5rem; border-radius: 0.5rem; }
+        .dark-box { background: #191713; color: #FFFFFF; padding: 1.5rem; border-radius: 0.5rem; }
         .dark-box__sign { border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; margin-top: 1rem; }
-        .dark-box__name { font-family: 'Montserrat', sans-serif; font-weight: 700; }
-        .dark-box__line { color: #9CA3AF; font-size: 0.875rem; line-height: 1.25rem; }
-        .dark-box__date { color: #10B981; font-size: 0.875rem; line-height: 1.25rem; margin-top: 0.5rem; }
+        .dark-box__name { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; }
+        .dark-box__line { color: #A19C92; font-size: 0.875rem; line-height: 1.25rem; }
+        .dark-box__date { color: #6FB89D; font-size: 0.875rem; line-height: 1.25rem; margin-top: 0.5rem; }
 
         /* Volver */
-        .doc-back { text-align: center; padding-top: 2rem; border-top: 1px solid #F3F4F6; }
-        .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: #10B981; color: #FFFFFF; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-family: 'Montserrat', sans-serif; font-weight: 600; transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
+        .doc-back { text-align: center; padding-top: 2rem; border-top: 1px solid #EBE8E1; }
+        .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: #0E5C43; color: #FFFFFF; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 600; transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
         .btn-primary:hover { background: #0D9668; }
 
         /* Footer */
-        .site-footer { background: #1A1A1A; color: #FFFFFF; padding-top: 3rem; padding-bottom: 3rem; }
+        .site-footer { background: #191713; color: #FFFFFF; padding-top: 3rem; padding-bottom: 3rem; }
         .site-footer__row { display: flex; flex-direction: column; justify-content: space-between; align-items: center; gap: 1.5rem; }
         @media (min-width: 768px) { .site-footer__row { flex-direction: row; } }
         .site-footer__brand { display: flex; align-items: center; gap: 1rem; }
         .site-footer__brand img { height: 2.5rem; width: auto; object-fit: contain; }
-        .site-footer__brand span { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.125rem; line-height: 1.75rem; }
-        .site-footer__nav { display: flex; flex-direction: column; gap: 1.5rem; align-items: center; font-size: 0.875rem; line-height: 1.25rem; color: #9CA3AF; }
+        .site-footer__brand span { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 1.125rem; line-height: 1.75rem; }
+        .site-footer__nav { display: flex; flex-direction: column; gap: 1.5rem; align-items: center; font-size: 0.875rem; line-height: 1.25rem; color: #A19C92; }
         @media (min-width: 768px) { .site-footer__nav { flex-direction: row; } }
         .site-footer__nav a { transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
-        .site-footer__nav a:hover { color: #10B981; }
+        .site-footer__nav a:hover { color: #6FB89D; }  /* sobre carbon el verde sube a Pino 300 */
         .site-footer__nav a.with-icon { display: flex; align-items: center; gap: 0.5rem; }
         .site-footer__social { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
-        .site-footer__social a { color: #9CA3AF; transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
-        .site-footer__social a:hover { color: #10B981; }
+        .site-footer__social a { color: #A19C92; transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
+        .site-footer__social a:hover { color: #0E5C43; }
         .site-footer__social svg { width: 22px; height: 22px; }
-        .site-footer__copy { text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.75rem; line-height: 1rem; color: #6B7280; }
+        .site-footer__copy { text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.75rem; line-height: 1rem; color: #A19C92; }
     </style>
 </head>
 <body>
@@ -170,7 +170,7 @@
     <header class="site-header" id="site-header">
         <div class="container site-header__inner">
             <a href="/" class="site-header__logo">
-                <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Logo_Mk.png" alt="MéTRIK Logo">
+                <img src="/assets/marca/metrik-wordmark.svg" alt="MéTRIK Logo">
             </a>
             <a href="/" class="back-link">
                 <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg></span>
@@ -573,7 +573,7 @@
         <div class="container">
             <div class="site-footer__row">
                 <div class="site-footer__brand">
-                    <img src="https://hcxyowictswpibzqxwyj.supabase.co/storage/v1/object/public/metrik-landing/Logo_Mk.png" alt="MéTRIK Logo">
+                    <img src="/assets/marca/metrik-wordmark-negativo.svg" alt="MéTRIK Logo">
                     <span>MéTRIK</span>
                 </div>
                 <div class="site-footer__nav">

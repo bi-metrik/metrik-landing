@@ -201,7 +201,7 @@ a { text-decoration: none; color: inherit; }
 /* QUESTIONS */
 .questions { padding: var(--s-3xl) var(--s-md); background: var(--carbon); }
 .questions-pain { text-align: center; margin-bottom: var(--s-lg); }
-.pain-hook { font-family: var(--font); font-weight: 800; font-size: clamp(2rem, 5vw, 3.25rem); color: var(--blanco); letter-spacing: -0.03em; line-height: 1.15; }
+.pain-hook { font-family: var(--font); font-weight: 800; font-size: clamp(2rem, 5vw, 3.25rem); color: var(--blanco); letter-spacing: -0.03em; line-height: 1.15; text-wrap: balance; max-width: 20ch; margin-left: auto; margin-right: auto; }
 .questions-transition { text-align: center; margin-bottom: var(--s-xl); }
 .transition-text { font-family: var(--font); font-weight: 400; font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.75); letter-spacing: 0.02em; }
 .transition-arrow { font-size: 2rem; color: var(--pino); margin-top: var(--s-md); opacity: 0.8; animation: arrowPulse 2s ease-in-out infinite; }
@@ -461,6 +461,7 @@ a { text-decoration: none; color: inherit; }
 .clarity-rev { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-md); max-width: var(--max-content); margin: var(--s-xl) auto 0; }
 .rev-card { padding: var(--s-md); border: 1px solid var(--gris-linea); border-radius: 12px; text-align: left; background: var(--blanco); transition: border-color 0.3s, transform 0.3s; position: relative; }
 .rev-card-eyebrow { font-weight: 700; font-size: 0.5625rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pino); margin-bottom: 0.375rem; }
+.rev-card-eyebrow--vacio { visibility: hidden; }
 .rev-card:hover { border-color: var(--pino); transform: translateY(-2px); }
 .rev-card-num { width: 28px; height: 28px; border-radius: 50%; background: var(--pino); color: var(--blanco); font-weight: 800; font-size: 0.8125rem; display: flex; align-items: center; justify-content: center; line-height: 1; margin-bottom: 0.625rem; }
 .rev-card-name { font-weight: 700; font-size: 1rem; color: var(--carbon); letter-spacing: -0.01em; margin-bottom: 0.5rem; }
@@ -498,7 +499,7 @@ a { text-decoration: none; color: inherit; }
 .clarity-cta:hover { background: var(--carbon); color: var(--blanco); }
 
 /* PROJECTS */
-.projects-section { padding: var(--s-xl) var(--s-md) var(--s-2xl); background: var(--blanco); text-align: center; }
+.projects-section { padding: var(--s-xl) var(--s-md) var(--s-xl); background: var(--blanco); text-align: center; }
 .projects-inner { max-width: var(--max-content); margin: 0 auto; }
 .projects-nota { font-weight: 500; font-size: 0.9375rem; color: var(--gris); margin-top: var(--s-lg); }
 .projects-bridge { font-weight: 500; font-style: italic; font-size: clamp(1rem, 2vw, 1.125rem); color: var(--gris); margin-bottom: var(--s-md); letter-spacing: -0.01em; }
@@ -553,8 +554,8 @@ a { text-decoration: none; color: inherit; }
 
 /* CTA FINAL */
 .cta-final { padding: var(--s-3xl) var(--s-md); background: var(--carbon); text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
-.cta-final-headline { font-weight: 800; font-size: clamp(2rem, 5vw, 3rem); color: var(--blanco); letter-spacing: -0.03em; line-height: 1.15; max-width: var(--max-narrow); margin: 0 auto; }
-.cta-final-sub { font-weight: 500; font-size: clamp(1rem, 2vw, 1.125rem); color: rgba(255,255,255,0.65); margin-top: var(--s-md); margin-bottom: var(--s-2xl); letter-spacing: 0.01em; }
+.cta-final-headline { font-weight: 800; font-size: clamp(2rem, 5vw, 3rem); color: var(--blanco); letter-spacing: -0.03em; line-height: 1.15; max-width: var(--max-narrow); margin: 0 auto; text-wrap: balance; }
+.cta-final-sub { font-weight: 500; font-size: clamp(1rem, 2vw, 1.125rem); color: rgba(255,255,255,0.65); margin: var(--s-md) auto var(--s-2xl); max-width: 34em; letter-spacing: 0.01em; }
 
 .cta-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-md); max-width: var(--max-narrow); margin: 0 auto; text-align: left; }
 .cta-option { display: flex; flex-direction: column; padding: var(--s-lg) var(--s-md); border-radius: 14px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); text-decoration: none; transition: all 0.3s ease; position: relative; }
@@ -1033,6 +1034,7 @@ a { text-decoration: none; color: inherit; }
     <div class="clarity-rev fade-up">
       <div class="rev-card">
         <div class="rev-card-num">1</div>
+        <div class="rev-card-eyebrow rev-card-eyebrow--vacio" aria-hidden="true">.</div>
         <div class="rev-card-name">Un disparador propio</div>
         <p class="rev-card-text">Algo pasa y el flujo arranca. No arranca porque alguien se acordó.</p>
       </div>
@@ -1044,6 +1046,7 @@ a { text-decoration: none; color: inherit; }
       </div>
       <div class="rev-card">
         <div class="rev-card-num">3</div>
+        <div class="rev-card-eyebrow rev-card-eyebrow--vacio" aria-hidden="true">.</div>
         <div class="rev-card-name">Un cierre propio</div>
         <p class="rev-card-text">El flujo termina y deja registro. No se diluye. Y ese registro es el que sostiene el margen que ves en tu celular.</p>
       </div>

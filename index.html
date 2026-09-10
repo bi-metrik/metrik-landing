@@ -138,7 +138,7 @@
 /* Contexto oscuro: sobre carbon el verde de marca sube a Pino 300 — el Pino base no contrasta.
    Todo var(--pino) que herede de aqui cambia solo, sin duplicar una sola regla de color. */
 .nav, .hero, .questions, .credibility, .methodology, .cta-final, .footer,
-.product-disclaimer, .section--dark {
+.section--dark {
   --pino: var(--pino-300);
   --pino-rgb: var(--pino-300-rgb);
   --gris: #A19C92;              /* el gris de texto tambien sube: #6E6A62 sobre carbon no se lee */
@@ -348,11 +348,6 @@ a { text-decoration: none; color: inherit; }
 .product-lockup .lockup { display: inline-flex; flex-direction: column; align-items: flex-start; }
 .product-label { font-weight: 700; font-size: 0.6875rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gris); margin-bottom: var(--s-sm); }
 .product-bridge { font-weight: 500; font-style: italic; font-size: clamp(1rem, 2vw, 1.125rem); color: var(--gris); margin-bottom: var(--s-md); letter-spacing: -0.01em; }
-.product-disclaimer { text-align: center; margin: var(--s-xl) auto 0; max-width: var(--max-narrow); padding: var(--s-lg) var(--s-md) 0; position: relative; }
-.product-disclaimer::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 40px; height: 2.5px; background: var(--pino); border-radius: 2px; }
-.product-disclaimer-statement { font-weight: 800; font-size: clamp(1.125rem, 2.4vw, 1.5rem); color: var(--papel); letter-spacing: -0.02em; line-height: 1.25; margin-top: 0; }
-.product-disclaimer-cierre { font-weight: 500; font-size: clamp(1rem, 2vw, 1.125rem); color: var(--pino); margin-top: 0.5rem; letter-spacing: -0.01em; }
-.product-disclaimer-note { font-weight: 500; font-size: 0.9375rem; color: var(--gris); margin-top: 0.75rem; letter-spacing: 0.005em; }
 .product-headline { font-weight: 700; font-size: clamp(1.25rem, 3vw, 1.75rem); color: var(--carbon); margin-top: var(--s-sm); letter-spacing: -0.01em; }
 .product-desc { font-weight: 400; font-size: 1rem; color: var(--gris); margin-top: var(--s-xs); max-width: var(--max-text); margin-left: auto; margin-right: auto; line-height: 1.7; }
 .product-demo-cta { display: inline-flex; align-items: center; gap: 0.625rem; margin-top: var(--s-lg); padding: 0.75rem 1.5rem; font-family: var(--font); font-weight: 700; font-size: 0.9375rem; color: var(--blanco); background: var(--pino); border-radius: 8px; text-decoration: none; transition: all 0.3s ease; letter-spacing: 0.01em; }
@@ -505,6 +500,7 @@ a { text-decoration: none; color: inherit; }
 /* PROJECTS */
 .projects-section { padding: var(--s-xl) var(--s-md) var(--s-2xl); background: var(--blanco); text-align: center; }
 .projects-inner { max-width: var(--max-content); margin: 0 auto; }
+.projects-nota { font-weight: 500; font-size: 0.9375rem; color: var(--gris); margin-top: var(--s-lg); }
 .projects-bridge { font-weight: 500; font-style: italic; font-size: clamp(1rem, 2vw, 1.125rem); color: var(--gris); margin-bottom: var(--s-md); letter-spacing: -0.01em; }
 .projects-lockup { margin-bottom: var(--s-md); display: flex; justify-content: center; }
 .projects-lockup .lockup { display: inline-flex; flex-direction: column; align-items: flex-start; transform: scale(0.85); transform-origin: center; }
@@ -1177,17 +1173,11 @@ a { text-decoration: none; color: inherit; }
   </div>
 </section>
 
-<div class="product-disclaimer fade-up">
-  <p class="product-disclaimer-statement">No es contabilidad. No es ERP.</p>
-  <p class="product-disclaimer-cierre">Es ver lo que tu operación produce, hoy.</p>
-  <p class="product-disclaimer-note">Lo contable se queda con tu contador.</p>
-</div>
-
 <section class="projects-section">
   <div class="projects-inner">
-    <p class="projects-bridge fade-up">Para que no perdamos el tiempo.</p>
+    <p class="projects-bridge fade-up">No es contabilidad. No es ERP.</p>
     <p class="projects-headline fade-up">Cuatro cosas que no hacemos.</p>
-    <p class="projects-desc fade-up">Decir que no a tiempo es parte de lo que compras:</p>
+    <p class="projects-desc fade-up">Es ver lo que tu operación produce, hoy. Decir que no a tiempo es parte de lo que compras:</p>
     <div class="projects-capabilities fade-up">
 
       <div class="projects-cap">
@@ -1215,6 +1205,7 @@ a { text-decoration: none; color: inherit; }
       </div>
 
     </div>
+    <p class="projects-nota fade-up">Lo contable se queda con tu contador.</p>
   </div>
 </section>
 

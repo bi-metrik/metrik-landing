@@ -200,6 +200,20 @@ a { text-decoration: none; color: inherit; }
 
 /* QUESTIONS */
 .questions { padding: var(--s-3xl) var(--s-md); background: var(--carbon); }
+.questions-split { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: var(--s-2xl); align-items: center; max-width: var(--max-content); margin: 0 auto; }
+.questions-split .questions-pain, .questions-split .questions-transition { text-align: left; }
+.questions-split .pain-hook { margin-left: 0; margin-right: 0; max-width: 15ch; }
+.questions-split .questions-closure { text-align: left; align-items: flex-start; margin-top: var(--s-lg); }
+.questions-split .transition-arrow { display: none; }
+.questions-split .mockup-wrapper { margin: 0 0 0 auto; }
+@media (max-width: 900px) {
+  .questions-split { grid-template-columns: 1fr; gap: var(--s-lg); }
+  .questions-split .questions-pain, .questions-split .questions-transition, .questions-split .questions-closure { text-align: center; }
+  .questions-split .pain-hook { margin-left: auto; margin-right: auto; max-width: 20ch; }
+  .questions-split .questions-closure { align-items: center; }
+  .questions-split .transition-arrow { display: block; }
+  .questions-split .mockup-wrapper { margin: 0 auto; }
+}
 .questions-pain { text-align: center; margin-bottom: var(--s-lg); }
 .pain-hook { font-family: var(--font); font-weight: 800; font-size: clamp(2rem, 5vw, 3.25rem); color: var(--blanco); letter-spacing: -0.03em; line-height: 1.15; text-wrap: balance; max-width: 20ch; margin-left: auto; margin-right: auto; }
 .questions-transition { text-align: center; margin-bottom: var(--s-xl); }
@@ -305,6 +319,14 @@ a { text-decoration: none; color: inherit; }
 
 /* BRIDGE */
 .bridge { padding: var(--s-3xl) var(--s-md) var(--s-lg); background: var(--blanco); text-align: center; }
+.bridge-split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-2xl); align-items: start; max-width: var(--max-content); margin: 0 auto; text-align: left; }
+.bridge-split .bridge-statement { max-width: none; margin: 0; }
+.bridge-split .bridge-accent { margin: 1.75rem 0 0; }
+.bridge-split .bridge-lines { margin: 0; max-width: none; }
+@media (max-width: 900px) {
+  .bridge-split { grid-template-columns: 1fr; gap: var(--s-lg); text-align: center; }
+  .bridge-split .bridge-accent { margin: 1.75rem auto 0; }
+}
 .bridge-statement { font-weight: 800; font-size: clamp(1.75rem, 4.5vw, 2.75rem); color: var(--carbon); line-height: 1.2; max-width: var(--max-narrow); margin: 0 auto; letter-spacing: -0.02em; }
 .bridge-accent { display: block; width: 40px; height: 2.5px; background: var(--pino); margin: 2rem auto 0; border-radius: 2px; }
 .bridge-lines { margin-top: 2rem; max-width: var(--max-narrow); margin-left: auto; margin-right: auto; display: flex; flex-direction: column; gap: 0.875rem; }
@@ -948,14 +970,21 @@ a { text-decoration: none; color: inherit; }
 </section>
 
 <section class="questions" id="questions">
-  <div class="questions-pain fade-up">
+    <div class="questions-split">
+    <div class="questions-col">
+      <div class="questions-pain fade-up">
     <p class="pain-hook">Tu problema financiero no empezó en el cierre del mes.</p>
   </div>
   <div class="questions-transition fade-up">
     <p class="transition-text">El caso cerró sin registrar el tiempo real.<br>El trabajo rehecho no quedó costeado.<br>El sobrecosto se aprobó por WhatsApp.</p>
     <div class="transition-arrow">&#8595;</div>
   </div>
-  <div class="mockup-wrapper fade-up">
+      <div class="questions-closure fade-up">
+    <p class="closure-line">Tres meses después el margen no cuadra, y ya nadie sabe por qué.</p>
+    <a href="https://calendly.com/mauricio-moreno-metrik/30min" target="_blank" rel="noopener" class="closure-cta">Hablemos 30 minutos</a>
+  </div>
+    </div>
+    <div class="mockup-wrapper fade-up">
     <a class="iphone-frame iphone-frame--link"
        href="/operamos-one"
        target="_blank"
@@ -977,20 +1006,21 @@ a { text-decoration: none; color: inherit; }
     </a>
     <div class="mockup-glow"></div>
   </div>
-  <div class="questions-closure fade-up">
-    <p class="closure-line">Tres meses después el margen no cuadra, y ya nadie sabe por qué.</p>
-    <a href="https://calendly.com/mauricio-moreno-metrik/30min" target="_blank" rel="noopener" class="closure-cta">Hablemos 30 minutos</a>
   </div>
 </section>
 
 <div class="transition-divider"></div>
 
 <section class="bridge">
+  <div class="bridge-split">
+  <div class="bridge-col">
   <p class="bridge-statement fade-up">Un agente no limpia datos.<br>Los hereda.</p>
   <span class="bridge-accent fade-up"></span>
+  </div>
   <div class="bridge-lines fade-up">
     <p class="bridge-line">Si tu agente lee archivos sueltos, correos y campos que cada quien llena distinto, <span class="bridge-action">responde con seguridad y responde mal.</span></p>
     <p class="bridge-line">Por eso no limpiamos datos a mano una vez: <span class="bridge-action">cambiamos dónde nace el dato.</span></p>
+  </div>
   </div>
   <div class="bridge-handoff fade-up">
     <p class="bridge-handoff-text">Ese trabajo tiene nombre.</p>

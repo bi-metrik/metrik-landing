@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Fuente de la imagen Open Graph de metrik.com.co</title>
+<!--
+  Artboard de 1200x630 del que sale assets/og/metrik-og.png, la tarjeta que ven
+  WhatsApp y LinkedIn cuando alguien pega el enlace. No se sirve: es la fuente,
+  y se renderiza con scripts/render-og.mjs.
+
+  Reemplaza a assets/marca/metrik-og.png, que era el wordmark sobre papel con el
+  tagline: se veia como MeTRIK pero no decia que hace MeTRIK. El titular de aqui
+  es el mismo gancho del hero, no un copy nuevo.
+
+  Las fuentes se piden a Google Fonts igual que index.html, para no meter
+  binarios nuevos al repo. El render espera document.fonts.ready.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #2b2b2b; }
+
+.og {
+  width: 1200px; height: 630px;
+  background: #191713;
+  padding: 72px 80px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  font-family: 'Schibsted Grotesk', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* Wordmark en contornos, no tipografiado: es la misma curva que el SVG de marca
+   y asi la tilde de la e no depende de que cargue la fuente. */
+.og__marca { height: 52px; width: auto; display: block; align-self: flex-start; }
+
+.og__titular {
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #F3F1EC;
+  max-width: 18ch;
+}
+.og__bajada {
+  margin-top: 22px;
+  font-size: 25px; font-weight: 400; color: #A8A29A;
+}
+
+.og__pie { display: flex; align-items: baseline; justify-content: space-between; }
+.og__url {
+  font-family: 'Martian Mono', monospace;
+  font-weight: 400; font-size: 17px; letter-spacing: 0.02em;
+  color: #6FB89D;
+}
+.og__nota { font-size: 19px; color: #A8A29A; }
+</style>
+</head>
+<body>
+<div class="og" id="og">
+  <img class="og__marca" src="../assets/marca/metrik-wordmark-negativo.svg" alt="MéTRIK">
+
+  <div>
+    <h1 class="og__titular">La IA no arregla una operación desordenada.</h1>
+    <p class="og__bajada">Primero el flujo, después el agente.</p>
+  </div>
+
+  <div class="og__pie">
+    <span class="og__url">metrik.com.co</span>
+    <span class="og__nota">Claridad para decidir</span>
+  </div>
+</div>
+</body>
+</html>

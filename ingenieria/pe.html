@@ -83,6 +83,12 @@ p{margin:0}
   letter-spacing:.005em;text-align:center;text-decoration:none;cursor:pointer;min-height:52px}
 .btn:active{transform:scale(.99)}
 .dib{display:none}
+.dib img{display:block;width:100%;height:auto}
+.dib-rot{margin-top:var(--e2);display:grid;grid-template-columns:auto 1fr;align-items:center;
+  border:1px solid var(--reticula-osc)}
+.dib-rot .k{font-family:var(--f-mono);font-size:.625rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gris-osc);padding:9px 14px;border-right:1px solid var(--reticula-osc);white-space:nowrap}
+.dib-rot .v{font-size:.875rem;color:var(--papel);padding:9px 14px}
 
 /* ---------- SECCIONES PAPEL ---------- */
 .sec{padding-block:48px}
@@ -184,6 +190,7 @@ p{margin:0}
   .hero{padding-block:56px 64px}
   .hero-g{display:grid;grid-template-columns:1fr 480px;gap:var(--e6);align-items:center}
   .hero h1{font-size:3.5rem;letter-spacing:-.035em;line-height:1;max-width:15ch}
+  .barra img{height:38px}
   .apoyo{font-size:1.25rem}
   .cota{max-width:15ch}
   .cond{font-size:1.25rem;max-width:38ch}
@@ -237,30 +244,9 @@ p{margin:0}
       <a class="btn" href="#encargo">Enviar mi encargo</a>
     </div>
     <div class="dib">
-      <svg viewBox="0 0 480 400" role="img" aria-label="Vista acotada de una brida con su rótulo">
-        <g stroke="#6FB89D" stroke-width="1" fill="none" opacity=".45">
-          <path d="M40 40 H440 M40 360 H440 M40 40 V360 M440 40 V360"/>
-        </g>
-        <g stroke="#F3F1EC" stroke-width="1.6" fill="none">
-          <circle cx="200" cy="170" r="88"/><circle cx="200" cy="170" r="44"/>
-          <circle cx="200" cy="96" r="10"/><circle cx="274" cy="170" r="10"/>
-          <circle cx="200" cy="244" r="10"/><circle cx="126" cy="170" r="10"/>
-        </g>
-        <g stroke="#6FB89D" stroke-width="1" fill="none" stroke-dasharray="6 4">
-          <path d="M200 60 V280 M90 170 H310"/>
-        </g>
-        <g stroke="#6FB89D" stroke-width="1" fill="none">
-          <path d="M112 300 H288"/><path d="M112 292 V308 M288 292 V308"/>
-          <path d="M112 300 L124 297 L124 303 Z" fill="#6FB89D"/>
-          <path d="M288 300 L276 297 L276 303 Z" fill="#6FB89D"/>
-        </g>
-        <text x="200" y="294" text-anchor="middle" fill="#6FB89D" font-family="'Martian Mono',monospace" font-size="12">Ø176</text>
-        <g stroke="#F3F1EC" stroke-width="1" fill="none" opacity=".8">
-          <rect x="222" y="318" width="218" height="52"/><path d="M222 344 H440"/>
-        </g>
-        <text x="232" y="336" fill="#A19C92" font-family="'Martian Mono',monospace" font-size="9" letter-spacing="1.4">REVISO Y FIRMO</text>
-        <text x="232" y="362" fill="#F3F1EC" font-family="'Schibsted Grotesk',sans-serif" font-size="12">Ing. mecánico · matrícula colombiana</text>
-      </svg>
+      <img src="/assets/engineering/fea-union-soldada.webp" width="1100" height="1026"
+           alt="Mapa de esfuerzo von Mises sobre el modelo sólido de una unión soldada, calculado por elementos finitos: la escala va del azul en las zonas descargadas al rojo en el pie del refuerzo.">
+      <p class="dib-rot"><span class="k">Revisó y firmó</span><span class="v">Ing. mecánico · matrícula colombiana</span></p>
     </div>
   </div>
 </header>

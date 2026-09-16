@@ -2,7 +2,92 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/auth", "destination": "/", "permanent": true },
-    { "source": "/auth/(.*)", "destination": "/", "permanent": true }
+    {
+      "source": "/auth",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/auth/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "ingenieria.metrik.com.co"
+        }
+      ],
+      "destination": "/pe",
+      "permanent": false
+    },
+    {
+      "source": "/ingenieria/pe",
+      "has": [
+        {
+          "type": "host",
+          "value": "metrik.com.co"
+        }
+      ],
+      "destination": "https://ingenieria.metrik.com.co/pe",
+      "permanent": true
+    },
+    {
+      "source": "/ingenieria/pe",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.metrik.com.co"
+        }
+      ],
+      "destination": "https://ingenieria.metrik.com.co/pe",
+      "permanent": true
+    },
+    {
+      "source": "/ingenieria/co",
+      "has": [
+        {
+          "type": "host",
+          "value": "metrik.com.co"
+        }
+      ],
+      "destination": "https://ingenieria.metrik.com.co/co",
+      "permanent": true
+    },
+    {
+      "source": "/ingenieria/co",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.metrik.com.co"
+        }
+      ],
+      "destination": "https://ingenieria.metrik.com.co/co",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/pe",
+      "has": [
+        {
+          "type": "host",
+          "value": "ingenieria.metrik.com.co"
+        }
+      ],
+      "destination": "/ingenieria/pe"
+    },
+    {
+      "source": "/co",
+      "has": [
+        {
+          "type": "host",
+          "value": "ingenieria.metrik.com.co"
+        }
+      ],
+      "destination": "/ingenieria/co"
+    }
   ]
 }

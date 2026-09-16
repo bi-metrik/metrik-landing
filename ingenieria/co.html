@@ -65,18 +65,20 @@ p{margin:0}
 
 /* ---------- HERO ---------- */
 .hero{color:var(--papel);padding-block:24px 32px}
-.barra{display:flex;flex-direction:column;gap:4px;margin-bottom:var(--e3)}
+.barra{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin-bottom:var(--e3)}
 .barra img{height:26px;width:auto}
 .apoyo{font-family:var(--f-serif);font-style:italic;font-size:.8125rem;color:var(--pino-300);line-height:1.35}
 .hero h1{font-weight:800;font-size:1.75rem;line-height:1.06;letter-spacing:-.03em;max-width:17ch;color:var(--papel)}
-.cotab{margin-top:var(--e2)}
-.cota{position:relative;height:40px;max-width:17ch}
-.cota svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.cota .val{position:absolute;left:50%;top:4px;transform:translateX(-50%);
-  background:var(--carbon);padding:0 8px;color:var(--acido);font-family:var(--f-mono);
-  font-variant-numeric:tabular-nums;font-size:1.5rem;letter-spacing:0;line-height:1;white-space:nowrap}
+.cotab{margin-top:var(--e3)}
+.plazos{display:grid;grid-template-columns:auto 1fr;align-items:center;
+  border:1px solid var(--reticula-osc);max-width:26rem;margin-bottom:var(--e2)}
+.plazos dt{font-family:var(--f-mono);font-size:.5625rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gris-osc);padding:12px 12px;border-right:1px solid var(--reticula-osc);white-space:nowrap}
+.plazos dd{font-size:.9375rem;color:var(--papel);padding:10px 12px}
+.plazos dt:not(:last-of-type),.plazos dd:not(:last-of-type){border-bottom:1px solid var(--reticula-osc)}
+.plazos .val{font-family:var(--f-mono);font-variant-numeric:tabular-nums;
+  font-size:1.375rem;line-height:1;color:var(--acido)}
 .cond{font-size:1.0625rem;line-height:1.5;color:var(--papel);max-width:36ch}
-.cond + .cond{margin-top:var(--e1);padding-top:var(--e1);border-top:1px solid var(--reticula-osc)}
 .cond a{color:var(--pino-300);text-underline-offset:3px}
 .btn{display:block;width:100%;margin-top:var(--e3);padding:15px 20px;border:0;border-radius:6px;
   background:var(--pino-500);color:#fff;font-family:var(--f-sans);font-weight:600;font-size:1.0625rem;
@@ -191,8 +193,9 @@ p{margin:0}
   .hero-g{display:grid;grid-template-columns:1fr 480px;gap:var(--e6);align-items:center}
   .hero h1{font-size:3.5rem;letter-spacing:-.035em;line-height:1;max-width:15ch}
   .barra img{height:38px}
+  .plazos dt{font-size:.625rem;letter-spacing:.14em;padding:12px 16px}
+  .plazos dd{font-size:1.0625rem;padding:10px 16px}
   .apoyo{font-size:1.25rem}
-  .cota{max-width:15ch}
   .cond{font-size:1.25rem;max-width:38ch}
   .btn{width:auto;display:inline-block;padding-inline:var(--e5)}
   .dib{display:block}
@@ -229,16 +232,10 @@ p{margin:0}
       </div>
       <h1>Ingeniería mecánica con plazo comprometido: primera versión en 24 horas.</h1>
       <div class="cotab">
-        <div class="cota" aria-hidden="true">
-          <svg viewBox="0 0 300 34" preserveAspectRatio="none">
-            <path d="M1 2 V12 M299 2 V12" stroke="#6FB89D" stroke-width="1" vector-effect="non-scaling-stroke"/>
-            <path d="M1 12 H299" stroke="#6FB89D" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-            <path d="M1 12 L11 9.2 L11 14.8 Z" fill="#6FB89D"/>
-            <path d="M299 12 L289 9.2 L289 14.8 Z" fill="#6FB89D"/>
-          </svg>
-          <span class="val">24 h</span>
-        </div>
-        <p class="cond">Cotizamos dentro de <span class="num">3</span> horas hábiles.</p>
+        <dl class="plazos">
+          <dt>Cotización</dt><dd>Dentro de <span class="num">3 h</span> hábiles</dd>
+          <dt>Primera versión</dt><dd><span class="val">24 h</span></dd>
+        </dl>
         <p class="cond">El reloj de las <span class="num">24</span> horas arranca cuando recibimos tus insumos completos. <a href="#plazo" data-abre="plazo">Cómo se cuenta</a>.</p>
       </div>
       <a class="btn" href="#encargo">Enviar mi encargo</a>

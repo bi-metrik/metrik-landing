@@ -9,6 +9,6 @@
     { "source": "/ingenieria/pe", "has": [{ "type": "host", "value": "www.metrik.com.co" }], "destination": "https://ingenieria.metrik.com.co/pe", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/pe", "has": [{ "type": "host", "value": "ingenieria.metrik.com.co" }], "destination": "/ingenieria/pe.html" }
+    { "source": "/pe", "has": [{ "type": "host", "value": "ingenieria.metrik.com.co" }], "destination": "/ingenieria/pe" }
   ]
 }

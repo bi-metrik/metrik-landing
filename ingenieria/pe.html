@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MéTRIK Engineering — Ingeniería mecánica con plazo comprometido | Perú</title>
+<meta name="description" content="Planos de fabricación, layouts, redes de aire comprimido, modelos 3D y DataBook de calidad. Cotización dentro de 3 horas hábiles y primera versión en 24 horas desde que recibimos tus insumos completos.">
+<meta name="keywords" content="planos de fabricación Perú, ingeniería mecánica Perú, plano de taller, DataBook ISO 3834, ASME IX, red de aire comprimido, layout de planta, oficina técnica tercerizada">
+<link rel="canonical" href="https://metrik.com.co/ingenieria/pe">
+<meta property="og:title" content="MéTRIK Engineering — Ingeniería mecánica con plazo comprometido">
+<meta property="og:description" content="Cotización dentro de 3 horas hábiles y primera versión en 24 horas desde que recibimos tus insumos completos. Revisado y firmado por ingeniero mecánico.">
+<meta property="og:image" content="https://metrik.com.co/assets/og/metrik-og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MéTRIK Engineering. Del boceto al plano firmado.">
+<meta property="og:url" content="https://metrik.com.co/ingenieria/pe">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PE">
+<meta property="og:site_name" content="MéTRIK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MéTRIK Engineering — Ingeniería mecánica con plazo comprometido">
+<meta name="twitter:description" content="Cotización dentro de 3 horas hábiles y primera versión en 24 horas desde que recibimos tus insumos completos.">
+<meta name="twitter:image" content="https://metrik.com.co/assets/og/metrik-og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@500&family=Newsreader:ital,opsz,wght@1,6..72,400&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --carbon:#191713; --reticula-osc:#2B2923; --gris:#6E6A62; --gris-osc:#A19C92;
+  --pino:#0E5C43; --pino-500:#1C7D5E; --pino-300:#6FB89D; --oxido:#B3382C;
+  --papel:#F3F1EC; --blanco:#FFFFFF; --linea:#E3E0D9; --acido:#B8E62D;
+  --f-sans:'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --f-mono:'Martian Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --e1:8px;--e2:16px;--e3:24px;--e4:32px;--e5:40px;--e6:64px;--e7:96px;
+  --medida:56ch;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:var(--f-sans);background:var(--papel);color:var(--carbon);
+  -webkit-font-smoothing:antialiased;font-size:16px}
+img,svg{max-width:100%}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.reticula-clara{background-color:var(--papel);
+  background-image:linear-gradient(rgba(25,23,19,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(25,23,19,.075) 1px,transparent 1px),
+  linear-gradient(rgba(25,23,19,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(25,23,19,.035) 1px,transparent 1px);
+  background-size:40px 40px,40px 40px,8px 8px,8px 8px}
+.reticula-osc{background-color:var(--carbon);
+  background-image:linear-gradient(rgba(243,241,236,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(243,241,236,.07) 1px,transparent 1px),
+  linear-gradient(rgba(243,241,236,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(243,241,236,.028) 1px,transparent 1px);
+  background-size:40px 40px,40px 40px,8px 8px,8px 8px}
+.env{width:100%;max-width:1180px;margin:0 auto;padding-inline:20px}
+:focus-visible{outline:2px solid var(--pino);outline-offset:2px;border-radius:6px}
+.hero :focus-visible{outline-color:var(--pino-300)}
+
+/* salto */
+.salto{position:absolute;left:-9999px;top:0;z-index:20;background:var(--pino-500);color:#fff;
+  padding:10px 16px;border-radius:6px;font-weight:600;text-decoration:none}
+.salto:focus{left:12px;top:12px}
+
+/* ---------- HERO ---------- */
+.hero{color:var(--papel);padding-block:24px 32px}
+.barra{display:flex;flex-direction:column;gap:4px;margin-bottom:var(--e3)}
+.barra img{height:26px;width:auto}
+.apoyo{font-family:var(--f-serif);font-style:italic;font-size:.8125rem;color:var(--pino-300);line-height:1.35}
+.hero h1{font-weight:800;font-size:1.75rem;line-height:1.06;letter-spacing:-.03em;max-width:17ch;color:var(--papel)}
+.cotab{margin-top:var(--e2)}
+.cota{position:relative;height:40px;max-width:17ch}
+.cota svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cota .val{position:absolute;left:50%;top:4px;transform:translateX(-50%);
+  background:var(--carbon);padding:0 8px;color:var(--acido);font-family:var(--f-mono);
+  font-variant-numeric:tabular-nums;font-size:1.5rem;letter-spacing:0;line-height:1;white-space:nowrap}
+.cond{font-size:1.0625rem;line-height:1.5;color:var(--papel);max-width:36ch}
+.cond + .cond{margin-top:var(--e1);padding-top:var(--e1);border-top:1px solid var(--reticula-osc)}
+.cond a{color:var(--pino-300);text-underline-offset:3px}
+.btn{display:block;width:100%;margin-top:var(--e3);padding:15px 20px;border:0;border-radius:6px;
+  background:var(--pino-500);color:#fff;font-family:var(--f-sans);font-weight:600;font-size:1.0625rem;
+  letter-spacing:.005em;text-align:center;text-decoration:none;cursor:pointer;min-height:52px}
+.btn:active{transform:scale(.99)}
+.dib{display:none}
+
+/* ---------- SECCIONES PAPEL ---------- */
+.sec{padding-block:48px}
+.sec h2{font-weight:700;font-size:1.5rem;line-height:1.15;letter-spacing:-.02em;margin-bottom:var(--e3)}
+.et{font-family:var(--f-mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gris)}
+
+/* filas de paquete */
+.lista{background:var(--blanco);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.fila + .fila{border-top:1px solid var(--linea)}
+.disp{display:grid;grid-template-columns:40px 1fr 24px;gap:var(--e2);align-items:start;width:100%;
+  padding:16px 16px;background:var(--blanco);border:0;text-align:left;cursor:pointer;font-family:inherit;min-height:72px}
+.disp:focus-visible{outline-offset:-2px}
+.fila.abierta .disp{background:var(--papel)}
+.disp .ico{width:40px;height:40px}
+.disp h3{font-weight:600;font-size:1.0625rem;line-height:1.25;color:var(--carbon)}
+.disp .alc{font-size:.9375rem;line-height:1.45;color:var(--gris);margin-top:2px}
+.disp .ver{font-family:var(--f-mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--pino);margin-top:6px;display:block}
+.marc{width:20px;height:20px;border:1px solid var(--pino);position:relative;margin-top:10px}
+.marc::before,.marc::after{content:"";position:absolute;background:var(--pino)}
+.marc::before{left:4px;right:4px;top:9px;height:1px}
+.marc::after{top:4px;bottom:4px;left:9px;width:1px}
+.fila.abierta .marc::after{display:none}
+.env-panel{display:grid;grid-template-rows:1fr;transition:grid-template-rows .22s ease}
+.fila.cerrada .env-panel,.acc.cerrada .env-panel{grid-template-rows:0fr}
+.panel{overflow:hidden}
+.panel-in{background:var(--blanco);border-left:1px solid var(--pino);margin-left:20px;padding:4px 16px 20px 16px}
+.panel-in ul{margin:6px 0 0;padding-left:18px}
+.panel-in li{font-size:1rem;line-height:1.6;color:var(--carbon);margin-bottom:4px}
+.caps{display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--e2)}
+.caps span{font-family:var(--f-mono);font-size:.6875rem;letter-spacing:.06em;border:1px solid var(--linea);border-radius:6px;padding:4px 8px;color:var(--gris)}
+.pie-bloque{font-size:.875rem;line-height:1.5;color:var(--gris);margin-top:var(--e3);max-width:var(--medida)}
+
+/* quien firma */
+.rotulo{max-width:640px;border:1px solid var(--carbon);background:var(--blanco)}
+.rotulo .cab{border-bottom:1px solid var(--carbon);padding:8px 16px}
+.rotulo .cue{padding:20px 16px 16px;display:flex;flex-direction:column;gap:var(--e2)}
+.rotulo .frase{font-weight:500;font-size:1.25rem;line-height:1.4}
+.firma{align-self:flex-end}
+.nota{font-size:.875rem;line-height:1.5;color:var(--gris);max-width:var(--medida);margin-top:var(--e2)}
+.nota strong{color:var(--carbon);font-weight:600}
+
+/* encargo por whatsapp */
+.via{display:flex;flex-direction:column;align-items:flex-start;gap:var(--e1)}
+.btn-wa{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:420px;
+  padding:16px 24px;border-radius:6px;background:var(--pino);color:#fff;font-weight:600;font-size:1.0625rem;
+  text-decoration:none;min-height:56px}
+.btn-wa:active{transform:scale(.99)}
+.btn-wa svg{flex:none}
+.wa-num{font-size:.8125rem;color:var(--gris);letter-spacing:.06em}
+.manda{margin-top:var(--e5);max-width:var(--medida);border-top:1px solid var(--linea);padding-top:var(--e3)}
+.manda ul{margin:var(--e2) 0 0;padding-left:18px}
+.manda li{font-size:1rem;line-height:1.6;margin-bottom:8px}
+.manda .nota{margin-top:var(--e3)}
+.manda a{color:var(--pino)}
+.tras{font-size:.875rem;line-height:1.5;color:var(--gris);margin-top:var(--e3);max-width:var(--medida)}
+/* acordeones */
+.accs{max-width:720px}
+.acc{border-top:1px solid var(--linea)}
+.acc:last-of-type{border-bottom:1px solid var(--linea)}
+.acc .disp{grid-template-columns:1fr 24px;background:transparent;padding:18px 0}
+.acc.abierta .disp{background:transparent}
+.acc .disp h3{font-size:1.0625rem}
+.acc .panel-in{background:transparent;border-left:1px solid var(--pino);margin-left:0;padding:0 0 20px 16px}
+.acc .panel-in p{font-size:1rem;line-height:1.6;max-width:var(--medida);color:var(--carbon)}
+.acc .panel-in p + p{margin-top:var(--e2)}
+.pend{border:1px dashed var(--oxido);border-radius:6px;padding:10px 12px;font-size:.875rem;line-height:1.5;color:var(--oxido);margin-top:var(--e2)}
+.pasos{display:flex;flex-direction:column;gap:0;margin:var(--e2) 0 0;padding:0;list-style:none}
+.paso{display:grid;grid-template-columns:20px 1fr;gap:var(--e2);align-items:start;padding-bottom:var(--e3);position:relative}
+.paso:not(:last-child)::before{content:"";position:absolute;left:9px;top:16px;bottom:0;width:1px;background:var(--pino)}
+.punto{width:19px;height:19px;border:1.5px solid var(--pino);border-radius:50%;background:var(--papel);z-index:1}
+.paso b{display:block;font-family:var(--f-mono);font-size:.8125rem;color:var(--pino);margin-bottom:2px}
+.paso span{font-size:1rem;line-height:1.5}
+.casos{display:flex;flex-direction:column;gap:var(--e3);margin-top:var(--e2)}
+.caso{display:grid;grid-template-columns:1fr;gap:var(--e1)}
+.marco{aspect-ratio:4/3;border:1px solid var(--linea);background:var(--blanco);display:grid;place-items:center;
+  font-family:var(--f-mono);font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gris-osc);text-align:center;padding:12px}
+.caso p{font-family:var(--f-mono);font-size:.6875rem;letter-spacing:.06em;color:var(--gris)}
+
+/* pie */
+.pie{background:var(--carbon);color:var(--gris-osc);padding-block:var(--e5)}
+.pie img{height:22px;width:auto;margin-bottom:var(--e2)}
+.pie p{font-size:.875rem;line-height:1.7}
+.pie a{color:var(--gris-osc)}
+
+@media (min-width:960px){
+  .env{padding-inline:48px}
+  .hero{padding-block:56px 64px}
+  .hero-g{display:grid;grid-template-columns:1fr 480px;gap:var(--e6);align-items:center}
+  .hero h1{font-size:3.5rem;letter-spacing:-.035em;line-height:1;max-width:15ch}
+  .apoyo{font-size:1.25rem}
+  .cota{max-width:15ch}
+  .cond{font-size:1.25rem;max-width:38ch}
+  .btn{width:auto;display:inline-block;padding-inline:var(--e5)}
+  .dib{display:block}
+  .sec{padding-block:96px}
+  .sec h2{font-size:2.25rem}
+  .disp{padding:20px}
+  .disp h3{font-size:1.125rem}
+  .disp .alc{font-size:1rem}
+  .rotulo{max-width:720px}
+  .rotulo .frase{font-size:1.375rem}
+  .caso{grid-template-columns:1fr 1fr;gap:var(--e2)}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .btn:active,.btn2:active{transform:none}
+}
+</style>
+<!-- Medicion detras de consentimiento previo. Ver /privacidad 5.4 y assets/consentimiento.js -->
+<script src="/assets/consentimiento.js" defer></script>
+</head>
+<body>
+
+<a class="salto" href="#encargo">Ir al formulario</a>
+
+<!-- ================= HERO ================= -->
+<header class="hero reticula-osc">
+  <div class="env hero-g">
+    <div>
+      <div class="barra">
+        <img src="/assets/marca/engineering-horizontal-negativo.svg" alt="MéTRIK Engineering">
+        <p class="apoyo">Del boceto al plano firmado.</p>
+      </div>
+      <h1>Ingeniería mecánica con plazo comprometido: primera versión en 24 horas.</h1>
+      <div class="cotab">
+        <div class="cota" aria-hidden="true">
+          <svg viewBox="0 0 300 34" preserveAspectRatio="none">
+            <path d="M1 2 V12 M299 2 V12" stroke="#6FB89D" stroke-width="1" vector-effect="non-scaling-stroke"/>
+            <path d="M1 12 H299" stroke="#6FB89D" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+            <path d="M1 12 L11 9.2 L11 14.8 Z" fill="#6FB89D"/>
+            <path d="M299 12 L289 9.2 L289 14.8 Z" fill="#6FB89D"/>
+          </svg>
+          <span class="val">24 h</span>
+        </div>
+        <p class="cond">Cotizamos dentro de <span class="num">3</span> horas hábiles.</p>
+        <p class="cond">El reloj de las <span class="num">24</span> horas arranca cuando recibimos tus insumos completos. <a href="#plazo" data-abre="plazo">Cómo se cuenta</a>.</p>
+      </div>
+      <a class="btn" href="#encargo">Enviar mi encargo</a>
+    </div>
+    <div class="dib">
+      <svg viewBox="0 0 480 400" role="img" aria-label="Vista acotada de una brida con su rótulo">
+        <g stroke="#6FB89D" stroke-width="1" fill="none" opacity=".45">
+          <path d="M40 40 H440 M40 360 H440 M40 40 V360 M440 40 V360"/>
+        </g>
+        <g stroke="#F3F1EC" stroke-width="1.6" fill="none">
+          <circle cx="200" cy="170" r="88"/><circle cx="200" cy="170" r="44"/>
+          <circle cx="200" cy="96" r="10"/><circle cx="274" cy="170" r="10"/>
+          <circle cx="200" cy="244" r="10"/><circle cx="126" cy="170" r="10"/>
+        </g>
+        <g stroke="#6FB89D" stroke-width="1" fill="none" stroke-dasharray="6 4">
+          <path d="M200 60 V280 M90 170 H310"/>
+        </g>
+        <g stroke="#6FB89D" stroke-width="1" fill="none">
+          <path d="M112 300 H288"/><path d="M112 292 V308 M288 292 V308"/>
+          <path d="M112 300 L124 297 L124 303 Z" fill="#6FB89D"/>
+          <path d="M288 300 L276 297 L276 303 Z" fill="#6FB89D"/>
+        </g>
+        <text x="200" y="294" text-anchor="middle" fill="#6FB89D" font-family="'Martian Mono',monospace" font-size="12">Ø176</text>
+        <g stroke="#F3F1EC" stroke-width="1" fill="none" opacity=".8">
+          <rect x="222" y="318" width="218" height="52"/><path d="M222 344 H440"/>
+        </g>
+        <text x="232" y="336" fill="#A19C92" font-family="'Martian Mono',monospace" font-size="9" letter-spacing="1.4">REVISO Y FIRMO</text>
+        <text x="232" y="362" fill="#F3F1EC" font-family="'Schibsted Grotesk',sans-serif" font-size="12">Ing. mecánico · matrícula colombiana</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- ================= QUE ENTREGAMOS ================= -->
+<section class="sec reticula-clara">
+  <div class="env">
+    <h2>Cinco paquetes, alcance cerrado</h2>
+    <div class="lista" id="paquetes">
+
+      <div class="fila cerrada" data-grupo="paq">
+        <button class="disp" aria-expanded="true" aria-controls="p1">
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><g stroke="#191713"><rect x="7" y="16" width="34" height="25"/><path d="M21 16v10h-6M28 41V31h13M21 33v8"/></g><g stroke="#0E5C43"><path d="M7 9.5h34M7 6.5v6M41 6.5v6"/></g></svg>
+          <span><h3>Plano de distribución 2D</h3>
+            <span class="alc">Layout acotado de tu planta o estación, en una lámina.</span>
+            <span class="ver">Ver alcance</span></span>
+          <span class="marc" aria-hidden="true"></span>
+        </button>
+        <div class="env-panel"><div class="panel"><div class="panel-in" id="p1" role="region">
+          <span class="et">Incluye</span>
+          <ul><li>Layout acotado de la planta, la estación o el área.</li>
+              <li>Una lámina con cotas, referencias y convenciones.</li>
+              <li>Dos rondas de ajuste.</li></ul>
+          <div class="caps"><span>DXF</span><span>PDF</span></div>
+        </div></div></div>
+      </div>
+
+      <div class="fila cerrada" data-grupo="paq">
+        <button class="disp" aria-expanded="true" aria-controls="p2">
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><g stroke="#191713"><path d="M24 7l15 8.5v17L24 41 9 32.5v-17z"/><path d="M9 15.5L24 24l15-8.5M24 24v17"/></g><g stroke="#0E5C43"><path d="M24 24l15-8.5"/></g></svg>
+          <span><h3>Modelo 3D y renders</h3>
+            <span class="alc">Modelo, tres renders y lámina de vistas para presentar el proyecto.</span>
+            <span class="ver">Ver alcance</span></span>
+          <span class="marc" aria-hidden="true"></span>
+        </button>
+        <div class="env-panel"><div class="panel"><div class="panel-in" id="p2" role="region">
+          <span class="et">Incluye</span>
+          <ul><li>Modelo 3D del conjunto.</li>
+              <li>Tres renders para presentación.</li>
+              <li>Lámina de vistas.</li>
+              <li>Dos rondas de ajuste.</li></ul>
+          <span class="et">No incluye</span>
+          <ul><li>Firma del ingeniero sobre el render.</li></ul>
+          <div class="caps"><span>STEP</span><span>PDF</span></div>
+        </div></div></div>
+      </div>
+
+      <div class="fila cerrada" data-grupo="paq">
+        <button class="disp" aria-expanded="true" aria-controls="p3">
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><g stroke="#191713"><rect x="6" y="26" width="14" height="14"/><rect x="28" y="26" width="14" height="14"/><path d="M13 26V14h22v12"/></g><g stroke="#0E5C43"><path d="M24 14V7"/><circle cx="24" cy="10" r="0"/></g></svg>
+          <span><h3>Estación y red de aire comprimido</h3>
+            <span class="alc">Layout, P&amp;ID, modelo 3D y renders de la red completa.</span>
+            <span class="ver">Ver alcance</span></span>
+          <span class="marc" aria-hidden="true"></span>
+        </button>
+        <div class="env-panel"><div class="panel"><div class="panel-in" id="p3" role="region">
+          <span class="et">Incluye</span>
+          <ul><li>Layout de la estación y trazado de la red.</li>
+              <li>Diagrama P&amp;ID.</li>
+              <li>Modelo 3D y renders.</li>
+              <li>Dos rondas de ajuste.</li></ul>
+          <div class="caps"><span>STEP</span><span>DXF</span><span>PDF</span></div>
+        </div></div></div>
+      </div>
+
+      <div class="fila cerrada" data-grupo="paq">
+        <button class="disp" aria-expanded="true" aria-controls="p4">
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><g stroke="#191713"><path d="M11 7h18l8 8v26H11z"/><path d="M29 7v8h8"/><path d="M17 27h14M17 33h14"/></g><g stroke="#0E5C43"><path d="M17 21h8"/></g></svg>
+          <span><h3>Planos de fabricación</h3>
+            <span class="alc">Planos de taller con despiece, detalle de soldadura y lista de materiales.</span>
+            <span class="ver">Ver alcance</span></span>
+          <span class="marc" aria-hidden="true"></span>
+        </button>
+        <div class="env-panel"><div class="panel"><div class="panel-in" id="p4" role="region">
+          <span class="et">Incluye</span>
+          <ul><li>Planos de taller con despiece.</li>
+              <li>Detalle de soldadura.</li>
+              <li>Lista de materiales.</li>
+              <li>Dos rondas de ajuste.</li></ul>
+          <span class="et">No incluye</span>
+          <ul><li>Memoria de cálculo firmada, que es un paquete aparte.</li></ul>
+          <div class="caps"><span>DXF</span><span>PDF</span></div>
+        </div></div></div>
+      </div>
+
+      <div class="fila cerrada" data-grupo="paq">
+        <button class="disp" aria-expanded="true" aria-controls="p5">
+          <svg class="ico" viewBox="0 0 48 48" fill="none" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><g stroke="#191713"><path d="M12 6h24v36H12z"/><path d="M18 15h12M18 22h12M18 29h8"/></g><g stroke="#0E5C43"><path d="M12 6v36"/></g></svg>
+          <span><h3>DataBook</h3>
+            <span class="alc">Dossier de calidad bajo ISO 3834 y ASME IX, listo para entregar.</span>
+            <span class="ver">Ver alcance</span></span>
+          <span class="marc" aria-hidden="true"></span>
+        </button>
+        <div class="env-panel"><div class="panel"><div class="panel-in" id="p5" role="region">
+          <span class="et">Incluye</span>
+          <ul><li>Dossier de calidad compilado bajo ISO 3834 y ASME IX.</li>
+              <li>Trazabilidad de los documentos del proceso de soldadura.</li>
+              <li>Índice navegable y versión para entregar al cliente final.</li></ul>
+          <div class="caps"><span>PDF</span></div>
+        </div></div></div>
+      </div>
+
+    </div>
+    <p class="pie-bloque">Entregamos en <span class="num">STEP</span>, <span class="num">DXF</span> y <span class="num">PDF</span>. No entregamos archivo nativo de SOLIDWORKS.</p>
+  </div>
+</section>
+
+<!-- ================= QUIEN FIRMA ================= -->
+<section class="sec" style="background:var(--papel)">
+  <div class="env">
+    <h2>Quién firma</h2>
+    <div class="rotulo">
+      <div class="cab"><span class="et">Revisó y firmó</span></div>
+      <div class="cue">
+        <p class="frase">Cada entrega la revisa y la firma un ingeniero mecánico con matrícula profesional colombiana, y se firma solo lo que el ingeniero revisó personalmente.</p>
+        <svg class="firma" width="130" height="40" viewBox="0 0 130 40" fill="none" aria-hidden="true">
+          <path d="M6 30c14-20 20-24 26-18s-2 22 6 22 16-18 24-24 18 4 26 2 18-8 18-8" stroke="#0E5C43" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+    <p class="nota"><strong>Nuestra matrícula es colombiana, no del CIP.</strong> Si el documento va a trámite, a obra o a un expediente técnico en el Perú, necesita además el refrendo de un ingeniero colegiado y habilitado en el Perú, que no está incluido.</p>
+    <p class="nota">La memoria de cálculo firmada es un paquete aparte. El render no se firma.</p>
+  </div>
+</section>
+
+<!-- ================= ENCARGO POR WHATSAPP ================= -->
+<section class="sec reticula-clara" id="encargo">
+  <div class="env">
+    <h2>Cuéntanos qué necesitas</h2>
+    <p class="nota" style="margin-top:calc(var(--e3) * -1);margin-bottom:var(--e3);font-size:1rem">Escríbenos por WhatsApp con los insumos. El reloj arranca cuando estén completos.</p>
+
+    <div class="via">
+      <a class="btn-wa" id="wa" href="https://wa.me/573159509103" rel="noopener">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4c1.9.8 2.3.7 2.8.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2Z"/></svg>
+        <span>Escribir por WhatsApp</span>
+      </a>
+      <p class="wa-num mono">+57 315 950 9103</p>
+    </div>
+
+    <div class="manda">
+      <span class="et">Qué mandar para que arranque el reloj</span>
+      <ul>
+        <li>Qué paquete necesitas, o cuéntanos el problema si no estás seguro.</li>
+        <li>Fotos, medidas, bocetos y fichas de los equipos.</li>
+        <li>Para cuándo lo necesitas y el RUC de tu empresa.</li>
+        <li>Si el entregable va a trámite, a obra o a un expediente técnico en el Perú, dínoslo desde el principio: cambia lo que podemos firmar.</li>
+      </ul>
+      <p class="nota">Si prefieres correo, escribe a <a href="mailto:mauricio.moreno@metrik.com.co">mauricio.moreno@metrik.com.co</a> con lo mismo.</p>
+    </div>
+
+    <p class="tras">Recibes la cotización dentro de las próximas <span class="num">3</span> horas hábiles.</p>
+  </div>
+</section>
+
+<!-- ================= ACORDEONES ================= -->
+<section class="sec" style="background:var(--papel);padding-top:0">
+  <div class="env accs">
+
+    <div class="acc cerrada" id="plazo" data-grupo="acc" style="scroll-margin-top:24px">
+      <button class="disp" aria-expanded="true" aria-controls="a1">
+        <span><h3>Cómo funciona el plazo y cómo se cuenta</h3></span>
+        <span class="marc" aria-hidden="true"></span>
+      </button>
+      <div class="env-panel"><div class="panel"><div class="panel-in" id="a1" role="region">
+        <ul class="pasos">
+          <li class="paso"><span class="punto"></span><span><b>PASO 01</b><span>Nos envías los insumos completos: fotos, medidas, bocetos y fichas de equipos.</span></span></li>
+          <li class="paso"><span class="punto"></span><span><b>3 H HÁBILES</b><span>Recibes la cotización con el alcance cerrado.</span></span></li>
+          <li class="paso"><span class="punto"></span><span><b>24 H</b><span>Recibes la primera versión. Incluye dos rondas de ajuste; lo que pase de dos se cotiza.</span></span></li>
+        </ul>
+        <p>Si los insumos llegan incompletos, te decimos exactamente qué falta y el reloj arranca cuando lo recibimos.</p>
+        <p><strong>Hora hábil</strong> es de lunes a viernes, de 8:00 a 18:00, hora de Perú. Lo que entra después de las 18:00, un fin de semana o un feriado peruano, arranca a las 8:00 del siguiente día hábil.</p>
+      </div></div></div>
+    </div>
+
+    <div class="acc cerrada" data-grupo="acc">
+      <button class="disp" aria-expanded="true" aria-controls="a3">
+        <span><h3>Licencias de software</h3></span>
+        <span class="marc" aria-hidden="true"></span>
+      </button>
+      <div class="env-panel"><div class="panel"><div class="panel-in" id="a3" role="region">
+        <p>Diseñamos con software pagado y de código abierto, en nuestros equipos, y lo documentamos. Recibes STEP, DXF y PDF listos para fabricar: el encargo no le agrega a tu empresa ni una instalación ni una licencia que sustentar.</p>
+        <p>Si tu contrato te pide evidencia de licenciamiento, tenemos por escrito la del software que usamos en tu encargo.</p>
+      </div></div></div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="pie">
+  <div class="env">
+    <img src="/assets/marca/engineering-horizontal-negativo.svg" alt="MéTRIK Engineering">
+    <p>MéTRIK SAS · <a href="mailto:mauricio.moreno@metrik.com.co">mauricio.moreno@metrik.com.co</a> · <a href="/">www.metrik.com.co</a></p>
+    <p><a href="/terminos">Términos</a> · <a href="/privacidad">Privacidad</a> · <a href="/terminos#refrendo-peru">Refrendo profesional en el Perú</a></p>
+  </div>
+</footer>
+
+<script>
+// Progresivo: el HTML sale con los paneles abiertos; el JS los colapsa al cargar.
+document.querySelectorAll('.fila, .acc').forEach(function(c){
+  c.classList.add('cerrada'); c.classList.remove('abierta');
+  c.querySelector('.disp').setAttribute('aria-expanded','false');
+});
+function alterna(c, forzarAbrir){
+  var abrir = forzarAbrir === true ? true : c.classList.contains('cerrada');
+  if (abrir){
+    var g = c.dataset.grupo;
+    document.querySelectorAll('[data-grupo="'+g+'"]').forEach(function(o){
+      if (o !== c){ o.classList.add('cerrada'); o.classList.remove('abierta');
+        o.querySelector('.disp').setAttribute('aria-expanded','false'); }
+    });
+  }
+  c.classList.toggle('cerrada', !abrir);
+  c.classList.toggle('abierta', abrir);
+  c.querySelector('.disp').setAttribute('aria-expanded', String(abrir));
+}
+document.querySelectorAll('.disp').forEach(function(b){
+  b.addEventListener('click', function(){ alterna(b.closest('.fila, .acc')); });
+});
+document.querySelectorAll('[data-abre]').forEach(function(a){
+  a.addEventListener('click', function(){
+    var c = document.getElementById(a.dataset.abre);
+    if (c) alterna(c, true);
+  });
+});
+
+// Arrastra la atribucion del anuncio al mensaje de WhatsApp: sin esto el inversionista
+// no puede atribuir el lead a la pauta.
+(function(){
+  var a = document.getElementById('wa'); if(!a) return;
+  var q = new URLSearchParams(location.search);
+  var ref = q.get('gclid') || q.get('utm_campaign') || '';
+  var t = 'Hola, quiero un encargo de ingenieria. Les mando los insumos.';
+  if (ref) t += ' (ref: ' + ref.slice(0,24) + ')';
+  a.href = 'https://wa.me/573159509103?text=' + encodeURIComponent(t);
+
+  // Conversion. metrikMedicion.evento solo registra si hubo consentimiento previo
+  // (Decreto 1377 de 2013 art. 5), asi que la puerta la sigue guardando el mismo archivo.
+  // El clic es la micro conversion; la conversion real se sube despues a Google Ads
+  // como conversion offline usando el gclid que viaja en el mensaje.
+  a.addEventListener('click', function(){
+    try {
+      if (window.metrikMedicion && typeof window.metrikMedicion.evento === 'function') {
+        window.metrikMedicion.evento('contacto_whatsapp', {origen: 'landing_pe', ref: ref || '(sin ref)'});
+      }
+      if (ref) { document.cookie = 'mk_ref=' + encodeURIComponent(ref) + ';path=/;max-age=7776000;SameSite=Lax'; }
+    } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>

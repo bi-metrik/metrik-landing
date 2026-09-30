@@ -471,8 +471,11 @@ function cargarEstado(){
     }
   }catch(e){}
   const M = window.MARCA || {};
-  const base = (M.perfilInicial && PRESETS[M.perfilInicial]) ? M.perfilInicial : "metrik";
-  const nom = M.nombre || (PRESETS[base] ? PRESETS[base].nombre : "Mi negocio");
+  // Sin marca, el Radar abre EN BLANCO: sin perfil sectorial y sin temas. Abrir en
+  // el perfil de MeTRIK preseleccionaba temas ajenos al que mira la pantalla y le
+  // decia que el tablero ya sabe quien es. Elegir los temas ES el producto.
+  const base = (M.perfilInicial && PRESETS[M.perfilInicial]) ? M.perfilInicial : "vacio";
+  const nom = M.nombre || (base === "vacio" ? "mi negocio" : PRESETS[base].nombre);
   return {activo:nom, perfiles:{[nom]: perfilNuevo(base)}, modo:"claro"};
 }
 const guardar = () => localStorage.setItem(LS, JSON.stringify(ST));
@@ -515,7 +518,9 @@ function rescorear(){
 /* ---------- filtros ---------- */
 const F = {region:new Set(), area:new Set(), min:null, max:null, q:"", cierra:"",
            rup:false, temas:false, excl:true, seg:false};
-let orden = {col:"fit", asc:false}, pagina = 0;
+/* Sin temas activos todos los fit valen 0, y ordenar por una columna toda en cero
+   se lee como que el tablero no ordena. En blanco manda lo que cierra primero. */
+let orden = P().sel.length ? {col:"fit", asc:false} : {col:"d", asc:true}, pagina = 0;
 const PAG = 40;
 
 /** Busqueda con operadores: "frase exacta", -excluye, uno|otro, el resto es Y. */

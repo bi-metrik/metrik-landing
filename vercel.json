@@ -89,5 +89,25 @@
       ],
       "destination": "/ingenieria/co"
     }
+  ],
+  "headers": [
+    {
+      "source": "/radar",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/radar/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
   ]
 }

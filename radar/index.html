@@ -85,6 +85,7 @@ input:focus,select:focus,button:focus-visible{outline:2px solid var(--acento);ou
   padding:8px 14px;font:inherit;font-size:14px;cursor:pointer}
 .btn:hover{border-color:var(--acento)}
 .btn.pri{background:var(--dato-verde);border-color:var(--dato-verde);color:#fff}
+html[data-tema="oscuro"] .btn.pri{color:#151310}
 .btn.sm{padding:5px 10px;font-size:12.5px;border-radius:7px}
 /* multiselect */
 .ms{position:relative}
@@ -142,7 +143,7 @@ svg{display:block;width:100%;overflow:visible}
    y el objeto — que es lo que la gente lee — queda fuera de pantalla. */
 table{width:100%;border-collapse:collapse;font-size:14px;table-layout:fixed}
 th:nth-child(1){width:86px} th:nth-child(2){width:54px} th:nth-child(3){width:16%}
-th:nth-child(4){width:9%} th:nth-child(5){width:10%} th:nth-child(6){width:11%}
+th:nth-child(4){width:11%} th:nth-child(5){width:10%} th:nth-child(6){width:12%}
 th:nth-child(7){width:92px} th:nth-child(8){width:104px} th:nth-child(10){width:28px}
 th{text-align:left;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta3);
   font-weight:600;padding:9px 11px;border-bottom:1px solid var(--borde2);white-space:nowrap;cursor:pointer;background:var(--sup)}
@@ -150,7 +151,12 @@ th.col-ver{cursor:default}
 th.act{color:var(--acento)}
 /* La flecha solo aparece en la columna que ordena: indicarlas todas seria ruido. */
 th.act[data-dir="asc"]::after{content:" ↑"} th.act[data-dir="desc"]::after{content:" ↓"}
-td{padding:11px;border-bottom:1px solid var(--borde);vertical-align:top;overflow-wrap:break-word}
+td{padding:9px 11px;border-bottom:1px solid var(--borde);vertical-align:top;overflow-wrap:break-word}
+/* La tabla es el producto y entraban seis filas por pantalla: entidad, region,
+   area y modalidad envolvian a dos y tres renglones. Se recortan a una linea;
+   el nombre completo queda en el `title` y en el detalle que abre la fila. */
+.cl2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ent .mini{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
 tbody tr:not(.detalle){cursor:pointer}
 tbody tr:not(.detalle):hover{background:color-mix(in srgb,var(--acento) 5%,transparent)}
 /* El objeto se lee a dos lineas en la tabla y completo al abrir la fila. */
@@ -828,10 +834,10 @@ function pintar(){
     tr.innerHTML = `
       <td><span class="d${urg}">${p.d === null ? "—" : p.d + " d"}</span><div class="mini">${p.cie}</div></td>
       <td><span class="fit${p._pos ? "" : " cero"}" title="${p._pos ? "Coincide con tus temas" : "Ningun tema tuyo aparece en el objeto"}">${p._pos ? (p._fit > 0 ? "+" + p._fit : p._fit) : "–"}</span></td>
-      <td class="ent">${esc(p.ent)}<div class="mini">${esc(p.ref)}</div></td>
-      <td class="col-dep">${esc(p.dep)}</td>
-      <td class="col-area" style="font-size:13px">${esc(p.tip)}${p.cpra ? ' <span class="tag neg" style="padding:1px 7px">compraventa</span>' : ""}</td>
-      <td class="col-mod" style="font-size:13px">${esc(p.mod)}</td>
+      <td class="ent" title="${esc(p.ent)}"><div class="nom cl2">${esc(p.ent)}</div><div class="mini">${esc(p.ref)}</div></td>
+      <td class="col-dep"><div class="cl2">${esc(p.dep)}</div></td>
+      <td class="col-area" style="font-size:13px"><div class="cl2">${esc(p.tip)}${p.cpra ? ' <span class="tag neg" style="padding:1px 7px">compraventa</span>' : ""}</div></td>
+      <td class="col-mod" style="font-size:13px"><div class="cl2">${esc(p.mod)}</div></td>
       <td class="col-rup">${p.srup
         ? '<span class="tag pos" style="padding:1px 8px" title="Mínima cuantía y RFI no exigen RUP inscrito">No requiere</span>'
         : '<span class="tag" style="padding:1px 8px" title="Exige RUP inscrito en la Cámara de Comercio">Requiere</span>'}</td>

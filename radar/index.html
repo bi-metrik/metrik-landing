@@ -166,7 +166,9 @@ tbody tr:nth-child(even){background:color-mix(in srgb,var(--fondo) 55%,transpare
 tbody tr.abierta{background:color-mix(in srgb,var(--acento) 8%,transparent)}
 .d{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
 .d.urg{color:var(--urgente)}
-.num-col{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+.num-col{font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;
+  overflow:hidden;text-overflow:ellipsis}
+td.num-col{font-family:var(--mono)}   /* la mono es para las cifras; el th va como los demas */
 .ent{font-weight:600}
 .obj{color:var(--tinta2);font-size:13.5px;margin-top:5px;max-width:70ch}
 .fit{font-family:var(--mono);display:inline-block;min-width:34px;text-align:center;border-radius:6px;padding:2px 7px;
@@ -726,7 +728,7 @@ function pintar(){
       <td class="col-rup">${p.srup
         ? '<span class="tag pos" style="padding:1px 8px" title="Mínima cuantía y RFI no exigen RUP inscrito">No requiere</span>'
         : '<span class="tag" style="padding:1px 8px" title="Exige RUP inscrito en la Cámara de Comercio">Requiere</span>'}</td>
-      <td class="num-col">${plata(p.val)}</td>
+      <td class="num-col"${p.val ? "" : ' title="Sin presupuesto publicado"'}>${p.val ? plata(p.val) : "&mdash;"}</td>
       <td class="col-obj"><div class="obj-cell">${esc(p.obj)}</div></td>
       <td class="col-ver"><button class="ver" aria-expanded="false" aria-label="Ver detalle del proceso ${esc(p.ref)}">▾</button></td>`;
     const det = document.createElement("tr"); det.className = "detalle"; det.style.display = "none";

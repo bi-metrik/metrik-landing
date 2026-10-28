@@ -571,13 +571,11 @@ a { text-decoration: none; color: inherit; }
 .caso-cita figcaption strong { font-weight: 600; color: var(--carbon); }
 .casos-muro { margin-top: var(--s-xl); text-align: center; }
 .casos-muro-rotulo { margin-bottom: var(--s-md); }
-.casos-muro-lista { list-style: none; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--s-md) 16px; align-items: center; justify-items: center; }
-/* 3 columnas en celular; la segunda fila (2 logos) queda centrada */
-.casos-muro-lista li { grid-column: span 2; }
-.casos-muro-lista li:nth-child(4) { grid-column: 2 / 4; }
-.casos-muro-lista li:nth-child(5) { grid-column: 4 / 6; }
+.casos-muro-lista { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-md) 16px; align-items: center; justify-items: center; }
 @media (min-width: 900px) { .casos-muro-lista { display: flex; justify-content: center; gap: var(--s-xl); } }
 .casos-muro-lista img { width: auto; max-width: 100%; object-fit: contain; filter: brightness(0); opacity: 0.7; }
+/* AFI viene pintado en dos tonos de carbon: el filtro los aplanaria */
+.casos-muro-lista img.logo-dos-tonos { filter: none; }
 
 /* CREDIBILITY */
 .credibility { padding: var(--s-3xl) var(--s-md); background: var(--carbon); color: var(--blanco); }
@@ -1379,11 +1377,12 @@ h1.hero-roi-hook { font-size: clamp(1.0625rem, 2.2vw, 1.375rem); font-weight: 50
     <div class="casos-muro fade-up">
       <p class="casos-muro-rotulo">Trabajan con nosotros</p>
       <ul class="casos-muro-lista">
-        <li><img src="assets/clients/afi.png" alt="AFI" width="60" height="46" loading="lazy" decoding="async"></li>
+        <li><img class="logo-dos-tonos" src="assets/clients/afi.png" alt="AFI" width="86" height="44" loading="lazy" decoding="async"></li>
         <li><img src="assets/clients/dimpro.png" alt="Dimpro" width="119" height="24" loading="lazy" decoding="async"></li>
         <li><img src="assets/clients/wmc.png" alt="WMC" width="110" height="38" loading="lazy" decoding="async"></li>
         <li><img src="assets/clients/soena.png" alt="Soena" width="94" height="18" loading="lazy" decoding="async"></li>
         <li><img src="assets/clients/trappvel.png" alt="Trappvel" width="128" height="26" loading="lazy" decoding="async"></li>
+        <li><img src="assets/clients/sabor.png" alt="Sabor &amp; Experiencias" width="105" height="48" loading="lazy" decoding="async"></li>
       </ul>
     </div>
   </div>

@@ -87,26 +87,30 @@
     var st = document.createElement('style');
     st.id = 'metrik-consentimiento-css';
     st.textContent = [
+      // Sistema Pino: Schibsted Grotesk (ya cargada por la pagina), texto carbon sobre blanco.
       '.mk-consent{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#FFFFFF;',
-      'border-top:1px solid #E5E7EB;box-shadow:0 -4px 24px rgba(26,26,26,0.08);',
-      "font-family:'Montserrat',system-ui,-apple-system,sans-serif;color:#1A1A1A;",
-      'padding:1.25rem 1rem;animation:mk-consent-in .25s ease-out}',
+      'border-top:1px solid #E3E0D9;box-shadow:0 -4px 24px rgba(25,23,19,0.08);',
+      "font-family:'Schibsted Grotesk',system-ui,-apple-system,sans-serif;color:#191713;",
+      'padding:1rem 1.5rem;animation:mk-consent-in .25s ease-out}',
       '@keyframes mk-consent-in{from{transform:translateY(100%)}to{transform:translateY(0)}}',
       '@media (prefers-reduced-motion:reduce){.mk-consent{animation:none}}',
       '.mk-consent__box{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;',
-      'gap:1rem 1.5rem;align-items:center;justify-content:space-between}',
-      '.mk-consent__texto{flex:1 1 320px;font-size:.875rem;line-height:1.45;color:#4B5563;margin:0}',
-      '.mk-consent__texto a{color:#1A1A1A;text-decoration:underline;text-underline-offset:2px}',
-      '.mk-consent__acciones{display:flex;gap:.75rem;flex-wrap:wrap}',
+      'gap:.75rem 1.5rem;align-items:center;justify-content:space-between}',
+      '.mk-consent__texto{flex:1 1 320px;font-size:.875rem;line-height:1.45;color:#191713;margin:0}',
+      '.mk-consent__texto a{color:#191713;text-decoration:underline;text-underline-offset:2px}',
+      '.mk-consent__acciones{display:flex;gap:.75rem}',
       '.mk-consent__btn{font-family:inherit;font-size:.875rem;font-weight:600;line-height:1;',
-      'padding:.75rem 1.5rem;border-radius:9999px;cursor:pointer;border:1px solid #1A1A1A;',
-      'background:#FFFFFF;color:#1A1A1A;transition:background .15s,color .15s,border-color .15s}',
-      '.mk-consent__btn:hover{background:#F9FAFB}',
-      '.mk-consent__btn:focus-visible{outline:2px solid #10B981;outline-offset:2px}',
-      '.mk-consent__btn--si{background:#1A1A1A;color:#FFFFFF}',
+      'min-height:44px;padding:.75rem 1.5rem;border-radius:8px;cursor:pointer;border:1.5px solid #191713;',
+      'background:#FFFFFF;color:#191713;transition:background .15s,color .15s,border-color .15s}',
+      '.mk-consent__btn:hover{background:#F3F1EC}',
+      '.mk-consent__btn:focus-visible{outline:2px solid #0E5C43;outline-offset:3px}',
+      '.mk-consent__btn--si{background:#191713;color:#FFFFFF}',
       '.mk-consent__btn--si:hover{background:#000000}',
-      '@media (max-width:600px){.mk-consent__acciones{width:100%}',
-      '.mk-consent__btn{flex:1 1 auto}}',
+      '@media (max-width:600px){.mk-consent{padding:.625rem 1rem}',
+      '.mk-consent__box{gap:.5rem}',
+      '.mk-consent__texto{flex-basis:100%;line-height:1.3}',
+      '.mk-consent__acciones{width:100%}',
+      '.mk-consent__btn{flex:1 1 0;padding:.625rem 1rem}}',
       '.mk-consent-link{cursor:pointer}'
     ].join('');
     document.head.appendChild(st);
@@ -176,7 +180,16 @@
     estado = leer();
     enlacePie();
     if (estado === ACEPTADO) cargarGA();
-    else if (estado !== RECHAZADO) abrirBanner();
+    else if (estado !== RECHAZADO) abrirCuandoLlegueLaFuente();
+  }
+
+  // El aviso se pinta con la fuente de la pagina ya cargada: si entra con la de respaldo y luego
+  // cambia, el texto salta y suma desplazamiento de layout. Tope de 1,5 s para no esperar de mas.
+  function abrirCuandoLlegueLaFuente() {
+    var hecho = false;
+    function abrir() { if (hecho) return; hecho = true; if (estado === null) abrirBanner(); }
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(abrir);
+    setTimeout(abrir, 1500);
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar);

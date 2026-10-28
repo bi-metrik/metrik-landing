@@ -102,7 +102,7 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Martian+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Martian+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
 <!-- Medicion con consentimiento previo: GA4 no carga hasta que la persona acepta.
      Ver la seccion 5.4 de /privacidad y assets/consentimiento.js -->
@@ -549,6 +549,43 @@ a { text-decoration: none; color: inherit; }
 .projects-cta:hover { background: var(--carbon); color: var(--blanco); transform: translateY(-1px); }
 @media (max-width: 768px) { .projects-capabilities { grid-template-columns: 1fr; } }
 
+/* CASOS — mobile-first: una tarjeta debajo de la otra, lado a lado desde 900 px */
+.casos { padding: var(--s-xl) 16px var(--s-2xl); background: var(--blanco); color: var(--carbon); }
+.casos-inner { max-width: var(--max-content); margin: 0 auto; }
+.casos-headline { font-weight: 800; font-size: clamp(1.625rem, 3.4vw, 2.25rem); color: var(--carbon); letter-spacing: -0.02em; line-height: 1.2; text-align: center; margin-bottom: var(--s-lg); text-wrap: balance; }
+.casos-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+@media (min-width: 900px) { .casos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-md); } }
+.caso { display: flex; flex-direction: column; padding: var(--s-md); background: var(--papel); border: 1px solid var(--gris-linea); border-radius: 12px; min-width: 0; }
+@media (min-width: 900px) { .caso { padding: var(--s-lg); } }
+.caso-logo { height: 28px; display: flex; align-items: center; margin-bottom: var(--s-sm); }
+/* Monocromo carbon: brightness(0) deja negro puro; la opacidad lo sube a carbon */
+.caso-logo img { width: auto; filter: brightness(0); opacity: 0.9; }
+.caso-contexto { font-weight: 500; font-size: 0.9375rem; color: var(--gris); line-height: 1.45; margin-bottom: var(--s-md); }
+.caso-bloque { margin-bottom: var(--s-md); }
+.caso-rotulo, .casos-muro-rotulo { font-family: var(--font-num); font-weight: 400; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gris); line-height: 1.4; margin-bottom: 0.375rem; }
+.caso-texto { font-weight: 400; font-size: 17px; line-height: 1.55; color: var(--carbon); }
+.caso-cifra { display: block; font-family: var(--font-num); font-weight: 500; font-size: 32px; line-height: 1.1; font-variant-numeric: tabular-nums; word-spacing: -0.4em; color: var(--pino); margin-bottom: 0.25rem; }
+.caso-cita { margin: auto 0 0; padding-top: var(--s-md); border-top: 1px solid var(--gris-linea); }
+.caso-cita blockquote { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 20px; line-height: 1.4; color: var(--carbon); }
+.caso-cita figcaption { margin-top: 0.625rem; font-size: 0.9375rem; line-height: 1.45; color: var(--gris); }
+.caso-cita figcaption strong { font-weight: 600; color: var(--carbon); }
+.casos-muro { margin-top: var(--s-xl); text-align: center; }
+.casos-muro-rotulo { margin-bottom: var(--s-md); }
+.casos-muro-lista { list-style: none; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--s-md) 16px; align-items: center; justify-items: center; }
+/* Celular: 3 arriba, 2 centrados en medio y Sabor solo abajo */
+.casos-muro-lista > li { grid-column: span 2; }
+.casos-muro-lista > li:nth-child(4) { grid-column: 2 / 4; }
+.casos-muro-lista > li:nth-child(5) { grid-column: 4 / 6; }
+@media (min-width: 900px) { .casos-muro-lista { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--s-md) var(--s-xl); } }
+.casos-muro-lista li { display: flex; align-items: center; justify-content: center; }
+/* Sabor va completo y mas alto, para que "EXPERIENCIA" se lea; en celular ocupa su propia fila */
+.casos-muro-lista > li.muro-sabor { grid-column: 1 / -1; }
+.casos-muro-lista .muro-sabor img { height: 88px; opacity: 0.85; }
+@media (min-width: 900px) { .casos-muro-lista .muro-sabor img { height: 110px; } }
+.casos-muro-lista img { width: auto; max-width: 100%; object-fit: contain; filter: brightness(0); opacity: 0.7; }
+/* AFI viene pintado en dos tonos de carbon: el filtro los aplanaria */
+.casos-muro-lista img.logo-dos-tonos { filter: none; }
+
 /* CREDIBILITY */
 .credibility { padding: var(--s-3xl) var(--s-md); background: var(--carbon); color: var(--blanco); }
 .founder-statement { max-width: var(--max-narrow); margin: 0 auto var(--s-2xl); text-align: center; }
@@ -657,15 +694,15 @@ a { text-decoration: none; color: inherit; }
 }
 /* HERO BEAM ANIMATION */
 .hero-chars{display:flex;align-items:baseline;white-space:nowrap}
-.hero-ch{font-family:var(--font);font-weight:900;font-size:clamp(3rem,8vw,5.5rem);color:var(--blanco);line-height:1;letter-spacing:-0.02em;display:inline-block;will-change:opacity,text-shadow;transition:text-shadow 0.2s ease;opacity:0}
+.hero-ch{font-family:var(--font);font-weight:900;font-size:clamp(1.8rem,4.8vw,3.3rem);color:var(--blanco);line-height:1;letter-spacing:-0.02em;display:inline-block;will-change:opacity,text-shadow;transition:text-shadow 0.2s ease;opacity:0}
 .hero-ch.lit{text-shadow:0 4px 20px rgba(var(--pino-rgb),0.4),0 2px 40px rgba(var(--pino-rgb),0.15)}
 .hero-track{position:relative;overflow:visible;background:transparent}
 .hero-beam-trail{position:absolute;left:0;top:0;height:100%;background:var(--pino);border-radius:2px;width:0}
-.hero-beam-orb{position:absolute;top:50%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;background:#FFF;box-shadow:0 0 6px 3px rgba(var(--pino-rgb),0.8),0 0 18px 8px rgba(var(--pino-rgb),0.45),0 0 40px 14px rgba(var(--pino-rgb),0.18);z-index:10;pointer-events:none;opacity:0;transition:opacity 0.6s ease}
-.hero-beam-tail{position:absolute;top:50%;transform:translateY(-50%);height:12px;background:linear-gradient(90deg,transparent 0%,rgba(var(--pino-rgb),0.06) 40%,rgba(var(--pino-rgb),0.25) 100%);border-radius:8px;pointer-events:none;z-index:9;opacity:0;transition:opacity 0.5s ease}
-.hero-beam-cone{position:absolute;bottom:100%;transform:translateX(-50%);width:60px;height:50px;background:linear-gradient(0deg,rgba(var(--pino-rgb),0.15) 0%,rgba(var(--pino-rgb),0.03) 50%,transparent 100%);clip-path:polygon(35% 100%,65% 100%,85% 0%,15% 0%);pointer-events:none;z-index:8;opacity:0;transition:opacity 0.5s ease}
+.hero-beam-orb{position:absolute;top:50%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;background:#FFF;box-shadow:0 0 6px 3px rgba(var(--pino-rgb),0.8),0 0 18px 8px rgba(var(--pino-rgb),0.45),0 0 40px 14px rgba(var(--pino-rgb),0.18);z-index:10;pointer-events:none;opacity:0;transition:opacity 0.25s ease}
+.hero-beam-tail{position:absolute;top:50%;transform:translateY(-50%);height:12px;background:linear-gradient(90deg,transparent 0%,rgba(var(--pino-rgb),0.06) 40%,rgba(var(--pino-rgb),0.25) 100%);border-radius:8px;pointer-events:none;z-index:9;opacity:0;transition:opacity 0.25s ease}
+.hero-beam-cone{position:absolute;bottom:100%;transform:translateX(-50%);width:60px;height:50px;background:linear-gradient(0deg,rgba(var(--pino-rgb),0.15) 0%,rgba(var(--pino-rgb),0.03) 50%,transparent 100%);clip-path:polygon(35% 100%,65% 100%,85% 0%,15% 0%);pointer-events:none;z-index:8;opacity:0;transition:opacity 0.25s ease}
 .hero-beam-glow{position:absolute;inset:-5px 0;background:var(--pino);border-radius:6px;filter:blur(10px);opacity:0;pointer-events:none}
-.hero-beam-glow.on{animation:heroGlow 1.2s cubic-bezier(0.16,1,0.3,1) forwards}
+.hero-beam-glow.on{animation:heroGlow 0.4s cubic-bezier(0.16,1,0.3,1) forwards}
 @keyframes heroGlow{0%{opacity:0.3}30%{opacity:0.12}100%{opacity:0}}
 /* LOCKUP BEAM ANIMATION */
 .lockup-chars{display:flex;align-items:baseline;white-space:nowrap}
@@ -743,6 +780,50 @@ a { text-decoration: none; color: inherit; }
   text-wrap: balance;
   margin-bottom: 0.75rem;
 }
+/* El h1 es la tesis: sin estilos de encabezado propios del navegador */
+h1.hero-roi-hook { font-size: clamp(1.0625rem, 2.2vw, 1.375rem); font-weight: 500; }
+.hero-sub {
+  font-family: var(--font); font-weight: 400;
+  font-size: clamp(0.9375rem, 1.6vw, 1.0625rem);
+  color: rgba(255,255,255,0.62); line-height: 1.55;
+  max-width: 600px; margin-top: var(--s-md); padding: 0 var(--s-md);
+}
+.hero-ctas { display: flex; gap: 0.75rem; justify-content: center; margin-top: var(--s-lg); }
+.hero-ctas a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; font-size: 0.9375rem; padding: 0.75rem 2rem; border-radius: 8px; }
+@media (max-width: 600px) {
+  /* En celular la tesis y los dos botones caben en el primer pantallazo, por encima del aviso de medicion */
+  .hero { padding-top: 6rem; }
+  .hero-tagline { margin-top: var(--s-md); }
+  .hero-sub { margin-top: 1.25rem; }
+  .hero-ctas { margin-top: var(--s-md); }
+  .hero-ctas { flex-direction: column; width: 100%; max-width: 420px; }
+  .hero-ctas a { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-ch { opacity: 1 !important; text-shadow: none !important; transition: none !important; }
+  .hero-beam-trail { width: 100% !important; }
+  .hero-beam-orb, .hero-beam-tail, .hero-beam-cone, .hero-beam-glow { display: none !important; }
+  .hero-scroll-line { animation: none; }
+  .hero-ctas a { transition: none; }
+}
+
+/* Salto al contenido: fuera de la vista hasta recibir foco */
+.skip-link {
+  position: absolute; top: 0.75rem; left: 0.75rem; z-index: 10000;
+  background: var(--blanco); color: var(--carbon);
+  font-family: var(--font); font-weight: 600; font-size: 0.875rem;
+  padding: 0.75rem 1.25rem; border-radius: 8px;
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: none; }
+
+/* Foco por teclado: Pino sobre claro, Pino 300 sobre carbon */
+:focus-visible { outline: 2px solid #0E5C43; outline-offset: 3px; }
+.nav :focus-visible, .hero :focus-visible, .questions :focus-visible, .credibility :focus-visible,
+.methodology :focus-visible, .cta-final :focus-visible, .footer :focus-visible,
+.section--dark :focus-visible, .skip-link:focus-visible { outline-color: #6FB89D; }
+
 .hero-roi-asterisk {
   font-size: 0.7em; vertical-align: super;
   color: rgba(255,255,255,0.45);
@@ -924,8 +1005,9 @@ a { text-decoration: none; color: inherit; }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<nav class="nav" id="nav" style="opacity:0">
+<nav class="nav" id="nav">
   <a href="#" class="nav-logo">
     <div class="logo logo--light">
       <span class="logo-text">MéTRIK</span>
@@ -966,15 +1048,20 @@ a { text-decoration: none; color: inherit; }
       </div>
     </div>
   </div>
-  <p class="hero-tagline" id="hero-tagline" style="opacity:0">Claridad para decidir</p>
-  <p class="hero-roi-hook" id="hero-roi-hook" style="opacity:0"><strong>La IA no arregla una operación desordenada.</strong> Primero el flujo, después el agente.</p>
-  <div class="hero-scroll" id="hero-scroll" style="opacity:0">
+  <p class="hero-tagline" id="hero-tagline">Claridad para decidir</p>
+  <h1 class="hero-roi-hook" id="hero-roi-hook"><strong>La IA no arregla una operación desordenada.</strong> Primero el flujo, después el agente.</h1>
+  <p class="hero-sub">Reestructuramos los flujos de trabajo de empresas medianas en Colombia sobre MéTRIK ONE: cada venta, costo y cobro queda registrado donde nace. Con eso, la IA sí sirve.</p>
+  <div class="hero-ctas">
+    <a href="https://calendly.com/mauricio-moreno-metrik/30min" target="_blank" rel="noopener" class="closure-cta">Hablemos 30 minutos</a>
+    <a href="/operamos-one" class="nav-cta">Ver demo</a>
+  </div>
+  <div class="hero-scroll" id="hero-scroll">
     <span class="hero-scroll-text">Descubre</span>
     <div class="hero-scroll-line"></div>
   </div>
 </section>
 
-<section class="questions" id="questions">
+<section class="questions" id="contenido">
     <div class="questions-split">
     <div class="questions-col">
       <div class="questions-pain fade-up">
@@ -1247,6 +1334,69 @@ a { text-decoration: none; color: inherit; }
   </div>
 </section>
 
+<section class="casos" id="casos">
+  <div class="casos-inner">
+    <h2 class="casos-headline fade-up">Empresas que ya trabajan así</h2>
+    <div class="casos-grid">
+
+      <article class="caso fade-up">
+        <div class="caso-logo"><img src="assets/clients/soena.png" alt="Soena" width="115" height="22" loading="lazy" decoding="async"></div>
+        <p class="caso-contexto">incentivos tributarios para vehículos eléctricos e híbridos</p>
+        <div class="caso-bloque">
+          <p class="caso-rotulo">Antes</p>
+          <p class="caso-texto">284 casos repartidos entre Excel y HubSpot, en dos tablas que no cuadraban.</p>
+        </div>
+        <div class="caso-bloque">
+          <p class="caso-rotulo">Ahora</p>
+          <p class="caso-texto">Cada caso recorre su flujo en MéTRIK ONE, del primer contacto al expediente para la DIAN. El Excel ya no se usa.</p>
+        </div>
+        <div class="caso-bloque">
+          <p class="caso-rotulo">En cifras</p>
+          <p class="caso-texto"><span class="caso-cifra">89&nbsp;%</span>de 293 casos avanzaron sin trabajo manual por fuera del flujo, al corte de agosto de 2026.</p>
+        </div>
+        <figure class="caso-cita">
+          <blockquote>“Estamos a ciegas y lo que me preocupa son los tiempos.”</blockquote>
+          <figcaption><strong>Juan David Bruce</strong> · Representante Legal, al arrancar el proyecto (julio de 2026)</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso fade-up">
+        <div class="caso-logo"><img src="assets/clients/trappvel.png" alt="Trappvel" width="138" height="28" loading="lazy" decoding="async"></div>
+        <p class="caso-contexto">viajes a la medida</p>
+        <div class="caso-bloque">
+          <p class="caso-rotulo">Antes</p>
+          <p class="caso-texto">Cada viaje vivía en el chat de quien lo atendía. Nadie veía el margen hasta el final.</p>
+        </div>
+        <div class="caso-bloque">
+          <p class="caso-rotulo">Ahora</p>
+          <p class="caso-texto">La solicitud entra por WhatsApp, queda con responsable desde el primer mensaje y avanza por etapas con controles antes de cotizar y de confirmar.</p>
+        </div>
+        <div class="caso-bloque">
+          <p class="caso-rotulo">Lo que sigue</p>
+          <p class="caso-texto">Medir el margen por viaje con la operación registrada en el sistema.</p>
+        </div>
+        <figure class="caso-cita">
+          <blockquote>“Ahora sabemos en qué etapa va cada viaje y quién responde por él.”</blockquote>
+          <figcaption><strong>Edgar Alarcón</strong> · Fundador</figcaption>
+        </figure>
+      </article>
+
+    </div>
+
+    <div class="casos-muro fade-up">
+      <p class="casos-muro-rotulo">Trabajan con nosotros</p>
+      <ul class="casos-muro-lista">
+        <li><img class="logo-dos-tonos" src="assets/clients/afi.png" alt="AFI" width="86" height="44" loading="lazy" decoding="async"></li>
+        <li><img src="assets/clients/dimpro.png" alt="Dimpro" width="119" height="24" loading="lazy" decoding="async"></li>
+        <li><img src="assets/clients/wmc.png" alt="WMC" width="110" height="38" loading="lazy" decoding="async"></li>
+        <li><img src="assets/clients/soena.png" alt="Soena" width="94" height="18" loading="lazy" decoding="async"></li>
+        <li><img src="assets/clients/trappvel.png" alt="Trappvel" width="128" height="26" loading="lazy" decoding="async"></li>
+        <li class="muro-sabor"><img src="assets/clients/sabor.png" alt="Sabor &amp; Experiencias" width="204" height="110" loading="lazy" decoding="async"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <div style="height:120px;background:linear-gradient(to bottom, var(--blanco), var(--carbon))"></div>
 
 <section class="credibility" id="nosotros">
@@ -1353,7 +1503,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]:not(.skip-link)').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
@@ -1368,10 +1518,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   var tail = document.getElementById('hero-tail');
   var cone = document.getElementById('hero-cone');
   var glow = document.getElementById('hero-glow');
-  var tagline = document.getElementById('hero-tagline');
-  var roiHook = document.getElementById('hero-roi-hook');
-  var heroScroll = document.getElementById('hero-scroll');
-  var nav = document.getElementById('nav');
 
   var beamStarted = false, beamFinished = false, beamProgress = 0;
   var startTime = null;
@@ -1394,32 +1540,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
   function tick(now){
     if(!startTime) startTime = now;
-    var raw = Math.min((now - startTime) / 1800, 1);
+    var raw = Math.min((now - startTime) / 800, 1);
     beamProgress = 1 - Math.pow(1 - raw, 2.6);
     update();
     if(raw < 1) requestAnimationFrame(tick);
     else { beamFinished = true; update(); }
   }
 
-  document.body.style.overflow = 'hidden';
+  // Con movimiento reducido el wordmark queda estatico (lo resuelve el CSS).
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  setTimeout(function(){
+  // El wordmark se anima en menos de 1,2 s y no retiene nada: nav, tesis y CTAs ya estan pintados.
+  // Arranca cuando la fuente ya llego: si el cambio de fuente cae a mitad del haz, el brillo
+  // de las letras multiplica el desplazamiento de layout (CLS ~0,1 en 3G).
+  function start(){
+    if (beamStarted) return;
     beamStarted = true;
     orb.style.opacity = 1; tail.style.opacity = 1; cone.style.opacity = 1;
     requestAnimationFrame(tick);
-  }, 300);
-  setTimeout(function(){ glow.classList.add('on'); }, 2200);
-  setTimeout(function(){ orb.style.opacity = 0; tail.style.opacity = 0; cone.style.opacity = 0; }, 2300);
-  setTimeout(function(){ tagline.style.opacity = '1'; }, 2500);
-  setTimeout(function(){ if(roiHook) roiHook.style.opacity = '1'; }, 2700);
-  setTimeout(function(){ nav.style.opacity = '1'; heroScroll.style.opacity = ''; }, 2900);
-  setTimeout(function(){
-    document.body.style.overflow = '';
-    nav.style.removeProperty('opacity');
-    tagline.style.removeProperty('opacity');
-    if(roiHook) roiHook.style.removeProperty('opacity');
-    heroScroll.style.removeProperty('opacity');
-  }, 3800);
+    setTimeout(function(){ glow.classList.add('on'); orb.style.opacity = 0; tail.style.opacity = 0; cone.style.opacity = 0; }, 800);
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(start);
+  setTimeout(start, 1500);
 })();
 
 /* ═══ LOCKUP BEAM ANIMATION (scroll-triggered) ═══ */

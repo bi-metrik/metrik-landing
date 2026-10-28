@@ -102,7 +102,7 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Martian+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Martian+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
 <!-- Medicion con consentimiento previo: GA4 no carga hasta que la persona acepta.
      Ver la seccion 5.4 de /privacidad y assets/consentimiento.js -->
@@ -548,6 +548,36 @@ a { text-decoration: none; color: inherit; }
 .projects-cta { display: inline-block; font-family: var(--font); font-weight: 600; font-size: 0.9375rem; color: var(--carbon); border: 1.5px solid var(--carbon); padding: 0.75rem 1.75rem; border-radius: 8px; transition: all 0.3s ease; }
 .projects-cta:hover { background: var(--carbon); color: var(--blanco); transform: translateY(-1px); }
 @media (max-width: 768px) { .projects-capabilities { grid-template-columns: 1fr; } }
+
+/* CASOS — mobile-first: una tarjeta debajo de la otra, lado a lado desde 900 px */
+.casos { padding: var(--s-xl) 16px var(--s-2xl); background: var(--blanco); color: var(--carbon); }
+.casos-inner { max-width: var(--max-content); margin: 0 auto; }
+.casos-headline { font-weight: 800; font-size: clamp(1.625rem, 3.4vw, 2.25rem); color: var(--carbon); letter-spacing: -0.02em; line-height: 1.2; text-align: center; margin-bottom: var(--s-lg); text-wrap: balance; }
+.casos-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+@media (min-width: 900px) { .casos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-md); } }
+.caso { display: flex; flex-direction: column; padding: var(--s-md); background: var(--papel); border: 1px solid var(--gris-linea); border-radius: 12px; min-width: 0; }
+@media (min-width: 900px) { .caso { padding: var(--s-lg); } }
+.caso-logo { height: 28px; display: flex; align-items: center; margin-bottom: var(--s-sm); }
+/* Monocromo carbon: brightness(0) deja negro puro; la opacidad lo sube a carbon */
+.caso-logo img { width: auto; filter: brightness(0); opacity: 0.9; }
+.caso-contexto { font-weight: 500; font-size: 0.9375rem; color: var(--gris); line-height: 1.45; margin-bottom: var(--s-md); }
+.caso-bloque { margin-bottom: var(--s-md); }
+.caso-rotulo, .casos-muro-rotulo { font-family: var(--font-num); font-weight: 400; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gris); line-height: 1.4; margin-bottom: 0.375rem; }
+.caso-texto { font-weight: 400; font-size: 17px; line-height: 1.55; color: var(--carbon); }
+.caso-cifra { display: block; font-family: var(--font-num); font-weight: 500; font-size: 32px; line-height: 1.1; font-variant-numeric: tabular-nums; word-spacing: -0.4em; color: var(--pino); margin-bottom: 0.25rem; }
+.caso-cita { margin: auto 0 0; padding-top: var(--s-md); border-top: 1px solid var(--gris-linea); }
+.caso-cita blockquote { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; font-size: 20px; line-height: 1.4; color: var(--carbon); }
+.caso-cita figcaption { margin-top: 0.625rem; font-size: 0.9375rem; line-height: 1.45; color: var(--gris); }
+.caso-cita figcaption strong { font-weight: 600; color: var(--carbon); }
+.casos-muro { margin-top: var(--s-xl); text-align: center; }
+.casos-muro-rotulo { margin-bottom: var(--s-md); }
+.casos-muro-lista { list-style: none; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--s-md) 16px; align-items: center; justify-items: center; }
+/* 3 columnas en celular; la segunda fila (2 logos) queda centrada */
+.casos-muro-lista li { grid-column: span 2; }
+.casos-muro-lista li:nth-child(4) { grid-column: 2 / 4; }
+.casos-muro-lista li:nth-child(5) { grid-column: 4 / 6; }
+@media (min-width: 900px) { .casos-muro-lista { display: flex; justify-content: center; gap: var(--s-xl); } }
+.casos-muro-lista img { width: auto; max-width: 100%; object-fit: contain; filter: brightness(0); opacity: 0.7; }
 
 /* CREDIBILITY */
 .credibility { padding: var(--s-3xl) var(--s-md); background: var(--carbon); color: var(--blanco); }
@@ -1293,6 +1323,68 @@ h1.hero-roi-hook { font-size: clamp(1.0625rem, 2.2vw, 1.375rem); font-weight: 50
         <div class="projects-cap-text">Si lo que necesitas es una aplicación a la medida, no somos nosotros. Preferimos decírtelo en la primera llamada.</div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section class="casos" id="casos">
+  <div class="casos-inner">
+    <h2 class="casos-headline fade-up">Empresas que ya trabajan así</h2>
+    <div class="casos-grid">
+
+      <article class="caso fade-up">
+        <div class="caso-logo"><img src="assets/clients/soena.svg" alt="Soena" width="98" height="18" loading="lazy" decoding="async"></div>
+        <p class="caso-contexto">Soena · incentivos tributarios para vehículos eléctricos e híbridos</p>
+        <div class="caso-bloque">
+          <p class="caso-rotulo">Antes</p>
+          <p class="caso-texto">284 casos repartidos entre Excel y HubSpot, en dos tablas que no cuadraban.</p>
+        </div>
+        <div class="caso-bloque">
+          <p class="caso-rotulo">Ahora</p>
+          <p class="caso-texto">Cada caso recorre su flujo en MéTRIK ONE, del primer contacto al expediente para la DIAN. El Excel ya no se usa.</p>
+        </div>
+        <div class="caso-bloque">
+          <p class="caso-rotulo">En cifras</p>
+          <p class="caso-texto"><span class="caso-cifra">98&nbsp;%</span>de los casos sin trabajo manual por fuera del flujo en agosto de 2026. En julio era 69&nbsp;%.</p>
+        </div>
+        <figure class="caso-cita">
+          <blockquote>“Estamos a ciegas y lo que me preocupa son los tiempos.”</blockquote>
+          <figcaption><strong>Juan David Bruce</strong> · Representante Legal, al arrancar el proyecto (julio de 2026)</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso fade-up">
+        <div class="caso-logo"><img src="assets/clients/trappvel.png" alt="Trappvel" width="138" height="28" loading="lazy" decoding="async"></div>
+        <p class="caso-contexto">Trappvel · viajes a la medida</p>
+        <div class="caso-bloque">
+          <p class="caso-rotulo">Antes</p>
+          <p class="caso-texto">Cada viaje vivía en el chat de quien lo atendía. Nadie veía el margen hasta el final.</p>
+        </div>
+        <div class="caso-bloque">
+          <p class="caso-rotulo">Ahora</p>
+          <p class="caso-texto">La solicitud entra por WhatsApp, queda con responsable desde el primer mensaje y avanza por etapas con controles antes de cotizar y de confirmar.</p>
+        </div>
+        <div class="caso-bloque">
+          <p class="caso-rotulo">Lo que sigue</p>
+          <p class="caso-texto">Medir el margen por viaje con la operación registrada en el sistema.</p>
+        </div>
+        <figure class="caso-cita">
+          <blockquote>“Ahora sabemos en qué etapa va cada viaje y quién responde por él.”</blockquote>
+          <figcaption><strong>Edgar Alarcón</strong> · Fundador</figcaption>
+        </figure>
+      </article>
+
+    </div>
+
+    <div class="casos-muro fade-up">
+      <p class="casos-muro-rotulo">Trabajan con nosotros</p>
+      <ul class="casos-muro-lista">
+        <li><img src="assets/clients/afi.svg" alt="AFI" width="49" height="17" loading="lazy" decoding="async"></li>
+        <li><img src="assets/clients/dimpro.svg" alt="Dimpro" width="110" height="17" loading="lazy" decoding="async"></li>
+        <li><img src="assets/clients/wmc.svg" alt="WMC" width="68" height="17" loading="lazy" decoding="async"></li>
+        <li><img src="assets/clients/soena.svg" alt="Soena" width="93" height="17" loading="lazy" decoding="async"></li>
+        <li><img src="assets/clients/trappvel.png" alt="Trappvel" width="128" height="26" loading="lazy" decoding="async"></li>
+      </ul>
     </div>
   </div>
 </section>

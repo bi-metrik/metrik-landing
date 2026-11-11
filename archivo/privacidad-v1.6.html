@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politica de Privacidad | MéTRIK</title>
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/assets/marca/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/marca/metrik-icono-180.png">
+    <meta name="description" content="Politica de Tratamiento de Datos Personales de MéTRIK. Cumplimiento Ley 1581 de 2012.">
+    <link rel="canonical" href="https://metrik.com.co/privacidad.html">
+
+    <!-- Favicon -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Martian+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset base (equivalente al preflight que aplicaba Tailwind en esta pagina) */
+        *, *::before, *::after { box-sizing: border-box; border: 0 solid #E3E0D9; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+        body { margin: 0; line-height: inherit; }
+        h1, h2, h3, p, ul, ol { margin: 0; }
+        h1, h2, h3 { font-size: inherit; font-weight: inherit; }
+        ul, ol { list-style: none; padding: 0; }
+        a { color: inherit; text-decoration: inherit; }
+        img, svg { display: block; vertical-align: middle; }
+        img { max-width: 100%; height: auto; }
+        table { border-collapse: collapse; border-color: inherit; text-indent: 0; }
+        strong { font-weight: bolder; }
+
+        /* Base de pagina */
+        .page {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            color: #191713;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .font-sans { font-family: 'Schibsted Grotesk', sans-serif; }
+
+        /* Contenedores */
+        .container { width: 100%; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+        @media (min-width: 640px)  { .container { max-width: 640px; } }
+        @media (min-width: 768px)  { .container { max-width: 768px; } }
+        @media (min-width: 1024px) { .container { max-width: 1024px; } }
+        @media (min-width: 1280px) { .container { max-width: 1280px; } }
+        @media (min-width: 1536px) { .container { max-width: 1536px; } }
+        .wrap { width: 100%; max-width: 56rem; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+
+        /* Utilidades de espaciado */
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+
+        /* Iconos */
+        .icon { display: inline-flex; align-items: center; justify-content: center; }
+        .icon--green { color: #0E5C43; }
+        .icon--li { margin-top: 0.25rem; flex-shrink: 0; }
+
+        /* Header */
+        .site-header { position: fixed; top: 0; width: 100%; z-index: 50; background: #FFFFFF; padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .site-header.is-scrolled { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); }
+        .site-header__inner { display: flex; justify-content: space-between; align-items: center; }
+        .site-header__logo { display: flex; align-items: center; gap: 0.5rem; }
+        .site-header__logo img { height: 2.5rem; width: auto; object-fit: contain; }
+        @media (min-width: 768px) { .site-header__logo img { height: 3rem; } }
+        .back-link { display: flex; align-items: center; gap: 0.5rem; color: #55514A; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 500; font-size: 0.875rem; line-height: 1.25rem; transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
+        .back-link:hover { color: #0E5C43; }
+
+        /* Documento */
+        .doc-main { padding-top: 6rem; padding-bottom: 4rem; }
+        .doc-hero { text-align: center; margin-bottom: 4rem; }
+        .doc-hero__badge { display: inline-flex; align-items: center; justify-content: center; width: 4rem; height: 4rem; background: rgba(var(--pino-rgb), 0.1); border-radius: 9999px; margin-bottom: 1.5rem; }
+        .doc-hero__title { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 1.875rem; line-height: 2.25rem; color: #191713; margin-bottom: 1rem; }
+        @media (min-width: 768px) { .doc-hero__title { font-size: 2.25rem; line-height: 2.5rem; } }
+        .doc-hero__meta { color: #55514A; font-family: 'Schibsted Grotesk', sans-serif; }
+        .doc-card { background: #FFFFFF; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); padding: 2rem; }
+        @media (min-width: 768px) { .doc-card { padding: 3rem; } }
+
+        .doc-section { margin-bottom: 3rem; }
+        .doc-section__title { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 2rem; color: #191713; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #0E5C43; }
+        .doc-h3 { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 600; font-size: 1.125rem; line-height: 1.75rem; color: #191713; margin-bottom: 0.75rem; }
+        .doc-h3--spaced { margin-top: 1.5rem; }
+        .doc-p { color: #3A3630; }
+        .doc-defs { color: #3A3630; }
+        .doc-defs > * + * { margin-top: 1rem; }
+        .strong-dark { color: #191713; }
+
+        /* Listas */
+        .doc-list { color: #3A3630; }
+        .doc-list > * + * { margin-top: 0.5rem; }
+        .doc-list--icon > li { display: flex; align-items: flex-start; gap: 0.5rem; }
+        .doc-list--num { list-style-type: decimal; list-style-position: inside; }
+        .doc-list--disc { list-style-type: disc; list-style-position: inside; }
+        .doc-list--sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .marker { color: #0E5C43; font-weight: 700; }
+
+        /* Tablas */
+        .doc-table-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
+        .doc-table { width: 100%; border-collapse: collapse; background: #FFFFFF; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
+        .doc-table thead tr { background: #191713; color: #FFFFFF; }
+        .doc-table th { padding: 0.75rem 1rem; text-align: left; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 600; font-size: 0.875rem; line-height: 1.25rem; }
+        .doc-table td { padding: 0.75rem 1rem; font-size: 0.875rem; line-height: 1.25rem; color: #3A3630; border-bottom: 1px solid #EBE8E1; }
+        .doc-table tbody tr:nth-child(odd) { background: #F3F1EC; }
+        .doc-table tbody tr:nth-child(even) { background: #FFFFFF; }
+
+        /* Grillas */
+        .grid-cards { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 1rem; }
+        .grid-panels { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 1.5rem; }
+        @media (min-width: 768px) {
+            .grid-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .grid-panels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        /* Tarjetas de derechos */
+        .right-card { background: #F3F1EC; padding: 1rem; border-radius: 0.5rem; border: 1px solid #EBE8E1; }
+        .right-card__head { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+        .right-card__num { width: 1.5rem; height: 1.5rem; background: #0E5C43; color: #FFFFFF; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; line-height: 1rem; font-weight: 700; }
+        .right-card__title { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 600; color: #191713; }
+        .right-card__desc { font-size: 0.875rem; line-height: 1.25rem; color: #55514A; }
+
+        /* Caja de contacto */
+        .contact-box { background: rgba(var(--pino-rgb), 0.05); border: 1px solid rgba(var(--pino-rgb), 0.2); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .contact-box__list { display: flex; flex-direction: column; gap: 0.75rem; }
+        .contact-link { display: flex; align-items: center; gap: 0.75rem; color: #3A3630; transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
+        .contact-link:hover { color: #0E5C43; }
+        .contact-box__note { font-size: 0.875rem; line-height: 1.25rem; color: #6E6A62; margin-top: 1rem; }
+
+        /* Paneles de seguridad */
+        .panel { background: #F3F1EC; padding: 1.5rem; border-radius: 0.5rem; }
+        .panel__title { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 600; font-size: 1.125rem; line-height: 1.75rem; color: #191713; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+
+        /* Caja oscura de cierre */
+        .dark-box { background: #191713; color: #FFFFFF; padding: 1.5rem; border-radius: 0.5rem; }
+        .dark-box__sign { border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; margin-top: 1rem; }
+        .dark-box__name { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; }
+        .dark-box__line { color: #A19C92; font-size: 0.875rem; line-height: 1.25rem; }
+        .dark-box__date { color: #6FB89D; font-size: 0.875rem; line-height: 1.25rem; margin-top: 0.5rem; }
+
+        /* Volver */
+        .doc-back { text-align: center; padding-top: 2rem; border-top: 1px solid #EBE8E1; }
+        .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: #0E5C43; color: #FFFFFF; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 600; transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
+        .btn-primary:hover { background: #0D9668; }
+
+        /* Footer */
+        .site-footer { background: #191713; color: #FFFFFF; padding-top: 3rem; padding-bottom: 3rem; }
+        .site-footer__row { display: flex; flex-direction: column; justify-content: space-between; align-items: center; gap: 1.5rem; }
+        @media (min-width: 768px) { .site-footer__row { flex-direction: row; } }
+        .site-footer__brand { display: flex; align-items: center; gap: 1rem; }
+        .site-footer__brand img { height: 2.5rem; width: auto; object-fit: contain; }
+        .site-footer__brand span { font-family: 'Schibsted Grotesk', sans-serif; font-weight: 700; font-size: 1.125rem; line-height: 1.75rem; }
+        .site-footer__nav { display: flex; flex-direction: column; gap: 1.5rem; align-items: center; font-size: 0.875rem; line-height: 1.25rem; color: #A19C92; }
+        @media (min-width: 768px) { .site-footer__nav { flex-direction: row; } }
+        .site-footer__nav a { transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
+        .site-footer__nav a:hover { color: #6FB89D; }  /* sobre carbon el verde sube a Pino 300 */
+        .site-footer__nav a.with-icon { display: flex; align-items: center; gap: 0.5rem; }
+        .site-footer__social { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
+        .site-footer__social a { color: #A19C92; transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
+        .site-footer__social a:hover { color: #0E5C43; }
+        .site-footer__social svg { width: 22px; height: 22px; }
+        .site-footer__copy { text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.75rem; line-height: 1rem; color: #A19C92; }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <header class="site-header" id="site-header">
+        <div class="container site-header__inner">
+            <a href="/" class="site-header__logo">
+                <img src="/assets/marca/metrik-wordmark.svg" alt="MéTRIK Logo">
+            </a>
+            <a href="/" class="back-link">
+                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg></span>
+                Volver al inicio
+            </a>
+        </div>
+    </header>
+
+    <main class="doc-main">
+        <div class="wrap">
+
+            <div class="doc-hero">
+                <div class="doc-hero__badge">
+                    <span class="icon icon--green"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+                </div>
+                <h1 class="doc-hero__title">Politica de Tratamiento de Datos Personales</h1>
+                <p class="doc-hero__meta">Version 1.6 - 10 de noviembre de 2026</p>
+            </div>
+
+            <div class="doc-card">
+
+                <section id="responsable" class="doc-section">
+                    <h2 class="doc-section__title">1. Identificacion del Responsable del Tratamiento</h2>
+                    <div class="doc-table-wrap">
+                        <table class="doc-table">
+                            <thead>
+                                <tr><th>Campo</th><th>Informacion</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Razon social</td><td>METRIK IA S.A.S.</td></tr>
+                                <tr><td>NIT</td><td>902.079.601-9</td></tr>
+                                <tr><td>Matricula mercantil</td><td>04121230 de la Camara de Comercio de Bogota</td></tr>
+                                <tr><td>Nombre comercial</td><td>MéTRIK</td></tr>
+                                <tr><td>Representante legal</td><td>Brallan Mauricio Moreno Guzman</td></tr>
+                                <tr><td>Domicilio</td><td>Bogota D.C., Colombia</td></tr>
+                                <tr><td>Direccion de notificaciones</td><td>Calle 24A Bis # 100-71, Bogota D.C., Colombia</td></tr>
+                                <tr><td>Correo electronico</td><td>mauricio.moreno@metrik.com.co</td></tr>
+                                <tr><td>Telefono</td><td>+57 315 950 9103</td></tr>
+                                <tr><td>Pagina web</td><td>www.metrik.com.co</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 class="doc-h3 doc-h3--spaced">1.1 Responsable de los datos recolectados antes del 2 de septiembre de 2026</h3>
+                    <p class="doc-p mb-4">Antes del 2 de septiembre de 2026, el responsable del tratamiento de los datos personales recolectados a traves de este sitio y de los demas canales de MéTRIK fue Brallan Mauricio Moreno Guzman, persona natural identificada con C.C. 1.016.044.186 de Bogota, que actuaba bajo el nombre comercial MéTRIK.</p>
+                    <p class="doc-p mb-4">A partir de esa fecha, METRIK IA S.A.S. asume la calidad de Responsable del Tratamiento respecto de esas bases de datos y de las que se conformen en adelante. El cambio es de responsable, no de finalidad: los datos se siguen tratando para los mismos fines declarados en el numeral 5 de esta Politica, con las mismas medidas de seguridad del numeral 9 y por el mismo canal de atencion del numeral 7. Usted no tiene que hacer ningun tramite.</p>
+                    <p class="doc-p mb-4">Las autorizaciones que usted otorgo antes de esa fecha conservan su validez y su alcance. Las versiones anteriores de esta Politica se conservan y respaldan las autorizaciones otorgadas mientras estuvieron vigentes.</p>
+                    <p class="doc-p">Si usted no esta de acuerdo con este cambio, puede revocar su autorizacion o solicitar la supresion de sus datos por el canal del numeral 7, sin costo y sin tramite adicional.</p>
+                </section>
+
+                <section id="marco-legal" class="doc-section">
+                    <h2 class="doc-section__title">2. Marco Legal</h2>
+                    <p class="doc-p mb-4">Esta Politica se rige por las siguientes normas del ordenamiento juridico colombiano:</p>
+                    <ul class="doc-list doc-list--icon">
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            <span>Constitucion Politica de Colombia, articulo 15 (derecho a la intimidad y habeas data).</span>
+                        </li>
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            <span>Ley Estatutaria 1581 de 2012, Regimen General de Proteccion de Datos Personales.</span>
+                        </li>
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            <span>Decreto 1377 de 2013, reglamentario de la Ley 1581 de 2012.</span>
+                        </li>
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            <span>Decreto 1074 de 2015, Decreto Unico Reglamentario del Sector Comercio, Industria y Turismo (Libro 2, Parte 2, Titulo 2, Capitulo 25), que compila el Decreto 1377 de 2013.</span>
+                        </li>
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            <span>Ley 1266 de 2008, Habeas Data Financiero.</span>
+                        </li>
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            <span>Ley 2300 de 2023, sobre la proteccion del derecho a la intimidad en los mensajes y llamadas comerciales (horarios y mecanismo para cancelarlos).</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="definiciones" class="doc-section">
+                    <h2 class="doc-section__title">3. Definiciones</h2>
+                    <div class="doc-defs">
+                        <p><strong class="strong-dark">Autorizacion:</strong> consentimiento previo, expreso e informado del Titular para llevar a cabo el Tratamiento de datos personales.</p>
+                        <p><strong class="strong-dark">Base de Datos:</strong> conjunto organizado de datos personales que sea objeto de Tratamiento.</p>
+                        <p><strong class="strong-dark">Dato Personal:</strong> cualquier informacion vinculada o que pueda asociarse a una o varias personas naturales determinadas o determinables.</p>
+                        <p><strong class="strong-dark">Dato de naturaleza publica:</strong> el dato que no es semiprivado, privado ni sensible. Son publicos, entre otros, los datos relativos a la calidad de comerciante o de servidor publico de una persona, y los que constan en registros publicos, como el certificado de existencia y representacion legal.</p>
+                        <p><strong class="strong-dark">Dato corporativo:</strong> el dato que pertenece a una persona juridica, como su razon social, su NIT, la direccion de su establecimiento, su sitio web y sus canales institucionales genericos. No es un dato personal.</p>
+                        <p><strong class="strong-dark">Dato Sensible:</strong> datos que afectan la intimidad del Titular o cuyo uso indebido puede generar discriminacion (origen racial, orientacion politica, convicciones religiosas, salud, vida sexual, datos biometricos).</p>
+                        <p><strong class="strong-dark">Encargado del Tratamiento:</strong> persona natural o juridica que realiza el Tratamiento de datos personales por cuenta del Responsable del Tratamiento.</p>
+                        <p><strong class="strong-dark">Lista de supresion:</strong> registro minimo de las personas que pidieron no ser contactadas, que MéTRIK consulta antes de cada envio para no volver a escribirles.</p>
+                        <p><strong class="strong-dark">Prospecto:</strong> persona o empresa con la que MéTRIK todavia no tiene una relacion comercial y a la que le presenta sus servicios.</p>
+                        <p><strong class="strong-dark">Responsable del Tratamiento:</strong> persona natural o juridica que decide sobre la base de datos y/o el Tratamiento de los datos.</p>
+                        <p><strong class="strong-dark">Titular:</strong> persona natural cuyos datos personales sean objeto de Tratamiento.</p>
+                        <p><strong class="strong-dark">Tratamiento:</strong> cualquier operacion sobre datos personales, como recoleccion, almacenamiento, uso, circulacion o supresion.</p>
+                    </div>
+                </section>
+
+                <section id="principios" class="doc-section">
+                    <h2 class="doc-section__title">4. Principios Rectores</h2>
+                    <p class="doc-p mb-4">MéTRIK garantiza el cumplimiento de los siguientes principios:</p>
+                    <div class="doc-table-wrap">
+                        <table class="doc-table">
+                            <thead>
+                                <tr><th>Principio</th><th>Descripcion</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Legalidad</td><td>El Tratamiento es una actividad reglada que debe sujetarse a lo establecido en la ley.</td></tr>
+                                <tr><td>Finalidad</td><td>El Tratamiento debe obedecer a una finalidad legitima, la cual debe ser informada al Titular. Los datos de naturaleza publica tambien se tratan solo para las finalidades que esta Politica declara.</td></tr>
+                                <tr><td>Libertad</td><td>El Tratamiento solo puede ejercerse con el consentimiento previo, expreso e informado del Titular, salvo mandato legal o judicial que releve el consentimiento y salvo los casos del articulo 10 de la Ley 1581 de 2012, entre ellos los datos de naturaleza publica.</td></tr>
+                                <tr><td>Veracidad</td><td>La informacion sujeta a Tratamiento debe ser veraz, completa, exacta, actualizada y comprobable.</td></tr>
+                                <tr><td>Transparencia</td><td>Se garantiza el derecho del Titular a obtener informacion sobre sus datos en cualquier momento, incluida la fuente de la que los obtuvimos.</td></tr>
+                                <tr><td>Acceso y Circulacion Restringida</td><td>El Tratamiento se sujeta a los limites de la naturaleza de los datos y las autorizaciones.</td></tr>
+                                <tr><td>Seguridad</td><td>Los datos seran manejados con medidas tecnicas, humanas y administrativas de proteccion.</td></tr>
+                                <tr><td>Confidencialidad</td><td>Todas las personas que intervengan en el Tratamiento estan obligadas a garantizar la reserva de la informacion.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="finalidades" class="doc-section">
+                    <h2 class="doc-section__title">5. Finalidades del Tratamiento</h2>
+                    <h3 class="doc-h3">5.1 Para Clientes y Prospectos Comerciales</h3>
+                    <p class="doc-p mb-4">Estas finalidades aplican a los datos que usted nos entrega directamente:</p>
+                    <ul class="doc-list doc-list--icon mb-6">
+                        <li><span class="marker">a)</span><span>Gestion de la relacion comercial y prestacion de servicios de consultoria en Business Intelligence.</span></li>
+                        <li><span class="marker">b)</span><span>Elaboracion de propuestas comerciales y cotizaciones.</span></li>
+                        <li><span class="marker">c)</span><span>Comunicaciones relacionadas con los servicios contratados.</span></li>
+                        <li><span class="marker">d)</span><span>Envio de informacion comercial, promocional y de nuevos servicios, a quienes nos hayan dado su autorizacion previa. La prospeccion que MéTRIK hace sobre datos publicos y canales corporativos, sin autorizacion previa, se rige por el numeral 5.5.</span></li>
+                        <li><span class="marker">e)</span><span>Facturacion y gestion de cobro.</span></li>
+                        <li><span class="marker">f)</span><span>Evaluacion de satisfaccion del cliente.</span></li>
+                    </ul>
+
+                    <h3 class="doc-h3">5.2 Para Datos Empresariales de Terceros</h3>
+                    <p class="doc-p mb-4">En el desarrollo de nuestros servicios de consultoria BI, MéTRIK puede acceder a datos de terceros proporcionados por nuestros clientes. En estos casos, MéTRIK actua como <strong>Encargado del Tratamiento</strong> y:</p>
+                    <ol class="doc-list doc-list--num">
+                        <li>Solo procesara los datos para las finalidades especificas del proyecto contratado.</li>
+                        <li>Mantendra estricta confidencialidad sobre la informacion.</li>
+                        <li>Implementara medidas de seguridad apropiadas.</li>
+                        <li>Devolvera o destruira los datos al finalizar el proyecto, segun instrucciones del cliente.</li>
+                        <li>No utilizara los datos para fines distintos a los acordados contractualmente.</li>
+                    </ol>
+
+                    <h3 class="doc-h3 doc-h3--spaced">5.3 Datos que recibimos por WhatsApp</h3>
+                    <p class="doc-p mb-4">MéTRIK atiende un canal de WhatsApp para conversaciones comerciales y de servicio. Cuando usted nos escribe por WhatsApp, recibimos los datos que WhatsApp entrega junto con el mensaje:</p>
+                    <ul class="doc-list doc-list--disc mb-4">
+                        <li>Su numero de telefono.</li>
+                        <li>El nombre que usted tenga configurado en su perfil de WhatsApp.</li>
+                        <li>El contenido del mensaje y los archivos que adjunte (texto, imagenes, documentos, audio, ubicacion).</li>
+                        <li>Datos tecnicos del envio, como la fecha, la hora y el tipo de mensaje.</li>
+                    </ul>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Quien interviene.</strong> El canal opera sobre la plataforma de WhatsApp Business, propiedad de Meta Platforms, Inc. y sus filiales. Meta actua como intermediario tecnico: transporta el mensaje entre su telefono y nosotros, y lo hace bajo sus propias condiciones y su propia politica de privacidad, que usted acepto al usar WhatsApp. MéTRIK no controla el tratamiento que Meta haga de esa informacion por su cuenta. Ver el numeral 10 sobre el envio de datos fuera de Colombia.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Para que usamos esos datos.</strong> Para atender su mensaje y gestionar la relacion comercial: responderle, entender lo que necesita, coordinar reuniones y dar seguimiento a un servicio contratado o a una propuesta. No los usamos para publicidad, no los cruzamos con terceros y no los vendemos. WhatsApp no es un canal de primer contacto en frio: solo le escribimos por ese canal si usted nos escribio primero o si nos autorizo expresamente a usarlo. Si en algun momento quisieramos usar estos datos para enviarle informacion promocional, se lo pediriamos aparte y de forma expresa, conforme al principio de finalidad del articulo 4, literal b, de la Ley 1581 de 2012. En el workshop Radiografia en Vivo aplican ademas las finalidades del numeral 5.6.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Que conservamos.</strong> Segun el tipo de conversacion, nuestros sistemas guardan lo siguiente:</p>
+                    <div class="doc-table-wrap">
+                        <table class="doc-table">
+                            <thead>
+                                <tr><th>Registro</th><th>Que guarda</th><th>Cuanto tiempo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Registro de operacion del canal</td><td>Su numero, una vista previa del mensaje de hasta 100 caracteres, el tipo de mensaje y su estado</td><td>90 dias. Despues se borran el numero y el texto, y quedan solo datos tecnicos</td></tr>
+                                <tr><td>Registro de mensajes enviados</td><td>Su numero, los primeros 300 caracteres de cada mensaje que le enviamos y su identificador en WhatsApp</td><td>12 meses. Despues se borran el numero, el texto y el identificador</td></tr>
+                                <tr><td>Conversacion activa con el asistente</td><td>Los datos necesarios para continuar la conversacion</td><td>Hasta 7 dias despues de que venza</td></tr>
+                                <tr><td>Mensajes en espera de aceptacion del aviso</td><td>El mensaje recibido</td><td>7 dias</td></tr>
+                                <tr><td>Conversaciones de usuarios de nuestra plataforma con el asistente</td><td>El texto completo de la conversacion</td><td>6 meses</td></tr>
+                                <tr><td>Workshop Radiografia en Vivo</td><td>Lo descrito en el numeral 5.6</td><td>Lo indicado en el numeral 5.6</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="doc-p mb-4">Estos registros pueden existir desde su primer mensaje, antes de que usted acepte un aviso o una autorizacion, porque sin ellos el canal no puede responderle ni controlar abusos. Los usamos solo para operar el canal y atender su mensaje.</p>
+                    <p class="doc-p mb-4">Lo anterior no significa que la conversacion desaparezca. Como en cualquier chat de WhatsApp, el historial permanece en la aplicacion de WhatsApp del dispositivo corporativo desde el que le respondemos, y en la infraestructura de Meta segun las condiciones de esa plataforma. Sobre esa copia aplican los mismos derechos descritos en el numeral 6 y el mismo canal del numeral 7.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Base de legitimacion.</strong> Tratamos estos datos con su autorizacion, la cual usted otorga al escribirnos voluntariamente por este canal, en los terminos de los articulos 9 de la Ley 1581 de 2012 y 5 del Decreto 1377 de 2013. Puede revocarla en cualquier momento, con el efecto y por la via que indica el numeral 7.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Retencion y supresion.</strong> Al vencer cada plazo, el dato se borra de forma automatica. Si nos pide suprimir sus datos antes, atendemos la solicitud en los plazos del numeral 7.3 y le indicamos que quedo eliminado y que, por estar en la aplicacion de WhatsApp o por una obligacion legal de conservacion, requiere un paso adicional de su parte o no puede suprimirse.</p>
+
+                    <h3 class="doc-h3 doc-h3--spaced">5.4 Cookies y tecnologias de medicion</h3>
+                    <p class="doc-p mb-4">Cuando usted visita las paginas comerciales de metrik.com.co, su navegador guarda archivos pequeños llamados cookies y ejecuta una herramienta de medicion. Sirve para saber cuanta gente entra al sitio y que recorrido hace, y asi mejorar lo que publicamos. <strong>Las paginas de esta Politica y de los Terminos no ejecutan ninguna herramienta de medicion.</strong></p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Que herramienta usamos.</strong></p>
+                    <div class="doc-table-wrap">
+                        <table class="doc-table">
+                            <thead>
+                                <tr><th>Herramienta</th><th>Para que</th><th>Que recoge</th><th>Donde procesa</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Google Analytics 4 (Google LLC)</td><td>Medir visitas y recorrido dentro del sitio</td><td>Un identificador aleatorio de navegador, las paginas visitadas, la fecha y la hora, el tipo de dispositivo y el pais</td><td>Estados Unidos</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Que pasa cuando usted llena el formulario de radiografia.</strong> Ademas de lo anterior, se registra que el formulario se completo, junto con el rango de empleados, el rango de facturacion, el sector y el origen de la visita. Esos son rangos y categorias, no cifras de su empresa.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Que no recoge.</strong> No enviamos a esta herramienta su nombre, su correo, su telefono, ni el texto que usted escribe en el campo abierto del formulario. Ese texto se guarda unicamente en su propio navegador, para no volver a preguntarle lo mismo si agenda una reunion, y usted lo borra vaciando los datos del sitio desde su navegador.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">No usamos publicidad dirigida.</strong> El sitio no ejecuta pixeles ni etiquetas de redes sociales o de redes publicitarias, y la informacion descrita aqui no se usa para elaborar perfiles publicitarios ni para perseguirlo con anuncios en otros sitios.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Como decir que no.</strong> Al entrar al sitio le mostramos un aviso donde puede aceptar o rechazar la medicion. <strong>Mientras usted no acepte, la herramienta no se carga</strong> y no se recoge ningun dato. Puede cambiar su eleccion cuando quiera con el enlace <em>Preferencias de medicion</em> del pie de pagina. Tambien puede bloquear o borrar las cookies desde la configuracion de su navegador, o instalar el complemento de inhabilitacion de Google Analytics que Google ofrece para los navegadores mas comunes. Rechazar la medicion no limita el acceso a ninguna parte del sitio ni a nuestros servicios.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Base de legitimacion.</strong> Tratamos estos datos con su autorizacion, que usted otorga de forma previa a traves del aviso descrito arriba, en los terminos del articulo 9 de la Ley 1581 de 2012 y del articulo 5 del Decreto 1377 de 2013. Puede revocarla en cualquier momento por la via del numeral 7 o rechazando la medicion desde el pie de pagina.</p>
+
+                    <h3 class="doc-h3 doc-h3--spaced">5.5 Prospeccion comercial B2B</h3>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Que es.</strong> MéTRIK presenta sus servicios, en particular Valida, a empresas y a las personas que las representan o actuan por ellas. Este numeral explica que datos usamos para eso, de donde los tomamos, como le escribimos y como puede pedirnos que paremos. Se aplica a los datos que MéTRIK obtiene de fuentes publicas o corporativas, no de usted directamente. Los datos que usted nos entrega se rigen por los numerales 5.1 a 5.4 y 5.6.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Que datos usamos y de donde salen.</strong></p>
+                    <div class="doc-table-wrap">
+                        <table class="doc-table">
+                            <thead>
+                                <tr><th>Clase de dato</th><th>Ejemplos</th><th>Fuente</th><th>Como lo usamos</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Datos corporativos de personas juridicas</td><td>Razon social, NIT, direccion del establecimiento, sitio web, correo institucional generico (info@, contacto@, gerencia@, comercial@) y conmutador</td><td>Sitio web de la empresa, directorios empresariales publicos y registros publicos</td><td>Para escribirle a la empresa por su canal corporativo. No son datos personales</td></tr>
+                                <tr><td>Datos de naturaleza publica de una persona natural en su calidad de comerciante, representante legal o servidor publico</td><td>Nombre y calidad</td><td>Certificado de existencia y representacion legal, RUES y otros registros publicos (Ley 1581 de 2012, art. 10, literal b)</td><td>Solo para saber a quien dirigir la comunicacion, que enviamos al canal corporativo de la empresa. No tomamos de esos registros correos personales ni celulares para fines comerciales</td></tr>
+                                <tr><td>Contacto nominal en un dominio empresarial</td><td>nombre.apellido@empresa.com</td><td>Su autorizacion, una relacion comercial previa cuya autorizacion cubre comunicaciones sobre nuestros servicios, o un contacto que usted mismo publico para que lo contacten en su rol</td><td>Solo en esos tres casos, y limitado a su rol en la empresa</td></tr>
+                                <tr><td>Datos entregados por un aliado comercial</td><td>Datos de contacto de una empresa o de una persona</td><td>El aliado, solo si nos certifica por escrito de donde salieron y que cuenta con la autorizacion del titular para entregarnoslos</td><td>Mientras esa certificacion no exista, no los usamos</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Que no hacemos.</strong></p>
+                    <ul class="doc-list doc-list--disc mb-4">
+                        <li>No usamos correos ni celulares personales (por ejemplo, cuentas de gmail, hotmail, outlook o yahoo, o numeros de celular personales) para prospeccion, salvo con su autorizacion previa, expresa e informada.</li>
+                        <li>No escribimos por WhatsApp a quien no nos haya escrito primero o no nos haya autorizado ese canal.</li>
+                        <li>No tratamos datos sensibles ni datos de niños, niñas y adolescentes para prospeccion.</li>
+                        <li>No compramos bases de datos de terceros ni usamos las que un tercero nos entregue sin certificar por escrito de donde salieron y con que autorizacion. De los directorios y registros publicos tomamos solo datos corporativos de las empresas, no correos ni celulares personales de sus integrantes.</li>
+                        <li>No exportamos a una base propia los contactos de redes profesionales, como LinkedIn. Cuando escribimos por esa via, lo hacemos dentro de la propia plataforma y solo a perfiles que muestran un rol y una empresa relevantes.</li>
+                    </ul>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Para que los usamos.</strong> Para ofrecerle informacion sobre los servicios de MéTRIK, en particular Valida, hacer seguimiento de la conversacion que usted inicie al responder y atender sus solicitudes. No los usamos para otros fines ni los vendemos.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Como le escribimos.</strong></p>
+                    <ul class="doc-list doc-list--disc mb-4">
+                        <li>Un solo primer contacto por persona y por canal. Si usted no responde, enviamos como maximo dos mensajes de seguimiento en los diez (10) dias siguientes. Cualquier respuesta suya detiene la secuencia, y terminada no volvemos a escribirle por esa campaña.</li>
+                        <li>Un mensaje individual o con copia oculta: ningun destinatario ve los datos de otro.</li>
+                        <li>Dentro del horario de la Ley 2300 de 2023: de lunes a viernes de 7:00 a 19:00 y sabados de 8:00 a 15:00, nunca domingos ni festivos.</li>
+                        <li>Cada mensaje dice quien escribe (METRIK IA S.A.S.), de donde obtuvimos el dato, para que lo usamos, como pedir la baja y donde esta esta Politica.</li>
+                    </ul>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Como pedir que paremos.</strong> Responda "BAJA" al mensaje (o con cualquier frase que diga que no quiere mas) o escriba a mauricio.moreno@metrik.com.co. Dejamos de contactarle a mas tardar el siguiente dia habil, por cualquier canal y en cualquier campaña, y registramos su baja en la lista de supresion. Esa lista guarda solo lo minimo para cumplir su solicitud (una huella cifrada de su correo o telefono, la fecha, el canal y el motivo) y no se borra con las depuraciones, porque sin ella podriamos volver a escribirle. El plazo legal maximo para atender un reclamo es de quince (15) dias habiles; nuestro estandar es el siguiente dia habil. Con pedirlo una vez basta.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Si usted responde con interes.</strong> Su respuesta no es una autorizacion para tratar mas datos suyos. Antes de guardar datos distintos de los de la conversacion, le pedimos su autorizacion expresa y le entregamos el aviso de privacidad.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Cuanto tiempo los conservamos.</strong> Un prospecto con el que no hubo interaccion se elimina de nuestro registro comercial doce (12) meses despues del ultimo contacto. Si usted pidio la baja, conservamos solo la huella de la lista de supresion.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Sus derechos.</strong> Los del numeral 6, incluido el de conocer de que fuente obtuvimos sus datos, y por el canal del numeral 7.</p>
+
+                    <h3 class="doc-h3 doc-h3--spaced">5.6 Workshop Radiografia en Vivo</h3>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Que es.</strong> Un taller en el que usted le cuenta a Agus, la inteligencia artificial de MéTRIK, por WhatsApp, como funciona su empresa, y recibe una radiografia en PDF. Solo empieza si usted nos escribe primero la palabra que le indiquemos y responde SI a la autorizacion. Sin ese SI no escuchamos ni transcribimos sus audios.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Si responde NO.</strong> No seguimos con su radiografia. En los registros del workshop guardamos solo una huella cifrada de su numero y su respuesta, para saber que no dio la autorizacion, y la borramos a los doce (12) meses. Los mensajes que le enviamos quedan ademas en el registro de mensajes enviados del numeral 5.3, por el plazo que alli se indica.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Que datos guardamos si responde SI.</strong></p>
+                    <ul class="doc-list doc-list--disc mb-4">
+                        <li>Su numero de telefono y la prueba de su autorizacion: el texto que acepto, su version, la fecha, la hora y el identificador del mensaje.</li>
+                        <li>Lo que usted nos escribe y la transcripcion escrita de sus audios.</li>
+                        <li>Las cifras que nos de de su empresa, como ventas, cartera, numero de personas y margen.</li>
+                        <li>Su nombre y el de su empresa. En la radiografia, a las demas personas que menciona las nombramos solo por su cargo.</li>
+                        <li>La radiografia en PDF y el analisis que la produce.</li>
+                    </ul>
+                    <p class="doc-p mb-4"><strong class="strong-dark">El audio.</strong> No guardamos el archivo de audio en nuestros sistemas: lo enviamos a transcribir y conservamos solo el texto. Meta lo trata bajo sus propias condiciones.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Para que.</strong> Para elaborar su radiografia; para registrar su empresa como posible cliente en el sistema comercial de MéTRIK; para clasificarla internamente, y para preguntarle una vez, al final, si quiere revisarla con nosotros. Esa clasificacion indica de forma orientativa el tamaño de la empresa, el nivel de oportunidad y el servicio que podria servirle. La usa solo MéTRIK, no produce efectos juridicos para usted y no se comparte. Si dice que no a la revision, no volvemos a escribirle sobre esto.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Sus cifras.</strong> Las cifras de su empresa se usan solo para su radiografia y para la clasificacion comercial interna de MéTRIK. No se entregan a la entidad organizadora ni a otros terceros, salvo a los proveedores tecnologicos que indicamos abajo, que las tratan por cuenta nuestra.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">La entidad organizadora.</strong> Cuando la sesion se realice con una camara de comercio u otra entidad aliada, esa entidad recibe solo cifras agregadas de asistencia y sectores, que no permiten identificar a ninguna persona ni empresa.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Quien trata sus datos por cuenta nuestra.</strong> Usamos dos servicios de inteligencia artificial, en los terminos del numeral 10: Google LLC (Gemini API) solo para transcribir sus audios, y Anthropic, PBC (Claude) para analizar el texto y elaborar su radiografia. Los dos actuan como encargados, y sus condiciones para el servicio pago que usamos les impiden usar estos datos para entrenar sus modelos.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Cuanto tiempo.</strong> Doce (12) meses desde nuestro ultimo intercambio con usted en el workshop. Al cumplirse, se borran de forma automatica sus respuestas, las transcripciones, la radiografia, la clasificacion, la prueba de su autorizacion y el registro comercial que creo el workshop. Si para entonces ya existe una relacion comercial con usted, por ejemplo una propuesta, una cotizacion o un servicio, ese registro comercial y la prueba de su autorizacion se conservan bajo las reglas de esa relacion.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Datos de otras personas o sensibles.</strong> Le pedimos no dar nombres de otras personas ni datos de salud. La radiografia no los incluye. Si los menciona, quedan en la transcripcion y en el analisis interno, que los señala para poder eliminarlos, hasta que los detectemos o usted nos lo pida; en ese momento los eliminamos, como indica el numeral 8.</p>
+                    <p class="doc-p"><strong class="strong-dark">Como parar.</strong> Durante la conversacion del workshop, escriba BAJA o STOP y Agus se detiene y no le vuelve a escribir por este canal. Detenerse no borra sus datos: para verlos, corregirlos o borrarlos, o para revocar su autorizacion, use el canal del numeral 7, sin costo.</p>
+                </section>
+
+                <section id="derechos" class="doc-section">
+                    <h2 class="doc-section__title">6. Derechos de los Titulares</h2>
+                    <p class="doc-p mb-4">De conformidad con la Ley 1581 de 2012, los Titulares de datos personales tienen los siguientes derechos:</p>
+                    <div class="grid-cards">
+                        <div class="right-card">
+                            <div class="right-card__head"><span class="right-card__num">1</span><span class="right-card__title">Conocer</span></div>
+                            <p class="right-card__desc">Acceder de forma gratuita a sus datos personales y saber de que fuente los obtuvimos.</p>
+                        </div>
+                        <div class="right-card">
+                            <div class="right-card__head"><span class="right-card__num">2</span><span class="right-card__title">Actualizar</span></div>
+                            <p class="right-card__desc">Solicitar la actualizacion de sus datos personales.</p>
+                        </div>
+                        <div class="right-card">
+                            <div class="right-card__head"><span class="right-card__num">3</span><span class="right-card__title">Rectificar</span></div>
+                            <p class="right-card__desc">Solicitar la correccion de datos inexactos o incompletos.</p>
+                        </div>
+                        <div class="right-card">
+                            <div class="right-card__head"><span class="right-card__num">4</span><span class="right-card__title">Suprimir</span></div>
+                            <p class="right-card__desc">Solicitar la eliminacion de sus datos cuando no exista obligacion de conservarlos.</p>
+                        </div>
+                        <div class="right-card">
+                            <div class="right-card__head"><span class="right-card__num">5</span><span class="right-card__title">Revocar</span></div>
+                            <p class="right-card__desc">Revocar la autorizacion otorgada para el Tratamiento.</p>
+                        </div>
+                        <div class="right-card">
+                            <div class="right-card__head"><span class="right-card__num">6</span><span class="right-card__title">Oponerse</span></div>
+                            <p class="right-card__desc">Oponerse al Tratamiento de sus datos personales.</p>
+                        </div>
+                        <div class="right-card">
+                            <div class="right-card__head"><span class="right-card__num">7</span><span class="right-card__title">Solicitar prueba</span></div>
+                            <p class="right-card__desc">Solicitar prueba de la autorizacion otorgada.</p>
+                        </div>
+                        <div class="right-card">
+                            <div class="right-card__head"><span class="right-card__num">8</span><span class="right-card__title">Presentar quejas</span></div>
+                            <p class="right-card__desc">Presentar quejas ante la Superintendencia de Industria y Comercio por infracciones a la ley.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="procedimiento" class="doc-section">
+                    <h2 class="doc-section__title">7. Procedimiento para Ejercer los Derechos</h2>
+
+                    <h3 class="doc-h3">7.1 Canal de Atencion</h3>
+                    <p class="doc-p mb-4">Los Titulares pueden ejercer sus derechos mediante comunicacion escrita dirigida a:</p>
+                    <div class="contact-box">
+                        <div class="contact-box__list">
+                            <a href="mailto:mauricio.moreno@metrik.com.co" class="contact-link">
+                                <span class="icon icon--green"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span>
+                                <span>mauricio.moreno@metrik.com.co</span>
+                            </a>
+                            <a href="https://wa.me/573159509103" class="contact-link">
+                                <span class="icon icon--green"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></span>
+                                <span>+57 315 950 9103</span>
+                            </a>
+                        </div>
+                        <p class="contact-box__note">Asunto: "Solicitud de Derechos de Datos Personales"</p>
+                    </div>
+                    <p class="doc-p mb-6">Si usted nos escribio por WhatsApp y quiere que dejemos de contactarlo por ese canal, escribanos al correo o al WhatsApp indicados arriba. En el workshop del numeral 5.6, la conversacion se detiene escribiendo "BAJA" o "STOP"; alli "NO" solo sirve para no dar la autorizacion, porque durante las preguntas puede ser parte de su respuesta. Si recibio un mensaje comercial nuestro por correo y no quiere mas, responda "BAJA". Atender esa solicitud no requiere ningun tramite adicional y no afecta los demas derechos descritos en el numeral 6.</p>
+
+                    <h3 class="doc-h3">7.2 Requisitos de la Solicitud</h3>
+                    <ol class="doc-list doc-list--num mb-4">
+                        <li>Nombre completo y documento de identificacion del Titular.</li>
+                        <li>Descripcion clara de los hechos que dan lugar a la solicitud.</li>
+                        <li>Direccion fisica o electronica para notificaciones.</li>
+                        <li>Documentos que soporten la solicitud, si aplica.</li>
+                    </ol>
+                    <p class="doc-p mb-6">Para pedir la baja de una comunicacion comercial no se exigen estos requisitos: basta con responder "BAJA".</p>
+
+                    <h3 class="doc-h3">7.3 Plazos de Respuesta</h3>
+                    <div class="doc-table-wrap">
+                        <table class="doc-table">
+                            <thead>
+                                <tr><th>Tipo</th><th>Plazo</th><th>Prorroga</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Consultas</td><td>10 dias habiles</td><td>+5 dias habiles</td></tr>
+                                <tr><td>Reclamos</td><td>15 dias habiles</td><td>+8 dias habiles</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="doc-h3">7.4 Reclamo en Tramite</h3>
+                    <p class="doc-p">Dentro de los dos (2) dias habiles siguientes a recibir un reclamo completo, incluimos en la base de datos respectiva la leyenda "reclamo en tramite" y el motivo, y la mantenemos hasta que el reclamo se decida (Ley 1581 de 2012, art. 15).</p>
+                </section>
+
+                <section id="datos-sensibles" class="doc-section">
+                    <h2 class="doc-section__title">8. Tratamiento de Datos Sensibles</h2>
+                    <p class="doc-p mb-4">MéTRIK <strong>no recolecta ni trata datos sensibles</strong> de forma directa en el ejercicio de sus actividades comerciales.</p>
+                    <p class="doc-p mb-4">En caso de que en el desarrollo de un proyecto de consultoria el cliente proporcione archivos que contengan datos sensibles de terceros, MéTRIK:</p>
+                    <ul class="doc-list doc-list--icon mb-4">
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
+                            <span>Notificara al cliente sobre la presencia de dichos datos.</span>
+                        </li>
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
+                            <span>Solicitara instrucciones especificas sobre su tratamiento.</span>
+                        </li>
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
+                            <span>Aplicara medidas de seguridad reforzadas.</span>
+                        </li>
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
+                            <span>Limitara el acceso unicamente al personal estrictamente necesario.</span>
+                        </li>
+                    </ul>
+                    <p class="doc-p">Si recibimos por error datos sensibles o de menores, los eliminamos cuando los detectamos o cuando usted lo pida. En las conversaciones por WhatsApp pueden quedar en la transcripcion hasta ese momento, por lo cual le pedimos no incluirlos.</p>
+                </section>
+
+                <section id="seguridad" class="doc-section">
+                    <h2 class="doc-section__title">9. Medidas de Seguridad</h2>
+                    <div class="grid-panels">
+                        <div class="panel">
+                            <h3 class="panel__title">
+                                <span class="icon icon--green"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span>
+                                Medidas Tecnicas
+                            </h3>
+                            <ul class="doc-list doc-list--sm">
+                                <li>Almacenamiento en servicios cloud con certificacion de seguridad.</li>
+                                <li>Control de acceso mediante autenticacion.</li>
+                                <li>Respaldos periodicos de informacion.</li>
+                            </ul>
+                        </div>
+                        <div class="panel">
+                            <h3 class="panel__title">
+                                <span class="icon icon--green"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span>
+                                Medidas Organizacionales
+                            </h3>
+                            <ul class="doc-list doc-list--sm">
+                                <li>Acuerdos de confidencialidad con colaboradores.</li>
+                                <li>Protocolo de destruccion o devolucion de datos al finalizar proyectos.</li>
+                                <li>Limitacion de acceso segun necesidad de conocer.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="transferencia" class="doc-section">
+                    <h2 class="doc-section__title">10. Transferencia y Transmision de Datos</h2>
+                    <p class="doc-p mb-4">Para operar, MéTRIK usa proveedores de tecnologia cuya infraestructura esta ubicada fuera de Colombia. Esto implica que ciertos datos personales se almacenan o se procesan en el exterior. Lo declaramos de forma abierta porque el articulo 26 de la Ley 1581 de 2012 lo exige.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Proveedores y para que los usamos:</strong></p>
+                    <div class="doc-table-wrap">
+                        <table class="doc-table">
+                            <thead>
+                                <tr><th>Proveedor</th><th>Para que</th><th>Donde procesa</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Meta Platforms, Inc. y filiales (WhatsApp)</td><td>Transporte de los mensajes del canal de WhatsApp</td><td>Estados Unidos y otros paises</td></tr>
+                                <tr><td>Proveedores de infraestructura en la nube</td><td>Alojamiento de la plataforma, bases de datos y respaldos</td><td>Estados Unidos</td></tr>
+                                <tr><td>Proveedores de correo y de almacenamiento de archivos</td><td>Envio de comunicaciones y custodia de documentos del proyecto</td><td>Estados Unidos</td></tr>
+                                <tr><td>Google LLC (Google Analytics)</td><td>Medicion de uso del sitio web, en los terminos del numeral 5.4</td><td>Estados Unidos</td></tr>
+                                <tr><td>Google LLC (Gemini API)</td><td>Transcripcion de audios en el workshop (numeral 5.6)</td><td>Estados Unidos y otros paises donde el proveedor tenga instalaciones</td></tr>
+                                <tr><td>Anthropic, PBC (Claude)</td><td>Analisis de texto y elaboracion de la radiografia en el workshop (numeral 5.6)</td><td>Estados Unidos y paises de Europa, Asia y Australia donde el proveedor opere</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Con que fundamento se hace.</strong> El envio de datos a Estados Unidos esta permitido porque ese pais figura en la lista de paises con un nivel adecuado de proteccion de datos que adopto la Superintendencia de Industria y Comercio (numeral 3.2 del Capitulo Tercero del Titulo V de la Circular Unica, en la version de la Circular Externa 002 de 2018). Por lo tanto no se requiere declaracion de conformidad ante la SIC. De forma adicional, usted otorga su autorizacion expresa para esta transferencia al aceptar la presente Politica, en los terminos del articulo 26, literal a, de la Ley 1581 de 2012.</p>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Que exigimos a cada proveedor.</strong> En toda transmision de datos a un tercero que trate informacion por cuenta nuestra, garantizamos:</p>
+                    <ul class="doc-list doc-list--icon mb-4">
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg></span>
+                            <span>Que el tratamiento se limite a las finalidades autorizadas en esta Politica.</span>
+                        </li>
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg></span>
+                            <span>Que exista un acuerdo de confidencialidad o de tratamiento de datos.</span>
+                        </li>
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg></span>
+                            <span>Que el proveedor mantenga medidas de seguridad equivalentes a las descritas en el numeral 9.</span>
+                        </li>
+                        <li>
+                            <span class="icon icon--green icon--li"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg></span>
+                            <span>Que devuelva o elimine los datos cuando termine la relacion, salvo obligacion legal de conservarlos.</span>
+                        </li>
+                    </ul>
+                    <p class="doc-p mb-4"><strong class="strong-dark">Lo que no hacemos.</strong> No vendemos datos personales, no los cedemos a terceros para su propio provecho comercial y no los usamos para elaborar perfiles publicitarios.</p>
+                    <p class="doc-p">Cuando un proveedor trata datos por cuenta nuestra, como encargado, esa operacion es una transmision y se rige por el contrato que exige el articulo 25 del Decreto 1377 de 2013, compilado en el Decreto 1074 de 2015. Si un proveedor recibe datos para sus propios fines y el pais de destino no figura en la lista de la SIC, MéTRIK obtendra su autorizacion expresa o tramitara la declaracion de conformidad antes de realizar la transferencia.</p>
+                </section>
+
+                <section id="vigencia" class="doc-section">
+                    <h2 class="doc-section__title">11. Vigencia</h2>
+                    <p class="doc-p mb-4">Esta Politica esta vigente desde diciembre de 2025. La presente version 1.6 la modifica y sus cambios rigen a partir del 10 de noviembre de 2026. La actualizacion no interrumpe la vigencia de la Politica: las versiones anteriores respaldan las autorizaciones otorgadas mientras estuvieron vigentes, y el consentimiento que usted ya haya dado conserva su efecto. La version 1.6 no cambia las finalidades de los datos que usted nos entrego antes.</p>
+                    <p class="doc-p mb-4">Cambios que introduce la version 1.6:</p>
+                    <ul class="doc-list doc-list--disc mb-4">
+                        <li>Se agrega el workshop Radiografia en Vivo (numeral 5.6).</li>
+                        <li>Se corrige el numeral 5.3: la version anterior decia que no guardabamos el contenido de los mensajes y que el registro tecnico guardaba un codigo en lugar del numero. Esta version describe lo que realmente se conserva y por cuanto tiempo.</li>
+                        <li>Se precisa en el numeral 7.1 como se detiene la conversacion del workshop.</li>
+                        <li>Se precisa en el numeral 7.1 el canal para dejar de recibir mensajes por WhatsApp.</li>
+                        <li>Se ajusta el numeral 8 sobre datos sensibles recibidos por error.</li>
+                        <li>Se agregan Google (Gemini API) y Anthropic como proveedores y se precisa el fundamento de la transmision a encargados (numeral 10).</li>
+                    </ul>
+                    <p class="doc-p mb-4">Cambios que introdujo la version 1.5:</p>
+                    <ul class="doc-list doc-list--disc mb-4">
+                        <li>Se agrega la prospeccion comercial B2B sobre datos corporativos, datos de naturaleza publica y canales corporativos (numeral 5.5), con sus fuentes, sus limites, el horario de contacto, la lista de supresion y el plazo de conservacion de prospectos. La version 1.4 exigia consentimiento previo para toda informacion comercial; el literal d del numeral 5.1 se ajusta para distinguir los dos casos.</li>
+                        <li>Se ajusta el principio de libertad (numeral 4) para recoger los casos del articulo 10 de la Ley 1581 de 2012.</li>
+                        <li>Se agrega el derecho a conocer la fuente de los datos (numeral 6), el mecanismo de baja de comunicaciones comerciales (numeral 7.1) y la leyenda de "reclamo en tramite" (numeral 7.4).</li>
+                        <li>Se precisa la cita del Decreto 1074 de 2015 (numeral 2) y se agrega la Ley 2300 de 2023.</li>
+                    </ul>
+                    <p class="doc-p mb-4">Cambios que introdujo la version 1.4:</p>
+                    <ul class="doc-list doc-list--disc mb-4">
+                        <li>Se publica el aviso de medicion. Google Analytics ya no se carga al abrir la pagina: solo se ejecuta si usted lo acepta, y la eleccion se puede cambiar en cualquier momento desde el pie de pagina. El numeral 5.4 se actualiza en consecuencia y la autorizacion pasa a ser previa, como exige el articulo 5 del Decreto 1377 de 2013.</li>
+                    </ul>
+                    <p class="doc-p mb-4">Cambios que introdujo la version 1.3:</p>
+                    <ul class="doc-list doc-list--disc mb-4">
+                        <li>Se describen las cookies y la herramienta de medicion del sitio web, que datos recogen, como rechazarlas y en que estado esta hoy el mecanismo de rechazo previo (numeral 5.4).</li>
+                        <li>Se agrega Google LLC a la tabla de proveedores ubicados fuera de Colombia (numeral 10).</li>
+                    </ul>
+                    <p class="doc-p mb-4">Cambios que introdujo la version 1.2:</p>
+                    <ul class="doc-list doc-list--disc mb-4">
+                        <li>Cambia el Responsable del Tratamiento. METRIK IA S.A.S. sustituye a Brallan Mauricio Moreno Guzman como responsable, a partir del 2 de septiembre de 2026, sin cambio en las finalidades ni en los canales de atencion (numeral 1.1).</li>
+                    </ul>
+                    <p class="doc-p mb-4">Cambios que introdujo la version 1.1:</p>
+                    <ul class="doc-list doc-list--disc mb-4">
+                        <li>Se describen los datos que MéTRIK recibe cuando usted escribe por WhatsApp, para que se usan y que se conserva (numeral 5.3).</li>
+                        <li>Se corrige y se detalla el envio de datos a proveedores ubicados fuera de Colombia (numeral 10). La version anterior afirmaba que no se realizaban transferencias internacionales. Esta version declara los proveedores, el pais donde procesan la informacion y el fundamento legal de esa transferencia.</li>
+                    </ul>
+                    <p class="doc-p mb-4">Si usted otorgo su autorizacion bajo una version anterior y no esta de acuerdo con estos cambios, puede revocarla o solicitar la supresion de sus datos por el canal del numeral 7, sin costo y sin tramite adicional.</p>
+                    <p class="doc-p mb-4">Los datos personales seran conservados mientras subsista la finalidad para la cual fueron recolectados y durante el tiempo exigido por las normas aplicables. Cuando la finalidad se agote y no exista deber legal de conservacion, los datos se eliminan o se anonimizan. En el caso de los datos recibidos por WhatsApp aplica ademas lo previsto en el numeral 5.3, y en el de los datos de prospeccion, lo previsto en el numeral 5.5.</p>
+                    <p class="doc-p">MéTRIK se reserva el derecho de modificar esta Politica en cualquier momento. Toda modificacion se publica en esta pagina con su numero de version y su fecha. Los cambios sustanciales se comunican a los Titulares a traves de www.metrik.com.co y, cuando exista relacion comercial vigente, por el correo de contacto registrado.</p>
+                </section>
+
+                <section id="aceptacion" class="doc-section">
+                    <h2 class="doc-section__title">12. Aceptacion</h2>
+                    <div class="dark-box">
+                        <p class="mb-4">Al proporcionar sus datos personales a MéTRIK, el Titular acepta los terminos y condiciones establecidos en la presente Politica de Tratamiento de Datos Personales. Los datos que MéTRIK trata conforme al numeral 5.5 no los recibe del Titular sino de fuentes publicas o corporativas: se tratan bajo ese numeral sin que usted tenga que aceptar nada, y usted puede pedir la baja en cualquier momento.</p>
+                        <div class="dark-box__sign">
+                            <p class="dark-box__name">METRIK IA S.A.S.</p>
+                            <p class="dark-box__line">NIT 902.079.601-9</p>
+                            <p class="dark-box__line">Brallan Mauricio Moreno Guzman, Representante Legal</p>
+                            <p class="dark-box__date">Bogota D.C., Noviembre de 2026</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="doc-back">
+                    <a href="/" class="btn-primary">
+                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg></span>
+                        Volver al inicio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__row">
+                <div class="site-footer__brand">
+                    <img src="/assets/marca/metrik-wordmark-negativo.svg" alt="MéTRIK Logo">
+                    <span>MéTRIK</span>
+                </div>
+                <div class="site-footer__nav">
+                    <a href="/">Inicio</a>
+                    <a href="/confianza">Seguridad de Datos</a>
+                    <a href="/terminos">Terminos de Servicio</a>
+                    <a href="https://wa.me/573159509103" class="with-icon">
+                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></span>
+                        +57 315 950 9103
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-footer__social">
+                <a href="https://www.linkedin.com/company/m%C3%A9trik/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/metrik.negocios" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="https://www.tiktok.com/@metrik.negocios" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/metrik.co" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+            </div>
+
+            <div class="site-footer__copy">
+                &copy; 2026 MéTRIK. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+  // Unica pieza de JS: sombra del header al hacer scroll. El contenido ya esta en el HTML.
+  (function () {
+    var header = document.getElementById('site-header');
+    if (!header) return;
+    function sync() {
+      if (window.scrollY > 20) header.classList.add('is-scrolled');
+      else header.classList.remove('is-scrolled');
+    }
+    window.addEventListener('scroll', sync, { passive: true });
+    sync();
+  })();
+</script>
+</body>
+</html>
